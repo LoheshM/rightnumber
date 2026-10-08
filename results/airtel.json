@@ -1,0 +1,709 @@
+[
+ {
+  "event": "start",
+  "data": {
+   "brand": "Airtel",
+   "city": "Kolkata",
+   "number": "+91 62901 33964",
+   "number_kind": "mobile",
+   "mode": "auto"
+  }
+ },
+ {
+  "event": "step",
+  "data": {
+   "id": "gather",
+   "label": "Searching Google Maps, Google and your number the web",
+   "status": "running"
+  }
+ },
+ {
+  "event": "serp_call",
+  "data": {
+   "engine": "google_maps",
+   "purpose": "Maps pins for “Airtel customer care” near Kolkata",
+   "params": {
+    "type": "search",
+    "q": "Airtel customer care",
+    "ll": "@22.5726,88.3639,12z",
+    "hl": "en",
+    "gl": "in"
+   },
+   "source": "cache",
+   "ms": 0,
+   "ok": true,
+   "error": null,
+   "result_count": 0,
+   "credit": false
+  }
+ },
+ {
+  "event": "serp_call",
+  "data": {
+   "engine": "google",
+   "purpose": "What Google shows for “Airtel customer care number”",
+   "params": {
+    "q": "Airtel customer care number",
+    "gl": "in",
+    "hl": "en",
+    "google_domain": "google.co.in"
+   },
+   "source": "cache",
+   "ms": 0,
+   "ok": true,
+   "error": null,
+   "result_count": 10,
+   "credit": false
+  }
+ },
+ {
+  "event": "serp_call",
+  "data": {
+   "engine": "google",
+   "purpose": "Where +91 62901 33964 appears on the web",
+   "params": {
+    "q": "\"6290133964\" OR \"62901 33964\" OR \"+91 62901 33964\" OR \"+916290133964\"",
+    "gl": "in",
+    "hl": "en",
+    "google_domain": "google.co.in"
+   },
+   "source": "cache",
+   "ms": 0,
+   "ok": true,
+   "error": null,
+   "result_count": 8,
+   "credit": false
+  }
+ },
+ {
+  "event": "step",
+  "data": {
+   "id": "gather",
+   "label": "Found 20 Maps pins and 10 Google results",
+   "status": "done"
+  }
+ },
+ {
+  "event": "step",
+  "data": {
+   "id": "domain",
+   "label": "Working out the brand's official website",
+   "status": "running"
+  }
+ },
+ {
+  "event": "serp_call",
+  "data": {
+   "engine": "google",
+   "purpose": "The brand's own contact pages on airtel.in",
+   "params": {
+    "q": "site:airtel.in customer care contact number",
+    "gl": "in",
+    "hl": "en",
+    "google_domain": "google.co.in"
+   },
+   "source": "cache",
+   "ms": 0,
+   "ok": true,
+   "error": null,
+   "result_count": 10,
+   "credit": false
+  }
+ },
+ {
+  "event": "page_read",
+  "data": {
+   "url": "https://www.airtel.in/",
+   "final_url": "https://www.airtel.in/",
+   "source": "cache",
+   "ms": 0,
+   "ok": true,
+   "error": null,
+   "title": "Airtel: Wi-Fi, Postpaid, Prepaid, DTH, Bank & Business",
+   "chars": 56
+  }
+ },
+ {
+  "event": "official",
+  "data": {
+   "domain": "airtel.in",
+   "established": true,
+   "reason": "google + maps + model agree",
+   "votes": [
+    {
+     "domain": "airtel.in",
+     "sources": [
+      "maps: website of 19 of 20 Maps pins",
+      "google: organic result #4",
+      "model: model's own knowledge"
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "event": "step",
+  "data": {
+   "id": "domain",
+   "label": "Official website: airtel.in",
+   "status": "done"
+  }
+ },
+ {
+  "event": "result",
+  "data": {
+   "brand": "Airtel",
+   "city": "Kolkata",
+   "domain": "airtel.in",
+   "decision": {
+    "domain": "airtel.in",
+    "established": true,
+    "reason": "google + maps + model agree",
+    "votes": [
+     {
+      "domain": "airtel.in",
+      "sources": [
+       "maps: website of 19 of 20 Maps pins",
+       "google: organic result #4",
+       "model: model's own knowledge"
+      ]
+     }
+    ]
+   },
+   "number": "+91 62901 33964",
+   "number_kind": "mobile",
+   "verdict": {
+    "label": "not_on_official_pages",
+    "title": "Not found on the official pages we checked",
+    "sources": [],
+    "complaints": [],
+    "other_brands": [],
+    "other_brand_examples": []
+   },
+   "call_instead": [
+    {
+     "key": "4040000222",
+     "display": "040 4000 0222",
+     "kind": "landline",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://www.airtel.in/broadband-appellate",
+       "context": "Broadband and Fixed Line Appellate Authority . Phone No. 040-40000222. Phone No. 011-41614690. Phone No. 079-40020143. Phone No",
+       "kind": "snippet",
+       "label": "plain",
+       "scope": "main"
+      }
+     ]
+    },
+    {
+     "key": "1141614690",
+     "display": "011 4161 4690",
+     "kind": "landline",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://www.airtel.in/broadband-appellate",
+       "context": "Appellate Authority . Phone No. 040-40000222. Phone No. 011-41614690. Phone No. 079-40020143. Phone No. 0180-4600150. Phone No",
+       "kind": "snippet",
+       "label": "plain",
+       "scope": "main"
+      }
+     ]
+    },
+    {
+     "key": "7940020143",
+     "display": "079 4002 0143",
+     "kind": "landline",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://www.airtel.in/broadband-appellate",
+       "context": "Phone No. 040-40000222. Phone No. 011-41614690. Phone No. 079-40020143. Phone No. 0180-4600150. Phone No. 080-41115201. Phone No",
+       "kind": "snippet",
+       "label": "plain",
+       "scope": "main"
+      }
+     ]
+    },
+    {
+     "key": "1804600150",
+     "display": "0180 4600150",
+     "kind": "landline",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://www.airtel.in/broadband-appellate",
+       "context": "Phone No. 011-41614690. Phone No. 079-40020143. Phone No. 0180-4600150. Phone No. 080-41115201. Phone No. 0484-4015201",
+       "kind": "snippet",
+       "label": "plain",
+       "scope": "main"
+      }
+     ]
+    }
+   ],
+   "warned_numbers": [],
+   "official_numbers": [
+    {
+     "key": "4040000222",
+     "display": "040 4000 0222",
+     "kind": "landline",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://www.airtel.in/broadband-appellate",
+       "context": "Broadband and Fixed Line Appellate Authority . Phone No. 040-40000222. Phone No. 011-41614690. Phone No. 079-40020143. Phone No",
+       "kind": "snippet",
+       "label": "plain",
+       "scope": "main"
+      }
+     ]
+    },
+    {
+     "key": "1141614690",
+     "display": "011 4161 4690",
+     "kind": "landline",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://www.airtel.in/broadband-appellate",
+       "context": "Appellate Authority . Phone No. 040-40000222. Phone No. 011-41614690. Phone No. 079-40020143. Phone No. 0180-4600150. Phone No",
+       "kind": "snippet",
+       "label": "plain",
+       "scope": "main"
+      }
+     ]
+    },
+    {
+     "key": "7940020143",
+     "display": "079 4002 0143",
+     "kind": "landline",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://www.airtel.in/broadband-appellate",
+       "context": "Phone No. 040-40000222. Phone No. 011-41614690. Phone No. 079-40020143. Phone No. 0180-4600150. Phone No. 080-41115201. Phone No",
+       "kind": "snippet",
+       "label": "plain",
+       "scope": "main"
+      }
+     ]
+    },
+    {
+     "key": "1804600150",
+     "display": "0180 4600150",
+     "kind": "landline",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://www.airtel.in/broadband-appellate",
+       "context": "Phone No. 011-41614690. Phone No. 079-40020143. Phone No. 0180-4600150. Phone No. 080-41115201. Phone No. 0484-4015201",
+       "kind": "snippet",
+       "label": "plain",
+       "scope": "main"
+      }
+     ]
+    },
+    {
+     "key": "8041115201",
+     "display": "080 4111 5201",
+     "kind": "landline",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://www.airtel.in/broadband-appellate",
+       "context": "Phone No. 079-40020143. Phone No. 0180-4600150. Phone No. 080-41115201. Phone No. 0484-4015201",
+       "kind": "snippet",
+       "label": "plain",
+       "scope": "main"
+      }
+     ]
+    },
+    {
+     "key": "4844015201",
+     "display": "0484 4015201",
+     "kind": "landline",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://www.airtel.in/broadband-appellate",
+       "context": "Phone No. 0180-4600150. Phone No. 080-41115201. Phone No. 0484-4015201",
+       "kind": "snippet",
+       "label": "plain",
+       "scope": "main"
+      }
+     ]
+    },
+    {
+     "key": "9154052102",
+     "display": "+91 91540 52102",
+     "kind": "mobile",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://www.airtel.in/digital-tv/consumercorner",
+       "context": "From your registered mobile number, dial 9154052 … call 9154052102). Toll Free Customer Care Number and other contact details",
+       "kind": "snippet",
+       "label": "plain",
+       "scope": "main"
+      }
+     ]
+    }
+   ],
+   "pages": [
+    {
+     "url": "https://www.airtel.in/",
+     "final_url": "https://www.airtel.in/",
+     "source": "cache",
+     "ms": 0,
+     "ok": true,
+     "error": null,
+     "title": "Airtel: Wi-Fi, Postpaid, Prepaid, DTH, Bank & Business",
+     "chars": 56
+    }
+   ],
+   "pins": [
+    {
+     "title": "AIRTEL STORE - CIT ROAD KOLKATA",
+     "phone_shown": "+91 981xx xxx45",
+     "website": "airtel.in",
+     "website_status": "official",
+     "number_status": "not_on_official",
+     "rating": 4.3,
+     "reviews": 210,
+     "address": "Sch 52, Landmark :, P-123, CIT Rd, opposite Bank Of India, Melaranoor, Entally, Kolkata, W",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "AIRTEL STORE - DUMDUM KOLKATA",
+     "phone_shown": "+91 981xx xxx45",
+     "website": "airtel.in",
+     "website_status": "official",
+     "number_status": "not_on_official",
+     "rating": 3.7,
+     "reviews": 1027,
+     "address": "Shop No 2A Ground Floor, Club Town Estates, Dum Dum Rd, Jhilbagan, Dum Dum, Kolkata, West ",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "Airtel Store",
+     "phone_shown": "+91 983xx xxx45",
+     "website": "airtel.in",
+     "website_status": "official",
+     "number_status": "not_on_official",
+     "rating": 3.7,
+     "reviews": 53,
+     "address": "SE Railways, BNR, New Adminitrative Building, 11, 7000, Garden Reach Road, Kolkata, West B",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "AIRTEL STORE - PARK STREET KOLKATA",
+     "phone_shown": "+91 981xx xxx45",
+     "website": "airtel.in",
+     "website_status": "official",
+     "number_status": "not_on_official",
+     "rating": 3.5,
+     "reviews": 1139,
+     "address": "31 Chowringee Road, Park St, Kolkata, West Bengal 700016",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "AIRTEL STORE - KAKURGACHI KOLKATA",
+     "phone_shown": "+91 981xx xxx45",
+     "website": "airtel.in",
+     "website_status": "official",
+     "number_status": "not_on_official",
+     "rating": 3.5,
+     "reviews": 777,
+     "address": "P-339/1, CIT Rd, Scheme VI-M, Phoolbagan, Kankurgachi, Kolkata, West Bengal 700054",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "AIRTEL STORE - HOWRAH KOLKATA",
+     "phone_shown": "+91 981xx xxx45",
+     "website": "airtel.in",
+     "website_status": "official",
+     "number_status": "not_on_official",
+     "rating": 2.9,
+     "reviews": 256,
+     "address": "Vivek Vihar Complex, GT Rd, near Mobile Store, Vivek Vihar, Choura Bustee, Shibpur, Howrah",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "AIRTEL STORE - GC AVENUE KOLKATA",
+     "phone_shown": "+91 981xx xxx45",
+     "website": "airtel.in",
+     "website_status": "official",
+     "number_status": "not_on_official",
+     "rating": 3.4,
+     "reviews": 422,
+     "address": "38, Ganesh Chandra Ave, Chandni Chawk, Bowbazar, Kolkata, West Bengal 700013",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "AIRTEL STORE - LILUAH KOLKATA",
+     "phone_shown": "+91 981xx xxx45",
+     "website": "airtel.in",
+     "website_status": "official",
+     "number_status": "not_on_official",
+     "rating": 2.7,
+     "reviews": 260,
+     "address": "241/242, GT Rd, opp. Big Bazaar, Liluah, Kolkata, Howrah, West Bengal 711204",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "AIRTEL STORE - CHINAR PARK KOLKATA",
+     "phone_shown": "+91 981xx xxx45",
+     "website": "airtel.in",
+     "website_status": "official",
+     "number_status": "not_on_official",
+     "rating": 3.3,
+     "reviews": 648,
+     "address": "Gayens Guest House Atghara Purbapara Po Rajarhat Gopalpur, Ps, Rajarhat, Kolkata, West Ben",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "AIRTEL STORE - DOVER LANE KOLKATA",
+     "phone_shown": "+91 981xx xxx45",
+     "website": "airtel.in",
+     "website_status": "official",
+     "number_status": "not_on_official",
+     "rating": 3.5,
+     "reviews": 508,
+     "address": "Ward No, 85 Premises, 5, Ramani Chatterjee Rd, Ps, Gariahat, Kolkata, West Bengal 700029",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "AIRTEL STORE - LAKE TOWN KOLKATA",
+     "phone_shown": "+91 981xx xxx45",
+     "website": "airtel.in",
+     "website_status": "official",
+     "number_status": "not_on_official",
+     "rating": 3.4,
+     "reviews": 427,
+     "address": "Holding Number 48/8, Plot No 164, Jessore Rd, Bangur, P S, Lake Town, Kolkata, West Bengal",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "AIRTEL STORE - CITY CENTRE KOLKATA",
+     "phone_shown": "+91 981xx xxx45",
+     "website": "airtel.in",
+     "website_status": "official",
+     "number_status": "not_on_official",
+     "rating": 3.5,
+     "reviews": 973,
+     "address": "Shop No E002, City Center Mall, DC Block, Sector 1, Bidhannagar, Kolkata, West Bengal 7000",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "AIRTEL STORE - ALIPUR KOLKATA",
+     "phone_shown": "+91 981xx xxx45",
+     "website": "airtel.in",
+     "website_status": "official",
+     "number_status": "not_on_official",
+     "rating": 3.4,
+     "reviews": 337,
+     "address": "Premise No 15 Burdwan Road P S Alipur, Kmc, Ward Number 74, Kolkata, West Bengal 700027",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "AIRTEL STORE - GIRISH PARK KOLKATA",
+     "phone_shown": "+91 981xx xxx45",
+     "website": "airtel.in",
+     "website_status": "official",
+     "number_status": "not_on_official",
+     "rating": 3.3,
+     "reviews": 115,
+     "address": "Ground Floor, Purani Haveli Building, 17, Balmukund Mackker Road, opposite Mahajati Sadan,",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "AIRTEL STORE - DOBSON ROAD KOLKATA",
+     "phone_shown": "+91 981xx xxx45",
+     "website": "airtel.in",
+     "website_status": "official",
+     "number_status": "not_on_official",
+     "rating": 3.1,
+     "reviews": 57,
+     "address": "28/4, near Dobson Road, Babudanga, Golabari, Ps, Kolkata, Howrah, West Bengal 711101",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "Airtel Store",
+     "phone_shown": "+91 981xx xxx45",
+     "website": "airtel.in",
+     "website_status": "official",
+     "number_status": "not_on_official",
+     "rating": 2.7,
+     "reviews": 50,
+     "address": "P.S-Shyampukur, 70C Bhupen, Bhupendra Bose Ave, Shyambazar, Kolkata, West Bengal 700004",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "AIRTEL STORE - BENTICK STREET KOLKATA",
+     "phone_shown": "+91 981xx xxx45",
+     "website": "airtel.in",
+     "website_status": "official",
+     "number_status": "not_on_official",
+     "rating": 3.6,
+     "reviews": 306,
+     "address": "10 Bentinck Street, Hare St, Ps, Kolkata, West Bengal 700001",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "AIRTEL STORE - TOBIN ROAD KOLKATA",
+     "phone_shown": "+91 981xx xxx45",
+     "website": "airtel.in",
+     "website_status": "official",
+     "number_status": "not_on_official",
+     "rating": 3,
+     "reviews": 165,
+     "address": "18, Barrackpore Trunk Rd, Netaji Colony, Nainan Para, Baranagar, Kolkata, Baranagar, West ",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "AIRTEL STORE - ASHOK NAGAR KOLKATA",
+     "phone_shown": "+91 981xx xxx45",
+     "website": "airtel.in",
+     "website_status": "official",
+     "number_status": "not_on_official",
+     "rating": 3.6,
+     "reviews": 240,
+     "address": "Police Station Regent Park, Shra Greenview Comprised At Premises No 41D Po Regent Park, Wa",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "airtel Store",
+     "phone_shown": "+91 759xx xxx94",
+     "website": "grexa.site",
+     "website_status": "other",
+     "number_status": "not_on_official",
+     "rating": 3.6,
+     "reviews": 119,
+     "address": "POLICE STATION, P78, CIT Rd, near PHOOLBAGAN, opposite PANTALOONS, Scheme VI-M, Kadapara, ",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    }
+   ],
+   "pin_stats": {
+    "total": 20,
+    "judged": true,
+    "official_number": 0,
+    "number_not_on_official": 20,
+    "website_not_official": 1,
+    "no_website": 0,
+    "user_number_pins": 0
+   },
+   "google_view": {
+    "results": 10,
+    "directory": 6,
+    "directory_domains": [
+     "justdial.com"
+    ],
+    "official_rank": 4,
+    "top": [
+     {
+      "title": "Airtel Customer Care Number in Lucknow",
+      "domain": "justdial.com",
+      "link": "https://www.justdial.com/Lucknow/24-Hours-Mobile-Phone-Customer-Services-Airtel/nct-11218641",
+      "directory": true,
+      "official": false
+     },
+     {
+      "title": "Airtel Customer Service - Hyderabad",
+      "domain": "justdial.com",
+      "link": "https://www.justdial.com/Hyderabad/Airtel-Customer-Service-Arunodaya-Colony-Vittal-Rao-Nagar-Madhapur/040PXX40-XX40-170901133136-F4G3_BZDET",
+      "directory": true,
+      "official": false
+     },
+     {
+      "title": "Airtel (Customer Care) Customer Care Number in Delhi",
+      "domain": "justdial.com",
+      "link": "https://www.justdial.com/Delhi/Airtel-Customer-Care-Near-Pocket-1-Dwarka-Sector-4/011P554813_BZDET",
+      "directory": true,
+      "official": false
+     },
+     {
+      "title": "Broadband and Fixed Line Appellate Authority",
+      "domain": "airtel.in",
+      "link": "https://www.airtel.in/broadband-appellate",
+      "directory": false,
+      "official": true
+     },
+     {
+      "title": "Airtel Customer Care Number in Chennai",
+      "domain": "justdial.com",
+      "link": "https://www.justdial.com/Chennai/24-Hours-Mobile-Phone-Customer-Services-Airtel/nct-11218641",
+      "directory": true,
+      "official": false
+     }
+    ]
+   },
+   "mentions": [],
+   "summary": "The number +91 62901 33964 is not printed on the airtel.in pages that were read. Numbers printed on Airtel's official website airtel.in are 040 4000 0222 or 011 4161 4690.",
+   "summary_source": "llm:cache",
+   "credits_spent": 0,
+   "searches": 4,
+   "ms": 6
+  }
+ },
+ {
+  "event": "done",
+  "data": {
+   "credits_spent": 0,
+   "ms": 6
+  }
+ }
+]

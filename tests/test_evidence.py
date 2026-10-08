@@ -65,15 +65,11 @@ def test_label_mixed_line_tel_and_fax():
     assert lab == {"8025229856": "plain", "8025229857": "fax"}
 
 
-@pytest.mark.xfail(strict=True, reason="BUG: label windows run past the sentence end; a number inside a fraud "
-                                       "warning becomes 'care' when the next sentence says 'customer care'")
 def test_bug_scam_number_labelled_care_by_next_sentence():
     text = "Fraudsters are using 9123456789 and 9123456780. Our customer care is 1860 233 1234."
     assert labels(text)["9123456780"] == "warning"
 
 
-@pytest.mark.xfail(strict=True, reason="BUG: a legit number in the block after a fraud warning is labelled "
-                                       "'warning' (window looks 90 chars back across the separator)")
 def test_bug_corporate_number_after_warning_block_is_warned():
     text = "Beware of fraudsters calling from 9876543210 . Corporate office 022 2839 6444"
     assert labels(text)["2228396444"] == "plain"
@@ -83,7 +79,7 @@ def test_bug_corporate_number_after_warning_block_is_warned():
 
 CONTACT_TEXT = ("Customer care 1860 233 1234 . Fax 080-25229856 . "
                 "Beware of fraudsters calling from 9876543210 . . . . . . . . . . . . . . . . . . . . . . . . . . "
-                "Dial 1930 for cyber crime")
+                "Track your shipment with AWB 79034111122")
 
 
 def test_official_numbers_from_page():
@@ -92,7 +88,7 @@ def test_official_numbers_from_page():
     assert found["18602331234"].care
     assert found["8025229856"].fax_only
     assert found["9876543210"].warned
-    assert "1930" not in found
+    assert "7903411112" not in "".join(found)
 
 
 def test_only_official_domain_pages_count():
@@ -158,13 +154,35 @@ def _on(key, kind, *labels_kinds):
                                              for i, (lab, k) in enumerate(labels_kinds)])
 
 
-def test_callable_excludes_fax_warned_short():
+def test_callable_excludes_fax_warned_other_org():
     found = {o.phone.key: o for o in [
         _on("8025229856", "landline", ("fax", "page")),
         _on("9876543210", "mobile", ("warning", "page")),
-        _on("1930", "short", ("care", "page")),
+        _on("8068727374", "landline", ("other_org", "page")),
         _on("18602331234", "tollfree", ("care", "page")),
     ]}
+    assert [o.phone.key for o in callable_numbers(found)] == ["18602331234"]
+
+
+def test_callable_short_code_labelled_care_by_the_site():
+    found = {o.phone.key: o for o in [
+        _on("2240611234", "landline", ("care", "page")),
+        _on("1906", "short", ("care", "page")),
+    ]}
+    # toll-free first; a labelled short code ranks with landlines (most sources first)
+    assert {o.phone.key for o in callable_numbers(found)} == {"1906", "2240611234"}
+
+
+def test_other_org_helpline_not_suggested():
+    text = "Customer care 1860 233 1234 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "            "For UPI issues contact Google Pay on 080 6872 7374"
+    found = official_numbers([page(text)], [], OFFICIAL, "Blue Dart")
+    assert found["8068727374"].other_org
+    assert [o.phone.key for o in callable_numbers(found)] == ["18602331234"]
+
+
+def test_bug_cyber_crime_short_code_suggested_first():
+    text = "Customer care 1860 233 1234 . Victim of online fraud? Dial 1930 for cyber crime"
+    found = official_numbers([page(text)], [], OFFICIAL, "Blue Dart")
     assert [o.phone.key for o in callable_numbers(found)] == ["18602331234"]
 
 
@@ -201,8 +219,6 @@ def test_callable_on_real_contact_page():
     assert [o.phone.key for o in callable_numbers(found)] == ["18602331234"]
 
 
-@pytest.mark.xfail(strict=True, reason="BUG: the scam number in a fraud warning is suggested under call_instead "
-                                       "(label window crosses into the next sentence)")
 def test_bug_scam_number_suggested_as_callable():
     text = "Fraudsters are using 9123456789 and 9123456780. Our customer care is 1860 233 1234."
     found = official_numbers([page(text)], [], OFFICIAL)
@@ -435,10 +451,16 @@ def test_verdict_landline_spelling_matches():
         assert verdict(parse_user_number(spelling), "bluedart.com", numbers, 1, [])["label"] == "on_official_site"
 
 
-@pytest.mark.xfail(strict=True, reason="BUG: PLAN says short codes match exact official text, but find_phones "
-                                       "never extracts short codes, so '139' printed on the site is never official")
-def test_bug_short_code_on_official_page():
+def test_short_code_on_official_page():
     numbers = official_numbers([page("For train enquiries dial 139 (helpline)", url="https://www.irctc.co.in/x")],
                                [], {"irctc.co.in"})
     v = verdict(parse_user_number("139"), "irctc.co.in", numbers, 1, [])
     assert v["label"] == "on_official_site"
+    v = verdict(parse_user_number("1930"), "irctc.co.in", numbers, 1, [])
+    assert v["label"] == "not_on_official_pages"
+
+
+@pytest.mark.parametrize("text", ["Pin code 110001", "Since 1983", "Shipments 1,234,567", "call 12345678"])
+def test_short_code_needs_helpline_wording(text):
+    found = official_numbers([page(text)], [], OFFICIAL)
+    assert not any(o.phone.kind == "short" for o in found.values())

@@ -162,7 +162,7 @@ async def test_no_llm_maps_only_abstains(tmp_path):
     assert {p["number_status"] for p in result["pins"]} <= {"unknown", "none"}
     assert result["credits_spent"] == 0
     assert result["summary_source"] == "template"
-    assert result["summary"].startswith("+91 62916 10240: verify before calling.")
+    assert result["summary"].startswith("No official Blue Dart page could be read")
     assert not any(e == "page_read" for e in names(events))  # no domain -> no page reads
 
 
@@ -274,7 +274,7 @@ async def test_lookup_query_uses_number_variants(full):
 
 
 async def test_summary_falls_back_to_template(full):
-    env, result, _ = full
+    _, result, _ = full
     assert result["summary_source"] == "template"
     assert "1860 233 1234" in result["summary"]
     assert summary_ok(result["summary"], {"x": result["summary"]})
@@ -353,7 +353,7 @@ async def test_no_number_is_fine(tmp_path, number):
     result, events = await env.run(number=number)
     assert result["verdict"] is None
     assert not any("Indian phone number" in n for n in notices(events))
-    assert result["summary"].startswith("Official website for Blue Dart")
+    assert "could not be established" in result["summary"]
 
 
 @pytest.mark.parametrize("brand", ["", " ", "B", None, "  x  "])
@@ -400,22 +400,52 @@ async def test_every_engine_raising_still_returns(tmp_path):
     assert names(events)[-1] == "done"
 
 
-async def test_garbage_payloads_do_not_crash(tmp_path):
+async def test_garbage_maps_entries_are_skipped(tmp_path):
     env = Env(tmp_path, model_domains=["bluedart.com"])
-    env.payload_for = lambda engine, params: {"local_results": ["junk", None, {"phone": 123}],
-                                              "organic_results": [None, "x", {"link": None}],
-                                              "knowledge_graph": None}
+    real = env.payload_for
+
+    def payload_for(engine, params):
+        if engine == "google_maps":
+            m = load_payload("maps")
+            m["local_results"] = ["junk", None, 42] + m["local_results"]
+            return m
+        return real(engine, params)
+
+    env.payload_for = payload_for
     result, events = await env.populate()
     assert names(events)[-1] == "done"
-    assert result["domain"] is None
+    assert result["domain"] == "bluedart.com" and result["pin_stats"]["total"] == 20
 
 
-async def test_site_search_empty_and_pages_unreadable_revokes_domain(tmp_path):
+async def test_bug_garbage_brand_search_entries_crash(tmp_path):
+    env = Env(tmp_path, model_domains=["bluedart.com"])
+    real = env.payload_for
+
+    def payload_for(engine, params):
+        if engine == "google" and "customer care number" in params.get("q", "") and '"' not in params["q"]:
+            g = load_payload("g_brand")
+            g["organic_results"] = [None, "x"] + g["organic_results"]
+            return g
+        return real(engine, params)
+
+    env.payload_for = payload_for
+    _, events = await env.populate()
+    assert names(events)[-1] == "done"
+
+
+async def test_site_search_empty_and_pages_unreadable(tmp_path):
     env = Env(tmp_path, model_domains=["bluedart.com"], site=False, pages=False)
     result, events = await env.populate()
-    assert result["domain"] is None
-    assert "could not be read" in result["decision"]["reason"]
+    assert result["domain"] == "bluedart.com"  # still the agreed domain ...
+    assert any("couldn't be read" in n for n in notices(events))  # ... but we say we couldn't read it
+    assert result["call_instead"] == []
     assert result["verdict"]["label"] == "verify_before_calling"  # complaint text still found
+
+
+async def test_site_search_empty_pages_unreadable_no_complaint(tmp_path):
+    env = Env(tmp_path, model_domains=["bluedart.com"], site=False, pages=False, lookup=False)
+    result, _ = await env.populate(number="98111 22333")
+    assert result["verdict"]["label"] == "no_official_source"
 
 
 async def test_pages_unreadable_but_site_snippets_count(tmp_path):
@@ -429,9 +459,14 @@ async def test_pages_unreadable_but_site_snippets_count(tmp_path):
 # ---------------------------------------------------------------- summary validation
 
 FACTS = {
-    "brand": "Blue Dart", "official_website": "bluedart.com", "your_number": "+91 62916 10240",
-    "verdict": "Verify before calling", "call_instead": ["1860 233 1234 (printed on bluedart.com)"],
-    "maps_pins_near_delhi": 20, "pins_showing_a_number_not_on_official_pages": 7,
+    "brand": "Blue Dart",
+    "sentences": [
+        "The number checked is +91 62916 10240.",
+        "This number is not printed on the bluedart.com pages that were read.",
+        "Text on justdial.com names this exact number in a complaint.",
+        "Numbers printed on Blue Dart's official website bluedart.com: 1860 233 1234.",
+        "Of 20 Maps pins checked, 7 show a number not printed on bluedart.com.",
+    ],
 }
 
 
@@ -468,14 +503,16 @@ async def test_summary_from_llm_is_validated(tmp_path, reply, source):
     result, _ = await env.populate()
     assert result["summary_source"] == source
     if source == "template":
-        assert result["summary"].startswith("+91 62916 10240: verify before calling.")
+        assert result["summary"].startswith("This number is not printed on the bluedart.com pages")
     else:
         assert result["summary"] == reply["summary"]
 
 
 def test_template_without_numbers():
-    facts = {**FACTS, "call_instead": []}
+    facts = {**FACTS, "sentences": FACTS["sentences"][:3]
+             + ["No phone number could be copied from bluedart.com; use the number on your bill, card, ticket or app."]}
     out = pipeline._template(facts)
-    assert out.startswith("+91 62916 10240: verify before calling.")
-    assert "couldn't read an official number" in out
+    assert out.startswith("This number is not printed on the bluedart.com pages")
+    assert "No phone number could be copied" in out
+    assert "The number checked is" not in out
     assert summary_ok(out, facts)

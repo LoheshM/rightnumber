@@ -1,0 +1,563 @@
+[
+ {
+  "event": "start",
+  "data": {
+   "brand": "State Bank of India",
+   "city": "Mumbai",
+   "number": "1800 1234",
+   "number_kind": "tollfree",
+   "mode": "auto"
+  }
+ },
+ {
+  "event": "step",
+  "data": {
+   "id": "gather",
+   "label": "Searching Google Maps, Google and your number the web",
+   "status": "running"
+  }
+ },
+ {
+  "event": "serp_call",
+  "data": {
+   "engine": "google_maps",
+   "purpose": "Maps pins for “State Bank of India customer care” near Mumbai",
+   "params": {
+    "type": "search",
+    "q": "State Bank of India customer care",
+    "ll": "@19.076,72.8777,12z",
+    "hl": "en",
+    "gl": "in"
+   },
+   "source": "cache",
+   "ms": 0,
+   "ok": true,
+   "error": null,
+   "result_count": 0,
+   "credit": false
+  }
+ },
+ {
+  "event": "serp_call",
+  "data": {
+   "engine": "google",
+   "purpose": "What Google shows for “State Bank of India customer care number”",
+   "params": {
+    "q": "State Bank of India customer care number",
+    "gl": "in",
+    "hl": "en",
+    "google_domain": "google.co.in"
+   },
+   "source": "cache",
+   "ms": 0,
+   "ok": true,
+   "error": null,
+   "result_count": 10,
+   "credit": false
+  }
+ },
+ {
+  "event": "serp_call",
+  "data": {
+   "engine": "google",
+   "purpose": "Where 1800 1234 appears on the web",
+   "params": {
+    "q": "\"18001234\" OR \"1800 1234\" OR \"1800-1234\"",
+    "gl": "in",
+    "hl": "en",
+    "google_domain": "google.co.in"
+   },
+   "source": "cache",
+   "ms": 0,
+   "ok": true,
+   "error": null,
+   "result_count": 10,
+   "credit": false
+  }
+ },
+ {
+  "event": "step",
+  "data": {
+   "id": "gather",
+   "label": "Found 20 Maps pins and 10 Google results",
+   "status": "done"
+  }
+ },
+ {
+  "event": "step",
+  "data": {
+   "id": "domain",
+   "label": "Working out the brand's official website",
+   "status": "running"
+  }
+ },
+ {
+  "event": "official",
+  "data": {
+   "domain": null,
+   "established": false,
+   "reason": "sources don't agree on one official website",
+   "votes": [
+    {
+     "domain": "bank.sbi",
+     "sources": [
+      "maps: website of 11 of 13 Maps pins"
+     ]
+    },
+    {
+     "domain": "sbi.bank.in",
+     "sources": [
+      "model: model's own knowledge (sbi.co.in redirects here)"
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "event": "step",
+  "data": {
+   "id": "domain",
+   "label": "No official website established — sources don't agree on one official website",
+   "status": "done"
+  }
+ },
+ {
+  "event": "result",
+  "data": {
+   "brand": "State Bank of India",
+   "city": "Mumbai",
+   "domain": null,
+   "decision": {
+    "domain": null,
+    "established": false,
+    "reason": "sources don't agree on one official website",
+    "votes": [
+     {
+      "domain": "bank.sbi",
+      "sources": [
+       "maps: website of 11 of 13 Maps pins"
+      ]
+     },
+     {
+      "domain": "sbi.bank.in",
+      "sources": [
+       "model: model's own knowledge (sbi.co.in redirects here)"
+      ]
+     }
+    ]
+   },
+   "number": "1800 1234",
+   "number_kind": "tollfree",
+   "verdict": {
+    "label": "no_official_source",
+    "title": "Couldn't establish an official source",
+    "sources": [],
+    "complaints": [],
+    "other_brands": [],
+    "other_brand_examples": []
+   },
+   "call_instead": [],
+   "warned_numbers": [],
+   "official_numbers": [],
+   "pages": [],
+   "pins": [
+    {
+     "title": "State bank of india ( customer service point )",
+     "phone_shown": "",
+     "website": null,
+     "website_status": "none",
+     "number_status": "none",
+     "rating": null,
+     "reviews": null,
+     "address": "30 230 slum clearance colony, Mahatma Gandhi Rd, Goregaon West, Mumbai, Maharashtra 400104",
+     "is_user_number": false,
+     "phone_kind": null
+    },
+    {
+     "title": "SBI Customer Care Number",
+     "phone_shown": "1800 11 2211",
+     "website": null,
+     "website_status": "none",
+     "number_status": "unknown",
+     "rating": 4.5,
+     "reviews": 8,
+     "address": "State Bank Bhavan, 16th Floor, Madame Cama Rd, Mumbai, Maharashtra 400032",
+     "is_user_number": false,
+     "phone_kind": "tollfree"
+    },
+    {
+     "title": "Customer Service Point - State Bank of India & Life Insurance Corporation of Ind",
+     "phone_shown": "022 2779 2038",
+     "website": null,
+     "website_status": "none",
+     "number_status": "unknown",
+     "rating": 4.5,
+     "reviews": 11,
+     "address": "Shop. 6, Near Sai Mandir, GaneshNagar Chinchpada, Airoli Naka, Airoli, Navi Mumbai, Mahara",
+     "is_user_number": false,
+     "phone_kind": "landline"
+    },
+    {
+     "title": "State Bank Of India Customer Service Point",
+     "phone_shown": "",
+     "website": null,
+     "website_status": "none",
+     "number_status": "none",
+     "rating": 3.3,
+     "reviews": 6,
+     "address": "Ground Floor, Hiradeep Society, 3, Rd Number 1, behind Raymond Showroom, Shanti Nagar, Ulh",
+     "is_user_number": false,
+     "phone_kind": null
+    },
+    {
+     "title": "SBI Customer Service Point - Ghatkopar West",
+     "phone_shown": "",
+     "website": null,
+     "website_status": "none",
+     "number_status": "none",
+     "rating": 4.5,
+     "reviews": 13,
+     "address": "Jambhulpada, Prem Nagar, Azad Nagar, Ghatkopar West, Mumbai, Maharashtra 400084",
+     "is_user_number": false,
+     "phone_kind": null
+    },
+    {
+     "title": "SBI RBO Sion",
+     "phone_shown": "1800 1234",
+     "website": "bank.sbi",
+     "website_status": "unknown",
+     "number_status": "unknown",
+     "rating": 2.9,
+     "reviews": 68,
+     "address": "6Th Floor, Kohinoor City Mall, Sion B 603 -604,Commercial -I, Kirol Rd, off Lal Bahadur Sh",
+     "is_user_number": true,
+     "phone_kind": "tollfree"
+    },
+    {
+     "title": "SBI Branch Bhandupmumbai",
+     "phone_shown": "1800 1234",
+     "website": "bank.sbi",
+     "website_status": "unknown",
+     "number_status": "unknown",
+     "rating": 2.7,
+     "reviews": 155,
+     "address": "Lal Bahadur Shastri Marg, Sadan wadi, Bhandup West, Mumbai, Maharashtra 400078",
+     "is_user_number": true,
+     "phone_kind": "tollfree"
+    },
+    {
+     "title": "Bank Of India Head Office",
+     "phone_shown": "022 6668 4444",
+     "website": null,
+     "website_status": "none",
+     "number_status": "unknown",
+     "rating": 3,
+     "reviews": 366,
+     "address": "C-5, G Block BKC, Bandra Kurla Complex, Bandra East, C-5, Bandra Kurla Complex Rd, Bandra ",
+     "is_user_number": false,
+     "phone_kind": "landline"
+    },
+    {
+     "title": "State Bank of India, Corporate Centre",
+     "phone_shown": "1800 11 2211",
+     "website": "sbi.co.in",
+     "website_status": "unknown",
+     "number_status": "unknown",
+     "rating": 4.3,
+     "reviews": 818,
+     "address": "स्टेट बैंक भवन, Vidhan Bhavan Marg, Nariman Point, Mumbai, Maharashtra 400021",
+     "is_user_number": false,
+     "phone_kind": "tollfree"
+    },
+    {
+     "title": "SBI CAG Branch BKC",
+     "phone_shown": "1800 1234",
+     "website": "bank.sbi",
+     "website_status": "unknown",
+     "number_status": "unknown",
+     "rating": 4.3,
+     "reviews": 89,
+     "address": "16th floor, The Capital, G Block BKC, Bandra Kurla Complex, Bandra East, Mumbai, Maharasht",
+     "is_user_number": true,
+     "phone_kind": "tollfree"
+    },
+    {
+     "title": "SBI SMECCC Mumbai",
+     "phone_shown": "1800 1234",
+     "website": "bank.sbi",
+     "website_status": "unknown",
+     "number_status": "unknown",
+     "rating": 3.2,
+     "reviews": 38,
+     "address": "Jasmine Chs, Madhusudan Kalelkar Rd, near Guru Nanak Hospital, Kala Nagar, Bandra East, Mu",
+     "is_user_number": true,
+     "phone_kind": "tollfree"
+    },
+    {
+     "title": "SBI Branch Lbs Marg Kurla",
+     "phone_shown": "1800 1234",
+     "website": "bank.sbi",
+     "website_status": "unknown",
+     "number_status": "unknown",
+     "rating": 2.8,
+     "reviews": 77,
+     "address": "Pakeeza Apartment, Ground Floor, Lal Bahadur Shastri Marg, near Post Office, Kurla West, M",
+     "is_user_number": true,
+     "phone_kind": "tollfree"
+    },
+    {
+     "title": "State Bank of India",
+     "phone_shown": "022 2882 6408",
+     "website": "sbi.co.in",
+     "website_status": "unknown",
+     "number_status": "unknown",
+     "rating": 2.3,
+     "reviews": 58,
+     "address": "Ist Floor, Industrial Finance Branch, Swami Vivekanand Rd, Malad, Nadiyawala Colony 2, Mal",
+     "is_user_number": false,
+     "phone_kind": "landline"
+    },
+    {
+     "title": "SBI Branch Vakola",
+     "phone_shown": "1800 1234",
+     "website": "bank.sbi",
+     "website_status": "unknown",
+     "number_status": "unknown",
+     "rating": 2.2,
+     "reviews": 118,
+     "address": "Rati Khush, Pandit Jawaharlal Nehru Rd, Vakola, Santacruz East, Mumbai, Maharashtra 400055",
+     "is_user_number": true,
+     "phone_kind": "tollfree"
+    },
+    {
+     "title": "SBI Customer Service Point",
+     "phone_shown": "+91 976xx xxx41",
+     "website": null,
+     "website_status": "none",
+     "number_status": "unknown",
+     "rating": 1,
+     "reviews": 2,
+     "address": "Shop No 01, Akurli Rd, opposite Gaurav Country Bar, Kandivali, Damu Nagar, Singh Agri Esta",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "SBI Branch Dombivli East",
+     "phone_shown": "1800 1234",
+     "website": "bank.sbi",
+     "website_status": "unknown",
+     "number_status": "unknown",
+     "rating": 2.5,
+     "reviews": 243,
+     "address": "Bramhachaittanya, Tilak Road, Dombivli, Dombivli East, Maharashtra 421201",
+     "is_user_number": true,
+     "phone_kind": "tollfree"
+    },
+    {
+     "title": "SBI Branch Vile Parle",
+     "phone_shown": "1800 1234",
+     "website": "bank.sbi",
+     "website_status": "unknown",
+     "number_status": "unknown",
+     "rating": 2.8,
+     "reviews": 68,
+     "address": "No 58, Nehru Rd, Navpada, Vile Parle East, Vile Parle, Mumbai, Maharashtra 400057",
+     "is_user_number": true,
+     "phone_kind": "tollfree"
+    },
+    {
+     "title": "SBI Branch Dadar Millenium Branch",
+     "phone_shown": "1800 1234",
+     "website": "bank.sbi",
+     "website_status": "unknown",
+     "number_status": "unknown",
+     "rating": 3.2,
+     "reviews": 25,
+     "address": "Chs Ltd, Shop No 11, Ground Floor, Framroz Court Tenents, Dada Saheb Phalke Marg, Dadar Ea",
+     "is_user_number": true,
+     "phone_kind": "tollfree"
+    },
+    {
+     "title": "SBI Branch Pokharan Road Thane",
+     "phone_shown": "1800 1234",
+     "website": "bank.sbi",
+     "website_status": "unknown",
+     "number_status": "unknown",
+     "rating": 2.6,
+     "reviews": 80,
+     "address": "Swastik Garden, Pokharan Rd No. 2, Subhash Nagar, Thane West, Thane, Maharashtra 400601",
+     "is_user_number": true,
+     "phone_kind": "tollfree"
+    },
+    {
+     "title": "SBI Branch Sme Kandivali",
+     "phone_shown": "1800 1234",
+     "website": "bank.sbi",
+     "website_status": "unknown",
+     "number_status": "unknown",
+     "rating": 2.1,
+     "reviews": 79,
+     "address": "Govt Industrial Estate, Plot No 11 AB, Kandivali, Maharashtra Nagar, Kandivali West, Mumba",
+     "is_user_number": true,
+     "phone_kind": "tollfree"
+    }
+   ],
+   "pin_stats": {
+    "total": 20,
+    "judged": false,
+    "official_number": 0,
+    "number_not_on_official": 0,
+    "website_not_official": 0,
+    "no_website": 7,
+    "user_number_pins": 11
+   },
+   "google_view": {
+    "results": 10,
+    "directory": 1,
+    "directory_domains": [
+     "linkedin.com"
+    ],
+    "official_rank": null,
+    "top": [
+     {
+      "title": "CARE Case Report Guidelines",
+      "domain": "care-statement.org",
+      "link": "https://www.care-statement.org/",
+      "directory": false,
+      "official": false
+     },
+     {
+      "title": "CARE Ratings",
+      "domain": "careratings.com",
+      "link": "https://www.careratings.com/",
+      "directory": false,
+      "official": false
+     },
+     {
+      "title": "CARE",
+      "domain": "linkedin.com",
+      "link": "https://www.linkedin.com/company/care",
+      "directory": true,
+      "official": false
+     },
+     {
+      "title": "Care Insurance - Awarded as Best Claim Settlement Company ...",
+      "domain": "careinsurance.com",
+      "link": "https://www.careinsurance.com/",
+      "directory": false,
+      "official": false
+     },
+     {
+      "title": "CARE | English meaning - Cambridge Dictionary",
+      "domain": "cambridge.org",
+      "link": "https://dictionary.cambridge.org/dictionary/english/care",
+      "directory": false,
+      "official": false
+     }
+    ]
+   },
+   "mentions": [
+    {
+     "url": "https://sbi.bank.in/web/customer-care/contact-centre",
+     "domain": "sbi.bank.in",
+     "title": "Contact Centre - Customer Care - SBI Bank",
+     "snippet": "18001234. 2. 18002100. 3. 1800112211. 4. 18004253800. 5. 1800111101. *Currently, the ... Call Contact Centre Toll-Free Number 1800 1234 from your mobile. Opt ...",
+     "official": false,
+     "directory": false,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": []
+    },
+    {
+     "url": "https://www.facebook.com/StateBankOfIndia/videos/just-call-on-1800-1234-or-1800-2100-and-get-an-update-on-the-dispatch-status-of-/983631263464643/",
+     "domain": "facebook.com",
+     "title": "Just call on 1800 1234 or 1800 2100, and get an update on the ...",
+     "snippet": "Just call on 1800 1234 or 1800 2100, and get an update on the dispatch status of your SBI Debit Card. #SBI #TheBankerToEveryIndian # ...",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": []
+    },
+    {
+     "url": "https://www.facebook.com/StateBankOfIndia/posts/tune-in-with-our-contact-centre-and-dial-18001234-or-18002100-for-banking-at-you/830509032436847/",
+     "domain": "facebook.com",
+     "title": "Tune in with our contact centre and dial 18001234 or ...",
+     "snippet": "Tune in with our contact centre and dial 18001234 or 18002100 for banking at your fingertips ... Calling 1800 1234 or 1800 2100 is your mantra for ...",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": []
+    },
+    {
+     "url": "https://www.facebook.com/StateBankOfIndia/videos/tune-in-with-our-contact-centre-and-dial-18001234-or-18002100-for-banking-at-you/2102342866831236/",
+     "domain": "facebook.com",
+     "title": "Tune in with our contact centre and dial 18001234 or ...",
+     "snippet": "Tune in with our contact centre and dial 18001234 or 18002100 for banking at your fingertips ... Calling 1800 1234 or 1800 2100 is your mantra for ...",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": []
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=ZnAOYuBslxI&xstg=CAMSBhUD-7L2Hw%3D%3D",
+     "domain": "youtube.com",
+     "title": "Connect with our toll-free numbers 1800 1234 or 1800 2100!",
+     "snippet": "Eager to receive your new ATM/Debit Card? You can check the dispatch status of your card by calling 1800 1234 or 1800 2100, and we will let you",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": []
+    },
+    {
+     "url": "https://www.facebook.com/StateBankOfIndia/posts/calling-1800-1234-or-1800-2100-is-your-mantra-for-hassle-free-banking-with-conve/773802584774159/",
+     "domain": "facebook.com",
+     "title": "Calling 1800 1234 or 1800 2100 is your mantra for hassle-free ...",
+     "snippet": "Calling 1800 1234 or 1800 2100 is your mantra for hassle ... Contact us on 18001234 or 18002100 and bank from anywhere. #SBI ...",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": []
+    },
+    {
+     "url": "https://m.indiacustomercare.com/sbi-customer-care-helpline-numbers",
+     "domain": "indiacustomercare.com",
+     "title": "SBI Customer Care No. 1800 1234",
+     "snippet": "1800 1234. Updated on Friday, 25 September 2026 ... By Contact No.:You can call customer care at 18001234, 18002100, 1800112211, 18004253800, 080-26599990.",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": []
+    },
+    {
+     "url": "https://x.com/TheOfficialSBI/status/1453268348658139137?lang=en",
+     "domain": "x.com",
+     "title": "\"Call us toll-free on 1800 1234 and get a wide range of ...",
+     "snippet": "Call us toll-free on 1800 1234 and get a wide range of services on the go with SBI Contact Centre. What are you waiting for?",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": []
+    }
+   ],
+   "summary": "The number 1800 1234 could not be verified. No official State Bank of India page or website could be read for comparison.",
+   "summary_source": "llm:cache",
+   "credits_spent": 0,
+   "searches": 3,
+   "ms": 8
+  }
+ },
+ {
+  "event": "done",
+  "data": {
+   "credits_spent": 0,
+   "ms": 8
+  }
+ }
+]

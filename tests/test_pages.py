@@ -81,8 +81,6 @@ def test_html_to_text_caps_text_length():
     assert len(text) <= pages_mod.MAX_TEXT
 
 
-@pytest.mark.xfail(strict=True, reason="BUG: the link regex excludes '#' inside href, so <a href=\"/contact-us#phone\"> "
-                                       "is dropped entirely instead of keeping /contact-us")
 def test_bug_links_with_fragment_dropped():
     _, links, _ = html_to_text('<a href="/contact-us#phone">Contact us</a>')
     assert links and links[0][0].startswith("/contact-us")

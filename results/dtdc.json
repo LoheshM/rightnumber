@@ -1,0 +1,968 @@
+[
+ {
+  "event": "start",
+  "data": {
+   "brand": "DTDC",
+   "city": "Delhi",
+   "number": "+91 96069 11811",
+   "number_kind": "mobile",
+   "mode": "auto"
+  }
+ },
+ {
+  "event": "step",
+  "data": {
+   "id": "gather",
+   "label": "Searching Google Maps, Google and your number the web",
+   "status": "running"
+  }
+ },
+ {
+  "event": "serp_call",
+  "data": {
+   "engine": "google_maps",
+   "purpose": "Maps pins for “DTDC customer care” near Delhi",
+   "params": {
+    "type": "search",
+    "q": "DTDC customer care",
+    "ll": "@28.6139,77.209,12z",
+    "hl": "en",
+    "gl": "in"
+   },
+   "source": "cache",
+   "ms": 0,
+   "ok": true,
+   "error": null,
+   "result_count": 0,
+   "credit": false
+  }
+ },
+ {
+  "event": "serp_call",
+  "data": {
+   "engine": "google",
+   "purpose": "What Google shows for “DTDC customer care number”",
+   "params": {
+    "q": "DTDC customer care number",
+    "gl": "in",
+    "hl": "en",
+    "google_domain": "google.co.in"
+   },
+   "source": "cache",
+   "ms": 0,
+   "ok": true,
+   "error": null,
+   "result_count": 10,
+   "credit": false
+  }
+ },
+ {
+  "event": "serp_call",
+  "data": {
+   "engine": "google",
+   "purpose": "Where +91 96069 11811 appears on the web",
+   "params": {
+    "q": "\"9606911811\" OR \"96069 11811\" OR \"+91 96069 11811\" OR \"+919606911811\"",
+    "gl": "in",
+    "hl": "en",
+    "google_domain": "google.co.in"
+   },
+   "source": "cache",
+   "ms": 0,
+   "ok": true,
+   "error": null,
+   "result_count": 10,
+   "credit": false
+  }
+ },
+ {
+  "event": "step",
+  "data": {
+   "id": "gather",
+   "label": "Found 20 Maps pins and 10 Google results",
+   "status": "done"
+  }
+ },
+ {
+  "event": "step",
+  "data": {
+   "id": "domain",
+   "label": "Working out the brand's official website",
+   "status": "running"
+  }
+ },
+ {
+  "event": "serp_call",
+  "data": {
+   "engine": "google",
+   "purpose": "The brand's own contact pages on dtdc.com",
+   "params": {
+    "q": "site:dtdc.com customer care contact number",
+    "gl": "in",
+    "hl": "en",
+    "google_domain": "google.co.in"
+   },
+   "source": "cache",
+   "ms": 0,
+   "ok": true,
+   "error": null,
+   "result_count": 10,
+   "credit": false
+  }
+ },
+ {
+  "event": "page_read",
+  "data": {
+   "url": "https://www.dtdc.com/",
+   "final_url": "https://www.dtdc.com/in/",
+   "source": "cache",
+   "ms": 0,
+   "ok": true,
+   "error": null,
+   "title": "",
+   "chars": 9614
+  }
+ },
+ {
+  "event": "page_read",
+  "data": {
+   "url": "https://www.dtdc.com/customer-care/",
+   "final_url": "https://www.dtdc.com/customer-care/",
+   "source": "cache",
+   "ms": 0,
+   "ok": true,
+   "error": null,
+   "title": "",
+   "chars": 10426
+  }
+ },
+ {
+  "event": "page_read",
+  "data": {
+   "url": "https://www.dtdc.com/support-business-inquiry/",
+   "final_url": "https://edot.mydtdc.in/?utm_source=websitepages&utm_medium=Direct&utm_campaign=NA&utm_id=1&channel_code=",
+   "source": "cache",
+   "ms": 0,
+   "ok": true,
+   "error": null,
+   "title": "DTDC",
+   "chars": 12
+  }
+ },
+ {
+  "event": "page_read",
+  "data": {
+   "url": "https://www.dtdc.com/support-locate-us/",
+   "final_url": "https://www.dtdc.com/support-locate-us/",
+   "source": "cache",
+   "ms": 0,
+   "ok": true,
+   "error": null,
+   "title": "",
+   "chars": 4991
+  }
+ },
+ {
+  "event": "page_read",
+  "data": {
+   "url": "https://www.dtdc.com/support-service-guide/",
+   "final_url": "https://www.dtdc.com/support-service-guide/",
+   "source": "cache",
+   "ms": 0,
+   "ok": true,
+   "error": null,
+   "title": "",
+   "chars": 31427
+  }
+ },
+ {
+  "event": "official",
+  "data": {
+   "domain": "dtdc.com",
+   "established": true,
+   "reason": "google + model agree",
+   "votes": [
+    {
+     "domain": "dtdc.com",
+     "sources": [
+      "google: organic result #2",
+      "model: model's own knowledge (dtdc.in redirects here)"
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "event": "step",
+  "data": {
+   "id": "domain",
+   "label": "Official website: dtdc.com",
+   "status": "done"
+  }
+ },
+ {
+  "event": "result",
+  "data": {
+   "brand": "DTDC",
+   "city": "Delhi",
+   "domain": "dtdc.com",
+   "decision": {
+    "domain": "dtdc.com",
+    "established": true,
+    "reason": "google + model agree",
+    "votes": [
+     {
+      "domain": "dtdc.com",
+      "sources": [
+       "google: organic result #2",
+       "model: model's own knowledge (dtdc.in redirects here)"
+      ]
+     }
+    ]
+   },
+   "number": "+91 96069 11811",
+   "number_kind": "mobile",
+   "verdict": {
+    "label": "on_official_site",
+    "title": "Printed on the official site",
+    "sources": [
+     {
+      "url": "https://www.dtdc.com/customer-care/",
+      "context": "team for assistance · Contact Us · + 91 - 9606 911 811 · customersupport@dtdc.com · --> Banglore, India",
+      "kind": "page",
+      "label": "care",
+      "scope": "main"
+     }
+    ],
+    "complaints": [],
+    "other_brands": [],
+    "other_brand_examples": []
+   },
+   "call_instead": [
+    {
+     "key": "9606911811",
+     "display": "+91 96069 11811",
+     "kind": "mobile",
+     "warned": false,
+     "fax_only": false,
+     "care": true,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://www.dtdc.com/customer-care/",
+       "context": "team for assistance · Contact Us · + 91 - 9606 911 811 · customersupport@dtdc.com · --> Banglore, India",
+       "kind": "page",
+       "label": "care",
+       "scope": "main"
+      }
+     ]
+    },
+    {
+     "key": "8037681594",
+     "display": "+91 80376 81594",
+     "kind": "mobile",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://stores.dtdc.com/dtdc-retail-balrampur-azamgarh-courier-service-balrampur-azamgarh-563533/Timeline-Videos",
+       "context": "Balrampur Azamgarh - 276001. Infront Of ITI College. +918037681594. Opens at 10:00 AM. Sat 10:00 AM - 09:00 PM",
+       "kind": "snippet",
+       "label": "plain",
+       "scope": "local"
+      }
+     ]
+    },
+    {
+     "key": "8037681850",
+     "display": "+91 80376 81850",
+     "kind": "mobile",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://stores.dtdc.com/dtdc-retail-swami-vihar-haldwani-branch-courier-service-swami-vihar-nainital-563620/Home",
+       "context": "Road Swami Vihar Nainital - 263139. Near Suzuki Showroom. +918037681850. Opens at 09:00 AM. Sat 09:00 AM - 05:00 PM",
+       "kind": "snippet",
+       "label": "plain",
+       "scope": "local"
+      }
+     ]
+    },
+    {
+     "key": "8037681887",
+     "display": "+91 80376 81887",
+     "kind": "mobile",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://stores.dtdc.com/dtdc-retail-vazhu-thareddy-villupuram-courier-service-vazhu-thareddy-villupuram-563650/Timeline?page=5",
+       "context": "Thareddy Villupuram - 605602. Near Honda Service Center. +918037681887. Open until 09:00 PM Open Now",
+       "kind": "snippet",
+       "label": "plain",
+       "scope": "local"
+      }
+     ]
+    }
+   ],
+   "warned_numbers": [],
+   "official_numbers": [
+    {
+     "key": "9606911811",
+     "display": "+91 96069 11811",
+     "kind": "mobile",
+     "warned": false,
+     "fax_only": false,
+     "care": true,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://www.dtdc.com/customer-care/",
+       "context": "team for assistance · Contact Us · + 91 - 9606 911 811 · customersupport@dtdc.com · --> Banglore, India",
+       "kind": "page",
+       "label": "care",
+       "scope": "main"
+      }
+     ]
+    },
+    {
+     "key": "8037681594",
+     "display": "+91 80376 81594",
+     "kind": "mobile",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://stores.dtdc.com/dtdc-retail-balrampur-azamgarh-courier-service-balrampur-azamgarh-563533/Timeline-Videos",
+       "context": "Balrampur Azamgarh - 276001. Infront Of ITI College. +918037681594. Opens at 10:00 AM. Sat 10:00 AM - 09:00 PM",
+       "kind": "snippet",
+       "label": "plain",
+       "scope": "local"
+      }
+     ]
+    },
+    {
+     "key": "8037681850",
+     "display": "+91 80376 81850",
+     "kind": "mobile",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://stores.dtdc.com/dtdc-retail-swami-vihar-haldwani-branch-courier-service-swami-vihar-nainital-563620/Home",
+       "context": "Road Swami Vihar Nainital - 263139. Near Suzuki Showroom. +918037681850. Opens at 09:00 AM. Sat 09:00 AM - 05:00 PM",
+       "kind": "snippet",
+       "label": "plain",
+       "scope": "local"
+      }
+     ]
+    },
+    {
+     "key": "8037681887",
+     "display": "+91 80376 81887",
+     "kind": "mobile",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://stores.dtdc.com/dtdc-retail-vazhu-thareddy-villupuram-courier-service-vazhu-thareddy-villupuram-563650/Timeline?page=5",
+       "context": "Thareddy Villupuram - 605602. Near Honda Service Center. +918037681887. Open until 09:00 PM Open Now",
+       "kind": "snippet",
+       "label": "plain",
+       "scope": "local"
+      }
+     ]
+    },
+    {
+     "key": "8037681570",
+     "display": "+91 80376 81570",
+     "kind": "mobile",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://stores.dtdc.com/dtdc-retail-dwarka-sector-3-dwarka-courier-service-dwarka-sector-3-new-delhi-563595/Photos-Videos",
+       "context": "3. New Delhi - 110059. Behind Delhi Public School. +918037681570. Opens at 09:00 AM",
+       "kind": "snippet",
+       "label": "plain",
+       "scope": "local"
+      }
+     ]
+    },
+    {
+     "key": "8037681330",
+     "display": "+91 80376 81330",
+     "kind": "mobile",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://stores.dtdc.com/dtdc-retail-meera-bagh-meera-bagh-courier-service-meera-bagh-new-delhi-563740/Timeline-Videos",
+       "context": "Nangloi, Paschim Vihar Meera Bagh New Delhi - 110087. +918037681330. Closed for the day. Thu 10:00 AM - 07:00 PM; Fri 10:00 AM",
+       "kind": "snippet",
+       "label": "plain",
+       "scope": "local"
+      }
+     ]
+    },
+    {
+     "key": "8037681567",
+     "display": "+91 80376 81567",
+     "kind": "mobile",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://stores.dtdc.com/dtdc-retail-prayagipur-sultanpur-courier-service-prayagipur-sultanpur-563532/Timeline",
+       "context": "Prayagipur Sultanpur - 228001. Nearby Bikram Auto Agency. +918037681567. Opens at 10:00 AM",
+       "kind": "snippet",
+       "label": "plain",
+       "scope": "local"
+      }
+     ]
+    },
+    {
+     "key": "8037681064",
+     "display": "+91 80376 81064",
+     "kind": "mobile",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://stores.dtdc.com/dtdc-retail-vishram-colony-morya-heritage-courier-service-vishram-colony-indore-563465/Timeline-Videos",
+       "context": "Yeshwant Niwas Road Vishram Colony Indore - 452003. +918037681064. Opens at 10:00 AM Opening Soon. Sun 10:00 AM - 09:00 PM",
+       "kind": "snippet",
+       "label": "plain",
+       "scope": "local"
+      }
+     ]
+    },
+    {
+     "key": "8037837867",
+     "display": "+91 80378 37867",
+     "kind": "mobile",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://stores.dtdc.com/dtdc-retail-tulsi-nagar-berhampur-ccc-courier-service-tulsi-nagar-brahmapur-563518/Timeline",
+       "context": "Street Tulsi Nagar Brahmapur - 760001. Near Ram Mandir. +918037837867. Open until 09:00 PM Open Now. Sun Closed. Call Directions",
+       "kind": "snippet",
+       "label": "plain",
+       "scope": "local"
+      }
+     ]
+    },
+    {
+     "key": "8037681679",
+     "display": "+91 80376 81679",
+     "kind": "mobile",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://stores.dtdc.com/dtdc-retail-nehru-nagar-bhilai-ccc-courier-service-nehru-nagar-durg-563718/Timeline-Videos",
+       "context": "Highway Nehru Nagar Durg - 490001. Beside Dhillon Hotel. +918037681679. Opens at 10:00 AM. Sun Closed. Call Directions",
+       "kind": "snippet",
+       "label": "plain",
+       "scope": "local"
+      }
+     ]
+    },
+    {
+     "key": "8037681956",
+     "display": "+91 80376 81956",
+     "kind": "mobile",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://stores.dtdc.com/dtdc-retail-nizampur-akola-ccc-courier-service-nizampur-akola-563724/Timeline",
+       "context": "Road Nizampur Akola - 444001. Near New Kirana Market. +918037681956. Open until 07:30 PM Open Now",
+       "kind": "snippet",
+       "label": "plain",
+       "scope": "local"
+      }
+     ]
+    }
+   ],
+   "pages": [
+    {
+     "url": "https://www.dtdc.com/",
+     "final_url": "https://www.dtdc.com/in/",
+     "source": "cache",
+     "ms": 0,
+     "ok": true,
+     "error": null,
+     "title": "",
+     "chars": 9614
+    },
+    {
+     "url": "https://www.dtdc.com/customer-care/",
+     "final_url": "https://www.dtdc.com/customer-care/",
+     "source": "cache",
+     "ms": 0,
+     "ok": true,
+     "error": null,
+     "title": "",
+     "chars": 10426
+    },
+    {
+     "url": "https://www.dtdc.com/support-business-inquiry/",
+     "final_url": "https://edot.mydtdc.in/?utm_source=websitepages&utm_medium=Direct&utm_campaign=NA&utm_id=1&channel_code=",
+     "source": "cache",
+     "ms": 0,
+     "ok": true,
+     "error": null,
+     "title": "DTDC",
+     "chars": 12
+    },
+    {
+     "url": "https://www.dtdc.com/support-locate-us/",
+     "final_url": "https://www.dtdc.com/support-locate-us/",
+     "source": "cache",
+     "ms": 0,
+     "ok": true,
+     "error": null,
+     "title": "",
+     "chars": 4991
+    },
+    {
+     "url": "https://www.dtdc.com/support-service-guide/",
+     "final_url": "https://www.dtdc.com/support-service-guide/",
+     "source": "cache",
+     "ms": 0,
+     "ok": true,
+     "error": null,
+     "title": "",
+     "chars": 31427
+    }
+   ],
+   "pins": [
+    {
+     "title": "DTDC Express Limited, Super Hub - Delhi",
+     "phone_shown": "+91 931xx xxx08",
+     "website": "dtdc.in",
+     "website_status": "other",
+     "number_status": "not_on_official",
+     "rating": 3.6,
+     "reviews": 845,
+     "address": "D Block, NH 48, Samalka, New Delhi, Delhi 110097",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "DTDC Courier Service",
+     "phone_shown": "+91 995xx xxx57",
+     "website": "dtdc.com",
+     "website_status": "official",
+     "number_status": "not_on_official",
+     "rating": 3.5,
+     "reviews": 117,
+     "address": "METRO PILLAR NO.58, AGARWAL CHAMBER-1, Shop No.7,GROUND FLOOR, Near, Vikas Marg, Veer Sava",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "DTDC Courier Services",
+     "phone_shown": "011 4699 0067",
+     "website": null,
+     "website_status": "none",
+     "number_status": "not_on_official",
+     "rating": 3.5,
+     "reviews": 26,
+     "address": "J6HG+VVW, School Ln, Todermal Road Area, Mandi House, New Delhi, Delhi 110001",
+     "is_user_number": false,
+     "phone_kind": "landline"
+    },
+    {
+     "title": "DTDC",
+     "phone_shown": "+91 991xx xxx88",
+     "website": "dtdc.in",
+     "website_status": "other",
+     "number_status": "not_on_official",
+     "rating": 4.9,
+     "reviews": 917,
+     "address": "458/2A, Hanuman Mandir Rd, Chirag Dilli, New Delhi, Delhi 110017",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "DTDC Courier",
+     "phone_shown": "+91 981xx xxx15",
+     "website": null,
+     "website_status": "none",
+     "number_status": "not_on_official",
+     "rating": 4.7,
+     "reviews": 327,
+     "address": "IInd Floor, H L Plaza, Shop No. S-03, Plot No. 9, Sector 12 Dwarka, New Delhi, Delhi 11007",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "DTDC Courier",
+     "phone_shown": "",
+     "website": null,
+     "website_status": "none",
+     "number_status": "none",
+     "rating": 5,
+     "reviews": 107,
+     "address": "Shop No 5, Mahalaxmi Plaza, near Canara Bank, Sector 5, Rajendra Nagar, Sahibabad, Ghaziab",
+     "is_user_number": false,
+     "phone_kind": null
+    },
+    {
+     "title": "DTDC Vasundhara Sector 6 One Mart Mall",
+     "phone_shown": "+91 999xx xxx95",
+     "website": "grexa.site",
+     "website_status": "other",
+     "number_status": "not_on_official",
+     "rating": 5,
+     "reviews": 54,
+     "address": "Gf shop 41, one mart, Sector 4, Sector 6, Vasundhara, Ghaziabad, Uttar Pradesh 201012",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "DTDC Courier Delhi Janakpuri Vikaspuri Tilak Nagar Delhi",
+     "phone_shown": "+91 997xx xxx71",
+     "website": null,
+     "website_status": "none",
+     "number_status": "not_on_official",
+     "rating": 3.5,
+     "reviews": 51,
+     "address": "Keshopur Village, Vikaspuri, New Delhi, Delhi, 110018",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "DTDC COURIER NOIDA sector 63 sector 64 sector 65",
+     "phone_shown": "+91 956xx xxx60",
+     "website": null,
+     "website_status": "none",
+     "number_status": "not_on_official",
+     "rating": 4,
+     "reviews": 44,
+     "address": "C23 Basement, C Block, Sector 63, Noida, Uttar Pradesh 201309",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "Dtdc Courier Chatterpur",
+     "phone_shown": "+91 798xx xxx05",
+     "website": null,
+     "website_status": "none",
+     "number_status": "not_on_official",
+     "rating": 4.8,
+     "reviews": 42,
+     "address": "307, 205 Main Road, Block G, Chhatarpur, New Delhi, Delhi 110030",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "DTDC EXPRESS LTD.",
+     "phone_shown": "+91 931xx xxx69",
+     "website": null,
+     "website_status": "none",
+     "number_status": "not_on_official",
+     "rating": 4.9,
+     "reviews": 1052,
+     "address": "60/18, Jharsa Rd, Friends Colony, HVPNL Colony, Civil Lines, Sector 15, Gurugram, Haryana ",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "DTDC Courier Services",
+     "phone_shown": "+91 987xx xxx77",
+     "website": "dtdc.com",
+     "website_status": "official",
+     "number_status": "not_on_official",
+     "rating": 3,
+     "reviews": 34,
+     "address": "68, Gurudwara Rd, Block 35M, Teliwara, Shahdara, New Delhi, Delhi, 110005",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "DTDC - Mahipalpur",
+     "phone_shown": "011 4168 7105",
+     "website": "dtdc.com",
+     "website_status": "official",
+     "number_status": "not_on_official",
+     "rating": 4.2,
+     "reviews": 373,
+     "address": "G4VH+M87, Mahipalpur - Rangpuri Rd, K-Block, Mahipalpur Village, Mahipalpur, New Delhi, De",
+     "is_user_number": false,
+     "phone_kind": "landline"
+    },
+    {
+     "title": "DTDC Courier",
+     "phone_shown": "+91 704xx xxx73",
+     "website": null,
+     "website_status": "none",
+     "number_status": "not_on_official",
+     "rating": 4.9,
+     "reviews": 75,
+     "address": "Gate No.2, 187a, opposite max hospital, Hauz Rani, Malviya Nagar, New Delhi, Delhi 110017",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "DTDC",
+     "phone_shown": "+91 801xx xxx64",
+     "website": null,
+     "website_status": "none",
+     "number_status": "not_on_official",
+     "rating": 4.6,
+     "reviews": 243,
+     "address": "Shop No.- 7, 2nd Floor, DTDC Courier Service, Satyam Complex, 1, Pocket I, Block I, Sector",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "DTDC COURIER",
+     "phone_shown": "+91 896xx xxx85",
+     "website": "dtdc.com",
+     "website_status": "official",
+     "number_status": "not_on_official",
+     "rating": 4.7,
+     "reviews": 15,
+     "address": "SCO NO. 54, HUDA MARKET, Sector 23 Rd, near Ansal Plaza, near INDIAN OIL PETROL PUMP, Chom",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "Dtdc",
+     "phone_shown": "+91 959xx xxx29",
+     "website": "dtdc.in",
+     "website_status": "other",
+     "number_status": "not_on_official",
+     "rating": 4.8,
+     "reviews": 274,
+     "address": "L1/99a, DDA Flats Rd, DDA Flats Kalkaji, Block L 1, Kalkaji, New Delhi, Delhi 110019",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "DTDC EXPRESS LTD",
+     "phone_shown": "+91 798xx xxx93",
+     "website": null,
+     "website_status": "none",
+     "number_status": "not_on_official",
+     "rating": 3.8,
+     "reviews": 40,
+     "address": "5/9 , Gurunanak complex 103, Main, Saraswati Marg, WEA, Karol Bagh, New Delhi, Delhi 11000",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "DTDC",
+     "phone_shown": "+91 813xx xxx37",
+     "website": "dtdc.com",
+     "website_status": "official",
+     "number_status": "not_on_official",
+     "rating": 4.9,
+     "reviews": 54,
+     "address": "Gat No.1, 263 A/2, Hauz Rani Market Ln, opp. Max Hospital, Hauz Rani, Saket, New Delhi, De",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "DTDC Courier",
+     "phone_shown": "+91 981xx xxx60",
+     "website": "instagram.com",
+     "website_status": "other",
+     "number_status": "not_on_official",
+     "rating": 4.6,
+     "reviews": 183,
+     "address": "shop no.1 Street Number 4 (gali no. 4, koyle wali gali, near gurgaon bus stand, Fountain C",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    }
+   ],
+   "pin_stats": {
+    "total": 20,
+    "judged": true,
+    "official_number": 0,
+    "number_not_on_official": 19,
+    "website_not_official": 5,
+    "no_website": 10,
+    "user_number_pins": 0
+   },
+   "google_view": {
+    "results": 10,
+    "directory": 9,
+    "directory_domains": [
+     "justdial.com"
+    ],
+    "official_rank": 2,
+    "top": [
+     {
+      "title": "Find list of Dtdc Express in Chennai",
+      "domain": "justdial.com",
+      "link": "https://www.justdial.com/Chennai/DTDC-Express/nct-12099339",
+      "directory": true,
+      "official": false
+     },
+     {
+      "title": "https://frplus.dtdc.com/default.asp",
+      "domain": "dtdc.com",
+      "link": "https://frplus.dtdc.com/default.asp",
+      "directory": false,
+      "official": true
+     },
+     {
+      "title": "DTDC Express Ltd - Courier Services In Chennai",
+      "domain": "justdial.com",
+      "link": "https://www.justdial.com/Chennai/DTDC-Express-Ltd-Behind-Naidu-Hall-T-Nagar/044PPE00989_BZDET/contact",
+      "directory": true,
+      "official": false
+     },
+     {
+      "title": "DTDC Express Ltd - Courier Services In Chennai",
+      "domain": "justdial.com",
+      "link": "https://www.justdial.com/Chennai/DTDC-Express-Ltd-Near-Old-Herbal-Telephone-Near-Krishnan-Koil-Street-Armenian-Street-Mint-Mint/044PXX44-XX44-181026202218-I3S9_BZDET/contact",
+      "directory": true,
+      "official": false
+     },
+     {
+      "title": "DTDC Express Ltd - Courier Services in Selaiyur",
+      "domain": "justdial.com",
+      "link": "https://www.justdial.com/Chennai/DTDC-Express-Ltd-Near-Gupta-Sweets-Sri-Bhavan-Hotel-Selaiyur/044PXX44-XX44-120420164640-H6K5_BZDET/contact",
+      "directory": true,
+      "official": false
+     }
+    ]
+   },
+   "mentions": [
+    {
+     "url": "https://www.instagram.com/p/DR4NO4akl55/",
+     "domain": "instagram.com",
+     "title": "+91 96069 11811 | customersupport@dtdc.com Thank you ...",
+     "snippet": "We're committed to keeping your shipments moving. For assistance, please reach out to Customer Care: +91 96069 11811 | customersupport@dtdc.com",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": []
+    },
+    {
+     "url": "https://nfc.dgtechsoln.com/dtdc-couriers-electronic-city/",
+     "domain": "dgtechsoln.com",
+     "title": "DTDC Couriers – ELECTRONIC CITY",
+     "snippet": "9606911811 · 9606911811 · customersupport@dtdc.com · Site No 30 /28 Shop No 10, First Floor Hulimangala Road, Neotown Electronic City, Bengaluru, Karnataka ...",
+     "official": false,
+     "directory": false,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": []
+    },
+    {
+     "url": "https://www.facebook.com/DTDC.Official/posts/we-apologize-for-this-temporary-inconvenience-and-are-working-tirelessly-to-get-/1234152458882603/",
+     "domain": "facebook.com",
+     "title": "DTDC Express Limited",
+     "snippet": "Our team is here to support you. Reach out on +91 96069 11811 or customersupport@dtdc.com #DTDC #UAE #Canda ...",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": []
+    },
+    {
+     "url": "https://x.com/DTDCIndia/status/1828011282324451676",
+     "domain": "x.com",
+     "title": "Post",
+     "snippet": "Please note that our official website is dtdc.in and our customer support number is 9606911811. DTDC never asks for any money other than COD ...",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": []
+    },
+    {
+     "url": "https://www.linkedin.com/showcase/dtdc-support/",
+     "domain": "linkedin.com",
+     "title": "DTDC Support",
+     "snippet": "Welcome to the support page of DTDC, India's leading express logistics provider. www.dtdc.com +919606911811 · Report this product · Close menu ...",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": []
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=SlAt4gCHN6I&xstg=CAMSBhUDze3xHw%3D%3D",
+     "domain": "youtube.com",
+     "title": "How to Track your parcel in \"DTDC Courier\"",
+     "snippet": "... 9606911811 Here we provide a guide on How to Track DTDC Parcel from Official Website, so you can get a point to Track your shipment by ...",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": []
+    },
+    {
+     "url": "https://www.instagram.com/p/DWlC5SHk7cV/",
+     "domain": "instagram.com",
+     "title": "Our team is here to support you reach out on +91 ...",
+     "snippet": "Our team is here to support you reach out on +91 9606911811 or customer support @dtdc.com · #dtdchangal #dtdc #uae #canda #dtdcindia · March 31 ...",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": []
+    },
+    {
+     "url": "https://www.instagram.com/reel/DJ4mutGSJQl/",
+     "domain": "instagram.com",
+     "title": "🇨‌🇦‌🇷‌ 🇵‌🇱‌🇺‌🇸‌ 🇷‌🇦‌🇳‌🇨‌🇭‌🇮‌ | Scorpio welcome sound installation in ...",
+     "snippet": "... Risk Surcharge K72920052 Owner gaasary 9606911811 Carrier SENDER COPY Jan 2024 7004882837. carplusranchi's profile picture · carplusranchi. •.",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": []
+    }
+   ],
+   "summary": "The number +91 96069 11811 is printed on DTDC's official website dtdc.com. DTDC's official website also prints +91 80376 81594.",
+   "summary_source": "llm:cache",
+   "credits_spent": 0,
+   "searches": 4,
+   "ms": 17
+  }
+ },
+ {
+  "event": "done",
+  "data": {
+   "credits_spent": 0,
+   "ms": 17
+  }
+ }
+]

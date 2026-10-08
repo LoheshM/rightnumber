@@ -44,8 +44,6 @@ def test_registrable_rejects(value):
     assert registrable(value) is None
 
 
-@pytest.mark.xfail(strict=True, reason="BUG: registrable() accepts hosts with spaces and bare public suffixes, "
-                                       "so ?domain=co.in or 'exa mple.com' pass the API's domain validation")
 @pytest.mark.parametrize("value", ["https://exa mple.com", "co.in", "gov.in", "foo bar.com"])
 def test_bug_registrable_accepts_invalid_hosts(value):
     assert registrable(value) is None
@@ -143,8 +141,6 @@ def test_is_lookalike(domain, expected):
     assert is_lookalike(domain, "Blue Dart", {"bluedart.com"}) is expected
 
 
-@pytest.mark.xfail(strict=True, reason="BUG: 'corporation' is not in _GENERIC, so every *corporation* domain looks "
-                                       "like a Life Insurance Corporation of India lookalike")
 def test_bug_lic_generic_token():
     assert "corporation" not in brand_tokens("Life Insurance Corporation of India")
     assert not is_lookalike("corporationbank.in", "Life Insurance Corporation of India", {"licindia.in"})

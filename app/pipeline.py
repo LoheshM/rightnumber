@@ -25,7 +25,7 @@ from urllib.parse import urlsplit
 from . import evidence as ev
 from .domains import is_directory, registrable
 from .llm import LLM
-from .official import OfficialDecision, decide
+from .official import OfficialDecision, candidates, decide
 from .pages import Page, PageReader, contact_links, is_contactish, link_score, page_id
 from .phones import Phone, parse_user_number
 from .serp import (
@@ -82,8 +82,10 @@ SUMMARY_SCHEMA = {
     "additionalProperties": False,
 }
 SUMMARY_SYSTEM = (
-    "You write for RightNumber, a neutral Indian helpline checker. You get FACTS that are already correct. "
-    "Write 'summary': at most 2 short sentences in plain English for a worried, non-technical person. Copy "
+    "You write for RightNumber, a neutral Indian helpline checker. You get FACTS: correct sentences written by "
+    "code. Write 'summary': at most 2 short sentences in plain English for a worried, non-technical person, by "
+    "shortening and merging the most important FACTS (the verdict on the number first, then what to call). Add "
+    "no information that is not in a FACT sentence. Copy "
     "phone numbers and counts exactly as written in FACTS; never invent or alter a number, and never add a "
     "number that is not in FACTS. Stay neutral and factual: never use the words fake, scam, fraud, "
     "counterfeit, cheat, safe or guarantee, and never speculate about anyone's intent. State only what a FACTS "
@@ -172,7 +174,12 @@ async def run(brand: str, number_text: str | None, city: str | None, deps: Deps,
 
     # 2. Official domain --------------------------------------------------------------------------
     await step("domain", "Working out the brand's official website")
-    decision = decide(brand, pins_raw, brand_search, model_domains, user_domain)
+    cands = candidates(brand, pins_raw, brand_search, model_domains)
+    alias: dict[str, str] = {}
+    if len(cands) > 1:  # the same site under two names (dtdc.in -> dtdc.com) must not split the vote
+        finals = await asyncio.gather(*(deps.pages.resolve_alias(d) for d in cands[:5]))
+        alias = {d: f for d, f in zip(cands, finals, strict=False) if f and f != d}
+    decision = decide(brand, pins_raw, brand_search, model_domains, user_domain, alias)
     if model_source in ("unavailable", "error") and not user_domain:
         decision.votes.setdefault("(model)", ["model: not available — only search sources were used"])
     site_results: list[dict[str, Any]] = []
@@ -200,7 +207,9 @@ async def run(brand: str, number_text: str | None, city: str | None, deps: Deps,
     official: set[str] = {decision.domain} if decision.domain else set()
     official |= {d for d in (registrable(p.final_url) for p in pages if p.ok and p.text) if d}
     # Snippets of the brand's own pages from both searches (free: already fetched) plus the pages read directly.
-    own_snippets = site_results + [r for r in (brand_search.get("organic_results") or []) if isinstance(r, dict)]
+    # PDFs are skipped: they are often years-old documents (an investor-call dial-in list from 2015).
+    own_snippets = [r for r in site_results + (brand_search.get("organic_results") or [])
+                    if isinstance(r, dict) and not str(r.get("link", "")).lower().split("?")[0].endswith(".pdf")]
     numbers = ev.official_numbers(pages, own_snippets, official, brand) if decision.established else {}
     pages_ok = sum(1 for p in pages if p.ok and p.text)
     call_instead = ev.callable_numbers(numbers)
@@ -291,30 +300,44 @@ async def _read_official_pages(reader: PageReader, dom: str, brand: str, pins: l
 
 def _facts(brand: str, city: str, user: Phone | None, decision: OfficialDecision, verdict: dict | None,
            call_instead: list[ev.OfficialNumber], pin_stats: dict, gview: dict, mention_list: list) -> dict:
+    """Facts as complete sentences written by code. The LLM may only shorten and merge them: a bare
+    "pins: 20" once came back as "your number appears on 20 pins"."""
+    dom = decision.domain
     complaint = next((m for m in mention_list if m.complaint and not m.official), None)
-    return {
-        "brand": brand,
-        "official_website": decision.domain or "not established",
-        "your_number": user.display if user else None,
-        "verdict": verdict["title"] if verdict else None,
-        "call_instead": [f"{o.phone.display} (printed on {registrable(o.sources[0].url)})" for o in call_instead[:2]],
-        "maps_pins_near_" + city.lower(): pin_stats["total"],
-        "pins_showing_a_number_not_on_official_pages": pin_stats["number_not_on_official"] if pin_stats["judged"] else "unknown",
-        "pins_whose_website_is_not_official": pin_stats["website_not_official"] if pin_stats["judged"] else "unknown",
-        "top10_google_results_from_directory_sites": gview["directory"],
-        "complaint_text_naming_your_number_found_on": complaint.domain if complaint else None,
-        "other_known_brands_whose_helpline_web_text_says_is_your_number": (verdict or {}).get("other_brands") or None,
-    }
+    label = (verdict or {}).get("label")
+    s: list[str] = []
+    if user:
+        s.append(f"The number checked is {user.display}.")
+        if label == "on_official_site":
+            s.append(f"{brand}'s official website {dom} prints this exact number.")
+        elif label == "warned_on_official_site":
+            s.append(f"{dom} mentions this number only inside a fraud warning.")
+        elif label == "other_org_on_official_site":
+            s.append(f"{dom} lists this number as another organisation's helpline, not {brand}'s.")
+        elif dom and label != "no_official_source":
+            s.append(f"This number is not printed on the {dom} pages that were read.")
+        else:
+            s.append(f"No official {brand} page could be read to compare this number with.")
+        if complaint:
+            s.append(f"Text on {complaint.domain} names this exact number in a complaint.")
+        if (verdict or {}).get("other_brands"):
+            s.append("Web pages advertise this same number as the helpline of "
+                     f"{', '.join(verdict['other_brands'])}; a genuine helpline belongs to one company.")
+    if call_instead:
+        nums = " or ".join(o.phone.display for o in call_instead[:2])
+        s.append(f"Numbers printed on {brand}'s official website {dom}: {nums}.")
+    elif dom:
+        s.append(f"No phone number could be copied from {dom}; use the number on your bill, card, ticket or app.")
+    else:
+        s.append(f"{brand}'s official website could not be established from the search results.")
+    return {"sentences": s, "brand": brand}
 
 
 def _template(f: dict) -> str:
-    if f["your_number"] and f["verdict"]:
-        first = f"{f['your_number']}: {f['verdict'].lower()}."
-    else:
-        first = f"Official website for {f['brand']}: {f['official_website']}."
-    if f["call_instead"]:
-        return f"{first} Numbers printed on the official site: {', '.join(f['call_instead'])}."
-    return f"{first} We couldn't read an official number from the brand's own pages — use the number on your bill, card or app."
+    """No LLM (or its text failed validation): the code-written sentences themselves, minus the
+    "The number checked is …" opener the UI already shows in large type."""
+    s = f["sentences"]
+    return " ".join(s[1:] if s and s[0].startswith("The number checked is") else s)
 
 
 def summary_ok(text: str, facts: dict) -> bool:

@@ -28,11 +28,39 @@ REPORT_FRAUD = re.compile(r"(?<![a-z])(report\w*\s+(?:[\w,]+\s+){0,4}(?:fraud\w*
 OTHER_ORG = re.compile(r"(?<![a-z])(google ?pay|gpay|phone ?pe|paytm|whatsapp|mobikwik|amazon ?pay|bhim|npci|cred|"
                        r"freecharge|partner\w*|reserve bank|rbi|sebi|irdai|uidai|cyber ?crime|police|ombudsman|"
                        r"sachet|national consumer|nch)(?![a-z])", re.IGNORECASE)
+# Public emergency / government lines a brand page may mention ("call 112 for emergencies") — never the brand's.
+EMERGENCY = {"100", "101", "102", "108", "112", "1091", "1098", "1930", "1915", "14448", "155260", "1800", "1860"}
 SHORT_CODE = re.compile(r"(?i)(?:customer care|helpline|help line|toll[- ]?free|call|dial)(?: no\.?| number| us)?"
                         r"(?: on| at)?\s*[:\-]?\s*(1\d{2,4})(?!\d)(?!\s?[\-.]?\s?\d)(?![/]\d)(?!,\d{3}(?!\d))")
 FAX_BEFORE = re.compile(r"(?<![a-z])fax(?: no\.?| number)?\s*[:.\-]?\s*$", re.IGNORECASE)
 CARE_NEAR = re.compile(r"(?<![a-z])(customer (?:care|service|support)|toll[- ]?free|helpline|help ?line|call us|"
                        r"official (?:number|helpline)|support|assistance|enquir\w*|grievance)(?![a-z])", re.IGNORECASE)
+
+
+_B2B_URL = re.compile(r"(?:^|[./-])(sell|seller\w*|vendor\w*|supplier\w*|partner\w*|advertis\w*|affiliate\w*|"
+                      r"developer\w*|investor\w*|careers?|jobs|business|corporate|b2b|ir)(?:[./-]|$)", re.IGNORECASE)
+_LOCAL_URL = re.compile(r"(?:^|[./-])(stores?|branch\w*|locator|locate|outlets?|dealers?|franchise\w*|atm|"
+                        r"retail-point|centres?|centers?)(?:[./-]|$)", re.IGNORECASE)
+
+
+# Pages on the official domain written by *other people*: marketplace listings, reviews, Q&A, forums, blogs.
+# A seller can type "Amazon customer care: 9xxxxxxxxx" into a product description on amazon.in.
+_UGC_URL = re.compile(r"(?:/dp/|/gp/product|/gp/aw/d|/gp/customer-reviews|/product-reviews|/products?/|/itm|/p/|"
+                      r"/reviews?(?:/|$)|/questions?|/answers?|/forums?|/community|/discussions?|/threads?|/blogs?/|"
+                      r"/stores/page|/sp(?:/|$)|^(?:community|forum|forums|answers|blog|blogs|help-community)\.)", re.IGNORECASE)
+
+
+def url_scope(url: str) -> str:
+    """Who wrote / who reads a page on the official site: the brand for everyone (main), one branch or store
+    (local), businesses (b2b), or other people entirely (ugc: listings, reviews, forums — never official)."""
+    u = re.sub(r"^https?://", "", (url or "").lower()).split("?")[0]
+    if _UGC_URL.search(u) or _UGC_URL.search("/" + u.split("/", 1)[-1]):
+        return "ugc"
+    if _B2B_URL.search(u):
+        return "b2b"
+    if _LOCAL_URL.search(u):
+        return "local"
+    return "main"
 
 
 @dataclass
@@ -42,21 +70,45 @@ class Source:
     kind: str  # page | snippet
     label: str = "plain"  # care | plain | fax | warning | other_org
 
+    @property
+    def scope(self) -> str:
+        return url_scope(self.url)
+
     def to_dict(self) -> dict[str, str]:
-        return {"url": self.url, "context": self.context, "kind": self.kind, "label": self.label}
+        return {"url": self.url, "context": self.context, "kind": self.kind, "label": self.label,
+                "scope": self.scope}
+
+
+_SENTENCE_END = re.compile(r"(?<=[A-Za-z0-9)])[.!?](?=\s+[A-Z])")  # "...9123456780. Our customer care..."
+_BLOCK_END = re.compile(r"\s\.\s")  # block separator left by html_to_text (table cells, list items)
+
+
+def _clip(text: str, start: int, end: int, before: int, after: int, blocks: bool = False) -> str:
+    """The words around a number, cut at sentence ends so a label never leaks into the next sentence.
+
+    Block separators also cut when `blocks` is set: a warning in one list item must not taint the next
+    item, while a label cell ("Customer service:") legitimately sits in the block before its number."""
+    rxs = [_SENTENCE_END, _BLOCK_END] if blocks else [_SENTENCE_END]
+    a, b = max(0, start - before), min(len(text), end + after)
+    for rx in rxs:  # search the full string with bounds so lookbehinds see the digit before a "."
+        for m in rx.finditer(text, a, start):
+            a = m.end()
+        first = rx.search(text, end, b)
+        if first is not None:
+            b = first.start()
+    return text[a:b]
 
 
 def _label(text: str, start: int, end: int, brand_toks: tuple[str, ...] = ()) -> str:
     if FAX_BEFORE.search(text[max(0, start - 14):start]):
         return "fax"
-    before = text[max(0, start - 45):start]
+    before = _clip(text, start, start, 45, 0)
     org = [m.group(0) for m in OTHER_ORG.finditer(before)]
     if org and not any(t in o.lower().replace(" ", "") for o in org for t in brand_toks):
         return "other_org"
     if _is_warning(text, start, end):
         return "warning"
-    if CARE_NEAR.search(text[max(0, start - 80):min(len(text), end + 20)]) or REPORT_FRAUD.search(
-            text[max(0, start - 160):min(len(text), end + 30)]):
+    if CARE_NEAR.search(_clip(text, start, end, 80, 20)) or REPORT_FRAUD.search(_clip(text, start, end, 160, 30)):
         return "care"
     return "plain"
 
@@ -92,9 +144,9 @@ class OfficialNumber:
 
 
 def _is_warning(text: str, start: int, end: int) -> bool:
-    near = text[max(0, start - 90):min(len(text), end + 60)]
-    close = text[max(0, start - 45):min(len(text), end + 25)]
-    if REPORT_FRAUD.search(text[max(0, start - 160):min(len(text), end + 30)]):
+    near = _clip(text, start, end, 90, 60, blocks=True)
+    close = _clip(text, start, end, 45, 25, blocks=True)
+    if REPORT_FRAUD.search(_clip(text, start, end, 160, 30)):
         return False
     return bool(WARNING_NEAR.search(near)) and not OFFICIAL_NEAR.search(close)
 
@@ -119,14 +171,18 @@ def official_numbers(pages: list[Any], site_results: list[dict[str, Any]], offic
             add(ph, Source(url, context(text, a, b), kind, _label(text, a, b, toks)))
         # Short codes (14646, 1906, 139) only when the site itself labels them as a helpline.
         for m in SHORT_CODE.finditer(text):
-            add(Phone(m.group(1), "short"), Source(url, context(text, m.start(1), m.end(1)), kind, "care"))
+            if m.group(1) in EMERGENCY:
+                continue
+            lab = _label(text, m.start(1), m.end(1), toks)
+            add(Phone(m.group(1), "short"), Source(url, context(text, m.start(1), m.end(1)), kind,
+                                                   "care" if lab == "plain" else lab))
 
     for pg in pages:
-        if not pg.ok or registrable(pg.final_url) not in official:
+        if not pg.ok or registrable(pg.final_url) not in official or url_scope(pg.final_url) == "ugc":
             continue
         scan(pg.text, pg.final_url, "page")
     for r in site_results:
-        if registrable(r.get("link")) not in official:
+        if registrable(r.get("link")) not in official or url_scope(r.get("link", "")) == "ugc":
             continue
         scan(f"{r.get('title', '')} . {r.get('snippet', '')}", r["link"], "snippet")
     # A number the site only ever shows inside fraud warnings is not an official number.
@@ -138,9 +194,15 @@ def callable_numbers(found: dict[str, OfficialNumber]) -> list[OfficialNumber]:
 
     Fax lines and numbers the site only mentions inside fraud warnings are never suggested."""
     good = [o for o in found.values()
-            if not o.warned and not o.fax_only and not o.other_org]
-    rank = {"short": 0, "tollfree": 0, "landline": 1, "mobile": 2}
-    return sorted(good, key=lambda o: (not o.care, rank.get(o.phone.kind, 3), -len(o.sources),
+            if not o.warned and not o.fax_only and not o.other_org
+            and any(s.scope != "b2b" for s in o.sources)]  # seller/partner/investor desks aren't for customers
+    rank = {"tollfree": 0, "short": 1, "landline": 1, "mobile": 2}
+
+    def main(o: OfficialNumber) -> bool:
+        return any(s.scope == "main" for s in o.sources)
+
+    # A branch/store page's number is suggested only after numbers the brand publishes for everyone.
+    return sorted(good, key=lambda o: (not main(o), not o.care, rank.get(o.phone.kind, 3), -len(o.sources),
                                        0 if any(s.kind == "page" for s in o.sources) else 1))
 
 
@@ -206,7 +268,7 @@ def mentions(results: list[dict[str, Any]], number: Phone, official: set[str], e
              brand: str = "") -> list[Mention]:
     """Search results whose own title/snippet literally contains the number (after normalisation)."""
     out = []
-    for r in results:
+    for r in (x for x in results if isinstance(x, dict)):
         title, snip = r.get("title") or "", r.get("snippet") or ""
         text = f"{title} . {snip}"
         hits = [(a, b) for ph, a, b in find_phones(text) if ph.key == number.key]
@@ -272,7 +334,7 @@ def audit_pins(pins: list[dict[str, Any]], official: set[str], numbers: dict[str
 
 def google_view(brand_search: dict[str, Any], official: set[str]) -> dict[str, Any]:
     """What a victim's own search shows: how much of the top 10 is directories, where the brand ranks."""
-    org = (brand_search.get("organic_results") or [])[:10]
+    org = [r for r in (brand_search.get("organic_results") or []) if isinstance(r, dict)][:10]
     doms = [registrable(r.get("link")) or "" for r in org]
     directory = sum(1 for d in doms if is_directory(d))
     top_dirs = [d for d in dict.fromkeys(d for d in doms if is_directory(d))]

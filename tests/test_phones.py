@@ -114,8 +114,6 @@ def test_rejected_user_input(text):
     assert parse_user_number(text) is None
 
 
-@pytest.mark.xfail(strict=True, reason="BUG: classify() rejects every 10-digit NSN starting with 1, so Delhi "
-                                       "(011) and other 01x STD landlines are never parsed")
 @pytest.mark.parametrize("text,key", [
     ("011-2345 6789", "1123456789"),
     ("011 2345 6789", "1123456789"),
@@ -127,13 +125,10 @@ def test_bug_delhi_and_01x_landlines(text, key):
     assert ph is not None and ph.kind == "landline" and ph.key == key
 
 
-@pytest.mark.xfail(strict=True, reason="BUG: Delhi landline in free text is dropped (011 code starts with 1)")
 def test_bug_delhi_landline_in_text():
     assert keys("Delhi office: 011-2345 6789") == ["1123456789"]
 
 
-@pytest.mark.xfail(strict=True, reason="BUG: parse_user_number('+91 1800 209 1234') is None although "
-                                       "find_phones accepts the same spelling in text")
 def test_bug_plus91_tollfree_user_input():
     assert keys("+91 1800 209 1234") == ["18002091234"]  # passes today
     assert parse_user_number("+91 1800 209 1234") == Phone("18002091234", "tollfree")
@@ -272,9 +267,6 @@ def test_extract_rejects(text):
     assert extract_phones(text) == []
 
 
-@pytest.mark.xfail(strict=True, reason="BUG: the fractional part of a decimal ('3.9876543210') is extracted as a "
-                                       "mobile number; '.' is an allowed in-number separator so the run after it "
-                                       "starts a new number")
 @pytest.mark.parametrize("text", ["Growth was 3.9876543210 times", "pi ~ 3.9876543210"])
 def test_bug_decimal_fraction_extracted(text):
     assert extract_phones(text) == []
@@ -318,7 +310,7 @@ def test_contains_number():
 @pytest.mark.parametrize("phone,display", [
     (Phone("9876543210", "mobile"), "+91 98765 43210"),
     (Phone("18602331234", "tollfree"), "1860 233 1234"),
-    (Phone("1800102123", "tollfree"), "1800 102 123"),
+    (Phone("1800102123", "tollfree"), "1800 10 2123"),
     (Phone("2240611234", "landline", 2), "022 4061 1234"),
     (Phone("2240611234", "landline"), "022 4061 1234"),
     (Phone("8041234567", "landline", 2), "080 4123 4567"),

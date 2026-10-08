@@ -54,26 +54,39 @@ def _local_pack(g: dict[str, Any]) -> list[dict[str, Any]]:
 def google_domains(g: dict[str, Any], brand: str) -> dict[str, str]:
     """Domains the brand's Google results point to, with a short reason each."""
     out: dict[str, str] = {}
-    kg = g.get("knowledge_graph") or {}
+    kg = g.get("knowledge_graph") if isinstance(g.get("knowledge_graph"), dict) else {}
     d = registrable(kg.get("website"))
     if d and not is_directory(d):
         out[d] = "knowledge-graph website"
-    for p in _local_pack(g):
+    for p in (x for x in _local_pack(g) if isinstance(x, dict)):
         d = registrable(p.get("website") or (p.get("links") or {}).get("website"))
         if d and not is_directory(d) and mentions_brand(d, brand):
             out.setdefault(d, "Google local-pack website")
-    for r in (g.get("organic_results") or [])[:10]:
+    for r in [x for x in (g.get("organic_results") or []) if isinstance(x, dict)][:10]:
         d = registrable(r.get("link"))
         if d and not is_directory(d) and mentions_brand(d, brand):
             out.setdefault(d, f"organic result #{r.get('position', '?')}")
     return out
 
 
+def candidates(brand: str, pins: list[dict[str, Any]], brand_search: dict[str, Any], model_domains: list[str]) -> list[str]:
+    """Every domain that could receive a vote (used to resolve redirect aliases before voting)."""
+    dom, _, _ = maps_majority(pins)
+    out = [dom] if dom else []
+    out += list(google_domains(brand_search, brand)) + [registrable(d) for d in model_domains[:2]]
+    return [d for d in dict.fromkeys(out) if d]
+
+
 def decide(brand: str, pins: list[dict[str, Any]], brand_search: dict[str, Any], model_domains: list[str],
-           user_domain: str | None = None) -> OfficialDecision:
+           user_domain: str | None = None, alias: dict[str, str] | None = None) -> OfficialDecision:
+    """`alias` maps a domain to the domain it redirects to (dtdc.in -> dtdc.com, hdfcbank.com -> hdfc.bank.in),
+    so the same site reached under two names gets one combined vote."""
     votes: dict[str, dict[str, str]] = {}
+    alias = alias or {}
 
     def vote(dom: str | None, family: str, why: str) -> None:
+        if dom and dom in alias and not is_directory(alias[dom]):
+            why, dom = f"{why} ({dom} redirects here)", alias[dom]
         if dom and not is_directory(dom):
             votes.setdefault(dom, {}).setdefault(family, why)
 

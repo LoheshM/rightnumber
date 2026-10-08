@@ -33,7 +33,7 @@ _GENERIC = {
     "services", "support", "helpline", "number", "limited", "ltd", "private", "pvt", "the", "and", "of",
     "online", "official", "courier", "insurance", "finance", "group", "company", "corp", "help", "contact",
     "refund", "toll", "free", "mobile", "app", "store", "shop", "pay", "card", "cards", "state", "national",
-    "new", "first", "central", "general", "life",
+    "new", "first", "central", "general", "life", "corporation",
 }
 
 
@@ -49,8 +49,10 @@ def registrable(url_or_host: str | None) -> str | None:
     except ValueError:
         return None
     host = host.strip(".")
-    if not host or "." not in host or re.fullmatch(r"[\d.]+", host):
+    if not host or "." not in host or re.fullmatch(r"[\d.]+", host) or host in _TWO_LEVEL:
         return None
+    if not re.fullmatch(r"[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?(?:\.[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?)+", host):
+        return None  # spaces, underscores, other junk
     parts = host.split(".")
     if len(parts) >= 3 and ".".join(parts[-2:]) in _TWO_LEVEL:
         return ".".join(parts[-3:])

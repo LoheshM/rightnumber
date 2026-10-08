@@ -1,0 +1,451 @@
+[
+ {
+  "event": "start",
+  "data": {
+   "brand": "Amazon",
+   "city": "Bengaluru",
+   "number": "080 6605 5000",
+   "number_kind": "landline",
+   "mode": "auto"
+  }
+ },
+ {
+  "event": "step",
+  "data": {
+   "id": "gather",
+   "label": "Searching Google Maps, Google and your number the web",
+   "status": "running"
+  }
+ },
+ {
+  "event": "serp_call",
+  "data": {
+   "engine": "google_maps",
+   "purpose": "Maps pins for “Amazon customer care” near Bengaluru",
+   "params": {
+    "type": "search",
+    "q": "Amazon customer care",
+    "ll": "@12.9716,77.5946,12z",
+    "hl": "en",
+    "gl": "in"
+   },
+   "source": "cache",
+   "ms": 0,
+   "ok": true,
+   "error": null,
+   "result_count": 0,
+   "credit": false
+  }
+ },
+ {
+  "event": "serp_call",
+  "data": {
+   "engine": "google",
+   "purpose": "What Google shows for “Amazon customer care number”",
+   "params": {
+    "q": "Amazon customer care number",
+    "gl": "in",
+    "hl": "en",
+    "google_domain": "google.co.in"
+   },
+   "source": "cache",
+   "ms": 0,
+   "ok": true,
+   "error": null,
+   "result_count": 10,
+   "credit": false
+  }
+ },
+ {
+  "event": "serp_call",
+  "data": {
+   "engine": "google",
+   "purpose": "Where 080 6605 5000 appears on the web",
+   "params": {
+    "q": "\"08066055000\" OR \"080 6605 5000\" OR \"080-66055000\" OR \"+91 80 66055000\"",
+    "gl": "in",
+    "hl": "en",
+    "google_domain": "google.co.in"
+   },
+   "source": "cache",
+   "ms": 0,
+   "ok": true,
+   "error": null,
+   "result_count": 10,
+   "credit": false
+  }
+ },
+ {
+  "event": "step",
+  "data": {
+   "id": "gather",
+   "label": "Found 4 Maps pins and 10 Google results",
+   "status": "done"
+  }
+ },
+ {
+  "event": "step",
+  "data": {
+   "id": "domain",
+   "label": "Working out the brand's official website",
+   "status": "running"
+  }
+ },
+ {
+  "event": "serp_call",
+  "data": {
+   "engine": "google",
+   "purpose": "The brand's own contact pages on amazon.in",
+   "params": {
+    "q": "site:amazon.in customer care contact number",
+    "gl": "in",
+    "hl": "en",
+    "google_domain": "google.co.in"
+   },
+   "source": "cache",
+   "ms": 0,
+   "ok": true,
+   "error": null,
+   "result_count": 10,
+   "credit": false
+  }
+ },
+ {
+  "event": "page_read",
+  "data": {
+   "url": "https://www.amazon.in/",
+   "final_url": "https://www.amazon.in/",
+   "source": "cache",
+   "ms": 0,
+   "ok": true,
+   "error": null,
+   "title": "",
+   "chars": 1
+  }
+ },
+ {
+  "event": "page_read",
+  "data": {
+   "url": "https://www.amazon.in/live/video/12d08297c26349689e8fde6a4f74a3e2",
+   "final_url": "https://www.amazon.in/live/video/12d08297c26349689e8fde6a4f74a3e2",
+   "source": "cache",
+   "ms": 0,
+   "ok": true,
+   "error": null,
+   "title": "Watch Repair customer care number please on Amazon Live",
+   "chars": 2811
+  }
+ },
+ {
+  "event": "page_read",
+  "data": {
+   "url": "https://sellercentral.amazon.in/seller-forums/discussions/t/7a8bab01-078b-4643-b651-d539f3b6b112",
+   "final_url": "https://sellercentral.amazon.in/seller-forums/discussions/t/7a8bab01-078b-4643-b651-d539f3b6b112",
+   "source": "cache",
+   "ms": 0,
+   "ok": true,
+   "error": null,
+   "title": "Escalation: EasyShip Pickup Failure &amp; Customer Care Misconduct – Urgent Action Required",
+   "chars": 13845
+  }
+ },
+ {
+  "event": "page_read",
+  "data": {
+   "url": "https://www.amazon.in/your-product-safety-alerts?ref_=footer_bsx_ypsa",
+   "final_url": "https://www.amazon.in/ap/signin?openid.pape.max_auth_age=3600&openid.return_to=https%3A%2F%2Famazon.in%2Fyour-product-safety-alerts%3Fref_%3Dfooter_bsx_ypsa&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=amzn_yourrecalls_in&openid.mode=checkid_setup&language=en_IN&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0",
+   "source": "cache",
+   "ms": 0,
+   "ok": true,
+   "error": null,
+   "title": "Sign in",
+   "chars": 2619
+  }
+ },
+ {
+  "event": "page_read",
+  "data": {
+   "url": "https://www.amazon.in/gp/help/customer/display.html?nodeId=200507590&ref_=nav_cs_help",
+   "final_url": "https://www.amazon.in/gp/help/customer/display.html?nodeId=G508510&ref_=nav_cs_help",
+   "source": "cache",
+   "ms": 0,
+   "ok": true,
+   "error": null,
+   "title": "Help - Amazon Customer Service",
+   "chars": 9081
+  }
+ },
+ {
+  "event": "official",
+  "data": {
+   "domain": "amazon.in",
+   "established": true,
+   "reason": "google + model agree",
+   "votes": [
+    {
+     "domain": "amazon.in",
+     "sources": [
+      "google: organic result #1",
+      "model: model's own knowledge"
+     ]
+    },
+    {
+     "domain": "amazon.com",
+     "sources": [
+      "google: organic result #3"
+     ]
+    },
+    {
+     "domain": "aboutamazon.com",
+     "sources": [
+      "google: organic result #6"
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "event": "step",
+  "data": {
+   "id": "domain",
+   "label": "Official website: amazon.in",
+   "status": "done"
+  }
+ },
+ {
+  "event": "result",
+  "data": {
+   "brand": "Amazon",
+   "city": "Bengaluru",
+   "domain": "amazon.in",
+   "decision": {
+    "domain": "amazon.in",
+    "established": true,
+    "reason": "google + model agree",
+    "votes": [
+     {
+      "domain": "amazon.in",
+      "sources": [
+       "google: organic result #1",
+       "model: model's own knowledge"
+      ]
+     },
+     {
+      "domain": "amazon.com",
+      "sources": [
+       "google: organic result #3"
+      ]
+     },
+     {
+      "domain": "aboutamazon.com",
+      "sources": [
+       "google: organic result #6"
+      ]
+     }
+    ]
+   },
+   "number": "080 6605 5000",
+   "number_kind": "landline",
+   "verdict": {
+    "label": "not_on_official_pages",
+    "title": "Not found on the official pages we checked",
+    "sources": [],
+    "complaints": [],
+    "other_brands": [],
+    "other_brand_examples": []
+   },
+   "call_instead": [],
+   "warned_numbers": [],
+   "official_numbers": [
+    {
+     "key": "18004197355",
+     "display": "1800 419 7355",
+     "kind": "tollfree",
+     "warned": false,
+     "fax_only": false,
+     "care": true,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://sell.amazon.in/ml/standards/contact-us",
+       "context": "സഹായിക്കാൻ ഇവിടെ ഞങ്ങളുണ്ട് . Give a call to 1800-419-7355 (toll-free) & and we will help launch your account · You",
+       "kind": "snippet",
+       "label": "care",
+       "scope": "b2b"
+      }
+     ]
+    }
+   ],
+   "pages": [
+    {
+     "url": "https://www.amazon.in/",
+     "final_url": "https://www.amazon.in/",
+     "source": "cache",
+     "ms": 0,
+     "ok": true,
+     "error": null,
+     "title": "",
+     "chars": 1
+    },
+    {
+     "url": "https://www.amazon.in/live/video/12d08297c26349689e8fde6a4f74a3e2",
+     "final_url": "https://www.amazon.in/live/video/12d08297c26349689e8fde6a4f74a3e2",
+     "source": "cache",
+     "ms": 0,
+     "ok": true,
+     "error": null,
+     "title": "Watch Repair customer care number please on Amazon Live",
+     "chars": 2811
+    },
+    {
+     "url": "https://sellercentral.amazon.in/seller-forums/discussions/t/7a8bab01-078b-4643-b651-d539f3b6b112",
+     "final_url": "https://sellercentral.amazon.in/seller-forums/discussions/t/7a8bab01-078b-4643-b651-d539f3b6b112",
+     "source": "cache",
+     "ms": 0,
+     "ok": true,
+     "error": null,
+     "title": "Escalation: EasyShip Pickup Failure &amp; Customer Care Misconduct – Urgent Action Required",
+     "chars": 13845
+    },
+    {
+     "url": "https://www.amazon.in/your-product-safety-alerts?ref_=footer_bsx_ypsa",
+     "final_url": "https://www.amazon.in/ap/signin?openid.pape.max_auth_age=3600&openid.return_to=https%3A%2F%2Famazon.in%2Fyour-product-safety-alerts%3Fref_%3Dfooter_bsx_ypsa&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=amzn_yourrecalls_in&openid.mode=checkid_setup&language=en_IN&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0",
+     "source": "cache",
+     "ms": 0,
+     "ok": true,
+     "error": null,
+     "title": "Sign in",
+     "chars": 2619
+    },
+    {
+     "url": "https://www.amazon.in/gp/help/customer/display.html?nodeId=200507590&ref_=nav_cs_help",
+     "final_url": "https://www.amazon.in/gp/help/customer/display.html?nodeId=G508510&ref_=nav_cs_help",
+     "source": "cache",
+     "ms": 0,
+     "ok": true,
+     "error": null,
+     "title": "Help - Amazon Customer Service",
+     "chars": 9081
+    }
+   ],
+   "pins": [
+    {
+     "title": "Amazon custome care",
+     "phone_shown": "",
+     "website": null,
+     "website_status": "none",
+     "number_status": "none",
+     "rating": 1.7,
+     "reviews": 124,
+     "address": "4, Huriopet, Chickpet, Bengaluru, Karnataka 560053",
+     "is_user_number": false,
+     "phone_kind": null
+    },
+    {
+     "title": "Amazon Distributors Pvt. Ltd.",
+     "phone_shown": "",
+     "website": "amazondistributors.com",
+     "website_status": "other",
+     "number_status": "none",
+     "rating": 3.1,
+     "reviews": 175,
+     "address": "3rd Floor, DHL Building 32/5, Hosur Rd, Post, Roopena Agrahara, Bommanahalli, Bengaluru, K",
+     "is_user_number": false,
+     "phone_kind": null
+    },
+    {
+     "title": "Amazon Offer",
+     "phone_shown": "+91 910xx xxx98",
+     "website": "ueniweb.com",
+     "website_status": "other",
+     "number_status": "not_on_official",
+     "rating": 1.9,
+     "reviews": 15,
+     "address": "JP Nagar 6th Phase, Jarganahalli, Yelachenahalli, Kumaraswamy Layout, Bengaluru, Karnataka",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "Amazon Transportation Services Pvt. Ltd",
+     "phone_shown": "",
+     "website": null,
+     "website_status": "none",
+     "number_status": "none",
+     "rating": 1.9,
+     "reviews": 141,
+     "address": "Survey No. 54, Plot No. 5B, Kadugodi Industrial Estate, Biderahally Hobli, Bengaluru South",
+     "is_user_number": false,
+     "phone_kind": null
+    }
+   ],
+   "pin_stats": {
+    "total": 4,
+    "judged": true,
+    "official_number": 0,
+    "number_not_on_official": 1,
+    "website_not_official": 2,
+    "no_website": 2,
+    "user_number_pins": 0
+   },
+   "google_view": {
+    "results": 10,
+    "directory": 2,
+    "directory_domains": [
+     "indiacustomercare.com",
+     "pissedconsumer.com"
+    ],
+    "official_rank": 1,
+    "top": [
+     {
+      "title": "Help - Amazon Customer Service",
+      "domain": "amazon.in",
+      "link": "https://www.amazon.in/gp/help/customer/display.html?nodeId=508510",
+      "directory": false,
+      "official": true
+     },
+     {
+      "title": "Grievance Redressal for Amazon Pay",
+      "domain": "amazon.in",
+      "link": "https://www.amazon.in/gp/help/customer/display.html?nodeId=202134240",
+      "directory": false,
+      "official": true
+     },
+     {
+      "title": "Help & Contact Us - Amazon Customer Service",
+      "domain": "amazon.com",
+      "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=508510",
+      "directory": false,
+      "official": false
+     },
+     {
+      "title": "Amazon Customer Care Number for Emergency",
+      "domain": "amazon.in",
+      "link": "https://www.amazon.in/gp/help/customer/display.html?nodeId=G76E9Y3A6F4UXNL6",
+      "directory": false,
+      "official": true
+     },
+     {
+      "title": "Amazon.in",
+      "domain": "indiacustomercare.com",
+      "link": "https://m.indiacustomercare.com/category/company-names/amazonin?page=3",
+      "directory": true,
+      "official": false
+     }
+    ]
+   },
+   "mentions": [],
+   "summary": "The number 080 6605 5000 is not printed on the amazon.in pages that were read; use the number on your bill, card, ticket or app for a contact number.",
+   "summary_source": "llm:live",
+   "credits_spent": 0,
+   "searches": 4,
+   "ms": 4907
+  }
+ },
+ {
+  "event": "done",
+  "data": {
+   "credits_spent": 0,
+   "ms": 4907
+  }
+ }
+]

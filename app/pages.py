@@ -66,7 +66,7 @@ def html_to_text(raw: str) -> tuple[str, list[tuple[str, str]], str]:
     title_m = re.search(r"(?is)<title[^>]*>(.*?)</title>", raw)
     title = html.unescape(re.sub(r"\s+", " ", title_m.group(1))).strip() if title_m else ""
     links = []
-    for m in re.finditer(r'(?is)<a\b[^>]*?href\s*=\s*["\']([^"\'#]+)["\'][^>]*>(.*?)</a>', raw):
+    for m in re.finditer(r'(?is)<a\b[^>]*?href\s*=\s*["\']([^"\']+)["\'][^>]*>(.*?)</a>', raw):
         anchor = html.unescape(re.sub(r"<[^>]+>", " ", m.group(2)))
         links.append((html.unescape(m.group(1)).strip(), re.sub(r"\s+", " ", anchor).strip()[:80]))
     body = re.sub(r"(?is)<(script|style|noscript|svg)\b[^>]*>.*?</\1>", " ", raw)
@@ -188,6 +188,33 @@ class PageReader:
         self._store(key, rec)
         return Page(url, rec["final_url"], rec["text"], [tuple(x) for x in rec["links"]], "live", _ms(t0),
                     rec["ok"], rec.get("error"), rec["title"])
+
+    async def resolve_alias(self, domain: str) -> str | None:
+        """Registrable domain that https://www.<domain>/ finally redirects to (free; cached; replayable)."""
+        key = self.key("alias:" + domain)
+        self.used_keys.add(key)
+        hit = self._lookup(key)
+        if hit is not None:
+            return hit[0].get("final")
+        if self.replay:
+            return None
+        final = None
+        cur = f"https://www.{domain}/"
+        try:
+            for _ in range(5):
+                host = urlsplit(cur).hostname or ""
+                if not host or (self.check_dns and not await asyncio.to_thread(_public_host, host)):
+                    break
+                r = await self._http.head(cur)
+                if r.status_code in (301, 302, 303, 307, 308) and r.headers.get("location"):
+                    cur = urljoin(cur, r.headers["location"])
+                    continue
+                final = registrable(cur)
+                break
+        except httpx.HTTPError:
+            final = None
+        self._store(key, {"final": final, "final_url": cur, "text": "", "links": [], "ok": final is not None})
+        return final
 
     async def _fetch(self, url: str, allowed: set[str], brand: str) -> tuple[str, str]:
         cur = url

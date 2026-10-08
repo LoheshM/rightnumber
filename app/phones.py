@@ -12,11 +12,12 @@ from dataclasses import dataclass
 
 # Two-digit STD codes (metros); everything else is formatted with a 3-digit code.
 _METRO_STD = {"11", "20", "22", "33", "40", "44", "79", "80"}
+_US_TOLLFREE = {"800", "833", "844", "855", "866", "877", "888"}
 
 # A digit group, and the separators allowed *inside* one phone number.
 _GROUP = re.compile(r"\d+")
 _SEP_OK = re.compile(r"^(?:\s{1,2}|\s?[-.]\s?|\s?\)\s?|\(\s?)$")
-_CANDIDATE = re.compile(r"(?<![\w₹/])(?:\+|00)?[\d(][\d\s\-.()]{5,80}\d(?![\w%])")
+_CANDIDATE = re.compile(r"(?<![\w₹/])(?<!\d\.)(?:\+|00)?[\d(][\d\s\-.()]{5,80}\d(?![\w%])")
 _PRICE_BEFORE = re.compile(r"(?:₹|rs\.?|inr|\$|usd|€|£)\s*$", re.IGNORECASE)
 
 
@@ -32,7 +33,7 @@ class Phone:
         if self.kind == "mobile":
             return f"+91 {k[:5]} {k[5:]}"
         if self.kind == "tollfree":
-            return f"{k[:4]} {k[4:7]} {k[7:]}"
+            return " ".join(_tf_groups(k))
         if self.kind == "landline":
             std = self.std or (2 if k[:2] in _METRO_STD else 3)
             local = k[std:]
@@ -48,7 +49,8 @@ class Phone:
             std = self.std or (2 if k[:2] in _METRO_STD else 3)
             v = [f"0{k}", f"0{k[:std]} {k[std:std + 4]} {k[std + 4:]}", f"0{k[:std]}-{k[std:]}", f"+91 {k[:std]} {k[std:]}"]
         elif self.kind == "tollfree":
-            v = [k, f"{k[:4]} {k[4:7]} {k[7:]}", f"{k[:4]}-{k[4:7]}-{k[7:]}"]
+            g = _tf_groups(k)
+            v = [k, " ".join(g), "-".join(g)]
         else:
             v = [k]
         return list(dict.fromkeys(v))
@@ -61,16 +63,19 @@ def classify(digits: str, *, allow_short: bool = False, groups: list[str] | None
     separates STD landlines whose code starts with 6-8 (0612 Patna, 080 Bengaluru) from mobiles.
     """
     d = digits
-    if d.startswith("0091") and len(d) == 14:
-        d = d[4:]
-    elif d.startswith("91") and len(d) == 12:
-        d = d[2:]
-    if d.startswith(("1800", "1860")) and len(d) in (10, 11):
+    if groups and [len(g) for g in groups] == [3, 3, 4] and groups[0] in _US_TOLLFREE:
+        return None  # "844-311-0406": a North-American toll-free number, not an Indian landline
+    prefixed = False  # had +91 / 0091 / a trunk 0: then a leading 1 is Delhi/Punjab (011, 0172), not a code
+    if d.startswith("0091") and len(d) in (12, 14, 15):
+        d, prefixed = d[4:], True
+    elif d.startswith("91") and (len(d) == 12 or (len(d) in (12, 13) and d[2:6] in ("1800", "1860"))):
+        d, prefixed = d[2:], True
+    if d.startswith(("1800", "1860")) and len(d) in (8, 10, 11):  # SBI's 1800 1234 is 8 digits
         return Phone(d, "tollfree")
     trunk = False
     if d.startswith("0") and len(d) == 11:
         d = d[1:]
-        trunk = True
+        trunk = prefixed = True
     elif d.startswith("0") and len(d) == 12 and d[1:3] in ("18",):  # 01800... typo form
         d = d[1:]
         if d.startswith(("1800", "1860")):
@@ -85,6 +90,8 @@ def classify(digits: str, *, allow_short: bool = False, groups: list[str] | None
             return Phone(d, "landline", std) if std else Phone(d, "mobile")
         if d[0] == "9":
             return Phone(d, "mobile")
+        if d[0] == "1" and prefixed:  # 011 Delhi, 0172 Chandigarh, 0120 Noida
+            return Phone(d, "landline", std or (2 if d[:2] == "11" else 3))
         return None
     if allow_short and 3 <= len(d) <= 5 and d[0] == "1":
         return Phone(d, "short")
@@ -138,6 +145,9 @@ def find_phones(text: str) -> list[tuple[Phone, int, int]]:
         groups = [(g.group(0), g.start(), g.end()) for g in _GROUP.finditer(span)]
         i = 0
         while i < len(groups):
+            if i > 0 and span[groups[i - 1][2]:groups[i][1]] == ".":
+                i += 1  # digits right after "3." are a decimal, never the start of a number
+                continue
             found = None
             for j in range(min(len(groups), i + 6), i, -1):
                 seps = [span[groups[x][2]:groups[x + 1][1]] for x in range(i, j - 1)]
@@ -147,6 +157,9 @@ def find_phones(text: str) -> list[tuple[Phone, int, int]]:
                 if ph is not None:
                     found = (ph, j)
                     break
+            if found and found[0].kind == "tollfree" and len(found[0].key) == 8 and found[1] < len(groups) \
+                    and _SEP_OK.match(span[groups[found[1] - 1][2]:groups[found[1]][1]]):
+                found = None  # "1800-1200-1571": an 8-digit prefix of a longer run is not SBI-style 1800 1234
             if found:
                 ph, j = found
                 out.append((ph, m.start() + groups[i][1], m.start() + groups[j - 1][2]))
@@ -181,3 +194,12 @@ def context(text: str, start: int, end: int, width: int = 60) -> str:
 
 def contains_number(text: str, phone: Phone) -> bool:
     return any(p.key == phone.key for p in extract_phones(text))
+
+
+def _tf_groups(k: str) -> list[str]:
+    """1800 1234 · 1800 11 2211 · 1800 233 1234 — how Indian toll-free numbers are usually written."""
+    if len(k) == 8:
+        return [k[:4], k[4:]]
+    if len(k) == 10:
+        return [k[:4], k[4:6], k[6:]]
+    return [k[:4], k[4:7], k[7:]]
