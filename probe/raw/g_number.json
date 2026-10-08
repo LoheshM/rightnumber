@@ -1,0 +1,313 @@
+{
+ "search_metadata": {
+  "id": "6ac76b410fa72e8176cbf287",
+  "status": "Success",
+  "json_endpoint": "https://serpapi.com/searches/8r9E7OQ_3qX6VDrFEK9fs2_d98WrlgbyKwrZt23h_Cc/6ac76b410fa72e8176cbf287.json",
+  "markdown_endpoint": "https://serpapi.com/searches/8r9E7OQ_3qX6VDrFEK9fs2_d98WrlgbyKwrZt23h_Cc/6ac76b410fa72e8176cbf287.md",
+  "pixel_position_endpoint": "https://serpapi.com/searches/8r9E7OQ_3qX6VDrFEK9fs2_d98WrlgbyKwrZt23h_Cc/6ac76b410fa72e8176cbf287.json_with_pixel_position",
+  "created_at": "2026-10-08 10:06:57 UTC",
+  "processed_at": "2026-10-08 10:06:57 UTC",
+  "google_url": "https://www.google.co.in/search?q=%2204023311919%22+OR+%22040+2331+1919%22+OR+%22040-23311919%22&oq=%2204023311919%22+OR+%22040+2331+1919%22+OR+%22040-23311919%22&hl=en&gl=in&sourceid=chrome&ie=UTF-8",
+  "raw_html_file": "https://serpapi.com/searches/8r9E7OQ_3qX6VDrFEK9fs2_d98WrlgbyKwrZt23h_Cc/6ac76b410fa72e8176cbf287.html",
+  "total_time_taken": 1.03
+ },
+ "search_parameters": {
+  "engine": "google",
+  "q": "\"04023311919\" OR \"040 2331 1919\" OR \"040-23311919\"",
+  "google_domain": "google.co.in",
+  "hl": "en",
+  "gl": "in",
+  "device": "desktop"
+ },
+ "search_information": {
+  "query_displayed": "\"04023311919\" OR \"040 2331 1919\" OR \"040-23311919\"",
+  "total_results": 57,
+  "time_taken_displayed": 0.42,
+  "organic_results_state": "Results for exact spelling"
+ },
+ "organic_results": [
+  {
+   "position": 1,
+   "title": "TrackDart TM - Tracking Details",
+   "link": "https://www.bluedart.com/web/guest/trackdartresult?trackFor=1&trackNo=SVNCCU290726000103",
+   "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESkwEB6zswFc5Gxyw4u-RvoROSql1wcvGOfGRzvTIGzAsfAjk7aatGiFN9bzErEFOSl6WV7LcA_ssyySJrNHFuukNTIuNTJEuiyAfwsTAplRZvryUtlEM7nKhOUFpEjWVbAtbhvoUeUbWLeCC7zf6NqNVT7wNefJNweYMWVK3uKe9ZBKj7gxZM45pz56IG01pOYN_GCck&ved=2ahUKEwi-wd6ilqqXAxU7g_0HHVR6KIYQFnoECBIQAQ&uoh=1",
+   "displayed_link": "https://www.bluedart.com › web › guest › trackdartresult",
+   "favicon": "https://serpapi.com/images/i/UklGRvYAAABXRUJQVlA4IOoAAABwBgCdASocABwAPtEutFooIagoGAEAGglsAJ0zNDV3s3CD5KPRZK8ASrh06eXO3t4TXv68lk_rawWfvAAA_sl1xDVY7UlOOYJuqTUDCmBzUlqsxLlypUEAyngNbGAXxK17Ciw9KPo24elhPidO1v4pmNAnJ54rJakaBxVNs8bb0RUrfZi8f-x_bG7bTnxoOfilpv_53DyJqPAX7eFNLNEyolRQVfTRKOOsnCXX1hQEU6Zj6EH7UTEn-0PE9_eog-u8-OXH1JV-qbC6ThAVzxfvUEia8jcAY6XsHF0PgcBxcVCAP6rAgfALAAA.webp",
+   "snippet": "This website shows real-time tracking updates. Our teams also proactively track each shipment to ensure safe & time-bound deliveries.",
+   "about_this_result": {
+    "source": {
+     "description": "This website shows real-time tracking updates. Our teams also proactively track each shipment to ensure safe & time-bound deliveries.",
+     "source_info_link": "https://www.bluedart.com/web/guest/trackdartresult?trackFor=1&trackNo=SVNCCU290726000103",
+     "icon": "https://serpapi.com/images/i/UklGRvYAAABXRUJQVlA4IOoAAABwBgCdASocABwAPtEutFooIagoGAEAGglsAJ0zNDV3s3CD5KPRZK8ASrh06eXO3t4TXv68lk_rawWfvAAA_sl1xDVY7UlOOYJuqTUDCmBzUlqsxLlypUEAyngNbGAXxK17Ciw9KPo24elhPidO1v4pmNAnJ54rJakaBxVNs8bb0RUrfZi8f-x_bG7bTnxoOfilpv_53DyJqPAX7eFNLNEyolRQVfTRKOOsnCXX1hQEU6Zj6EH7UTEn-0PE9_eog-u8-OXH1JV-qbC6ThAVzxfvUEia8jcAY6XsHF0PgcBxcVCAP6rAgfALAAA.webp"
+    },
+    "languages": [
+     "en"
+    ],
+    "regions": [
+     "IN"
+    ]
+   },
+   "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CtUBL2dvdG8_dXJsPUNBRVNrd0VCNnpzd0ZjNUd4eXc0dS1Sdm9ST1NxbDF3Y3ZHT2ZHUnp2VElHekFzZkFqazdhYXRHaUZOOWJ6RXJFRk9TbDZXVjdMY0Ffc3N5eVNKck5IRnV1a05USXVOVEpFdWl5QWZ3c1RBcGxSWnZyeVV0bEVNN25LaE9VRnBFaldWYkF0Ymh2b1VlVWJXTGVDQzd6ZjZOcU5WVDd3TmVmSk53ZVlNV1ZLM3VLZTlaQktqN2d4Wk00NXB6NTZJRzAxcE9ZTl9HQ2NrEgQaAggAGu8DEgIIABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAyQMIABAAGAAgACovCgswNDAyMzMxMTkxORUAAAAAGg0wNDAgMjMzMSAxOTE5GgwwNDAgMjMzMTE5MTky1QEvZ290bz91cmw9Q0FFU2t3RUI2enN3RmM1R3h5dzR1LVJ2b1JPU3FsMXdjdkdPZkdSenZUSUd6QXNmQWprN2FhdEdpRk45YnpFckVGT1NsNldWN0xjQV9zc3l5U0pyTkhGdXVrTlRJdU5USkV1aXlBZndzVEFwbFJadnJ5VXRsRU03bktoT1VGcEVqV1ZiQXRiaHZvVWVVYldMZUNDN3pmNk5xTlZUN3dOZWZKTndlWU1XVkszdUtlOVpCS2o3Z3haTTQ1cHo1NklHMDFwT1lOX0dDY2s6KlRyYWNrRGFydCBUTSAtIFRyYWNraW5nIERldGFpbHMgLSBCbHVlZGFydEKJAVRoaXMgd2Vic2l0ZSBzaG93cyByZWFsLXRpbWUgdHJhY2tpbmcgdXBkYXRlcy4gT3VyIHRlYW1zIGFsc28gcHJvYWN0aXZlbHkgdHJhY2sgZWFjaCBzaGlwbWVudCB0byBlbnN1cmUgc2FmZSAmYW1wOyB0aW1lLWJvdW5kIGRlbGl2ZXJpZXMuIgIQAUgAWABoAA",
+   "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CtUBL2dvdG8_dXJsPUNBRVNrd0VCNnpzd0ZjNUd4eXc0dS1Sdm9ST1NxbDF3Y3ZHT2ZHUnp2VElHekFzZkFqazdhYXRHaUZOOWJ6RXJFRk9TbDZXVjdMY0Ffc3N5eVNKck5IRnV1a05USXVOVEpFdWl5QWZ3c1RBcGxSWnZyeVV0bEVNN25LaE9VRnBFaldWYkF0Ymh2b1VlVWJXTGVDQzd6ZjZOcU5WVDd3TmVmSk53ZVlNV1ZLM3VLZTlaQktqN2d4Wk00NXB6NTZJRzAxcE9ZTl9HQ2NrEgQaAggAGu8DEgIIABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAyQMIABAAGAAgACovCgswNDAyMzMxMTkxORUAAAAAGg0wNDAgMjMzMSAxOTE5GgwwNDAgMjMzMTE5MTky1QEvZ290bz91cmw9Q0FFU2t3RUI2enN3RmM1R3h5dzR1LVJ2b1JPU3FsMXdjdkdPZkdSenZUSUd6QXNmQWprN2FhdEdpRk45YnpFckVGT1NsNldWN0xjQV9zc3l5U0pyTkhGdXVrTlRJdU5USkV1aXlBZndzVEFwbFJadnJ5VXRsRU03bktoT1VGcEVqV1ZiQXRiaHZvVWVVYldMZUNDN3pmNk5xTlZUN3dOZWZKTndlWU1XVkszdUtlOVpCS2o3Z3haTTQ1cHo1NklHMDFwT1lOX0dDY2s6KlRyYWNrRGFydCBUTSAtIFRyYWNraW5nIERldGFpbHMgLSBCbHVlZGFydEKJAVRoaXMgd2Vic2l0ZSBzaG93cyByZWFsLXRpbWUgdHJhY2tpbmcgdXBkYXRlcy4gT3VyIHRlYW1zIGFsc28gcHJvYWN0aXZlbHkgdHJhY2sgZWFjaCBzaGlwbWVudCB0byBlbnN1cmUgc2FmZSAmYW1wOyB0aW1lLWJvdW5kIGRlbGl2ZXJpZXMuIgIQAUgAWABoAA",
+   "source": "Bluedart",
+   "read_more_link": "https://www.bluedart.com/web/guest/trackdartresult?trackFor=1&trackNo=SVNCCU290726000103#:~:text=This%20website%20shows%20real%2Dtime%20tracking,ensure%20safe%20%26%20time%2Dbound%20deliveries."
+  },
+  {
+   "position": 2,
+   "title": "TrackDart TM - Tracking Details",
+   "link": "https://www.bluedart.com/web/guest/trackdartresult?trackFor=1&trackNo=DEUDEL220926000501",
+   "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESkwEB6zswFdOeCztbkAdcb7GywZ5Brbu7cqxovSk4cCzT4eLZGlxdDcIU68twHjlav2-7NhkA7i2Ozy83_YBeDY4QnMF_D9JQrnyFhfD-XkGEbpMq6WIP_ahgHJzEMuR-jtP1JvA1_WY6GX92ytY6wrO2m-xj9RgrTe5WG_pfWbWPA9DBddeleUyj4888W0YrNuDJLxA&ved=2ahUKEwi-wd6ilqqXAxU7g_0HHVR6KIYQFnoECBMQAQ&uoh=1",
+   "displayed_link": "https://www.bluedart.com › web › guest › trackdartresult",
+   "favicon": "https://serpapi.com/images/i/UklGRvYAAABXRUJQVlA4IOoAAABwBgCdASocABwAPtEutFooIagoGAEAGglsAJ0zNDV3s3CD5KPRZK8ASrh06eXO3t4TXv68lk_rawWfvAAA_sl1xDVY7UlOOYJuqTUDCmBzUlqsxLlypUEAyngNbGAXxK17Ciw9KPo24elhPidO1v4pmNAnJ54rJakaBxVNs8bb0RUrfZi8f-x_bG7bTnxoOfilpv_53DyJqPAX7eFNLNEyolRQVfTRKOOsnCXX1hQEU6Zj6EH7UTEn-0PE9_eog-u8-OXH1JV-qbC6ThAVzxfvUEia8jcAY6XsHF0PgcBxcVCAP6rAgfALAAA.webp",
+   "snippet": "This website shows real-time tracking updates. Our teams also proactively track each shipment to ensure safe & time-bound deliveries.",
+   "about_this_result": {
+    "source": {
+     "description": "This website shows real-time tracking updates. Our teams also proactively track each shipment to ensure safe & time-bound deliveries.",
+     "source_info_link": "https://www.bluedart.com/web/guest/trackdartresult?trackFor=1&trackNo=DEUDEL220926000501",
+     "icon": "https://serpapi.com/images/i/UklGRvYAAABXRUJQVlA4IOoAAABwBgCdASocABwAPtEutFooIagoGAEAGglsAJ0zNDV3s3CD5KPRZK8ASrh06eXO3t4TXv68lk_rawWfvAAA_sl1xDVY7UlOOYJuqTUDCmBzUlqsxLlypUEAyngNbGAXxK17Ciw9KPo24elhPidO1v4pmNAnJ54rJakaBxVNs8bb0RUrfZi8f-x_bG7bTnxoOfilpv_53DyJqPAX7eFNLNEyolRQVfTRKOOsnCXX1hQEU6Zj6EH7UTEn-0PE9_eog-u8-OXH1JV-qbC6ThAVzxfvUEia8jcAY6XsHF0PgcBxcVCAP6rAgfALAAA.webp"
+    },
+    "languages": [
+     "en"
+    ],
+    "regions": [
+     "IN"
+    ]
+   },
+   "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CtUBL2dvdG8_dXJsPUNBRVNrd0VCNnpzd0ZkT2VDenRia0FkY2I3R3l3WjVCcmJ1N2NxeG92U2s0Y0N6VDRlTFpHbHhkRGNJVTY4dHdIamxhdjItN05oa0E3aTJPenk4M19ZQmVEWTRRbk1GX0Q5SlFybnlGaGZELVhrR0VicE1xNldJUF9haGdISnpFTXVSLWp0UDFKdkExX1dZNkdYOTJ5dFk2d3JPMm0teGo5UmdyVGU1V0dfcGZXYldQQTlEQmRkZWxlVXlqNDg4OFcwWXJOdURKTHhBEgQaAggAGu8DEgIIABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAyQMIABAAGAAgACovCgswNDAyMzMxMTkxORUAAAAAGg0wNDAgMjMzMSAxOTE5GgwwNDAgMjMzMTE5MTky1QEvZ290bz91cmw9Q0FFU2t3RUI2enN3RmRPZUN6dGJrQWRjYjdHeXdaNUJyYnU3Y3F4b3ZTazRjQ3pUNGVMWkdseGREY0lVNjh0d0hqbGF2Mi03TmhrQTdpMk96eTgzX1lCZURZNFFuTUZfRDlKUXJueUZoZkQtWGtHRWJwTXE2V0lQX2FoZ0hKekVNdVItanRQMUp2QTFfV1k2R1g5Mnl0WTZ3ck8ybS14ajlSZ3JUZTVXR19wZldiV1BBOURCZGRlbGVVeWo0ODg4VzBZck51REpMeEE6KlRyYWNrRGFydCBUTSAtIFRyYWNraW5nIERldGFpbHMgLSBCbHVlZGFydEKJAVRoaXMgd2Vic2l0ZSBzaG93cyByZWFsLXRpbWUgdHJhY2tpbmcgdXBkYXRlcy4gT3VyIHRlYW1zIGFsc28gcHJvYWN0aXZlbHkgdHJhY2sgZWFjaCBzaGlwbWVudCB0byBlbnN1cmUgc2FmZSAmYW1wOyB0aW1lLWJvdW5kIGRlbGl2ZXJpZXMuIgIQAUgAWABoAA",
+   "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CtUBL2dvdG8_dXJsPUNBRVNrd0VCNnpzd0ZkT2VDenRia0FkY2I3R3l3WjVCcmJ1N2NxeG92U2s0Y0N6VDRlTFpHbHhkRGNJVTY4dHdIamxhdjItN05oa0E3aTJPenk4M19ZQmVEWTRRbk1GX0Q5SlFybnlGaGZELVhrR0VicE1xNldJUF9haGdISnpFTXVSLWp0UDFKdkExX1dZNkdYOTJ5dFk2d3JPMm0teGo5UmdyVGU1V0dfcGZXYldQQTlEQmRkZWxlVXlqNDg4OFcwWXJOdURKTHhBEgQaAggAGu8DEgIIABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAyQMIABAAGAAgACovCgswNDAyMzMxMTkxORUAAAAAGg0wNDAgMjMzMSAxOTE5GgwwNDAgMjMzMTE5MTky1QEvZ290bz91cmw9Q0FFU2t3RUI2enN3RmRPZUN6dGJrQWRjYjdHeXdaNUJyYnU3Y3F4b3ZTazRjQ3pUNGVMWkdseGREY0lVNjh0d0hqbGF2Mi03TmhrQTdpMk96eTgzX1lCZURZNFFuTUZfRDlKUXJueUZoZkQtWGtHRWJwTXE2V0lQX2FoZ0hKekVNdVItanRQMUp2QTFfV1k2R1g5Mnl0WTZ3ck8ybS14ajlSZ3JUZTVXR19wZldiV1BBOURCZGRlbGVVeWo0ODg4VzBZck51REpMeEE6KlRyYWNrRGFydCBUTSAtIFRyYWNraW5nIERldGFpbHMgLSBCbHVlZGFydEKJAVRoaXMgd2Vic2l0ZSBzaG93cyByZWFsLXRpbWUgdHJhY2tpbmcgdXBkYXRlcy4gT3VyIHRlYW1zIGFsc28gcHJvYWN0aXZlbHkgdHJhY2sgZWFjaCBzaGlwbWVudCB0byBlbnN1cmUgc2FmZSAmYW1wOyB0aW1lLWJvdW5kIGRlbGl2ZXJpZXMuIgIQAUgAWABoAA",
+   "source": "Bluedart",
+   "read_more_link": "https://www.bluedart.com/web/guest/trackdartresult?trackFor=1&trackNo=DEUDEL220926000501#:~:text=This%20website%20shows%20real%2Dtime%20tracking,ensure%20safe%20%26%20time%2Dbound%20deliveries."
+  },
+  {
+   "position": 3,
+   "title": "TrackDart TM - Tracking Details",
+   "link": "https://www.bluedart.com/web/guest/trackdartresult?trackFor=1&trackNo=FRADEL290926002501",
+   "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESkwEB6zswFRRqrEJI8KyU2wpBBvawAKEW78n-ci_IOoytaLFfdFUu05Hk_0rII41U3FJIxW4ccKW5EqfiT4zhKqadpKjtnh_BiFkKXaFplt9grtoUvxejAmDHLVLbkpPvyPFQhLXreApkrSrU2gTSaRUfqM9dNF_rumsFMdSKhChjPYa3MBC4TbbcBR6hG91-3oe3GhU&ved=2ahUKEwi-wd6ilqqXAxU7g_0HHVR6KIYQFnoECBkQAQ&uoh=1",
+   "displayed_link": "https://www.bluedart.com › web › guest › trackdartresult",
+   "favicon": "https://serpapi.com/images/i/UklGRvYAAABXRUJQVlA4IOoAAABwBgCdASocABwAPtEutFooIagoGAEAGglsAJ0zNDV3s3CD5KPRZK8ASrh06eXO3t4TXv68lk_rawWfvAAA_sl1xDVY7UlOOYJuqTUDCmBzUlqsxLlypUEAyngNbGAXxK17Ciw9KPo24elhPidO1v4pmNAnJ54rJakaBxVNs8bb0RUrfZi8f-x_bG7bTnxoOfilpv_53DyJqPAX7eFNLNEyolRQVfTRKOOsnCXX1hQEU6Zj6EH7UTEn-0PE9_eog-u8-OXH1JV-qbC6ThAVzxfvUEia8jcAY6XsHF0PgcBxcVCAP6rAgfALAAA.webp",
+   "snippet": "This website shows real-time tracking updates. Our teams also proactively track each shipment to ensure safe & time-bound deliveries.",
+   "about_this_result": {
+    "source": {
+     "description": "This website shows real-time tracking updates. Our teams also proactively track each shipment to ensure safe & time-bound deliveries.",
+     "source_info_link": "https://www.bluedart.com/web/guest/trackdartresult?trackFor=1&trackNo=FRADEL290926002501",
+     "icon": "https://serpapi.com/images/i/UklGRvYAAABXRUJQVlA4IOoAAABwBgCdASocABwAPtEutFooIagoGAEAGglsAJ0zNDV3s3CD5KPRZK8ASrh06eXO3t4TXv68lk_rawWfvAAA_sl1xDVY7UlOOYJuqTUDCmBzUlqsxLlypUEAyngNbGAXxK17Ciw9KPo24elhPidO1v4pmNAnJ54rJakaBxVNs8bb0RUrfZi8f-x_bG7bTnxoOfilpv_53DyJqPAX7eFNLNEyolRQVfTRKOOsnCXX1hQEU6Zj6EH7UTEn-0PE9_eog-u8-OXH1JV-qbC6ThAVzxfvUEia8jcAY6XsHF0PgcBxcVCAP6rAgfALAAA.webp"
+    },
+    "languages": [
+     "en"
+    ],
+    "regions": [
+     "IN"
+    ]
+   },
+   "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CtUBL2dvdG8_dXJsPUNBRVNrd0VCNnpzd0ZSUnFyRUpJOEt5VTJ3cEJCdmF3QUtFVzc4bi1jaV9JT295dGFMRmZkRlV1MDVIa18wcklJNDFVM0ZKSXhXNGNjS1c1RXFmaVQ0emhLcWFkcEtqdG5oX0JpRmtLWGFGcGx0OWdydG9VdnhlakFtREhMVkxia3BQdnlQRlFoTFhyZUFwa3JTclUyZ1RTYVJVZnFNOWRORl9ydW1zRk1kU0toQ2hqUFlhM01CQzRUYmJjQlI2aEc5MS0zb2UzR2hVEgQaAggAGu8DEgIIABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAyQMIABAAGAAgACovCgswNDAyMzMxMTkxORUAAAAAGg0wNDAgMjMzMSAxOTE5GgwwNDAgMjMzMTE5MTky1QEvZ290bz91cmw9Q0FFU2t3RUI2enN3RlJScXJFSkk4S3lVMndwQkJ2YXdBS0VXNzhuLWNpX0lPb3l0YUxGZmRGVXUwNUhrXzBySUk0MVUzRkpJeFc0Y2NLVzVFcWZpVDR6aEtxYWRwS2p0bmhfQmlGa0tYYUZwbHQ5Z3J0b1V2eGVqQW1ESExWTGJrcFB2eVBGUWhMWHJlQXBrclNyVTJnVFNhUlVmcU05ZE5GX3J1bXNGTWRTS2hDaGpQWWEzTUJDNFRiYmNCUjZoRzkxLTNvZTNHaFU6KlRyYWNrRGFydCBUTSAtIFRyYWNraW5nIERldGFpbHMgLSBCbHVlZGFydEKJAVRoaXMgd2Vic2l0ZSBzaG93cyByZWFsLXRpbWUgdHJhY2tpbmcgdXBkYXRlcy4gT3VyIHRlYW1zIGFsc28gcHJvYWN0aXZlbHkgdHJhY2sgZWFjaCBzaGlwbWVudCB0byBlbnN1cmUgc2FmZSAmYW1wOyB0aW1lLWJvdW5kIGRlbGl2ZXJpZXMuIgIQAUgAWABoAA",
+   "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CtUBL2dvdG8_dXJsPUNBRVNrd0VCNnpzd0ZSUnFyRUpJOEt5VTJ3cEJCdmF3QUtFVzc4bi1jaV9JT295dGFMRmZkRlV1MDVIa18wcklJNDFVM0ZKSXhXNGNjS1c1RXFmaVQ0emhLcWFkcEtqdG5oX0JpRmtLWGFGcGx0OWdydG9VdnhlakFtREhMVkxia3BQdnlQRlFoTFhyZUFwa3JTclUyZ1RTYVJVZnFNOWRORl9ydW1zRk1kU0toQ2hqUFlhM01CQzRUYmJjQlI2aEc5MS0zb2UzR2hVEgQaAggAGu8DEgIIABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAyQMIABAAGAAgACovCgswNDAyMzMxMTkxORUAAAAAGg0wNDAgMjMzMSAxOTE5GgwwNDAgMjMzMTE5MTky1QEvZ290bz91cmw9Q0FFU2t3RUI2enN3RlJScXJFSkk4S3lVMndwQkJ2YXdBS0VXNzhuLWNpX0lPb3l0YUxGZmRGVXUwNUhrXzBySUk0MVUzRkpJeFc0Y2NLVzVFcWZpVDR6aEtxYWRwS2p0bmhfQmlGa0tYYUZwbHQ5Z3J0b1V2eGVqQW1ESExWTGJrcFB2eVBGUWhMWHJlQXBrclNyVTJnVFNhUlVmcU05ZE5GX3J1bXNGTWRTS2hDaGpQWWEzTUJDNFRiYmNCUjZoRzkxLTNvZTNHaFU6KlRyYWNrRGFydCBUTSAtIFRyYWNraW5nIERldGFpbHMgLSBCbHVlZGFydEKJAVRoaXMgd2Vic2l0ZSBzaG93cyByZWFsLXRpbWUgdHJhY2tpbmcgdXBkYXRlcy4gT3VyIHRlYW1zIGFsc28gcHJvYWN0aXZlbHkgdHJhY2sgZWFjaCBzaGlwbWVudCB0byBlbnN1cmUgc2FmZSAmYW1wOyB0aW1lLWJvdW5kIGRlbGl2ZXJpZXMuIgIQAUgAWABoAA",
+   "source": "Bluedart",
+   "read_more_link": "https://www.bluedart.com/web/guest/trackdartresult?trackFor=1&trackNo=FRADEL290926002501#:~:text=This%20website%20shows%20real%2Dtime%20tracking,ensure%20safe%20%26%20time%2Dbound%20deliveries."
+  },
+  {
+   "position": 4,
+   "title": "TrackDart TM - Tracking Details",
+   "link": "https://www.bluedart.com/web/guest/trackdartresult?trackFor=1&trackNo=DEUPNQ280926003801",
+   "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESkwEB6zswFYaAigke8ogAb3waX3rUMMWK9w523ALkubUCEiqDrhleBKzgfnIuthSsYOkXBek8ANhXP5cUxo8MaRro_q92QQ7SQoUpX7HoeXRh8CywxEOhmbYY09gnR6PlLQ5xWYzGtwGEX1m_qyIdNJ38WCmPNBkM3DWKIy2qpA3bce0CPfBNwUVSkjfbuOOmpgCIr9A&ved=2ahUKEwi-wd6ilqqXAxU7g_0HHVR6KIYQFnoECBYQAQ&uoh=1",
+   "displayed_link": "https://www.bluedart.com › web › guest › trackdartresult",
+   "favicon": "https://serpapi.com/images/i/UklGRvYAAABXRUJQVlA4IOoAAABwBgCdASocABwAPtEutFooIagoGAEAGglsAJ0zNDV3s3CD5KPRZK8ASrh06eXO3t4TXv68lk_rawWfvAAA_sl1xDVY7UlOOYJuqTUDCmBzUlqsxLlypUEAyngNbGAXxK17Ciw9KPo24elhPidO1v4pmNAnJ54rJakaBxVNs8bb0RUrfZi8f-x_bG7bTnxoOfilpv_53DyJqPAX7eFNLNEyolRQVfTRKOOsnCXX1hQEU6Zj6EH7UTEn-0PE9_eog-u8-OXH1JV-qbC6ThAVzxfvUEia8jcAY6XsHF0PgcBxcVCAP6rAgfALAAA.webp",
+   "snippet": "This website shows real-time tracking updates. Our teams also proactively track each shipment to ensure safe & time-bound deliveries.",
+   "about_this_result": {
+    "source": {
+     "description": "This website shows real-time tracking updates. Our teams also proactively track each shipment to ensure safe & time-bound deliveries.",
+     "source_info_link": "https://www.bluedart.com/web/guest/trackdartresult?trackFor=1&trackNo=DEUPNQ280926003801",
+     "icon": "https://serpapi.com/images/i/UklGRvYAAABXRUJQVlA4IOoAAABwBgCdASocABwAPtEutFooIagoGAEAGglsAJ0zNDV3s3CD5KPRZK8ASrh06eXO3t4TXv68lk_rawWfvAAA_sl1xDVY7UlOOYJuqTUDCmBzUlqsxLlypUEAyngNbGAXxK17Ciw9KPo24elhPidO1v4pmNAnJ54rJakaBxVNs8bb0RUrfZi8f-x_bG7bTnxoOfilpv_53DyJqPAX7eFNLNEyolRQVfTRKOOsnCXX1hQEU6Zj6EH7UTEn-0PE9_eog-u8-OXH1JV-qbC6ThAVzxfvUEia8jcAY6XsHF0PgcBxcVCAP6rAgfALAAA.webp"
+    },
+    "languages": [
+     "en"
+    ],
+    "regions": [
+     "IN"
+    ]
+   },
+   "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CtUBL2dvdG8_dXJsPUNBRVNrd0VCNnpzd0ZZYUFpZ2tlOG9nQWIzd2FYM3JVTU1XSzl3NTIzQUxrdWJVQ0VpcURyaGxlQkt6Z2ZuSXV0aFNzWU9rWEJlazhBTmhYUDVjVXhvOE1hUnJvX3E5MlFRN1NRb1VwWDdIb2VYUmg4Q3l3eEVPaG1iWVkwOWduUjZQbExRNXhXWXpHdHdHRVgxbV9xeUlkTkozOFdDbVBOQmtNM0RXS0l5MnFwQTNiY2UwQ1BmQk53VVZTa2pmYnVPT21wZ0NJcjlBEgQaAggAGu8DEgIIABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAyQMIABAAGAAgACovCgswNDAyMzMxMTkxORUAAAAAGg0wNDAgMjMzMSAxOTE5GgwwNDAgMjMzMTE5MTky1QEvZ290bz91cmw9Q0FFU2t3RUI2enN3RllhQWlna2U4b2dBYjN3YVgzclVNTVdLOXc1MjNBTGt1YlVDRWlxRHJobGVCS3pnZm5JdXRoU3NZT2tYQmVrOEFOaFhQNWNVeG84TWFScm9fcTkyUVE3U1FvVXBYN0hvZVhSaDhDeXd4RU9obWJZWTA5Z25SNlBsTFE1eFdZekd0d0dFWDFtX3F5SWROSjM4V0NtUE5Ca00zRFdLSXkycXBBM2JjZTBDUGZCTndVVlNramZidU9PbXBnQ0lyOUE6KlRyYWNrRGFydCBUTSAtIFRyYWNraW5nIERldGFpbHMgLSBCbHVlZGFydEKJAVRoaXMgd2Vic2l0ZSBzaG93cyByZWFsLXRpbWUgdHJhY2tpbmcgdXBkYXRlcy4gT3VyIHRlYW1zIGFsc28gcHJvYWN0aXZlbHkgdHJhY2sgZWFjaCBzaGlwbWVudCB0byBlbnN1cmUgc2FmZSAmYW1wOyB0aW1lLWJvdW5kIGRlbGl2ZXJpZXMuIgIQAUgAWABoAA",
+   "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CtUBL2dvdG8_dXJsPUNBRVNrd0VCNnpzd0ZZYUFpZ2tlOG9nQWIzd2FYM3JVTU1XSzl3NTIzQUxrdWJVQ0VpcURyaGxlQkt6Z2ZuSXV0aFNzWU9rWEJlazhBTmhYUDVjVXhvOE1hUnJvX3E5MlFRN1NRb1VwWDdIb2VYUmg4Q3l3eEVPaG1iWVkwOWduUjZQbExRNXhXWXpHdHdHRVgxbV9xeUlkTkozOFdDbVBOQmtNM0RXS0l5MnFwQTNiY2UwQ1BmQk53VVZTa2pmYnVPT21wZ0NJcjlBEgQaAggAGu8DEgIIABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAyQMIABAAGAAgACovCgswNDAyMzMxMTkxORUAAAAAGg0wNDAgMjMzMSAxOTE5GgwwNDAgMjMzMTE5MTky1QEvZ290bz91cmw9Q0FFU2t3RUI2enN3RllhQWlna2U4b2dBYjN3YVgzclVNTVdLOXc1MjNBTGt1YlVDRWlxRHJobGVCS3pnZm5JdXRoU3NZT2tYQmVrOEFOaFhQNWNVeG84TWFScm9fcTkyUVE3U1FvVXBYN0hvZVhSaDhDeXd4RU9obWJZWTA5Z25SNlBsTFE1eFdZekd0d0dFWDFtX3F5SWROSjM4V0NtUE5Ca00zRFdLSXkycXBBM2JjZTBDUGZCTndVVlNramZidU9PbXBnQ0lyOUE6KlRyYWNrRGFydCBUTSAtIFRyYWNraW5nIERldGFpbHMgLSBCbHVlZGFydEKJAVRoaXMgd2Vic2l0ZSBzaG93cyByZWFsLXRpbWUgdHJhY2tpbmcgdXBkYXRlcy4gT3VyIHRlYW1zIGFsc28gcHJvYWN0aXZlbHkgdHJhY2sgZWFjaCBzaGlwbWVudCB0byBlbnN1cmUgc2FmZSAmYW1wOyB0aW1lLWJvdW5kIGRlbGl2ZXJpZXMuIgIQAUgAWABoAA",
+   "source": "Bluedart",
+   "read_more_link": "https://www.bluedart.com/web/guest/trackdartresult?trackFor=1&trackNo=DEUPNQ280926003801#:~:text=This%20website%20shows%20real%2Dtime%20tracking,ensure%20safe%20%26%20time%2Dbound%20deliveries."
+  },
+  {
+   "position": 5,
+   "title": "TrackDart TM - Tracking Details",
+   "link": "https://www.bluedart.com/web/guest/trackdartresult?trackFor=1&trackNo=FRADEL290926003002",
+   "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESkwEB6zswFV8HqQG9q2NZunYQjnjKCYss1icLT4L-bdh0Tr9Keh08BCvQIv7F1bi5gN7Lj6kgFjTGiKgTFIcagqTq1mmm2_uaKxNKYH9OK3J_qeyWLxYAzrW7MI3hHnVJwFWgXdFH43IrFrfxd8RVRIVYcKD7-M5Di_ZybSuV3g2CV87WXwSmA-IX5mnBhTkGtRGymPs&ved=2ahUKEwi-wd6ilqqXAxU7g_0HHVR6KIYQFnoECBQQAQ&uoh=1",
+   "displayed_link": "https://www.bluedart.com › web › guest › trackdartresult",
+   "favicon": "https://serpapi.com/images/i/UklGRvYAAABXRUJQVlA4IOoAAABwBgCdASocABwAPtEutFooIagoGAEAGglsAJ0zNDV3s3CD5KPRZK8ASrh06eXO3t4TXv68lk_rawWfvAAA_sl1xDVY7UlOOYJuqTUDCmBzUlqsxLlypUEAyngNbGAXxK17Ciw9KPo24elhPidO1v4pmNAnJ54rJakaBxVNs8bb0RUrfZi8f-x_bG7bTnxoOfilpv_53DyJqPAX7eFNLNEyolRQVfTRKOOsnCXX1hQEU6Zj6EH7UTEn-0PE9_eog-u8-OXH1JV-qbC6ThAVzxfvUEia8jcAY6XsHF0PgcBxcVCAP6rAgfALAAA.webp",
+   "snippet": "This website shows real-time tracking updates. Our teams also proactively track each shipment to ensure safe & time-bound deliveries.",
+   "about_this_result": {
+    "source": {
+     "description": "This website shows real-time tracking updates. Our teams also proactively track each shipment to ensure safe & time-bound deliveries.",
+     "source_info_link": "https://www.bluedart.com/web/guest/trackdartresult?trackFor=1&trackNo=FRADEL290926003002",
+     "icon": "https://serpapi.com/images/i/UklGRvYAAABXRUJQVlA4IOoAAABwBgCdASocABwAPtEutFooIagoGAEAGglsAJ0zNDV3s3CD5KPRZK8ASrh06eXO3t4TXv68lk_rawWfvAAA_sl1xDVY7UlOOYJuqTUDCmBzUlqsxLlypUEAyngNbGAXxK17Ciw9KPo24elhPidO1v4pmNAnJ54rJakaBxVNs8bb0RUrfZi8f-x_bG7bTnxoOfilpv_53DyJqPAX7eFNLNEyolRQVfTRKOOsnCXX1hQEU6Zj6EH7UTEn-0PE9_eog-u8-OXH1JV-qbC6ThAVzxfvUEia8jcAY6XsHF0PgcBxcVCAP6rAgfALAAA.webp"
+    },
+    "languages": [
+     "en"
+    ],
+    "regions": [
+     "IN"
+    ]
+   },
+   "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CtUBL2dvdG8_dXJsPUNBRVNrd0VCNnpzd0ZWOEhxUUc5cTJOWnVuWVFqbmpLQ1lzczFpY0xUNEwtYmRoMFRyOUtlaDA4QkN2UUl2N0YxYmk1Z043TGo2a2dGalRHaUtnVEZJY2FncVRxMW1tbTJfdWFLeE5LWUg5T0szSl9xZXlXTHhZQXpyVzdNSTNoSG5WSndGV2dYZEZINDNJckZyZnhkOFJWUklWWWNLRDctTTVEaV9aeWJTdVYzZzJDVjg3V1h3U21BLUlYNW1uQmhUa0d0Ukd5bVBzEgQaAggAGu8DEgIIABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAyQMIABAAGAAgACovCgswNDAyMzMxMTkxORUAAAAAGg0wNDAgMjMzMSAxOTE5GgwwNDAgMjMzMTE5MTky1QEvZ290bz91cmw9Q0FFU2t3RUI2enN3RlY4SHFRRzlxMk5adW5ZUWpuaktDWXNzMWljTFQ0TC1iZGgwVHI5S2VoMDhCQ3ZRSXY3RjFiaTVnTjdMajZrZ0ZqVEdpS2dURkljYWdxVHExbW1tMl91YUt4TktZSDlPSzNKX3FleVdMeFlBenJXN01JM2hIblZKd0ZXZ1hkRkg0M0lyRnJmeGQ4UlZSSVZZY0tENy1NNURpX1p5YlN1VjNnMkNWODdXWHdTbUEtSVg1bW5CaFRrR3RSR3ltUHM6KlRyYWNrRGFydCBUTSAtIFRyYWNraW5nIERldGFpbHMgLSBCbHVlZGFydEKJAVRoaXMgd2Vic2l0ZSBzaG93cyByZWFsLXRpbWUgdHJhY2tpbmcgdXBkYXRlcy4gT3VyIHRlYW1zIGFsc28gcHJvYWN0aXZlbHkgdHJhY2sgZWFjaCBzaGlwbWVudCB0byBlbnN1cmUgc2FmZSAmYW1wOyB0aW1lLWJvdW5kIGRlbGl2ZXJpZXMuIgIQAUgAWABoAA",
+   "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CtUBL2dvdG8_dXJsPUNBRVNrd0VCNnpzd0ZWOEhxUUc5cTJOWnVuWVFqbmpLQ1lzczFpY0xUNEwtYmRoMFRyOUtlaDA4QkN2UUl2N0YxYmk1Z043TGo2a2dGalRHaUtnVEZJY2FncVRxMW1tbTJfdWFLeE5LWUg5T0szSl9xZXlXTHhZQXpyVzdNSTNoSG5WSndGV2dYZEZINDNJckZyZnhkOFJWUklWWWNLRDctTTVEaV9aeWJTdVYzZzJDVjg3V1h3U21BLUlYNW1uQmhUa0d0Ukd5bVBzEgQaAggAGu8DEgIIABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAyQMIABAAGAAgACovCgswNDAyMzMxMTkxORUAAAAAGg0wNDAgMjMzMSAxOTE5GgwwNDAgMjMzMTE5MTky1QEvZ290bz91cmw9Q0FFU2t3RUI2enN3RlY4SHFRRzlxMk5adW5ZUWpuaktDWXNzMWljTFQ0TC1iZGgwVHI5S2VoMDhCQ3ZRSXY3RjFiaTVnTjdMajZrZ0ZqVEdpS2dURkljYWdxVHExbW1tMl91YUt4TktZSDlPSzNKX3FleVdMeFlBenJXN01JM2hIblZKd0ZXZ1hkRkg0M0lyRnJmeGQ4UlZSSVZZY0tENy1NNURpX1p5YlN1VjNnMkNWODdXWHdTbUEtSVg1bW5CaFRrR3RSR3ltUHM6KlRyYWNrRGFydCBUTSAtIFRyYWNraW5nIERldGFpbHMgLSBCbHVlZGFydEKJAVRoaXMgd2Vic2l0ZSBzaG93cyByZWFsLXRpbWUgdHJhY2tpbmcgdXBkYXRlcy4gT3VyIHRlYW1zIGFsc28gcHJvYWN0aXZlbHkgdHJhY2sgZWFjaCBzaGlwbWVudCB0byBlbnN1cmUgc2FmZSAmYW1wOyB0aW1lLWJvdW5kIGRlbGl2ZXJpZXMuIgIQAUgAWABoAA",
+   "source": "Bluedart",
+   "read_more_link": "https://www.bluedart.com/web/guest/trackdartresult?trackFor=1&trackNo=FRADEL290926003002#:~:text=This%20website%20shows%20real%2Dtime%20tracking,ensure%20safe%20%26%20time%2Dbound%20deliveries."
+  },
+  {
+   "position": 6,
+   "title": "TrackDart TM - Tracking Details",
+   "link": "https://www.bluedart.com/web/guest/trackdartresult?trackFor=1&trackNo=ITADEL100626008401",
+   "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESkwEB6zswFfZN_RPHwnFWlBY7BUVz3IQw8DYnRZltJa6hu8BxaKJrqW3jTyRW0lseaL36mHn9hArg820hapxabILheBneeF-KFY5mutjzpOQ2P59vZcWvdjjI8-ZnJALVMNjGuEzlGNW6WKJlKGIPMTU2uzaJfMt1o8yme5ZXnRdaRX3zrQ4vUcrN0G2iiRbuNSU022I&ved=2ahUKEwi-wd6ilqqXAxU7g_0HHVR6KIYQFnoECB0QAQ&uoh=1",
+   "displayed_link": "https://www.bluedart.com › web › guest › trackdartresult",
+   "favicon": "https://serpapi.com/images/i/UklGRvYAAABXRUJQVlA4IOoAAABwBgCdASocABwAPtEutFooIagoGAEAGglsAJ0zNDV3s3CD5KPRZK8ASrh06eXO3t4TXv68lk_rawWfvAAA_sl1xDVY7UlOOYJuqTUDCmBzUlqsxLlypUEAyngNbGAXxK17Ciw9KPo24elhPidO1v4pmNAnJ54rJakaBxVNs8bb0RUrfZi8f-x_bG7bTnxoOfilpv_53DyJqPAX7eFNLNEyolRQVfTRKOOsnCXX1hQEU6Zj6EH7UTEn-0PE9_eog-u8-OXH1JV-qbC6ThAVzxfvUEia8jcAY6XsHF0PgcBxcVCAP6rAgfALAAA.webp",
+   "snippet": "This website shows real-time tracking updates. Our teams also proactively track each shipment to ensure safe & time-bound deliveries.",
+   "about_this_result": {
+    "source": {
+     "description": "This website shows real-time tracking updates. Our teams also proactively track each shipment to ensure safe & time-bound deliveries.",
+     "source_info_link": "https://www.bluedart.com/web/guest/trackdartresult?trackFor=1&trackNo=ITADEL100626008401",
+     "icon": "https://serpapi.com/images/i/UklGRvYAAABXRUJQVlA4IOoAAABwBgCdASocABwAPtEutFooIagoGAEAGglsAJ0zNDV3s3CD5KPRZK8ASrh06eXO3t4TXv68lk_rawWfvAAA_sl1xDVY7UlOOYJuqTUDCmBzUlqsxLlypUEAyngNbGAXxK17Ciw9KPo24elhPidO1v4pmNAnJ54rJakaBxVNs8bb0RUrfZi8f-x_bG7bTnxoOfilpv_53DyJqPAX7eFNLNEyolRQVfTRKOOsnCXX1hQEU6Zj6EH7UTEn-0PE9_eog-u8-OXH1JV-qbC6ThAVzxfvUEia8jcAY6XsHF0PgcBxcVCAP6rAgfALAAA.webp"
+    },
+    "languages": [
+     "en"
+    ],
+    "regions": [
+     "IN"
+    ]
+   },
+   "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CtUBL2dvdG8_dXJsPUNBRVNrd0VCNnpzd0ZmWk5fUlBId25GV2xCWTdCVVZ6M0lRdzhEWW5SWmx0SmE2aHU4QnhhS0pycVczalR5UlcwbHNlYUwzNm1IbjloQXJnODIwaGFweGFiSUxoZUJuZWVGLUtGWTVtdXRqenBPUTJQNTl2WmNXdmRqakk4LVpuSkFMVk1Oakd1RXpsR05XNldLSmxLR0lQTVRVMnV6YUpmTXQxbzh5bWU1WlhuUmRhUlgzenJRNHZVY3JOMEcyaWlSYnVOU1UwMjJJEgQaAggAGu8DEgIIABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAyQMIABAAGAAgACovCgswNDAyMzMxMTkxORUAAAAAGg0wNDAgMjMzMSAxOTE5GgwwNDAgMjMzMTE5MTky1QEvZ290bz91cmw9Q0FFU2t3RUI2enN3RmZaTl9SUEh3bkZXbEJZN0JVVnozSVF3OERZblJabHRKYTZodThCeGFLSnJxVzNqVHlSVzBsc2VhTDM2bUhuOWhBcmc4MjBoYXB4YWJJTGhlQm5lZUYtS0ZZNW11dGp6cE9RMlA1OXZaY1d2ZGpqSTgtWm5KQUxWTU5qR3VFemxHTlc2V0tKbEtHSVBNVFUydXphSmZNdDFvOHltZTVaWG5SZGFSWDN6clE0dlVjck4wRzJpaVJidU5TVTAyMkk6KlRyYWNrRGFydCBUTSAtIFRyYWNraW5nIERldGFpbHMgLSBCbHVlZGFydEKJAVRoaXMgd2Vic2l0ZSBzaG93cyByZWFsLXRpbWUgdHJhY2tpbmcgdXBkYXRlcy4gT3VyIHRlYW1zIGFsc28gcHJvYWN0aXZlbHkgdHJhY2sgZWFjaCBzaGlwbWVudCB0byBlbnN1cmUgc2FmZSAmYW1wOyB0aW1lLWJvdW5kIGRlbGl2ZXJpZXMuIgIQAUgAWABoAA",
+   "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CtUBL2dvdG8_dXJsPUNBRVNrd0VCNnpzd0ZmWk5fUlBId25GV2xCWTdCVVZ6M0lRdzhEWW5SWmx0SmE2aHU4QnhhS0pycVczalR5UlcwbHNlYUwzNm1IbjloQXJnODIwaGFweGFiSUxoZUJuZWVGLUtGWTVtdXRqenBPUTJQNTl2WmNXdmRqakk4LVpuSkFMVk1Oakd1RXpsR05XNldLSmxLR0lQTVRVMnV6YUpmTXQxbzh5bWU1WlhuUmRhUlgzenJRNHZVY3JOMEcyaWlSYnVOU1UwMjJJEgQaAggAGu8DEgIIABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAyQMIABAAGAAgACovCgswNDAyMzMxMTkxORUAAAAAGg0wNDAgMjMzMSAxOTE5GgwwNDAgMjMzMTE5MTky1QEvZ290bz91cmw9Q0FFU2t3RUI2enN3RmZaTl9SUEh3bkZXbEJZN0JVVnozSVF3OERZblJabHRKYTZodThCeGFLSnJxVzNqVHlSVzBsc2VhTDM2bUhuOWhBcmc4MjBoYXB4YWJJTGhlQm5lZUYtS0ZZNW11dGp6cE9RMlA1OXZaY1d2ZGpqSTgtWm5KQUxWTU5qR3VFemxHTlc2V0tKbEtHSVBNVFUydXphSmZNdDFvOHltZTVaWG5SZGFSWDN6clE0dlVjck4wRzJpaVJidU5TVTAyMkk6KlRyYWNrRGFydCBUTSAtIFRyYWNraW5nIERldGFpbHMgLSBCbHVlZGFydEKJAVRoaXMgd2Vic2l0ZSBzaG93cyByZWFsLXRpbWUgdHJhY2tpbmcgdXBkYXRlcy4gT3VyIHRlYW1zIGFsc28gcHJvYWN0aXZlbHkgdHJhY2sgZWFjaCBzaGlwbWVudCB0byBlbnN1cmUgc2FmZSAmYW1wOyB0aW1lLWJvdW5kIGRlbGl2ZXJpZXMuIgIQAUgAWABoAA",
+   "source": "Bluedart",
+   "read_more_link": "https://www.bluedart.com/web/guest/trackdartresult?trackFor=1&trackNo=ITADEL100626008401#:~:text=This%20website%20shows%20real%2Dtime%20tracking,ensure%20safe%20%26%20time%2Dbound%20deliveries."
+  },
+  {
+   "position": 7,
+   "title": "TrackDart TM - Tracking Details",
+   "link": "https://www.bluedart.com/web/guest/trackdartresult?trackFor=1&trackNo=AUTDEL100826002801",
+   "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESkwEB6zswFfxcIBhGaOXazY3M1xLbaoFYEJPC-5pKeovFoiM0h2wYhxEEivPI-oZN7krMVYQ8p8jkCGKvSEEXIIpWUtwlgYhEVFZ0RQuqXcx6WtlEm-PLDEU84E5hGZA5eVsEaPLmxTJPSt9KxRygPh2EmZZZOeDwaWQL6xI31w17wyiGZsVKEhLFao091FlabMMZJDE&ved=2ahUKEwi-wd6ilqqXAxU7g_0HHVR6KIYQFnoECBUQAQ&uoh=1",
+   "displayed_link": "https://www.bluedart.com › web › guest › trackdartresult",
+   "favicon": "https://serpapi.com/images/i/UklGRvYAAABXRUJQVlA4IOoAAABwBgCdASocABwAPtEutFooIagoGAEAGglsAJ0zNDV3s3CD5KPRZK8ASrh06eXO3t4TXv68lk_rawWfvAAA_sl1xDVY7UlOOYJuqTUDCmBzUlqsxLlypUEAyngNbGAXxK17Ciw9KPo24elhPidO1v4pmNAnJ54rJakaBxVNs8bb0RUrfZi8f-x_bG7bTnxoOfilpv_53DyJqPAX7eFNLNEyolRQVfTRKOOsnCXX1hQEU6Zj6EH7UTEn-0PE9_eog-u8-OXH1JV-qbC6ThAVzxfvUEia8jcAY6XsHF0PgcBxcVCAP6rAgfALAAA.webp",
+   "snippet": "This website shows real-time tracking updates. Our teams also proactively track each shipment to ensure safe & time-bound deliveries.",
+   "about_this_result": {
+    "source": {
+     "description": "This website shows real-time tracking updates. Our teams also proactively track each shipment to ensure safe & time-bound deliveries.",
+     "source_info_link": "https://www.bluedart.com/web/guest/trackdartresult?trackFor=1&trackNo=AUTDEL100826002801",
+     "icon": "https://serpapi.com/images/i/UklGRvYAAABXRUJQVlA4IOoAAABwBgCdASocABwAPtEutFooIagoGAEAGglsAJ0zNDV3s3CD5KPRZK8ASrh06eXO3t4TXv68lk_rawWfvAAA_sl1xDVY7UlOOYJuqTUDCmBzUlqsxLlypUEAyngNbGAXxK17Ciw9KPo24elhPidO1v4pmNAnJ54rJakaBxVNs8bb0RUrfZi8f-x_bG7bTnxoOfilpv_53DyJqPAX7eFNLNEyolRQVfTRKOOsnCXX1hQEU6Zj6EH7UTEn-0PE9_eog-u8-OXH1JV-qbC6ThAVzxfvUEia8jcAY6XsHF0PgcBxcVCAP6rAgfALAAA.webp"
+    },
+    "languages": [
+     "en"
+    ],
+    "regions": [
+     "IN"
+    ]
+   },
+   "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CtUBL2dvdG8_dXJsPUNBRVNrd0VCNnpzd0ZmeGNJQmhHYU9YYXpZM00xeExiYW9GWUVKUEMtNXBLZW92Rm9pTTBoMndZaHhFRWl2UEktb1pON2tyTVZZUThwOGprQ0dLdlNFRVhJSXBXVXR3bGdZaEVWRlowUlF1cVhjeDZXdGxFbS1QTERFVTg0RTVoR1pBNWVWc0VhUExteFRKUFN0OUt4UnlnUGgyRW1aWlpPZUR3YVdRTDZ4STMxdzE3d3lpR1pzVktFaExGYW8wOTFGbGFiTU1aSkRFEgQaAggAGu0DEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQMkDCAAQABgAIAAqLwoLMDQwMjMzMTE5MTkVAAAAABoNMDQwIDIzMzEgMTkxORoMMDQwIDIzMzExOTE5MtUBL2dvdG8_dXJsPUNBRVNrd0VCNnpzd0ZmeGNJQmhHYU9YYXpZM00xeExiYW9GWUVKUEMtNXBLZW92Rm9pTTBoMndZaHhFRWl2UEktb1pON2tyTVZZUThwOGprQ0dLdlNFRVhJSXBXVXR3bGdZaEVWRlowUlF1cVhjeDZXdGxFbS1QTERFVTg0RTVoR1pBNWVWc0VhUExteFRKUFN0OUt4UnlnUGgyRW1aWlpPZUR3YVdRTDZ4STMxdzE3d3lpR1pzVktFaExGYW8wOTFGbGFiTU1aSkRFOipUcmFja0RhcnQgVE0gLSBUcmFja2luZyBEZXRhaWxzIC0gQmx1ZWRhcnRCiQFUaGlzIHdlYnNpdGUgc2hvd3MgcmVhbC10aW1lIHRyYWNraW5nIHVwZGF0ZXMuIE91ciB0ZWFtcyBhbHNvIHByb2FjdGl2ZWx5IHRyYWNrIGVhY2ggc2hpcG1lbnQgdG8gZW5zdXJlIHNhZmUgJmFtcDsgdGltZS1ib3VuZCBkZWxpdmVyaWVzLiICEAFIAFgAaAA",
+   "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CtUBL2dvdG8_dXJsPUNBRVNrd0VCNnpzd0ZmeGNJQmhHYU9YYXpZM00xeExiYW9GWUVKUEMtNXBLZW92Rm9pTTBoMndZaHhFRWl2UEktb1pON2tyTVZZUThwOGprQ0dLdlNFRVhJSXBXVXR3bGdZaEVWRlowUlF1cVhjeDZXdGxFbS1QTERFVTg0RTVoR1pBNWVWc0VhUExteFRKUFN0OUt4UnlnUGgyRW1aWlpPZUR3YVdRTDZ4STMxdzE3d3lpR1pzVktFaExGYW8wOTFGbGFiTU1aSkRFEgQaAggAGu0DEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQMkDCAAQABgAIAAqLwoLMDQwMjMzMTE5MTkVAAAAABoNMDQwIDIzMzEgMTkxORoMMDQwIDIzMzExOTE5MtUBL2dvdG8_dXJsPUNBRVNrd0VCNnpzd0ZmeGNJQmhHYU9YYXpZM00xeExiYW9GWUVKUEMtNXBLZW92Rm9pTTBoMndZaHhFRWl2UEktb1pON2tyTVZZUThwOGprQ0dLdlNFRVhJSXBXVXR3bGdZaEVWRlowUlF1cVhjeDZXdGxFbS1QTERFVTg0RTVoR1pBNWVWc0VhUExteFRKUFN0OUt4UnlnUGgyRW1aWlpPZUR3YVdRTDZ4STMxdzE3d3lpR1pzVktFaExGYW8wOTFGbGFiTU1aSkRFOipUcmFja0RhcnQgVE0gLSBUcmFja2luZyBEZXRhaWxzIC0gQmx1ZWRhcnRCiQFUaGlzIHdlYnNpdGUgc2hvd3MgcmVhbC10aW1lIHRyYWNraW5nIHVwZGF0ZXMuIE91ciB0ZWFtcyBhbHNvIHByb2FjdGl2ZWx5IHRyYWNrIGVhY2ggc2hpcG1lbnQgdG8gZW5zdXJlIHNhZmUgJmFtcDsgdGltZS1ib3VuZCBkZWxpdmVyaWVzLiICEAFIAFgAaAA",
+   "source": "Bluedart",
+   "read_more_link": "https://www.bluedart.com/web/guest/trackdartresult?trackFor=1&trackNo=AUTDEL100826002801#:~:text=This%20website%20shows%20real%2Dtime%20tracking,ensure%20safe%20%26%20time%2Dbound%20deliveries."
+  },
+  {
+   "position": 8,
+   "title": "TrackDart TM - Tracking Details",
+   "link": "https://www.bluedart.com/web/guest/trackdartresult?trackFor=1&trackNo=BELDEL310826002301",
+   "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESkwEB6zswFa3C4AyJyg4p-KOKSgZAZ-PBnJodA8-0uwbzVm1fgQSA4cbde-E0sDxLX6OxOlbrpphmNa0hNDbePBuMmdeFZHlMsRgEcNc-e3ebNbfhWTn6Joh5o8qX9Buzq34bAIP_vDYLyhpv4uhRGIa3gxbwYY0e61q1CZFzYcKkYUth05e2D7yFHbH1WygyzL8TFd0&ved=2ahUKEwi-wd6ilqqXAxU7g_0HHVR6KIYQFnoECBgQAQ&uoh=1",
+   "displayed_link": "https://www.bluedart.com › web › guest › trackdartresult",
+   "favicon": "https://serpapi.com/images/i/UklGRvYAAABXRUJQVlA4IOoAAABwBgCdASocABwAPtEutFooIagoGAEAGglsAJ0zNDV3s3CD5KPRZK8ASrh06eXO3t4TXv68lk_rawWfvAAA_sl1xDVY7UlOOYJuqTUDCmBzUlqsxLlypUEAyngNbGAXxK17Ciw9KPo24elhPidO1v4pmNAnJ54rJakaBxVNs8bb0RUrfZi8f-x_bG7bTnxoOfilpv_53DyJqPAX7eFNLNEyolRQVfTRKOOsnCXX1hQEU6Zj6EH7UTEn-0PE9_eog-u8-OXH1JV-qbC6ThAVzxfvUEia8jcAY6XsHF0PgcBxcVCAP6rAgfALAAA.webp",
+   "snippet": "This website shows real-time tracking updates. Our teams also proactively track each shipment to ensure safe & time-bound deliveries.",
+   "about_this_result": {
+    "source": {
+     "description": "This website shows real-time tracking updates. Our teams also proactively track each shipment to ensure safe & time-bound deliveries.",
+     "source_info_link": "https://www.bluedart.com/web/guest/trackdartresult?trackFor=1&trackNo=BELDEL310826002301",
+     "icon": "https://serpapi.com/images/i/UklGRvYAAABXRUJQVlA4IOoAAABwBgCdASocABwAPtEutFooIagoGAEAGglsAJ0zNDV3s3CD5KPRZK8ASrh06eXO3t4TXv68lk_rawWfvAAA_sl1xDVY7UlOOYJuqTUDCmBzUlqsxLlypUEAyngNbGAXxK17Ciw9KPo24elhPidO1v4pmNAnJ54rJakaBxVNs8bb0RUrfZi8f-x_bG7bTnxoOfilpv_53DyJqPAX7eFNLNEyolRQVfTRKOOsnCXX1hQEU6Zj6EH7UTEn-0PE9_eog-u8-OXH1JV-qbC6ThAVzxfvUEia8jcAY6XsHF0PgcBxcVCAP6rAgfALAAA.webp"
+    },
+    "languages": [
+     "en"
+    ],
+    "regions": [
+     "IN"
+    ]
+   },
+   "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CtUBL2dvdG8_dXJsPUNBRVNrd0VCNnpzd0ZhM0M0QXlKeWc0cC1LT0tTZ1pBWi1QQm5Kb2RBOC0wdXdielZtMWZnUVNBNGNiZGUtRTBzRHhMWDZPeE9sYnJwcGhtTmEwaE5EYmVQQnVNbWRlRlpIbE1zUmdFY05jLWUzZWJOYmZoV1RuNkpvaDVvOHFYOUJ1enEzNGJBSVBfdkRZTHlocHY0dWhSR0lhM2d4YndZWTBlNjFxMUNaRnpZY0trWVV0aDA1ZTJEN3lGSGJIMVd5Z3l6TDhURmQwEgQaAggAGu0DEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQMkDCAAQABgAIAAqLwoLMDQwMjMzMTE5MTkVAAAAABoNMDQwIDIzMzEgMTkxORoMMDQwIDIzMzExOTE5MtUBL2dvdG8_dXJsPUNBRVNrd0VCNnpzd0ZhM0M0QXlKeWc0cC1LT0tTZ1pBWi1QQm5Kb2RBOC0wdXdielZtMWZnUVNBNGNiZGUtRTBzRHhMWDZPeE9sYnJwcGhtTmEwaE5EYmVQQnVNbWRlRlpIbE1zUmdFY05jLWUzZWJOYmZoV1RuNkpvaDVvOHFYOUJ1enEzNGJBSVBfdkRZTHlocHY0dWhSR0lhM2d4YndZWTBlNjFxMUNaRnpZY0trWVV0aDA1ZTJEN3lGSGJIMVd5Z3l6TDhURmQwOipUcmFja0RhcnQgVE0gLSBUcmFja2luZyBEZXRhaWxzIC0gQmx1ZWRhcnRCiQFUaGlzIHdlYnNpdGUgc2hvd3MgcmVhbC10aW1lIHRyYWNraW5nIHVwZGF0ZXMuIE91ciB0ZWFtcyBhbHNvIHByb2FjdGl2ZWx5IHRyYWNrIGVhY2ggc2hpcG1lbnQgdG8gZW5zdXJlIHNhZmUgJmFtcDsgdGltZS1ib3VuZCBkZWxpdmVyaWVzLiICEAFIAFgAaAA",
+   "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CtUBL2dvdG8_dXJsPUNBRVNrd0VCNnpzd0ZhM0M0QXlKeWc0cC1LT0tTZ1pBWi1QQm5Kb2RBOC0wdXdielZtMWZnUVNBNGNiZGUtRTBzRHhMWDZPeE9sYnJwcGhtTmEwaE5EYmVQQnVNbWRlRlpIbE1zUmdFY05jLWUzZWJOYmZoV1RuNkpvaDVvOHFYOUJ1enEzNGJBSVBfdkRZTHlocHY0dWhSR0lhM2d4YndZWTBlNjFxMUNaRnpZY0trWVV0aDA1ZTJEN3lGSGJIMVd5Z3l6TDhURmQwEgQaAggAGu0DEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQMkDCAAQABgAIAAqLwoLMDQwMjMzMTE5MTkVAAAAABoNMDQwIDIzMzEgMTkxORoMMDQwIDIzMzExOTE5MtUBL2dvdG8_dXJsPUNBRVNrd0VCNnpzd0ZhM0M0QXlKeWc0cC1LT0tTZ1pBWi1QQm5Kb2RBOC0wdXdielZtMWZnUVNBNGNiZGUtRTBzRHhMWDZPeE9sYnJwcGhtTmEwaE5EYmVQQnVNbWRlRlpIbE1zUmdFY05jLWUzZWJOYmZoV1RuNkpvaDVvOHFYOUJ1enEzNGJBSVBfdkRZTHlocHY0dWhSR0lhM2d4YndZWTBlNjFxMUNaRnpZY0trWVV0aDA1ZTJEN3lGSGJIMVd5Z3l6TDhURmQwOipUcmFja0RhcnQgVE0gLSBUcmFja2luZyBEZXRhaWxzIC0gQmx1ZWRhcnRCiQFUaGlzIHdlYnNpdGUgc2hvd3MgcmVhbC10aW1lIHRyYWNraW5nIHVwZGF0ZXMuIE91ciB0ZWFtcyBhbHNvIHByb2FjdGl2ZWx5IHRyYWNrIGVhY2ggc2hpcG1lbnQgdG8gZW5zdXJlIHNhZmUgJmFtcDsgdGltZS1ib3VuZCBkZWxpdmVyaWVzLiICEAFIAFgAaAA",
+   "source": "Bluedart",
+   "read_more_link": "https://www.bluedart.com/web/guest/trackdartresult?trackFor=1&trackNo=BELDEL310826002301#:~:text=This%20website%20shows%20real%2Dtime%20tracking,ensure%20safe%20%26%20time%2Dbound%20deliveries."
+  },
+  {
+   "position": 9,
+   "title": "TrackDart TM - Tracking Details",
+   "link": "https://www.bluedart.com/web/guest/trackdartresult?trackFor=1&trackNo=DEUDEL220926004801",
+   "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESkwEB6zswFfM27twcjp8sMr7MgTzJlhWo92usthOeTCPt69gXnMkI1AllYTcrFwUVK8wC9n7z3YkGQJk4l7eXCesY5HDnoqOSmTdd5b6pakwJjyvOZ4BhLBlW94Su7meAHQEO0YpjZyyk73eSR0MAWgs4EMm47OV2B2g0j11eFsFCoMfLZMtkimHICxJ3crLIMjRmi6o&ved=2ahUKEwi-wd6ilqqXAxU7g_0HHVR6KIYQFnoECBoQAQ&uoh=1",
+   "displayed_link": "https://www.bluedart.com › web › guest › trackdartresult",
+   "favicon": "https://serpapi.com/images/i/UklGRvYAAABXRUJQVlA4IOoAAABwBgCdASocABwAPtEutFooIagoGAEAGglsAJ0zNDV3s3CD5KPRZK8ASrh06eXO3t4TXv68lk_rawWfvAAA_sl1xDVY7UlOOYJuqTUDCmBzUlqsxLlypUEAyngNbGAXxK17Ciw9KPo24elhPidO1v4pmNAnJ54rJakaBxVNs8bb0RUrfZi8f-x_bG7bTnxoOfilpv_53DyJqPAX7eFNLNEyolRQVfTRKOOsnCXX1hQEU6Zj6EH7UTEn-0PE9_eog-u8-OXH1JV-qbC6ThAVzxfvUEia8jcAY6XsHF0PgcBxcVCAP6rAgfALAAA.webp",
+   "snippet": "This website shows real-time tracking updates. Our teams also proactively track each shipment to ensure safe & time-bound deliveries.",
+   "about_this_result": {
+    "source": {
+     "description": "This website shows real-time tracking updates. Our teams also proactively track each shipment to ensure safe & time-bound deliveries.",
+     "source_info_link": "https://www.bluedart.com/web/guest/trackdartresult?trackFor=1&trackNo=DEUDEL220926004801",
+     "icon": "https://serpapi.com/images/i/UklGRvYAAABXRUJQVlA4IOoAAABwBgCdASocABwAPtEutFooIagoGAEAGglsAJ0zNDV3s3CD5KPRZK8ASrh06eXO3t4TXv68lk_rawWfvAAA_sl1xDVY7UlOOYJuqTUDCmBzUlqsxLlypUEAyngNbGAXxK17Ciw9KPo24elhPidO1v4pmNAnJ54rJakaBxVNs8bb0RUrfZi8f-x_bG7bTnxoOfilpv_53DyJqPAX7eFNLNEyolRQVfTRKOOsnCXX1hQEU6Zj6EH7UTEn-0PE9_eog-u8-OXH1JV-qbC6ThAVzxfvUEia8jcAY6XsHF0PgcBxcVCAP6rAgfALAAA.webp"
+    },
+    "languages": [
+     "en"
+    ],
+    "regions": [
+     "IN"
+    ]
+   },
+   "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CtUBL2dvdG8_dXJsPUNBRVNrd0VCNnpzd0ZmTTI3dHdjanA4c01yN01nVHpKbGhXbzkydXN0aE9lVENQdDY5Z1huTWtJMUFsbFlUY3JGd1VWSzh3QzluN3ozWWtHUUprNGw3ZVhDZXNZNUhEbm9xT1NtVGRkNWI2cGFrd0pqeXZPWjRCaExCbFc5NFN1N21lQUhRRU8wWXBqWnl5azczZVNSME1BV2dzNEVNbTQ3T1YyQjJnMGoxMWVGc0ZDb01mTFpNdGtpbUhJQ3hKM2NyTElNalJtaTZvEgQaAggAGu8DEgIIABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAyQMIABAAGAAgACovCgswNDAyMzMxMTkxORUAAAAAGg0wNDAgMjMzMSAxOTE5GgwwNDAgMjMzMTE5MTky1QEvZ290bz91cmw9Q0FFU2t3RUI2enN3RmZNMjd0d2NqcDhzTXI3TWdUekpsaFdvOTJ1c3RoT2VUQ1B0NjlnWG5Na0kxQWxsWVRjckZ3VVZLOHdDOW43ejNZa0dRSms0bDdlWENlc1k1SERub3FPU21UZGQ1YjZwYWt3Smp5dk9aNEJoTEJsVzk0U3U3bWVBSFFFTzBZcGpaeXlrNzNlU1IwTUFXZ3M0RU1tNDdPVjJCMmcwajExZUZzRkNvTWZMWk10a2ltSElDeEozY3JMSU1qUm1pNm86KlRyYWNrRGFydCBUTSAtIFRyYWNraW5nIERldGFpbHMgLSBCbHVlZGFydEKJAVRoaXMgd2Vic2l0ZSBzaG93cyByZWFsLXRpbWUgdHJhY2tpbmcgdXBkYXRlcy4gT3VyIHRlYW1zIGFsc28gcHJvYWN0aXZlbHkgdHJhY2sgZWFjaCBzaGlwbWVudCB0byBlbnN1cmUgc2FmZSAmYW1wOyB0aW1lLWJvdW5kIGRlbGl2ZXJpZXMuIgIQAUgAWABoAA",
+   "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CtUBL2dvdG8_dXJsPUNBRVNrd0VCNnpzd0ZmTTI3dHdjanA4c01yN01nVHpKbGhXbzkydXN0aE9lVENQdDY5Z1huTWtJMUFsbFlUY3JGd1VWSzh3QzluN3ozWWtHUUprNGw3ZVhDZXNZNUhEbm9xT1NtVGRkNWI2cGFrd0pqeXZPWjRCaExCbFc5NFN1N21lQUhRRU8wWXBqWnl5azczZVNSME1BV2dzNEVNbTQ3T1YyQjJnMGoxMWVGc0ZDb01mTFpNdGtpbUhJQ3hKM2NyTElNalJtaTZvEgQaAggAGu8DEgIIABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAyQMIABAAGAAgACovCgswNDAyMzMxMTkxORUAAAAAGg0wNDAgMjMzMSAxOTE5GgwwNDAgMjMzMTE5MTky1QEvZ290bz91cmw9Q0FFU2t3RUI2enN3RmZNMjd0d2NqcDhzTXI3TWdUekpsaFdvOTJ1c3RoT2VUQ1B0NjlnWG5Na0kxQWxsWVRjckZ3VVZLOHdDOW43ejNZa0dRSms0bDdlWENlc1k1SERub3FPU21UZGQ1YjZwYWt3Smp5dk9aNEJoTEJsVzk0U3U3bWVBSFFFTzBZcGpaeXlrNzNlU1IwTUFXZ3M0RU1tNDdPVjJCMmcwajExZUZzRkNvTWZMWk10a2ltSElDeEozY3JMSU1qUm1pNm86KlRyYWNrRGFydCBUTSAtIFRyYWNraW5nIERldGFpbHMgLSBCbHVlZGFydEKJAVRoaXMgd2Vic2l0ZSBzaG93cyByZWFsLXRpbWUgdHJhY2tpbmcgdXBkYXRlcy4gT3VyIHRlYW1zIGFsc28gcHJvYWN0aXZlbHkgdHJhY2sgZWFjaCBzaGlwbWVudCB0byBlbnN1cmUgc2FmZSAmYW1wOyB0aW1lLWJvdW5kIGRlbGl2ZXJpZXMuIgIQAUgAWABoAA",
+   "source": "Bluedart",
+   "read_more_link": "https://www.bluedart.com/web/guest/trackdartresult?trackFor=1&trackNo=DEUDEL220926004801#:~:text=This%20website%20shows%20real%2Dtime%20tracking,ensure%20safe%20%26%20time%2Dbound%20deliveries."
+  },
+  {
+   "position": 10,
+   "title": "TrackDart TM - Tracking Details",
+   "link": "https://www.bluedart.com/web/guest/trackdartresult?trackFor=1&trackNo=PRTDEL160626008201",
+   "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESkwEB6zswFclFic5RhhU-86vROwYvZ8tjba5a6ZKrk-JyVTawuJTPNhEek6H-8ffAywEn8V8CAal62mYS8GRFoLgvv6OSzAFGX1mDK0siexOBNm_7SnZ2SOo1QQdwM-YWxxWW2R1jWxuZOVCG0MQlQhQWG0oAzA-yWVgQpdu0ghbTiITn3o8Y9vH3ecE9MZwoY5f1uvs&ved=2ahUKEwi-wd6ilqqXAxU7g_0HHVR6KIYQFnoECBwQAQ&uoh=1",
+   "displayed_link": "https://www.bluedart.com › web › guest › trackdartresult",
+   "favicon": "https://serpapi.com/images/i/UklGRvYAAABXRUJQVlA4IOoAAABwBgCdASocABwAPtEutFooIagoGAEAGglsAJ0zNDV3s3CD5KPRZK8ASrh06eXO3t4TXv68lk_rawWfvAAA_sl1xDVY7UlOOYJuqTUDCmBzUlqsxLlypUEAyngNbGAXxK17Ciw9KPo24elhPidO1v4pmNAnJ54rJakaBxVNs8bb0RUrfZi8f-x_bG7bTnxoOfilpv_53DyJqPAX7eFNLNEyolRQVfTRKOOsnCXX1hQEU6Zj6EH7UTEn-0PE9_eog-u8-OXH1JV-qbC6ThAVzxfvUEia8jcAY6XsHF0PgcBxcVCAP6rAgfALAAA.webp",
+   "snippet": "This website shows real-time tracking updates. Our teams also proactively track each shipment to ensure safe & time-bound deliveries.",
+   "about_this_result": {
+    "source": {
+     "description": "This website shows real-time tracking updates. Our teams also proactively track each shipment to ensure safe & time-bound deliveries.",
+     "source_info_link": "https://www.bluedart.com/web/guest/trackdartresult?trackFor=1&trackNo=PRTDEL160626008201",
+     "icon": "https://serpapi.com/images/i/UklGRvYAAABXRUJQVlA4IOoAAABwBgCdASocABwAPtEutFooIagoGAEAGglsAJ0zNDV3s3CD5KPRZK8ASrh06eXO3t4TXv68lk_rawWfvAAA_sl1xDVY7UlOOYJuqTUDCmBzUlqsxLlypUEAyngNbGAXxK17Ciw9KPo24elhPidO1v4pmNAnJ54rJakaBxVNs8bb0RUrfZi8f-x_bG7bTnxoOfilpv_53DyJqPAX7eFNLNEyolRQVfTRKOOsnCXX1hQEU6Zj6EH7UTEn-0PE9_eog-u8-OXH1JV-qbC6ThAVzxfvUEia8jcAY6XsHF0PgcBxcVCAP6rAgfALAAA.webp"
+    },
+    "languages": [
+     "en"
+    ],
+    "regions": [
+     "IN"
+    ]
+   },
+   "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CtUBL2dvdG8_dXJsPUNBRVNrd0VCNnpzd0ZjbEZpYzVSaGhVLTg2dlJPd1l2Wjh0amJhNWE2Wktyay1KeVZUYXd1SlRQTmhFZWs2SC04ZmZBeXdFbjhWOENBYWw2Mm1ZUzhHUkZvTGd2djZPU3pBRkdYMW1ESzBzaWV4T0JObV83U25aMlNPbzFRUWR3TS1ZV3h4V1cyUjFqV3h1Wk9WQ0cwTVFsUWhRV0cwb0F6QS15V1ZnUXBkdTBnaGJUaUlUbjNvOFk5dkgzZWNFOU1ad29ZNWYxdXZzEgQaAggAGu0DEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQMkDCAAQABgAIAAqLwoLMDQwMjMzMTE5MTkVAAAAABoNMDQwIDIzMzEgMTkxORoMMDQwIDIzMzExOTE5MtUBL2dvdG8_dXJsPUNBRVNrd0VCNnpzd0ZjbEZpYzVSaGhVLTg2dlJPd1l2Wjh0amJhNWE2Wktyay1KeVZUYXd1SlRQTmhFZWs2SC04ZmZBeXdFbjhWOENBYWw2Mm1ZUzhHUkZvTGd2djZPU3pBRkdYMW1ESzBzaWV4T0JObV83U25aMlNPbzFRUWR3TS1ZV3h4V1cyUjFqV3h1Wk9WQ0cwTVFsUWhRV0cwb0F6QS15V1ZnUXBkdTBnaGJUaUlUbjNvOFk5dkgzZWNFOU1ad29ZNWYxdXZzOipUcmFja0RhcnQgVE0gLSBUcmFja2luZyBEZXRhaWxzIC0gQmx1ZWRhcnRCiQFUaGlzIHdlYnNpdGUgc2hvd3MgcmVhbC10aW1lIHRyYWNraW5nIHVwZGF0ZXMuIE91ciB0ZWFtcyBhbHNvIHByb2FjdGl2ZWx5IHRyYWNrIGVhY2ggc2hpcG1lbnQgdG8gZW5zdXJlIHNhZmUgJmFtcDsgdGltZS1ib3VuZCBkZWxpdmVyaWVzLiICEAFIAFgAaAA",
+   "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CtUBL2dvdG8_dXJsPUNBRVNrd0VCNnpzd0ZjbEZpYzVSaGhVLTg2dlJPd1l2Wjh0amJhNWE2Wktyay1KeVZUYXd1SlRQTmhFZWs2SC04ZmZBeXdFbjhWOENBYWw2Mm1ZUzhHUkZvTGd2djZPU3pBRkdYMW1ESzBzaWV4T0JObV83U25aMlNPbzFRUWR3TS1ZV3h4V1cyUjFqV3h1Wk9WQ0cwTVFsUWhRV0cwb0F6QS15V1ZnUXBkdTBnaGJUaUlUbjNvOFk5dkgzZWNFOU1ad29ZNWYxdXZzEgQaAggAGu0DEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQMkDCAAQABgAIAAqLwoLMDQwMjMzMTE5MTkVAAAAABoNMDQwIDIzMzEgMTkxORoMMDQwIDIzMzExOTE5MtUBL2dvdG8_dXJsPUNBRVNrd0VCNnpzd0ZjbEZpYzVSaGhVLTg2dlJPd1l2Wjh0amJhNWE2Wktyay1KeVZUYXd1SlRQTmhFZWs2SC04ZmZBeXdFbjhWOENBYWw2Mm1ZUzhHUkZvTGd2djZPU3pBRkdYMW1ESzBzaWV4T0JObV83U25aMlNPbzFRUWR3TS1ZV3h4V1cyUjFqV3h1Wk9WQ0cwTVFsUWhRV0cwb0F6QS15V1ZnUXBkdTBnaGJUaUlUbjNvOFk5dkgzZWNFOU1ad29ZNWYxdXZzOipUcmFja0RhcnQgVE0gLSBUcmFja2luZyBEZXRhaWxzIC0gQmx1ZWRhcnRCiQFUaGlzIHdlYnNpdGUgc2hvd3MgcmVhbC10aW1lIHRyYWNraW5nIHVwZGF0ZXMuIE91ciB0ZWFtcyBhbHNvIHByb2FjdGl2ZWx5IHRyYWNrIGVhY2ggc2hpcG1lbnQgdG8gZW5zdXJlIHNhZmUgJmFtcDsgdGltZS1ib3VuZCBkZWxpdmVyaWVzLiICEAFIAFgAaAA",
+   "source": "Bluedart",
+   "read_more_link": "https://www.bluedart.com/web/guest/trackdartresult?trackFor=1&trackNo=PRTDEL160626008201#:~:text=This%20website%20shows%20real%2Dtime%20tracking,ensure%20safe%20%26%20time%2Dbound%20deliveries."
+  }
+ ],
+ "pagination": {
+  "current": 1,
+  "next": "https://www.google.co.in/search?q=%2204023311919%22+OR+%22040+2331+1919%22+OR+%22040-23311919%22&sca_esv=e2130cf16db8d2a2&hl=en&gl=in&sxsrf=APpeQnvLuB7pgwOlGCKgnMrrrd8l7cBEFg:1791454017469&ei=QWvHav6cHLuG9u8P1PShsQg&start=10&sa=N&sstk=AS6-VmLQvG6PVE64GDlYJr8gQm7OOX90bqBQWnIALfPIGgqlxOY0N7vC6Z2VqVokAekJ_euvbBo85b6E69ZlkARgsyLkvMCXJBWq3A&ved=2ahUKEwi-wd6ilqqXAxU7g_0HHVR6KIYQ8NMDegQIQBAO",
+  "other_pages": {
+   "2": "https://www.google.co.in/search?q=%2204023311919%22+OR+%22040+2331+1919%22+OR+%22040-23311919%22&sca_esv=e2130cf16db8d2a2&hl=en&gl=in&sxsrf=APpeQnvLuB7pgwOlGCKgnMrrrd8l7cBEFg:1791454017469&ei=QWvHav6cHLuG9u8P1PShsQg&start=10&sa=N&sstk=AS6-VmLQvG6PVE64GDlYJr8gQm7OOX90bqBQWnIALfPIGgqlxOY0N7vC6Z2VqVokAekJ_euvbBo85b6E69ZlkARgsyLkvMCXJBWq3A&ved=2ahUKEwi-wd6ilqqXAxU7g_0HHVR6KIYQ8tMDegQIQBAE",
+   "3": "https://www.google.co.in/search?q=%2204023311919%22+OR+%22040+2331+1919%22+OR+%22040-23311919%22&sca_esv=e2130cf16db8d2a2&hl=en&gl=in&sxsrf=APpeQnvLuB7pgwOlGCKgnMrrrd8l7cBEFg:1791454017469&ei=QWvHav6cHLuG9u8P1PShsQg&start=20&sa=N&sstk=AS6-VmLQvG6PVE64GDlYJr8gQm7OOX90bqBQWnIALfPIGgqlxOY0N7vC6Z2VqVokAekJ_euvbBo85b6E69ZlkARgsyLkvMCXJBWq3A&ved=2ahUKEwi-wd6ilqqXAxU7g_0HHVR6KIYQ8tMDegQIQBAG",
+   "4": "https://www.google.co.in/search?q=%2204023311919%22+OR+%22040+2331+1919%22+OR+%22040-23311919%22&sca_esv=e2130cf16db8d2a2&hl=en&gl=in&sxsrf=APpeQnvLuB7pgwOlGCKgnMrrrd8l7cBEFg:1791454017469&ei=QWvHav6cHLuG9u8P1PShsQg&start=30&sa=N&sstk=AS6-VmLQvG6PVE64GDlYJr8gQm7OOX90bqBQWnIALfPIGgqlxOY0N7vC6Z2VqVokAekJ_euvbBo85b6E69ZlkARgsyLkvMCXJBWq3A&ved=2ahUKEwi-wd6ilqqXAxU7g_0HHVR6KIYQ8tMDegQIQBAI",
+   "5": "https://www.google.co.in/search?q=%2204023311919%22+OR+%22040+2331+1919%22+OR+%22040-23311919%22&sca_esv=e2130cf16db8d2a2&hl=en&gl=in&sxsrf=APpeQnvLuB7pgwOlGCKgnMrrrd8l7cBEFg:1791454017469&ei=QWvHav6cHLuG9u8P1PShsQg&start=40&sa=N&sstk=AS6-VmLQvG6PVE64GDlYJr8gQm7OOX90bqBQWnIALfPIGgqlxOY0N7vC6Z2VqVokAekJ_euvbBo85b6E69ZlkARgsyLkvMCXJBWq3A&ved=2ahUKEwi-wd6ilqqXAxU7g_0HHVR6KIYQ8tMDegQIQBAK",
+   "6": "https://www.google.co.in/search?q=%2204023311919%22+OR+%22040+2331+1919%22+OR+%22040-23311919%22&sca_esv=e2130cf16db8d2a2&hl=en&gl=in&sxsrf=APpeQnvLuB7pgwOlGCKgnMrrrd8l7cBEFg:1791454017469&ei=QWvHav6cHLuG9u8P1PShsQg&start=50&sa=N&sstk=AS6-VmLQvG6PVE64GDlYJr8gQm7OOX90bqBQWnIALfPIGgqlxOY0N7vC6Z2VqVokAekJ_euvbBo85b6E69ZlkARgsyLkvMCXJBWq3A&ved=2ahUKEwi-wd6ilqqXAxU7g_0HHVR6KIYQ8tMDegQIQBAM"
+  }
+ },
+ "serpapi_pagination": {
+  "current": 1,
+  "next_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=%2204023311919%22+OR+%22040+2331+1919%22+OR+%22040-23311919%22&start=10",
+  "next": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=%2204023311919%22+OR+%22040+2331+1919%22+OR+%22040-23311919%22&start=10",
+  "other_pages": {
+   "2": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=%2204023311919%22+OR+%22040+2331+1919%22+OR+%22040-23311919%22&start=10",
+   "3": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=%2204023311919%22+OR+%22040+2331+1919%22+OR+%22040-23311919%22&start=20",
+   "4": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=%2204023311919%22+OR+%22040+2331+1919%22+OR+%22040-23311919%22&start=30",
+   "5": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=%2204023311919%22+OR+%22040+2331+1919%22+OR+%22040-23311919%22&start=40",
+   "6": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=%2204023311919%22+OR+%22040+2331+1919%22+OR+%22040-23311919%22&start=50"
+  }
+ }
+}

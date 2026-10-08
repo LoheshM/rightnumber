@@ -1,0 +1,23 @@
+[project]
+name = "rightnumber"
+version = "0.1.0"
+description = "Check a customer-care number against the brand's own website before you dial (SerpApi India Hackathon 2026)"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.142.4",
+    "httpx>=0.28.1",
+    "openai>=3.26.1",
+    "pydantic>=2.13.5",
+    "python-dotenv>=1.2.4",
+    "sse-starlette>=3.5.0",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[dependency-groups]
+dev = [
+    "playwright>=1.63.0",
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+    "respx>=0.23.1",
+    "ruff>=0.16.10",
+]

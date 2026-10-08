@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.example
+.venv/
+data/cache/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+DEMO_SCRIPT.md
+notes/
+probe/raw_unscrubbed/
+probe/*.json
+results/raw/
+HACKATHON_PLAYBOOK.md

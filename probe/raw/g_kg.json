@@ -1,0 +1,491 @@
+{
+ "search_metadata": {
+  "id": "6ac76b57b333ee2a431b6766",
+  "status": "Success",
+  "json_endpoint": "https://serpapi.com/searches/W3-RZFARXwhvxiDFNAayWO_Cms4KQPNu8iMK-plDzZI/6ac76b57b333ee2a431b6766.json",
+  "markdown_endpoint": "https://serpapi.com/searches/W3-RZFARXwhvxiDFNAayWO_Cms4KQPNu8iMK-plDzZI/6ac76b57b333ee2a431b6766.md",
+  "pixel_position_endpoint": "https://serpapi.com/searches/W3-RZFARXwhvxiDFNAayWO_Cms4KQPNu8iMK-plDzZI/6ac76b57b333ee2a431b6766.json_with_pixel_position",
+  "created_at": "2026-10-08 10:07:19 UTC",
+  "processed_at": "2026-10-08 10:07:19 UTC",
+  "google_url": "https://www.google.co.in/search?q=Blue+Dart&oq=Blue+Dart&hl=en&gl=in&sourceid=chrome&ie=UTF-8",
+  "raw_html_file": "https://serpapi.com/searches/W3-RZFARXwhvxiDFNAayWO_Cms4KQPNu8iMK-plDzZI/6ac76b57b333ee2a431b6766.html",
+  "total_time_taken": 0.48
+ },
+ "search_parameters": {
+  "engine": "google",
+  "q": "Blue Dart",
+  "google_domain": "google.co.in",
+  "hl": "en",
+  "gl": "in",
+  "device": "desktop"
+ },
+ "search_information": {
+  "query_displayed": "Blue Dart",
+  "total_results": 205000,
+  "time_taken_displayed": 0.28,
+  "organic_results_state": "Results for exact spelling"
+ },
+ "local_map": {
+  "link": "https://www.google.co.in/search?q=Blue+Dart&sca_esv=e2130cf16db8d2a2&gl=in&hl=en&sxsrf=APpeQnsyHRF4grpVoWEc43AEtAJx_0EqIg:1791454039393&udm=local&lsack=V2vHavvGF-Kv5NoPmNSqGA&sa=X&ved=2ahUKEwi7zpitlqqXAxXiF1kFHRiqCgMQtgN6BAg0EAM",
+  "image": "https://serpapi.com/searches/6ac76b57b333ee2a431b6766/images/IHLZM0TUsojlg-YFRDWFHA.png",
+  "gps_coordinates": {
+   "latitude": 20.98452118588512,
+   "longitude": 78.848876953125
+  }
+ },
+ "local_results": {
+  "places": [
+   {
+    "position": 1,
+    "title": "Blue Dart Express Limited",
+    "type": "Courier service",
+    "rating": 2.6,
+    "reviews": 94,
+    "label": "A",
+    "description": "\"Blue dart office located in Sandeep Saw Mill building\"",
+    "links": {
+     "phone": "tel:022 6975 1234",
+     "website": "https://www.bluedart.com/"
+    },
+    "place_id": "11138402887145120800",
+    "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&ludocid=11138402887145120800&q=Blue+Dart",
+    "provider_id": "/g/11qzj5tdmy",
+    "gps_coordinates": {
+     "latitude": 20.746547,
+     "longitude": 78.598129
+    },
+    "address": "PLOT NO 8, Sane guruji Nagar, Bachelor Rd, near Sai Mandir, Arvi Naka, Wardha, Maharashtra 442001",
+    "phone": "022 6975 1234"
+   },
+   {
+    "position": 2,
+    "title": "Blue Dart Express Digital",
+    "type": "Courier service",
+    "rating": 3,
+    "reviews": 527,
+    "label": "B",
+    "description": "On-site services",
+    "links": {
+     "phone": "tel:1860 233 1234",
+     "website": "https://www.bluedart.com/"
+    },
+    "place_id": "16030693700063545781",
+    "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&ludocid=16030693700063545781&q=Blue+Dart",
+    "provider_id": "/g/11cs4ycd8l",
+    "gps_coordinates": {
+     "latitude": 21.136227,
+     "longitude": 79.099071
+    },
+    "address": "17-23, Great Nag Rd, Nagpur, Maharashtra 440024",
+    "hours": "Open · Closes 9 pm",
+    "phone": "1860 233 1234"
+   },
+   {
+    "position": 3,
+    "title": "Blue Dart Express Limited",
+    "type": "Courier service",
+    "rating": 3.4,
+    "reviews": 992,
+    "label": "C",
+    "description": "On-site services",
+    "links": {
+     "phone": "tel:022 4061 1234",
+     "website": "https://www.bluedart.com/"
+    },
+    "place_id": "16838252727556942759",
+    "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&ludocid=16838252727556942759&q=Blue+Dart",
+    "provider_id": "/g/1tdj_13x",
+    "gps_coordinates": {
+     "latitude": 21.139542,
+     "longitude": 79.075242
+    },
+    "address": "179, 179, N Ambazari Rd, Near University library, Ramdaspeth, Nagpur, Maharashtra 440010",
+    "hours": "Open · Closes 8:30 pm",
+    "phone": "022 4061 1234"
+   }
+  ],
+  "more_locations_link": "https://www.google.co.in/search?q=Blue+Dart&sca_esv=e2130cf16db8d2a2&gl=in&hl=en&sxsrf=APpeQnsyHRF4grpVoWEc43AEtAJx_0EqIg:1791454039393&udm=local&lsack=V2vHavvGF-Kv5NoPmNSqGA&sa=X&ved=2ahUKEwi7zpitlqqXAxXiF1kFHRiqCgMQjGp6BAg6EAE"
+ },
+ "knowledge_graph": {
+  "place_id": "ChIJ7U4eirp_1DsRIGR4fWmOk5o"
+ },
+ "ai_overview": {
+  "page_token": "TcWLaXiczVXbcqpIFP2A-Y7xZaJcJGpSRZ3qblGJSiTEePSF4majclEwoudt3uZD5qvma6YBQbyQk5yHqekq7Nvu3Xv3Xsv159_Owlv989tf9na7Dh8pKoqiGvZ97Fg1w68tPEoLD55BzX0nDAz7G3b4hVexHd7yKocdX68YIU9XrAX_xu562m7X7VT7u3vJH7mSsumCSnKaV3UttJbE_X4ZUipFfla_19tkUgtrlqd2YY3ezuxFJ2CdCVdjabZee6Y0l9iA_7BhBQCB9AIGuNSIGIifcRY7ekl85Q1mJ-V8aQhid2JsHu9BGZQ0CNOYBDELoF0dWlOdDOjcqPz0WcgoSrt2cjkQhDi0LzThmE1238fvIZQu-aeVYWG3NAtxeD5HGKBRBOTTE59HIvjFGdmDqeWzDKx2C9gYfxi5IIPeECux-59UvA8WIzDOomLJNYgyMUEvTekB6RhqYdhGMgjCGNTo9YH2e5wYyYzkBG-66oRP3G7IPq0fVM8eupgydGLn-Jppmaqt0t-SOcMyzYcG3eDuEkIZYc6osMgo1BIca-CyrSFXG9Qgk3EJ5S-PLjIlc3QzRwxT4xI-iJfVinEkvuRTdDwJ41E3WS94Gj_jFHdRdrpJkAA7Z6FlgYBrLp2QlQeRcOlYCWFc9CAXz05PDBfPistdpYiuuQGBcYQEdpOFdubqCu0immXRgxx_p9Yl9j7xT1KeItCPxNSZfHLjYlu8PEU2MSJ_GGIhvXwkFLiEyKsvSC-jYfxaK4RXCAKYVinJLQZ5ampfVPI2HkhbkXKJqGTz49b_lBXKSHPBgSJ3Ooa9nUzXo7f7LjSRoR-4w_zHWsHKQZdvc8V39a_Jj_H_IlQqTugoTuWESm79GaFiBN0Qp2RPzn9ycRqn4jQuJRRMCXUUJ7EgTq3cKLO_IhQUi4RKxKldKk5fJpT4IaEyzlwTyr9NKLmMUIk4nRNKORMnVCZOR0L9ijhpvypOCb-stDtXqvclLlWszrZhLr43273BzmP63yfOerdqbQy2Of2EYs3d7aOrmc6dujAfIfu0PZh3KlnwHy2zsuGh82790daCbcV1Ap-ntfvqfhXM3rvWXp-tmiNmcl8X2HlrgEBDpQNr1tu063qnPem_7uucLqkbGjrssDl9CZ_gSoqW1bnpWDMY3a9EZh80pm-SLfYiJLqcIktw5Gg9qLyqCBucor5E08bcOHC76Y9AYebzybL6WmccehB093V25gfdVpTEFfINJHqeBOG7RFYCgycl5zCQZDDBBMVoSrCByeeTj1QfNYAsQJZgpRIammqFO95imTptzJmGqbdMVmMrLt4e1jzHVEIv4Jl_AZZYPzQ",
+  "serpapi_link": "https://serpapi.com/search.json?engine=google_ai_overview&page_token=TcWLaXiczVXbcqpIFP2A-Y7xZaJcJGpSRZ3qblGJSiTEePSF4majclEwoudt3uZD5qvma6YBQbyQk5yHqekq7Nvu3Xv3Xsv159_Owlv989tf9na7Dh8pKoqiGvZ97Fg1w68tPEoLD55BzX0nDAz7G3b4hVexHd7yKocdX68YIU9XrAX_xu562m7X7VT7u3vJH7mSsumCSnKaV3UttJbE_X4ZUipFfla_19tkUgtrlqd2YY3ezuxFJ2CdCVdjabZee6Y0l9iA_7BhBQCB9AIGuNSIGIifcRY7ekl85Q1mJ-V8aQhid2JsHu9BGZQ0CNOYBDELoF0dWlOdDOjcqPz0WcgoSrt2cjkQhDi0LzThmE1238fvIZQu-aeVYWG3NAtxeD5HGKBRBOTTE59HIvjFGdmDqeWzDKx2C9gYfxi5IIPeECux-59UvA8WIzDOomLJNYgyMUEvTekB6RhqYdhGMgjCGNTo9YH2e5wYyYzkBG-66oRP3G7IPq0fVM8eupgydGLn-Jppmaqt0t-SOcMyzYcG3eDuEkIZYc6osMgo1BIca-CyrSFXG9Qgk3EJ5S-PLjIlc3QzRwxT4xI-iJfVinEkvuRTdDwJ41E3WS94Gj_jFHdRdrpJkAA7Z6FlgYBrLp2QlQeRcOlYCWFc9CAXz05PDBfPistdpYiuuQGBcYQEdpOFdubqCu0immXRgxx_p9Yl9j7xT1KeItCPxNSZfHLjYlu8PEU2MSJ_GGIhvXwkFLiEyKsvSC-jYfxaK4RXCAKYVinJLQZ5ampfVPI2HkhbkXKJqGTz49b_lBXKSHPBgSJ3Ooa9nUzXo7f7LjSRoR-4w_zHWsHKQZdvc8V39a_Jj_H_IlQqTugoTuWESm79GaFiBN0Qp2RPzn9ycRqn4jQuJRRMCXUUJ7EgTq3cKLO_IhQUi4RKxKldKk5fJpT4IaEyzlwTyr9NKLmMUIk4nRNKORMnVCZOR0L9ijhpvypOCb-stDtXqvclLlWszrZhLr43273BzmP63yfOerdqbQy2Of2EYs3d7aOrmc6dujAfIfu0PZh3KlnwHy2zsuGh82790daCbcV1Ap-ntfvqfhXM3rvWXp-tmiNmcl8X2HlrgEBDpQNr1tu063qnPem_7uucLqkbGjrssDl9CZ_gSoqW1bnpWDMY3a9EZh80pm-SLfYiJLqcIktw5Gg9qLyqCBucor5E08bcOHC76Y9AYebzybL6WmccehB093V25gfdVpTEFfINJHqeBOG7RFYCgycl5zCQZDDBBMVoSrCByeeTj1QfNYAsQJZgpRIammqFO95imTptzJmGqbdMVmMrLt4e1jzHVEIv4Jl_AZZYPzQ"
+ },
+ "organic_results": [
+  {
+   "position": 1,
+   "title": "21 Reviews for Blue Dart Express Ltd in Bhadravati City ...",
+   "link": "https://www.justdial.com/Bhadravati-Maharashtra/Blue-Dart-Express-Ltd-Jain-Mandir-Near-Manohar-Theater-Bhadravati-City/9999P7172-7172-191210114623-C6J1_BZDET/reviews",
+   "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAES4QEB6zswFSr1WWoICw7fqeeItSTCTCvgUPm3JzZI-1dCG_MrVmGYQNsj40cf2NNXJpBDsh5qTKaoWz2hxgy2S1xKyhJpXiAmfxn-KdUctmRj0ye5yQzXycZU29ZSYH2qdbxtSCH_iXa5br7DOh-gn87x-GGjkFRRh7OA1ATUr382IU5mW-LlqDmq8Z-Urcg7pvmR6rxx7vVnF7VdXwYXB4wl6gQMmuj7S9apqWzto0tF84jBmGf_nR852-ceOPvdNIorZX7p8mfb5qnbnqiyW5EUbudhOg3bxCrKM5yv-HCkPuo&ved=2ahUKEwi7zpitlqqXAxXiF1kFHRiqCgMQFnoECCEQAQ&uoh=1",
+   "displayed_link": "https://www.justdial.com › ... › Blue Dart Express Ltd",
+   "favicon": "https://serpapi.com/images/i/UklGRqgAAABXRUJQVlA4IJwAAADwAgCdASoQABAAAsBMJbACdDiAP0A4CkFq58psin0SkAD--q31jH7d5W1uxfXO5nb8LSdefKaagozfP45QnxuH4vNL1KtsnPCpMJUuGP_FrEFbNoaquFgwJzn34CIyxoWia3lxLLsb-8VB4cmZOAYN_1krQMDF0t8L_p2aqhj9f-w2zUnHUm8H7QdRLxoFBciseJRQuvI02frQAAA.webp",
+   "snippet": "Blue Dart Express Ltd in Bhadravati City, Bhadravati-Maharashtra is located Jain Mandir, Near Manohar Theater. 5. Do you have time-bound services available ...",
+   "snippet_highlighted_words": [
+    "Blue Dart Express Ltd in Bhadravati City, Bhadravati-Maharashtra"
+   ],
+   "rich_snippet": {
+    "top": {
+     "detected_extensions": {
+      "rating": 2.4,
+      "reviews": 21
+     },
+     "extensions": [
+      "2.4(21)"
+     ]
+    }
+   },
+   "about_this_result": {
+    "source": {
+     "description": "Blue Dart Express Ltd in Bhadravati City, Bhadravati-Maharashtra is located Jain Mandir, Near Manohar Theater. 5. Do you have time-bound services available ...",
+     "source_info_link": "https://www.justdial.com/Bhadravati-Maharashtra/Blue-Dart-Express-Ltd-Jain-Mandir-Near-Manohar-Theater-Bhadravati-City/9999P7172-7172-191210114623-C6J1_BZDET/reviews",
+     "icon": "https://serpapi.com/images/i/UklGRqgAAABXRUJQVlA4IJwAAADwAgCdASoQABAAAsBMJbACdDiAP0A4CkFq58psin0SkAD--q31jH7d5W1uxfXO5nb8LSdefKaagozfP45QnxuH4vNL1KtsnPCpMJUuGP_FrEFbNoaquFgwJzn34CIyxoWia3lxLLsb-8VB4cmZOAYN_1krQMDF0t8L_p2aqhj9f-w2zUnHUm8H7QdRLxoFBciseJRQuvI02frQAAA.webp"
+    },
+    "languages": [
+     "en"
+    ],
+    "regions": [
+     "IN"
+    ]
+   },
+   "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=Cr0CL2dvdG8_dXJsPUNBRVM0UUVCNnpzd0ZTcjFXV29JQ3c3ZnFlZUl0U1RDVEN2Z1VQbTNKelpJLTFkQ0dfTXJWbUdZUU5zajQwY2YyTk5YSnBCRHNoNXFUS2FvV3oyaHhneTJTMXhLeWhKcFhpQW1meG4tS2RVY3RtUmoweWU1eVF6WHljWlUyOVpTWUgycWRieHRTQ0hfaVhhNWJyN0RPaC1nbjg3eC1HR2prRlJSaDdPQTFBVFVyMzgySVU1bVctTGxxRG1xOFotVXJjZzdwdm1SNnJ4eDd2Vm5GN1ZkWHdZWEI0d2w2Z1FNbXVqN1M5YXBxV3p0bzB0Rjg0akJtR2ZfblI4NTItY2VPUHZkTklvclpYN3A4bWZiNXFuYm5xaXlXNUVVYnVkaE9nM2J4Q3JLTTV5di1IQ2tQdW8SBBoCCAAaqgUSABoAIgAqADoAQgQIARAAShsIARITNDQyMzAxLCBNYWhhcmFzaHRyYRoCCAJaAHIAegCCQPMECAAQABgAIAAqFQoEYmx1ZRXpy6JAGghibHVlZGFydCogCgRkYXJ0FenLokAaCGJsdWVkYXJ0GglpdjtwO2RhcnQyvQIvZ290bz91cmw9Q0FFUzRRRUI2enN3RlNyMVdXb0lDdzdmcWVlSXRTVENUQ3ZnVVBtM0p6WkktMWRDR19NclZtR1lRTnNqNDBjZjJOTlhKcEJEc2g1cVRLYW9XejJoeGd5MlMxeEt5aEpwWGlBbWZ4bi1LZFVjdG1SajB5ZTV5UXpYeWNaVTI5WlNZSDJxZGJ4dFNDSF9pWGE1YnI3RE9oLWduODd4LUdHamtGUlJoN09BMUFUVXIzODJJVTVtVy1MbHFEbXE4Wi1VcmNnN3B2bVI2cnh4N3ZWbkY3VmRYd1lYQjR3bDZnUU1tdWo3UzlhcHFXenRvMHRGODRqQm1HZl9uUjg1Mi1jZU9QdmROSW9yWlg3cDhtZmI1cW5ibnFpeVc1RVVidWRoT2czYnhDcktNNXl2LUhDa1B1bzpCMjEgUmV2aWV3cyBmb3IgPGI-Qmx1ZSBEYXJ0PC9iPiBFeHByZXNzIEx0ZCBpbiBCaGFkcmF2YXRpIENpdHkgLi4uQqsBPGI-Qmx1ZSBEYXJ0IEV4cHJlc3MgTHRkIGluIEJoYWRyYXZhdGkgQ2l0eSwgQmhhZHJhdmF0aS1NYWhhcmFzaHRyYTwvYj4gaXMgbG9jYXRlZCBKYWluIE1hbmRpciwgTmVhciBNYW5vaGFyIFRoZWF0ZXIuIDUuIERvIHlvdSBoYXZlIHRpbWUtYm91bmQgc2VydmljZXMgYXZhaWxhYmxlJm5ic3A7Li4uIgIQAUgAWABoAA",
+   "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=Cr0CL2dvdG8_dXJsPUNBRVM0UUVCNnpzd0ZTcjFXV29JQ3c3ZnFlZUl0U1RDVEN2Z1VQbTNKelpJLTFkQ0dfTXJWbUdZUU5zajQwY2YyTk5YSnBCRHNoNXFUS2FvV3oyaHhneTJTMXhLeWhKcFhpQW1meG4tS2RVY3RtUmoweWU1eVF6WHljWlUyOVpTWUgycWRieHRTQ0hfaVhhNWJyN0RPaC1nbjg3eC1HR2prRlJSaDdPQTFBVFVyMzgySVU1bVctTGxxRG1xOFotVXJjZzdwdm1SNnJ4eDd2Vm5GN1ZkWHdZWEI0d2w2Z1FNbXVqN1M5YXBxV3p0bzB0Rjg0akJtR2ZfblI4NTItY2VPUHZkTklvclpYN3A4bWZiNXFuYm5xaXlXNUVVYnVkaE9nM2J4Q3JLTTV5di1IQ2tQdW8SBBoCCAAaqgUSABoAIgAqADoAQgQIARAAShsIARITNDQyMzAxLCBNYWhhcmFzaHRyYRoCCAJaAHIAegCCQPMECAAQABgAIAAqFQoEYmx1ZRXpy6JAGghibHVlZGFydCogCgRkYXJ0FenLokAaCGJsdWVkYXJ0GglpdjtwO2RhcnQyvQIvZ290bz91cmw9Q0FFUzRRRUI2enN3RlNyMVdXb0lDdzdmcWVlSXRTVENUQ3ZnVVBtM0p6WkktMWRDR19NclZtR1lRTnNqNDBjZjJOTlhKcEJEc2g1cVRLYW9XejJoeGd5MlMxeEt5aEpwWGlBbWZ4bi1LZFVjdG1SajB5ZTV5UXpYeWNaVTI5WlNZSDJxZGJ4dFNDSF9pWGE1YnI3RE9oLWduODd4LUdHamtGUlJoN09BMUFUVXIzODJJVTVtVy1MbHFEbXE4Wi1VcmNnN3B2bVI2cnh4N3ZWbkY3VmRYd1lYQjR3bDZnUU1tdWo3UzlhcHFXenRvMHRGODRqQm1HZl9uUjg1Mi1jZU9QdmROSW9yWlg3cDhtZmI1cW5ibnFpeVc1RVVidWRoT2czYnhDcktNNXl2LUhDa1B1bzpCMjEgUmV2aWV3cyBmb3IgPGI-Qmx1ZSBEYXJ0PC9iPiBFeHByZXNzIEx0ZCBpbiBCaGFkcmF2YXRpIENpdHkgLi4uQqsBPGI-Qmx1ZSBEYXJ0IEV4cHJlc3MgTHRkIGluIEJoYWRyYXZhdGkgQ2l0eSwgQmhhZHJhdmF0aS1NYWhhcmFzaHRyYTwvYj4gaXMgbG9jYXRlZCBKYWluIE1hbmRpciwgTmVhciBNYW5vaGFyIFRoZWF0ZXIuIDUuIERvIHlvdSBoYXZlIHRpbWUtYm91bmQgc2VydmljZXMgYXZhaWxhYmxlJm5ic3A7Li4uIgIQAUgAWABoAA",
+   "source": "Justdial",
+   "read_more_link": "https://www.justdial.com/Bhadravati-Maharashtra/Blue-Dart-Express-Ltd-Jain-Mandir-Near-Manohar-Theater-Bhadravati-City/9999P7172-7172-191210114623-C6J1_BZDET/reviews#:~:text=Blue%20Dart%20Express%20Ltd%20in,you%20have%20time%2Dbound%20services%20available%3F"
+  },
+  {
+   "position": 2,
+   "title": "Blue Dart Express in T Nagar,Chennai - Courier Services ...",
+   "link": "https://www.justdial.com/Chennai/Blue-Dart-Express-T-Nagar/044PXX44-XX44-221109041054-K8B2_BZDET",
+   "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESmwEB6zswFbuyHnEkY0dUzpSrikYVquCZz9wb_kV2rI-TfQkoGQyEvOMqxlz_g2Ze2dTbvNUe7S5MXaTd_GJpLcH14hSg-hP0SFFx0b-nHfWKaU795u3JLtqUxmDRFkatMPNtN9d0P7xXbeWB5TCMMK09pJXXpjZJlwSNtTdhIUyhfFOs8f5ozm2klMh5QGNVlsYCRg_Ui6lS_UCJAA&ved=2ahUKEwi7zpitlqqXAxXiF1kFHRiqCgMQFnoECCYQAQ&uoh=1",
+   "displayed_link": "https://www.justdial.com › Chennai › Blue-Dart-Express-...",
+   "thumbnail": "https://serpapi.com/searches/6ac76b57b333ee2a431b6766/images/r0uDYJzrDECRcbK4vUn5xgdvJN7BhSqx1mW6rUjd0lY.jpeg",
+   "favicon": "https://serpapi.com/images/i/UklGRqgAAABXRUJQVlA4IJwAAADwAgCdASoQABAAAsBMJbACdDiAP0A4CkFq58psin0SkAD--q31jH7d5W1uxfXO5nb8LSdefKaagozfP45QnxuH4vNL1KtsnPCpMJUuGP_FrEFbNoaquFgwJzn34CIyxoWia3lxLLsb-8VB4cmZOAYN_1krQMDF0t8L_p2aqhj9f-w2zUnHUm8H7QdRLxoFBciseJRQuvI02frQAAA.webp",
+   "snippet": "The hours of operation at Blue Dart Express are Monday:- 9:00 am - 7:00 pm, Tuesday:- 9:00 am - 7:00 pm, Wednesday:- 9:00 am - 7:00 pm, Thursday:- 9:00 am - 7: ...",
+   "snippet_highlighted_words": [
+    "Blue Dart"
+   ],
+   "rich_snippet": {
+    "top": {
+     "detected_extensions": {
+      "rating": 3.4,
+      "reviews": 86
+     },
+     "extensions": [
+      "3.4(86)"
+     ]
+    }
+   },
+   "about_this_result": {
+    "source": {
+     "description": "The hours of operation at Blue Dart Express are Monday:- 9:00 am - 7:00 pm, Tuesday:- 9:00 am - 7:00 pm, Wednesday:- 9:00 am - 7:00 pm, Thursday:- 9:00 am - 7: ...",
+     "source_info_link": "https://www.justdial.com/Chennai/Blue-Dart-Express-T-Nagar/044PXX44-XX44-221109041054-K8B2_BZDET",
+     "icon": "https://serpapi.com/images/i/UklGRqgAAABXRUJQVlA4IJwAAADwAgCdASoQABAAAsBMJbACdDiAP0A4CkFq58psin0SkAD--q31jH7d5W1uxfXO5nb8LSdefKaagozfP45QnxuH4vNL1KtsnPCpMJUuGP_FrEFbNoaquFgwJzn34CIyxoWia3lxLLsb-8VB4cmZOAYN_1krQMDF0t8L_p2aqhj9f-w2zUnHUm8H7QdRLxoFBciseJRQuvI02frQAAA.webp"
+    },
+    "languages": [
+     "en"
+    ],
+    "regions": [
+     "IN"
+    ]
+   },
+   "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CuABL2dvdG8_dXJsPUNBRVNtd0VCNnpzd0ZidXlIbkVrWTBkVXpwU3Jpa1lWcXVDWno5d2Jfa1YyckktVGZRa29HUXlFdk9NcXhsel9nMlplMmRUYnZOVWU3UzVNWGFUZF9HSnBMY0gxNGhTZy1oUDBTRkZ4MGItbkhmV0thVTc5NXUzSkx0cVV4bURSRmthdE1QTnROOWQwUDd4WGJlV0I1VENNTUswOXBKWFhwalpKbHdTTnRUZGhJVXloZkZPczhmNW96bTJrbE1oNVFHTlZsc1lDUmdfVWk2bFNfVUNKQUESBBoCCAAaxQQSABoCCAEiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCfBAgAEAAYACAAKhUKBGJsdWUVmqCSQBoIYmx1ZWRhcnQqIAoEZGFydBWaoJJAGghibHVlZGFydBoJaXY7cDtkYXJ0MuABL2dvdG8_dXJsPUNBRVNtd0VCNnpzd0ZidXlIbkVrWTBkVXpwU3Jpa1lWcXVDWno5d2Jfa1YyckktVGZRa29HUXlFdk9NcXhsel9nMlplMmRUYnZOVWU3UzVNWGFUZF9HSnBMY0gxNGhTZy1oUDBTRkZ4MGItbkhmV0thVTc5NXUzSkx0cVV4bURSRmthdE1QTnROOWQwUDd4WGJlV0I1VENNTUswOXBKWFhwalpKbHdTTnRUZGhJVXloZkZPczhmNW96bTJrbE1oNVFHTlZsc1lDUmdfVWk2bFNfVUNKQUE6RzxiPkJsdWUgRGFydDwvYj4gRXhwcmVzcyBpbiBUIE5hZ2FyLENoZW5uYWkgLSBDb3VyaWVyIFNlcnZpY2VzIG5lYXIgLi4uQq8BVGhlIGhvdXJzIG9mIG9wZXJhdGlvbiBhdCA8Yj5CbHVlIERhcnQ8L2I-IEV4cHJlc3MgYXJlIE1vbmRheTotIDk6MDAgYW0gLSA3OjAwIHBtLCBUdWVzZGF5Oi0gOTowMCBhbSAtIDc6MDAgcG0sIFdlZG5lc2RheTotIDk6MDAgYW0gLSA3OjAwIHBtLCBUaHVyc2RheTotIDk6MDAgYW0gLSA3OiZuYnNwOy4uLiICEAFIAFgAaAA",
+   "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CuABL2dvdG8_dXJsPUNBRVNtd0VCNnpzd0ZidXlIbkVrWTBkVXpwU3Jpa1lWcXVDWno5d2Jfa1YyckktVGZRa29HUXlFdk9NcXhsel9nMlplMmRUYnZOVWU3UzVNWGFUZF9HSnBMY0gxNGhTZy1oUDBTRkZ4MGItbkhmV0thVTc5NXUzSkx0cVV4bURSRmthdE1QTnROOWQwUDd4WGJlV0I1VENNTUswOXBKWFhwalpKbHdTTnRUZGhJVXloZkZPczhmNW96bTJrbE1oNVFHTlZsc1lDUmdfVWk2bFNfVUNKQUESBBoCCAAaxQQSABoCCAEiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCfBAgAEAAYACAAKhUKBGJsdWUVmqCSQBoIYmx1ZWRhcnQqIAoEZGFydBWaoJJAGghibHVlZGFydBoJaXY7cDtkYXJ0MuABL2dvdG8_dXJsPUNBRVNtd0VCNnpzd0ZidXlIbkVrWTBkVXpwU3Jpa1lWcXVDWno5d2Jfa1YyckktVGZRa29HUXlFdk9NcXhsel9nMlplMmRUYnZOVWU3UzVNWGFUZF9HSnBMY0gxNGhTZy1oUDBTRkZ4MGItbkhmV0thVTc5NXUzSkx0cVV4bURSRmthdE1QTnROOWQwUDd4WGJlV0I1VENNTUswOXBKWFhwalpKbHdTTnRUZGhJVXloZkZPczhmNW96bTJrbE1oNVFHTlZsc1lDUmdfVWk2bFNfVUNKQUE6RzxiPkJsdWUgRGFydDwvYj4gRXhwcmVzcyBpbiBUIE5hZ2FyLENoZW5uYWkgLSBDb3VyaWVyIFNlcnZpY2VzIG5lYXIgLi4uQq8BVGhlIGhvdXJzIG9mIG9wZXJhdGlvbiBhdCA8Yj5CbHVlIERhcnQ8L2I-IEV4cHJlc3MgYXJlIE1vbmRheTotIDk6MDAgYW0gLSA3OjAwIHBtLCBUdWVzZGF5Oi0gOTowMCBhbSAtIDc6MDAgcG0sIFdlZG5lc2RheTotIDk6MDAgYW0gLSA3OjAwIHBtLCBUaHVyc2RheTotIDk6MDAgYW0gLSA3OiZuYnNwOy4uLiICEAFIAFgAaAA",
+   "source": "Justdial",
+   "read_more_link": "https://www.justdial.com/Chennai/Blue-Dart-Express-T-Nagar/044PXX44-XX44-221109041054-K8B2_BZDET#:~:text=The%20hours%20of%20operation%20at,Thursday%3A%2D%209%3A00%20am%20%2D%207%3A"
+  },
+  {
+   "position": 3,
+   "title": "Blue Dart Express in Pedder Road, Mumbai",
+   "link": "https://www.justdial.com/Mumbai/Blue-Dart-Express-in-Pedder-Road/nct-12099485",
+   "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESiAEB6zswFQHQrJYbYE8vqEtUbCYxdcKjTK3-bT5CsaVJzwJOPAQDaUEm75sJiCDxcb1yKrz0TSoM4ZID6rXzb1kTcCAjCJ7tsI-kuwMnIb0bIFiCidC5qN2gUu1GFMQvrfqPoeicn4-knZmeFNtfKefAZ7W6tLlm5vmWs5YBG08vbgx_ZQ10MuZm&ved=2ahUKEwi7zpitlqqXAxXiF1kFHRiqCgMQFnoECCMQAQ&uoh=1",
+   "displayed_link": "https://www.justdial.com › Mumbai › nct-12099485",
+   "thumbnail": "https://serpapi.com/searches/6ac76b57b333ee2a431b6766/images/r0uDYJzrDECRcbK4vUn5xjkUusk8NxXmPpmKJLswVz8.jpeg",
+   "favicon": "https://serpapi.com/images/i/UklGRqgAAABXRUJQVlA4IJwAAADwAgCdASoQABAAAsBMJbACdDiAP0A4CkFq58psin0SkAD--q31jH7d5W1uxfXO5nb8LSdefKaagozfP45QnxuH4vNL1KtsnPCpMJUuGP_FrEFbNoaquFgwJzn34CIyxoWia3lxLLsb-8VB4cmZOAYN_1krQMDF0t8L_p2aqhj9f-w2zUnHUm8H7QdRLxoFBciseJRQuvI02frQAAA.webp",
+   "snippet": "Blue Dart logistics services in Pedder Road, Mumbai are designed to support large-scale transportation and supply chain operations for businesses. These ...",
+   "snippet_highlighted_words": [
+    "Blue Dart logistics services in Pedder Road, Mumbai"
+   ],
+   "about_this_result": {
+    "source": {
+     "description": "Blue Dart logistics services in Pedder Road, Mumbai are designed to support large-scale transportation and supply chain operations for businesses. These ...",
+     "source_info_link": "https://www.justdial.com/Mumbai/Blue-Dart-Express-in-Pedder-Road/nct-12099485",
+     "icon": "https://serpapi.com/images/i/UklGRqgAAABXRUJQVlA4IJwAAADwAgCdASoQABAAAsBMJbACdDiAP0A4CkFq58psin0SkAD--q31jH7d5W1uxfXO5nb8LSdefKaagozfP45QnxuH4vNL1KtsnPCpMJUuGP_FrEFbNoaquFgwJzn34CIyxoWia3lxLLsb-8VB4cmZOAYN_1krQMDF0t8L_p2aqhj9f-w2zUnHUm8H7QdRLxoFBciseJRQuvI02frQAAA.webp"
+    },
+    "languages": [
+     "en"
+    ],
+    "regions": [
+     "IN"
+    ]
+   },
+   "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CsYBL2dvdG8_dXJsPUNBRVNpQUVCNnpzd0ZRSFFySlliWUU4dnFFdFViQ1l4ZGNLalRLMy1iVDVDc2FWSnp3Sk9QQVFEYVVFbTc1c0ppQ0R4Y2IxeUtyejBUU29NNFpJRDZyWHpiMWtUY0NBakNKN3RzSS1rdXdNbkliMGJJRmlDaWRDNXFOMmdVdTFHRk1RdnJmcVBvZWljbjQta25abWVGTnRmS2VmQVo3VzZ0TGxtNXZtV3M1WUJHMDh2Ymd4X1pRMTBNdVptEgQaAggAGpcEEgAaAggBIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJA8QMIABAAGAAgACoVCgRibHVlFaNTzkAaCGJsdWVkYXJ0KiAKBGRhcnQVo1POQBoIYmx1ZWRhcnQaCWl2O3A7ZGFydDLGAS9nb3RvP3VybD1DQUVTaUFFQjZ6c3dGUUhRckpZYllFOHZxRXRVYkNZeGRjS2pUSzMtYlQ1Q3NhVkp6d0pPUEFRRGFVRW03NXNKaUNEeGNiMXlLcnowVFNvTTRaSUQ2clh6YjFrVGNDQWpDSjd0c0kta3V3TW5JYjBiSUZpQ2lkQzVxTjJnVXUxR0ZNUXZyZnFQb2VpY240LWtuWm1lRk50ZktlZkFaN1c2dExsbTV2bVdzNVlCRzA4dmJneF9aUTEwTXVabTo6PGI-Qmx1ZSBEYXJ0PC9iPiBFeHByZXNzIGluIFBlZGRlciBSb2FkLCBNdW1iYWkgLSBKdXN0ZGlhbEKoATxiPkJsdWUgRGFydCBsb2dpc3RpY3Mgc2VydmljZXMgaW4gUGVkZGVyIFJvYWQsIE11bWJhaTwvYj4gYXJlIGRlc2lnbmVkIHRvIHN1cHBvcnQgbGFyZ2Utc2NhbGUgdHJhbnNwb3J0YXRpb24gYW5kIHN1cHBseSBjaGFpbiBvcGVyYXRpb25zIGZvciBidXNpbmVzc2VzLiBUaGVzZSZuYnNwOy4uLiICEAFIAFgAaAA",
+   "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CsYBL2dvdG8_dXJsPUNBRVNpQUVCNnpzd0ZRSFFySlliWUU4dnFFdFViQ1l4ZGNLalRLMy1iVDVDc2FWSnp3Sk9QQVFEYVVFbTc1c0ppQ0R4Y2IxeUtyejBUU29NNFpJRDZyWHpiMWtUY0NBakNKN3RzSS1rdXdNbkliMGJJRmlDaWRDNXFOMmdVdTFHRk1RdnJmcVBvZWljbjQta25abWVGTnRmS2VmQVo3VzZ0TGxtNXZtV3M1WUJHMDh2Ymd4X1pRMTBNdVptEgQaAggAGpcEEgAaAggBIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJA8QMIABAAGAAgACoVCgRibHVlFaNTzkAaCGJsdWVkYXJ0KiAKBGRhcnQVo1POQBoIYmx1ZWRhcnQaCWl2O3A7ZGFydDLGAS9nb3RvP3VybD1DQUVTaUFFQjZ6c3dGUUhRckpZYllFOHZxRXRVYkNZeGRjS2pUSzMtYlQ1Q3NhVkp6d0pPUEFRRGFVRW03NXNKaUNEeGNiMXlLcnowVFNvTTRaSUQ2clh6YjFrVGNDQWpDSjd0c0kta3V3TW5JYjBiSUZpQ2lkQzVxTjJnVXUxR0ZNUXZyZnFQb2VpY240LWtuWm1lRk50ZktlZkFaN1c2dExsbTV2bVdzNVlCRzA4dmJneF9aUTEwTXVabTo6PGI-Qmx1ZSBEYXJ0PC9iPiBFeHByZXNzIGluIFBlZGRlciBSb2FkLCBNdW1iYWkgLSBKdXN0ZGlhbEKoATxiPkJsdWUgRGFydCBsb2dpc3RpY3Mgc2VydmljZXMgaW4gUGVkZGVyIFJvYWQsIE11bWJhaTwvYj4gYXJlIGRlc2lnbmVkIHRvIHN1cHBvcnQgbGFyZ2Utc2NhbGUgdHJhbnNwb3J0YXRpb24gYW5kIHN1cHBseSBjaGFpbiBvcGVyYXRpb25zIGZvciBidXNpbmVzc2VzLiBUaGVzZSZuYnNwOy4uLiICEAFIAFgAaAA",
+   "source": "Justdial",
+   "read_more_link": "https://www.justdial.com/Mumbai/Blue-Dart-Express-in-Pedder-Road/nct-12099485#:~:text=Blue%20Dart%20logistics%20services%20in,focus%20on%20end%2Dto%2Dend%20logistics%20management."
+  },
+  {
+   "position": 4,
+   "title": "Top Courier Services Blue Dart near Budbud - Bardhaman",
+   "link": "https://www.justdial.com/Bardhaman/Courier-Services-Blue-Dart-in-Budbud/nct-10145487",
+   "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESjwEB6zswFWfxkAPOD3IA5TSGkLIWiP1CoK-_vp6gmw9HtUpnfCVXPSG57DhE6vpLOTwkFr5xwqmIZ13uXkODdcGYkLeMFC7DUMQEQafK9C3Fxk7yJgx5ZePbDU1ph9DCEqV2Cop1Ugi8eDoUOCkoY7vV6ZInAfEtpwFCYfqocU-Jtb0f45e0XM2faRJ_UxZ1CQ&ved=2ahUKEwi7zpitlqqXAxXiF1kFHRiqCgMQFnoECCAQAQ&uoh=1",
+   "displayed_link": "https://www.justdial.com › Bardhaman › nct-10145487",
+   "favicon": "https://serpapi.com/images/i/UklGRqgAAABXRUJQVlA4IJwAAADwAgCdASoQABAAAsBMJbACdDiAP0A4CkFq58psin0SkAD--q31jH7d5W1uxfXO5nb8LSdefKaagozfP45QnxuH4vNL1KtsnPCpMJUuGP_FrEFbNoaquFgwJzn34CIyxoWia3lxLLsb-8VB4cmZOAYN_1krQMDF0t8L_p2aqhj9f-w2zUnHUm8H7QdRLxoFBciseJRQuvI02frQAAA.webp",
+   "snippet": "Blue Dart is widely chosen for professional shipping needs due to its organised network, consistent tracking facilities, structured logistics management, and ...",
+   "snippet_highlighted_words": [
+    "Blue Dart is widely chosen for professional shipping needs"
+   ],
+   "about_this_result": {
+    "source": {
+     "description": "Blue Dart is widely chosen for professional shipping needs due to its organised network, consistent tracking facilities, structured logistics management, and ...",
+     "source_info_link": "https://www.justdial.com/Bardhaman/Courier-Services-Blue-Dart-in-Budbud/nct-10145487",
+     "icon": "https://serpapi.com/images/i/UklGRqgAAABXRUJQVlA4IJwAAADwAgCdASoQABAAAsBMJbACdDiAP0A4CkFq58psin0SkAD--q31jH7d5W1uxfXO5nb8LSdefKaagozfP45QnxuH4vNL1KtsnPCpMJUuGP_FrEFbNoaquFgwJzn34CIyxoWia3lxLLsb-8VB4cmZOAYN_1krQMDF0t8L_p2aqhj9f-w2zUnHUm8H7QdRLxoFBciseJRQuvI02frQAAA.webp"
+    },
+    "languages": [
+     "en"
+    ],
+    "regions": [
+     "IN"
+    ]
+   },
+   "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CtABL2dvdG8_dXJsPUNBRVNqd0VCNnpzd0ZXZnhrQVBPRDNJQTVUU0drTElXaVAxQ29LLV92cDZnbXc5SHRVcG5mQ1ZYUFNHNTdEaEU2dnBMT1R3a0ZyNXh3cW1JWjEzdVhrT0RkY0dZa0xlTUZDN0RVTVFFUWFmSzlDM0Z4azd5Smd4NVplUGJEVTFwaDlEQ0VxVjJDb3AxVWdpOGVEb1VPQ2tvWTd2VjZaSW5BZkV0cHdGQ1lmcW9jVS1KdGIwZjQ1ZTBYTTJmYVJKX1V4WjFDURIEGgIIABqmBBIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCCBAgAEAAYACAAKhUKBGJsdWUVWhi9QBoIYmx1ZWRhcnQqIAoEZGFydBXFO71AGghibHVlZGFydBoJaXY7cDtkYXJ0MtABL2dvdG8_dXJsPUNBRVNqd0VCNnpzd0ZXZnhrQVBPRDNJQTVUU0drTElXaVAxQ29LLV92cDZnbXc5SHRVcG5mQ1ZYUFNHNTdEaEU2dnBMT1R3a0ZyNXh3cW1JWjEzdVhrT0RkY0dZa0xlTUZDN0RVTVFFUWFmSzlDM0Z4azd5Smd4NVplUGJEVTFwaDlEQ0VxVjJDb3AxVWdpOGVEb1VPQ2tvWTd2VjZaSW5BZkV0cHdGQ1lmcW9jVS1KdGIwZjQ1ZTBYTTJmYVJKX1V4WjFDUTo8VG9wIENvdXJpZXIgU2VydmljZXMgPGI-Qmx1ZSBEYXJ0PC9iPiBuZWFyIEJ1ZGJ1ZCAtIEp1c3RkaWFsQq0BPGI-Qmx1ZSBEYXJ0IGlzIHdpZGVseSBjaG9zZW4gZm9yIHByb2Zlc3Npb25hbCBzaGlwcGluZyBuZWVkczwvYj4gZHVlIHRvIGl0cyBvcmdhbmlzZWQgbmV0d29yaywgY29uc2lzdGVudCB0cmFja2luZyBmYWNpbGl0aWVzLCBzdHJ1Y3R1cmVkIGxvZ2lzdGljcyBtYW5hZ2VtZW50LCBhbmQmbmJzcDsuLi4iAhABSABYAGgA",
+   "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CtABL2dvdG8_dXJsPUNBRVNqd0VCNnpzd0ZXZnhrQVBPRDNJQTVUU0drTElXaVAxQ29LLV92cDZnbXc5SHRVcG5mQ1ZYUFNHNTdEaEU2dnBMT1R3a0ZyNXh3cW1JWjEzdVhrT0RkY0dZa0xlTUZDN0RVTVFFUWFmSzlDM0Z4azd5Smd4NVplUGJEVTFwaDlEQ0VxVjJDb3AxVWdpOGVEb1VPQ2tvWTd2VjZaSW5BZkV0cHdGQ1lmcW9jVS1KdGIwZjQ1ZTBYTTJmYVJKX1V4WjFDURIEGgIIABqmBBIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCCBAgAEAAYACAAKhUKBGJsdWUVWhi9QBoIYmx1ZWRhcnQqIAoEZGFydBXFO71AGghibHVlZGFydBoJaXY7cDtkYXJ0MtABL2dvdG8_dXJsPUNBRVNqd0VCNnpzd0ZXZnhrQVBPRDNJQTVUU0drTElXaVAxQ29LLV92cDZnbXc5SHRVcG5mQ1ZYUFNHNTdEaEU2dnBMT1R3a0ZyNXh3cW1JWjEzdVhrT0RkY0dZa0xlTUZDN0RVTVFFUWFmSzlDM0Z4azd5Smd4NVplUGJEVTFwaDlEQ0VxVjJDb3AxVWdpOGVEb1VPQ2tvWTd2VjZaSW5BZkV0cHdGQ1lmcW9jVS1KdGIwZjQ1ZTBYTTJmYVJKX1V4WjFDUTo8VG9wIENvdXJpZXIgU2VydmljZXMgPGI-Qmx1ZSBEYXJ0PC9iPiBuZWFyIEJ1ZGJ1ZCAtIEp1c3RkaWFsQq0BPGI-Qmx1ZSBEYXJ0IGlzIHdpZGVseSBjaG9zZW4gZm9yIHByb2Zlc3Npb25hbCBzaGlwcGluZyBuZWVkczwvYj4gZHVlIHRvIGl0cyBvcmdhbmlzZWQgbmV0d29yaywgY29uc2lzdGVudCB0cmFja2luZyBmYWNpbGl0aWVzLCBzdHJ1Y3R1cmVkIGxvZ2lzdGljcyBtYW5hZ2VtZW50LCBhbmQmbmJzcDsuLi4iAhABSABYAGgA",
+   "source": "Justdial",
+   "read_more_link": "https://www.justdial.com/Bardhaman/Courier-Services-Blue-Dart-in-Budbud/nct-10145487#:~:text=Blue%20Dart%20is%20widely%20chosen,commitment%20to%20timely%20delivery%20standards."
+  },
+  {
+   "position": 5,
+   "title": "Top Courier Services Blue Dart near Bhadra",
+   "link": "https://www.justdial.com/Bhadra/Courier-Services-Blue-Dart/nct-10145487",
+   "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESggEB6zswFXdUN46AT8qbTCSqMUwAzdO9aDGb6Rquv7SqqYuU2Xk5_x6EG3tMbBqIkfkWl50X2hshAWgSjo0jkojDJbGRZzuP3CzdxOtRIVyRElJVxpHNHuUo_z56021IX1-9AAxu_x5UGFTgaQsTuZRjPQmubEXTANIJ8XGTQfiXAAcF&ved=2ahUKEwi7zpitlqqXAxXiF1kFHRiqCgMQFnoECEwQAQ&uoh=1",
+   "displayed_link": "https://www.justdial.com › Bhadra › nct-10145487",
+   "thumbnail": "https://serpapi.com/searches/6ac76b57b333ee2a431b6766/images/r0uDYJzrDECRcbK4vUn5xgoWsSKpcfBu0-5lWcUM6gM.jpeg",
+   "favicon": "https://serpapi.com/images/i/UklGRqgAAABXRUJQVlA4IJwAAADwAgCdASoQABAAAsBMJbACdDiAP0A4CkFq58psin0SkAD--q31jH7d5W1uxfXO5nb8LSdefKaagozfP45QnxuH4vNL1KtsnPCpMJUuGP_FrEFbNoaquFgwJzn34CIyxoWia3lxLLsb-8VB4cmZOAYN_1krQMDF0t8L_p2aqhj9f-w2zUnHUm8H7QdRLxoFBciseJRQuvI02frQAAA.webp",
+   "snippet": "Blue Dart in Bhadra. Delivery was quick and reliable, Fast delivery and full support. Very fast and secure delivery. Best delivery Street No. 3",
+   "snippet_highlighted_words": [
+    "Blue Dart in Bhadra"
+   ],
+   "about_this_result": {
+    "source": {
+     "description": "Blue Dart in Bhadra. Delivery was quick and reliable, Fast delivery and full support. Very fast and secure delivery. Best delivery Street No. 3",
+     "source_info_link": "https://www.justdial.com/Bhadra/Courier-Services-Blue-Dart/nct-10145487",
+     "icon": "https://serpapi.com/images/i/UklGRqgAAABXRUJQVlA4IJwAAADwAgCdASoQABAAAsBMJbACdDiAP0A4CkFq58psin0SkAD--q31jH7d5W1uxfXO5nb8LSdefKaagozfP45QnxuH4vNL1KtsnPCpMJUuGP_FrEFbNoaquFgwJzn34CIyxoWia3lxLLsb-8VB4cmZOAYN_1krQMDF0t8L_p2aqhj9f-w2zUnHUm8H7QdRLxoFBciseJRQuvI02frQAAA.webp"
+    },
+    "languages": [
+     "en"
+    ],
+    "regions": [
+     "IN"
+    ]
+   },
+   "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=Cr4BL2dvdG8_dXJsPUNBRVNnZ0VCNnpzd0ZYZFVONDZBVDhxYlRDU3FNVXdBemRPOWFER2I2UnF1djdTcXFZdVUyWGs1X3g2RUczdE1iQnFJa2ZrV2w1MFgyaHNoQVdnU2pvMGprb2pESmJHUlp6dVAzQ3pkeE90UklWeVJFbEpWeHBITkh1VW9fejU2MDIxSVgxLTlBQXh1X3g1VUdGVGdhUXNUdVpSalBRbXViRVhUQU5JSjhYR1RRZmlYQUFjRhIEGgIIABr_AxIAGgIIASIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQNkDCAAQABgAIAAqFQoEYmx1ZRXGoc9AGghibHVlZGFydCogCgRkYXJ0Fcahz0AaCGJsdWVkYXJ0GglpdjtwO2RhcnQyvgEvZ290bz91cmw9Q0FFU2dnRUI2enN3RlhkVU40NkFUOHFiVENTcU1Vd0F6ZE85YURHYjZScXV2N1NxcVl1VTJYazVfeDZFRzN0TWJCcUlrZmtXbDUwWDJoc2hBV2dTam8wamtvakRKYkdSWnp1UDNDemR4T3RSSVZ5UkVsSlZ4cEhOSHVVb196NTYwMjFJWDEtOUFBeHVfeDVVR0ZUZ2FRc1R1WlJqUFFtdWJFWFRBTklKOFhHVFFmaVhBQWNGOjxUb3AgQ291cmllciBTZXJ2aWNlcyA8Yj5CbHVlIERhcnQ8L2I-IG5lYXIgQmhhZHJhIC0gSnVzdGRpYWxClgE8Yj5CbHVlIERhcnQgaW4gQmhhZHJhPC9iPi4gRGVsaXZlcnkgd2FzIHF1aWNrIGFuZCByZWxpYWJsZSwgRmFzdCBkZWxpdmVyeSBhbmQgZnVsbCBzdXBwb3J0LiBWZXJ5IGZhc3QgYW5kIHNlY3VyZSBkZWxpdmVyeS4gQmVzdCBkZWxpdmVyeSBTdHJlZXQgTm8uIDMiAhABSABYAGgA",
+   "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=Cr4BL2dvdG8_dXJsPUNBRVNnZ0VCNnpzd0ZYZFVONDZBVDhxYlRDU3FNVXdBemRPOWFER2I2UnF1djdTcXFZdVUyWGs1X3g2RUczdE1iQnFJa2ZrV2w1MFgyaHNoQVdnU2pvMGprb2pESmJHUlp6dVAzQ3pkeE90UklWeVJFbEpWeHBITkh1VW9fejU2MDIxSVgxLTlBQXh1X3g1VUdGVGdhUXNUdVpSalBRbXViRVhUQU5JSjhYR1RRZmlYQUFjRhIEGgIIABr_AxIAGgIIASIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQNkDCAAQABgAIAAqFQoEYmx1ZRXGoc9AGghibHVlZGFydCogCgRkYXJ0Fcahz0AaCGJsdWVkYXJ0GglpdjtwO2RhcnQyvgEvZ290bz91cmw9Q0FFU2dnRUI2enN3RlhkVU40NkFUOHFiVENTcU1Vd0F6ZE85YURHYjZScXV2N1NxcVl1VTJYazVfeDZFRzN0TWJCcUlrZmtXbDUwWDJoc2hBV2dTam8wamtvakRKYkdSWnp1UDNDemR4T3RSSVZ5UkVsSlZ4cEhOSHVVb196NTYwMjFJWDEtOUFBeHVfeDVVR0ZUZ2FRc1R1WlJqUFFtdWJFWFRBTklKOFhHVFFmaVhBQWNGOjxUb3AgQ291cmllciBTZXJ2aWNlcyA8Yj5CbHVlIERhcnQ8L2I-IG5lYXIgQmhhZHJhIC0gSnVzdGRpYWxClgE8Yj5CbHVlIERhcnQgaW4gQmhhZHJhPC9iPi4gRGVsaXZlcnkgd2FzIHF1aWNrIGFuZCByZWxpYWJsZSwgRmFzdCBkZWxpdmVyeSBhbmQgZnVsbCBzdXBwb3J0LiBWZXJ5IGZhc3QgYW5kIHNlY3VyZSBkZWxpdmVyeS4gQmVzdCBkZWxpdmVyeSBTdHJlZXQgTm8uIDMiAhABSABYAGgA",
+   "source": "Justdial"
+  },
+  {
+   "position": 6,
+   "title": "Top Blue Dart Domestic Courier Service in Khardah",
+   "link": "https://www.justdial.com/Kolkata/Domestic-Courier-Services-Blue-Dart-in-Khardah/nct-10169316",
+   "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESlwEB6zswFSnZRyqihSPwheIEZ4zzD6U25jennq06Np5270FHekcjEl1HCNJQG2rPSd53U7tDye1dO9E__7jXErgNL7utqVJSNrXRRBVSP5JdhVB_Bdd9dUs72yi_wHrlI-bMHtRFKE-ZyuJlCHHiZqpibkjXVrgsohU4vRpjEujEcQ2LkVLXT7UH4hLcJM2e-LN8qcZfAalM&ved=2ahUKEwi7zpitlqqXAxXiF1kFHRiqCgMQFnoECE8QAQ&uoh=1",
+   "displayed_link": "https://www.justdial.com › Kolkata › nct-10169316",
+   "thumbnail": "https://serpapi.com/searches/6ac76b57b333ee2a431b6766/images/r0uDYJzrDECRcbK4vUn5xmCLMt1kdcS_6YuB2WlZa3U.jpeg",
+   "favicon": "https://serpapi.com/images/i/UklGRqgAAABXRUJQVlA4IJwAAADwAgCdASoQABAAAsBMJbACdDiAP0A4CkFq58psin0SkAD--q31jH7d5W1uxfXO5nb8LSdefKaagozfP45QnxuH4vNL1KtsnPCpMJUuGP_FrEFbNoaquFgwJzn34CIyxoWia3lxLLsb-8VB4cmZOAYN_1krQMDF0t8L_p2aqhj9f-w2zUnHUm8H7QdRLxoFBciseJRQuvI02frQAAA.webp",
+   "snippet": "Blue Dart is a leading provider of courier, logistics, and e-commerce services in India. The company was founded in 1983 and is headquartered in Chennai, India.",
+   "snippet_highlighted_words": [
+    "Blue Dart is a leading provider of courier, logistics, and e-commerce services"
+   ],
+   "about_this_result": {
+    "source": {
+     "description": "Blue Dart is a leading provider of courier, logistics, and e-commerce services in India. The company was founded in 1983 and is headquartered in Chennai, India.",
+     "source_info_link": "https://www.justdial.com/Kolkata/Domestic-Courier-Services-Blue-Dart-in-Khardah/nct-10169316",
+     "icon": "https://serpapi.com/images/i/UklGRqgAAABXRUJQVlA4IJwAAADwAgCdASoQABAAAsBMJbACdDiAP0A4CkFq58psin0SkAD--q31jH7d5W1uxfXO5nb8LSdefKaagozfP45QnxuH4vNL1KtsnPCpMJUuGP_FrEFbNoaquFgwJzn34CIyxoWia3lxLLsb-8VB4cmZOAYN_1krQMDF0t8L_p2aqhj9f-w2zUnHUm8H7QdRLxoFBciseJRQuvI02frQAAA.webp"
+    },
+    "languages": [
+     "en"
+    ],
+    "regions": [
+     "IN"
+    ]
+   },
+   "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CtoBL2dvdG8_dXJsPUNBRVNsd0VCNnpzd0ZTblpSeXFpaFNQd2hlSUVaNHp6RDZVMjVqZW5ucTA2TnA1MjcwRkhla2NqRWwxSENOSlFHMnJQU2Q1M1U3dER5ZTFkTzlFX183alhFcmdOTDd1dHFWSlNOclhSUkJWU1A1SmRoVkJfQmRkOWRVczcyeWlfd0hybEktYk1IdFJGS0UtWnl1SmxDSEhpWnFwaWJralhWcmdzb2hVNHZScGpFdWpFY1EyTGtWTFhUN1VINGhMY0pNMmUtTE44cWNaZkFhbE0SBBoCCAAasgQSABoCCAEiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCMBAgAEAAYACAAKhUKBGJsdWUVFArHQBoIYmx1ZWRhcnQqIAoEZGFydBUUCsdAGghibHVlZGFydBoJaXY7cDtkYXJ0MtoBL2dvdG8_dXJsPUNBRVNsd0VCNnpzd0ZTblpSeXFpaFNQd2hlSUVaNHp6RDZVMjVqZW5ucTA2TnA1MjcwRkhla2NqRWwxSENOSlFHMnJQU2Q1M1U3dER5ZTFkTzlFX183alhFcmdOTDd1dHFWSlNOclhSUkJWU1A1SmRoVkJfQmRkOWRVczcyeWlfd0hybEktYk1IdFJGS0UtWnl1SmxDSEhpWnFwaWJralhWcmdzb2hVNHZScGpFdWpFY1EyTGtWTFhUN1VINGhMY0pNMmUtTE44cWNaZkFhbE06QlRvcCA8Yj5CbHVlIERhcnQ8L2I-IERvbWVzdGljIENvdXJpZXIgU2VydmljZSBpbiBLaGFyZGFoIC0gS29sa2F0YUKnATxiPkJsdWUgRGFydCBpcyBhIGxlYWRpbmcgcHJvdmlkZXIgb2YgY291cmllciwgbG9naXN0aWNzLCBhbmQgZS1jb21tZXJjZSBzZXJ2aWNlczwvYj4gaW4gSW5kaWEuIFRoZSBjb21wYW55IHdhcyBmb3VuZGVkIGluIDE5ODMgYW5kIGlzIGhlYWRxdWFydGVyZWQgaW4gQ2hlbm5haSwgSW5kaWEuIgIQAUgAWABoAA",
+   "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CtoBL2dvdG8_dXJsPUNBRVNsd0VCNnpzd0ZTblpSeXFpaFNQd2hlSUVaNHp6RDZVMjVqZW5ucTA2TnA1MjcwRkhla2NqRWwxSENOSlFHMnJQU2Q1M1U3dER5ZTFkTzlFX183alhFcmdOTDd1dHFWSlNOclhSUkJWU1A1SmRoVkJfQmRkOWRVczcyeWlfd0hybEktYk1IdFJGS0UtWnl1SmxDSEhpWnFwaWJralhWcmdzb2hVNHZScGpFdWpFY1EyTGtWTFhUN1VINGhMY0pNMmUtTE44cWNaZkFhbE0SBBoCCAAasgQSABoCCAEiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCMBAgAEAAYACAAKhUKBGJsdWUVFArHQBoIYmx1ZWRhcnQqIAoEZGFydBUUCsdAGghibHVlZGFydBoJaXY7cDtkYXJ0MtoBL2dvdG8_dXJsPUNBRVNsd0VCNnpzd0ZTblpSeXFpaFNQd2hlSUVaNHp6RDZVMjVqZW5ucTA2TnA1MjcwRkhla2NqRWwxSENOSlFHMnJQU2Q1M1U3dER5ZTFkTzlFX183alhFcmdOTDd1dHFWSlNOclhSUkJWU1A1SmRoVkJfQmRkOWRVczcyeWlfd0hybEktYk1IdFJGS0UtWnl1SmxDSEhpWnFwaWJralhWcmdzb2hVNHZScGpFdWpFY1EyTGtWTFhUN1VINGhMY0pNMmUtTE44cWNaZkFhbE06QlRvcCA8Yj5CbHVlIERhcnQ8L2I-IERvbWVzdGljIENvdXJpZXIgU2VydmljZSBpbiBLaGFyZGFoIC0gS29sa2F0YUKnATxiPkJsdWUgRGFydCBpcyBhIGxlYWRpbmcgcHJvdmlkZXIgb2YgY291cmllciwgbG9naXN0aWNzLCBhbmQgZS1jb21tZXJjZSBzZXJ2aWNlczwvYj4gaW4gSW5kaWEuIFRoZSBjb21wYW55IHdhcyBmb3VuZGVkIGluIDE5ODMgYW5kIGlzIGhlYWRxdWFydGVyZWQgaW4gQ2hlbm5haSwgSW5kaWEuIgIQAUgAWABoAA",
+   "source": "Justdial",
+   "read_more_link": "https://www.justdial.com/Kolkata/Domestic-Courier-Services-Blue-Dart-in-Khardah/nct-10169316#:~:text=Blue%20Dart%20is%20a%20leading,is%20headquartered%20in%20Chennai%2C%20India."
+  },
+  {
+   "position": 7,
+   "title": "Blue Dart Express in Udalguri,Darrang - Courier Services ...",
+   "link": "https://www.justdial.com/Darrang/Blue-Dart-Express-Udalguri/9999P3713-3713-230127151943-G3J8_BZDET",
+   "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESnQEB6zswFele00yclhzEJX1akGqNVoMSJvRevbpIGtZ3poeYaak26nzJYINSz2-3l0J92CGroa5XfKZRx1yw8o6dup6tmvH33WI56usTsdFDJ4WXwb7GgNvdzWIRJVDkTCm4IBm_d2woLBZr9maCK0YlMDF4J1SUKE2ld0VueFUn8L9IZsSPaffcFyeDfyUPwUkboXFf4gRA5cRqrLJF&ved=2ahUKEwi7zpitlqqXAxXiF1kFHRiqCgMQFnoECFAQAQ&uoh=1",
+   "displayed_link": "https://www.justdial.com › Darrang › Blue-Dart-Express-...",
+   "favicon": "https://serpapi.com/images/i/UklGRqgAAABXRUJQVlA4IJwAAADwAgCdASoQABAAAsBMJbACdDiAP0A4CkFq58psin0SkAD--q31jH7d5W1uxfXO5nb8LSdefKaagozfP45QnxuH4vNL1KtsnPCpMJUuGP_FrEFbNoaquFgwJzn34CIyxoWia3lxLLsb-8VB4cmZOAYN_1krQMDF0t8L_p2aqhj9f-w2zUnHUm8H7QdRLxoFBciseJRQuvI02frQAAA.webp",
+   "snippet": "Blue Dart Express Ltd is a well-known courier and logistics company in India, with a strong presence in the North-East region of India. The company has a branch ...",
+   "snippet_highlighted_words": [
+    "Blue Dart Express Ltd is a well-known courier and logistics company"
+   ],
+   "rich_snippet": {
+    "top": {
+     "detected_extensions": {
+      "rating": 4.5,
+      "reviews": 12
+     },
+     "extensions": [
+      "4.5(12)"
+     ]
+    }
+   },
+   "about_this_result": {
+    "source": {
+     "description": "Blue Dart Express Ltd is a well-known courier and logistics company in India, with a strong presence in the North-East region of India. The company has a branch ...",
+     "source_info_link": "https://www.justdial.com/Darrang/Blue-Dart-Express-Udalguri/9999P3713-3713-230127151943-G3J8_BZDET",
+     "icon": "https://serpapi.com/images/i/UklGRqgAAABXRUJQVlA4IJwAAADwAgCdASoQABAAAsBMJbACdDiAP0A4CkFq58psin0SkAD--q31jH7d5W1uxfXO5nb8LSdefKaagozfP45QnxuH4vNL1KtsnPCpMJUuGP_FrEFbNoaquFgwJzn34CIyxoWia3lxLLsb-8VB4cmZOAYN_1krQMDF0t8L_p2aqhj9f-w2zUnHUm8H7QdRLxoFBciseJRQuvI02frQAAA.webp"
+    },
+    "languages": [
+     "en"
+    ],
+    "regions": [
+     "IN"
+    ]
+   },
+   "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CuIBL2dvdG8_dXJsPUNBRVNuUUVCNnpzd0ZlbGUwMHljbGh6RUpYMWFrR3FOVm9NU0p2UmV2YnBJR3RaM3BvZVlhYWsyNm56SllJTlN6Mi0zbDBKOTJDR3JvYTVYZktaUngxeXc4bzZkdXA2dG12SDMzV0k1NnVzVHNkRkRKNFdYd2I3R2dOdmR6V0lSSlZEa1RDbTRJQm1fZDJ3b0xCWnI5bWFDSzBZbE1ERjRKMVNVS0UybGQwVnVlRlVuOEw5SVpzU1BhZmZjRnllRGZ5VVB3VWtib1hGZjRnUkE1Y1JxckxKRhIEGgIIABrBBBIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCdBAgAEAAYACAAKhUKBGJsdWUVTR-QQBoIYmx1ZWRhcnQqIAoEZGFydBVNH5BAGghibHVlZGFydBoJaXY7cDtkYXJ0MuIBL2dvdG8_dXJsPUNBRVNuUUVCNnpzd0ZlbGUwMHljbGh6RUpYMWFrR3FOVm9NU0p2UmV2YnBJR3RaM3BvZVlhYWsyNm56SllJTlN6Mi0zbDBKOTJDR3JvYTVYZktaUngxeXc4bzZkdXA2dG12SDMzV0k1NnVzVHNkRkRKNFdYd2I3R2dOdmR6V0lSSlZEa1RDbTRJQm1fZDJ3b0xCWnI5bWFDSzBZbE1ERjRKMVNVS0UybGQwVnVlRlVuOEw5SVpzU1BhZmZjRnllRGZ5VVB3VWtib1hGZjRnUkE1Y1JxckxKRjpCPGI-Qmx1ZSBEYXJ0PC9iPiBFeHByZXNzIC0gQ291cmllciBTZXJ2aWNlcyBpbiBVZGFsZ3VyaSAtIEp1c3RkaWFsQrABPGI-Qmx1ZSBEYXJ0IEV4cHJlc3MgTHRkIGlzIGEgd2VsbC1rbm93biBjb3VyaWVyIGFuZCBsb2dpc3RpY3MgY29tcGFueTwvYj4gaW4gSW5kaWEsIHdpdGggYSBzdHJvbmcgcHJlc2VuY2UgaW4gdGhlIE5vcnRoLUVhc3QgcmVnaW9uIG9mIEluZGlhLiBUaGUgY29tcGFueSBoYXMgYSBicmFuY2gmbmJzcDsuLi4iAhABSABYAGgA",
+   "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CuIBL2dvdG8_dXJsPUNBRVNuUUVCNnpzd0ZlbGUwMHljbGh6RUpYMWFrR3FOVm9NU0p2UmV2YnBJR3RaM3BvZVlhYWsyNm56SllJTlN6Mi0zbDBKOTJDR3JvYTVYZktaUngxeXc4bzZkdXA2dG12SDMzV0k1NnVzVHNkRkRKNFdYd2I3R2dOdmR6V0lSSlZEa1RDbTRJQm1fZDJ3b0xCWnI5bWFDSzBZbE1ERjRKMVNVS0UybGQwVnVlRlVuOEw5SVpzU1BhZmZjRnllRGZ5VVB3VWtib1hGZjRnUkE1Y1JxckxKRhIEGgIIABrBBBIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCdBAgAEAAYACAAKhUKBGJsdWUVTR-QQBoIYmx1ZWRhcnQqIAoEZGFydBVNH5BAGghibHVlZGFydBoJaXY7cDtkYXJ0MuIBL2dvdG8_dXJsPUNBRVNuUUVCNnpzd0ZlbGUwMHljbGh6RUpYMWFrR3FOVm9NU0p2UmV2YnBJR3RaM3BvZVlhYWsyNm56SllJTlN6Mi0zbDBKOTJDR3JvYTVYZktaUngxeXc4bzZkdXA2dG12SDMzV0k1NnVzVHNkRkRKNFdYd2I3R2dOdmR6V0lSSlZEa1RDbTRJQm1fZDJ3b0xCWnI5bWFDSzBZbE1ERjRKMVNVS0UybGQwVnVlRlVuOEw5SVpzU1BhZmZjRnllRGZ5VVB3VWtib1hGZjRnUkE1Y1JxckxKRjpCPGI-Qmx1ZSBEYXJ0PC9iPiBFeHByZXNzIC0gQ291cmllciBTZXJ2aWNlcyBpbiBVZGFsZ3VyaSAtIEp1c3RkaWFsQrABPGI-Qmx1ZSBEYXJ0IEV4cHJlc3MgTHRkIGlzIGEgd2VsbC1rbm93biBjb3VyaWVyIGFuZCBsb2dpc3RpY3MgY29tcGFueTwvYj4gaW4gSW5kaWEsIHdpdGggYSBzdHJvbmcgcHJlc2VuY2UgaW4gdGhlIE5vcnRoLUVhc3QgcmVnaW9uIG9mIEluZGlhLiBUaGUgY29tcGFueSBoYXMgYSBicmFuY2gmbmJzcDsuLi4iAhABSABYAGgA",
+   "source": "Justdial",
+   "read_more_link": "https://www.justdial.com/Darrang/Blue-Dart-Express-Udalguri/9999P3713-3713-230127151943-G3J8_BZDET#:~:text=Blue%20Dart%20Express%20Ltd%20is,the%20local%20businesses%20and%20individuals."
+  },
+  {
+   "position": 8,
+   "title": "Blue Dart Express, Kolkata - Domestic & international ...",
+   "link": "https://www.justdial.com/Kolkata/Blue-Dart-Express-Block-A-New-Alipore/033PMULTI44235_BZDET",
+   "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESlgEB6zswFaRgSejqZ3gxqLSTkosEtllvlrix-dBpbmuFNPHtdu2tktaY0oumcxLVqxl8eactV5HdqFGvefLS7MES7TR6Ek-ljMjx-FXbH6VKBTae_kt4oQrw4IPluQFTEEkBYCazUr496ySz7Cdki88WIucqQzHjp7mY2YkovVMDYYc8_572zL5ciZ5RgnxelkGt7-hPJt0&ved=2ahUKEwi7zpitlqqXAxXiF1kFHRiqCgMQFnoECFEQAQ&uoh=1",
+   "displayed_link": "https://www.justdial.com › Kolkata › Blue-Dart-Express-...",
+   "favicon": "https://serpapi.com/images/i/UklGRqgAAABXRUJQVlA4IJwAAADwAgCdASoQABAAAsBMJbACdDiAP0A4CkFq58psin0SkAD--q31jH7d5W1uxfXO5nb8LSdefKaagozfP45QnxuH4vNL1KtsnPCpMJUuGP_FrEFbNoaquFgwJzn34CIyxoWia3lxLLsb-8VB4cmZOAYN_1krQMDF0t8L_p2aqhj9f-w2zUnHUm8H7QdRLxoFBciseJRQuvI02frQAAA.webp",
+   "snippet": "Blue Dart Express Ltd is a leading logistics company in India that provides courier, parcel, and express delivery services. The company has a strong presence in ...",
+   "snippet_highlighted_words": [
+    "Blue Dart Express Ltd is a leading logistics company in India"
+   ],
+   "rich_snippet": {
+    "top": {
+     "detected_extensions": {
+      "rating": 3.7,
+      "reviews": 1073
+     },
+     "extensions": [
+      "3.7(1,073)"
+     ]
+    }
+   },
+   "about_this_result": {
+    "source": {
+     "description": "Blue Dart Express Ltd is a leading logistics company in India that provides courier, parcel, and express delivery services. The company has a strong presence in ...",
+     "source_info_link": "https://www.justdial.com/Kolkata/Blue-Dart-Express-Block-A-New-Alipore/033PMULTI44235_BZDET",
+     "icon": "https://serpapi.com/images/i/UklGRqgAAABXRUJQVlA4IJwAAADwAgCdASoQABAAAsBMJbACdDiAP0A4CkFq58psin0SkAD--q31jH7d5W1uxfXO5nb8LSdefKaagozfP45QnxuH4vNL1KtsnPCpMJUuGP_FrEFbNoaquFgwJzn34CIyxoWia3lxLLsb-8VB4cmZOAYN_1krQMDF0t8L_p2aqhj9f-w2zUnHUm8H7QdRLxoFBciseJRQuvI02frQAAA.webp"
+    },
+    "languages": [
+     "en"
+    ],
+    "regions": [
+     "IN"
+    ]
+   },
+   "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CtkBL2dvdG8_dXJsPUNBRVNsZ0VCNnpzd0ZhUmdTZWpxWjNneHFMU1Rrb3NFdGxsdmxyaXgtZEJwYm11Rk5QSHRkdTJ0a3RhWTBvdW1jeExWcXhsOGVhY3RWNUhkcUZHdmVmTFM3TUVTN1RSNkVrLWxqTWp4LUZYYkg2VktCVGFlX2t0NG9Rcnc0SVBsdVFGVEVFa0JZQ2F6VXI0OTZ5U3o3Q2RraTg4V0l1Y3FRekhqcDdtWTJZa292Vk1EWVljOF81NzJ6TDVjaVo1UmdueGVsa0d0Ny1oUEp0MBIEGgIIABrBBBIAGgIIASIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQJsECAAQABgAIAAqFQoEYmx1ZRVKNZBAGghibHVlZGFydCogCgRkYXJ0FUo1kEAaCGJsdWVkYXJ0GglpdjtwO2RhcnQy2QEvZ290bz91cmw9Q0FFU2xnRUI2enN3RmFSZ1NlanFaM2d4cUxTVGtvc0V0bGx2bHJpeC1kQnBibXVGTlBIdGR1MnRrdGFZMG91bWN4TFZxeGw4ZWFjdFY1SGRxRkd2ZWZMUzdNRVM3VFI2RWstbGpNangtRlhiSDZWS0JUYWVfa3Q0b1FydzRJUGx1UUZURUVrQllDYXpVcjQ5NnlTejdDZGtpODhXSXVjcVF6SGpwN21ZMllrb3ZWTURZWWM4XzU3MnpMNWNpWjVSZ254ZWxrR3Q3LWhQSnQwOkk8Yj5CbHVlIERhcnQ8L2I-IEV4cHJlc3MsIEtvbGthdGEgLSBEb21lc3RpYyAmYW1wOyBpbnRlcm5hdGlvbmFsIENvdXJpZXJzQrABPGI-Qmx1ZSBEYXJ0IEV4cHJlc3MgTHRkIGlzIGEgbGVhZGluZyBsb2dpc3RpY3MgY29tcGFueSBpbiBJbmRpYTwvYj4gdGhhdCBwcm92aWRlcyBjb3VyaWVyLCBwYXJjZWwsIGFuZCBleHByZXNzIGRlbGl2ZXJ5IHNlcnZpY2VzLiBUaGUgY29tcGFueSBoYXMgYSBzdHJvbmcgcHJlc2VuY2UgaW4mbmJzcDsuLi4iAhABSABYAGgA",
+   "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CtkBL2dvdG8_dXJsPUNBRVNsZ0VCNnpzd0ZhUmdTZWpxWjNneHFMU1Rrb3NFdGxsdmxyaXgtZEJwYm11Rk5QSHRkdTJ0a3RhWTBvdW1jeExWcXhsOGVhY3RWNUhkcUZHdmVmTFM3TUVTN1RSNkVrLWxqTWp4LUZYYkg2VktCVGFlX2t0NG9Rcnc0SVBsdVFGVEVFa0JZQ2F6VXI0OTZ5U3o3Q2RraTg4V0l1Y3FRekhqcDdtWTJZa292Vk1EWVljOF81NzJ6TDVjaVo1UmdueGVsa0d0Ny1oUEp0MBIEGgIIABrBBBIAGgIIASIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQJsECAAQABgAIAAqFQoEYmx1ZRVKNZBAGghibHVlZGFydCogCgRkYXJ0FUo1kEAaCGJsdWVkYXJ0GglpdjtwO2RhcnQy2QEvZ290bz91cmw9Q0FFU2xnRUI2enN3RmFSZ1NlanFaM2d4cUxTVGtvc0V0bGx2bHJpeC1kQnBibXVGTlBIdGR1MnRrdGFZMG91bWN4TFZxeGw4ZWFjdFY1SGRxRkd2ZWZMUzdNRVM3VFI2RWstbGpNangtRlhiSDZWS0JUYWVfa3Q0b1FydzRJUGx1UUZURUVrQllDYXpVcjQ5NnlTejdDZGtpODhXSXVjcVF6SGpwN21ZMllrb3ZWTURZWWM4XzU3MnpMNWNpWjVSZ254ZWxrR3Q3LWhQSnQwOkk8Yj5CbHVlIERhcnQ8L2I-IEV4cHJlc3MsIEtvbGthdGEgLSBEb21lc3RpYyAmYW1wOyBpbnRlcm5hdGlvbmFsIENvdXJpZXJzQrABPGI-Qmx1ZSBEYXJ0IEV4cHJlc3MgTHRkIGlzIGEgbGVhZGluZyBsb2dpc3RpY3MgY29tcGFueSBpbiBJbmRpYTwvYj4gdGhhdCBwcm92aWRlcyBjb3VyaWVyLCBwYXJjZWwsIGFuZCBleHByZXNzIGRlbGl2ZXJ5IHNlcnZpY2VzLiBUaGUgY29tcGFueSBoYXMgYSBzdHJvbmcgcHJlc2VuY2UgaW4mbmJzcDsuLi4iAhABSABYAGgA",
+   "source": "Justdial",
+   "read_more_link": "https://www.justdial.com/Kolkata/Blue-Dart-Express-Block-A-New-Alipore/033PMULTI44235_BZDET#:~:text=Blue%20Dart%20Express%20Ltd%20is,branches%20located%20across%20the%20city."
+  },
+  {
+   "position": 9,
+   "title": "Blue Dart Express in Sankhol, Bahadurgarh Haryana",
+   "link": "https://www.justdial.com/Bahadurgarh-Haryana/Blue-Dart-Express-in-Sankhol/nct-12099485",
+   "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESkQEB6zswFU4PXAU8zgegNdUh24am339mDuGbXnzd3EVgnviecQ-_WZ90rww1aDmYtI4MHRjCkB5qZ2-QL20DONL87giUrJgRE3bw9kQ5nLbVXIMVyCj1nh3YTp9KSwwn-xJmdeyc21BmuvzrPldMQTNYeYCkziZ0tN_8xvLgOc107BIzkBgT6wHqk89PKn4shnP6&ved=2ahUKEwi7zpitlqqXAxXiF1kFHRiqCgMQFnoECEsQAQ&uoh=1",
+   "displayed_link": "https://www.justdial.com › nct-12099485",
+   "favicon": "https://serpapi.com/images/i/UklGRqgAAABXRUJQVlA4IJwAAADwAgCdASoQABAAAsBMJbACdDiAP0A4CkFq58psin0SkAD--q31jH7d5W1uxfXO5nb8LSdefKaagozfP45QnxuH4vNL1KtsnPCpMJUuGP_FrEFbNoaquFgwJzn34CIyxoWia3lxLLsb-8VB4cmZOAYN_1krQMDF0t8L_p2aqhj9f-w2zUnHUm8H7QdRLxoFBciseJRQuvI02frQAAA.webp",
+   "snippet": "Blue Dart Express Limited is a highly priced transit and portage service with exceptional customer service. The staff are friendly and efficient, making the ...",
+   "snippet_highlighted_words": [
+    "Blue Dart Express Limited"
+   ],
+   "about_this_result": {
+    "source": {
+     "description": "Blue Dart Express Limited is a highly priced transit and portage service with exceptional customer service. The staff are friendly and efficient, making the ...",
+     "source_info_link": "https://www.justdial.com/Bahadurgarh-Haryana/Blue-Dart-Express-in-Sankhol/nct-12099485",
+     "icon": "https://serpapi.com/images/i/UklGRqgAAABXRUJQVlA4IJwAAADwAgCdASoQABAAAsBMJbACdDiAP0A4CkFq58psin0SkAD--q31jH7d5W1uxfXO5nb8LSdefKaagozfP45QnxuH4vNL1KtsnPCpMJUuGP_FrEFbNoaquFgwJzn34CIyxoWia3lxLLsb-8VB4cmZOAYN_1krQMDF0t8L_p2aqhj9f-w2zUnHUm8H7QdRLxoFBciseJRQuvI02frQAAA.webp"
+    },
+    "languages": [
+     "en"
+    ],
+    "regions": [
+     "IN"
+    ]
+   },
+   "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CtIBL2dvdG8_dXJsPUNBRVNrUUVCNnpzd0ZVNFBYQVU4emdlZ05kVWgyNGFtMzM5bUR1R2JYbnpkM0VWZ252aWVjUS1fV1o5MHJ3dzFhRG1ZdEk0TUhSakNrQjVxWjItUUwyMERPTkw4N2dpVXJKZ1JFM2J3OWtRNW5MYlZYSU1WeUNqMW5oM1lUcDlLU3d3bi14Sm1kZXljMjFCbXV2enJQbGRNUVROWWVZQ2t6aVowdE5fOHh2TGdPYzEwN0JJemtCZ1Q2d0hxazg5UEtuNHNoblA2EgQaAggAGq4EEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQIoECAAQABgAIAAqFQoEYmx1ZRV0hNJAGghibHVlZGFydCogCgRkYXJ0FXSE0kAaCGJsdWVkYXJ0GglpdjtwO2RhcnQy0gEvZ290bz91cmw9Q0FFU2tRRUI2enN3RlU0UFhBVTh6Z2VnTmRVaDI0YW0zMzltRHVHYlhuemQzRVZnbnZpZWNRLV9XWjkwcnd3MWFEbVl0STRNSFJqQ2tCNXFaMi1RTDIwRE9OTDg3Z2lVckpnUkUzYnc5a1E1bkxiVlhJTVZ5Q2oxbmgzWVRwOUtTd3duLXhKbWRleWMyMUJtdXZ6clBsZE1RVE5ZZVlDa3ppWjB0Tl84eHZMZ09jMTA3Qkl6a0JnVDZ3SHFrODlQS240c2huUDY6QzxiPkJsdWUgRGFydDwvYj4gRXhwcmVzcyBpbiBTYW5raG9sLCBCYWhhZHVyZ2FyaCBIYXJ5YW5hIC0gSnVzdGRpYWxCrAE8Yj5CbHVlIERhcnQgRXhwcmVzcyBMaW1pdGVkPC9iPiBpcyBhIGhpZ2hseSBwcmljZWQgdHJhbnNpdCBhbmQgcG9ydGFnZSBzZXJ2aWNlIHdpdGggZXhjZXB0aW9uYWwgY3VzdG9tZXIgc2VydmljZS4gVGhlIHN0YWZmIGFyZSBmcmllbmRseSBhbmQgZWZmaWNpZW50LCBtYWtpbmcgdGhlJm5ic3A7Li4uIgIQAUgAWABoAA",
+   "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CtIBL2dvdG8_dXJsPUNBRVNrUUVCNnpzd0ZVNFBYQVU4emdlZ05kVWgyNGFtMzM5bUR1R2JYbnpkM0VWZ252aWVjUS1fV1o5MHJ3dzFhRG1ZdEk0TUhSakNrQjVxWjItUUwyMERPTkw4N2dpVXJKZ1JFM2J3OWtRNW5MYlZYSU1WeUNqMW5oM1lUcDlLU3d3bi14Sm1kZXljMjFCbXV2enJQbGRNUVROWWVZQ2t6aVowdE5fOHh2TGdPYzEwN0JJemtCZ1Q2d0hxazg5UEtuNHNoblA2EgQaAggAGq4EEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQIoECAAQABgAIAAqFQoEYmx1ZRV0hNJAGghibHVlZGFydCogCgRkYXJ0FXSE0kAaCGJsdWVkYXJ0GglpdjtwO2RhcnQy0gEvZ290bz91cmw9Q0FFU2tRRUI2enN3RlU0UFhBVTh6Z2VnTmRVaDI0YW0zMzltRHVHYlhuemQzRVZnbnZpZWNRLV9XWjkwcnd3MWFEbVl0STRNSFJqQ2tCNXFaMi1RTDIwRE9OTDg3Z2lVckpnUkUzYnc5a1E1bkxiVlhJTVZ5Q2oxbmgzWVRwOUtTd3duLXhKbWRleWMyMUJtdXZ6clBsZE1RVE5ZZVlDa3ppWjB0Tl84eHZMZ09jMTA3Qkl6a0JnVDZ3SHFrODlQS240c2huUDY6QzxiPkJsdWUgRGFydDwvYj4gRXhwcmVzcyBpbiBTYW5raG9sLCBCYWhhZHVyZ2FyaCBIYXJ5YW5hIC0gSnVzdGRpYWxCrAE8Yj5CbHVlIERhcnQgRXhwcmVzcyBMaW1pdGVkPC9iPiBpcyBhIGhpZ2hseSBwcmljZWQgdHJhbnNpdCBhbmQgcG9ydGFnZSBzZXJ2aWNlIHdpdGggZXhjZXB0aW9uYWwgY3VzdG9tZXIgc2VydmljZS4gVGhlIHN0YWZmIGFyZSBmcmllbmRseSBhbmQgZWZmaWNpZW50LCBtYWtpbmcgdGhlJm5ic3A7Li4uIgIQAUgAWABoAA",
+   "source": "Justdial",
+   "read_more_link": "https://www.justdial.com/Bahadurgarh-Haryana/Blue-Dart-Express-in-Sankhol/nct-12099485#:~:text=Blue%20Dart%20Express%20Limited%20is,entire%20experience%20smooth%20and%20hassle%2Dfree."
+  }
+ ],
+ "related_searches": [
+  {
+   "block_position": 1,
+   "query": "Blue Dart near me",
+   "link": "https://www.google.co.in/search?sca_esv=e2130cf16db8d2a2&gl=in&hl=en&sxsrf=APpeQnsyHRF4grpVoWEc43AEtAJx_0EqIg:1791454039393&q=Blue+Dart+near+me&sa=X&ved=2ahUKEwi7zpitlqqXAxXiF1kFHRiqCgMQ1QJ6BAhDEAE",
+   "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=Blue+Dart+near+me"
+  },
+  {
+   "block_position": 1,
+   "query": "Blue Dart tracking",
+   "link": "https://www.google.co.in/search?sca_esv=e2130cf16db8d2a2&gl=in&hl=en&sxsrf=APpeQnsyHRF4grpVoWEc43AEtAJx_0EqIg:1791454039393&q=Blue+Dart+tracking&sa=X&ved=2ahUKEwi7zpitlqqXAxXiF1kFHRiqCgMQ1QJ6BAhKEAE",
+   "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=Blue+Dart+tracking"
+  },
+  {
+   "block_position": 1,
+   "query": "Blue Dart customer care",
+   "link": "https://www.google.co.in/search?sca_esv=e2130cf16db8d2a2&gl=in&hl=en&sxsrf=APpeQnsyHRF4grpVoWEc43AEtAJx_0EqIg:1791454039393&q=Blue+Dart+customer+care&sa=X&ved=2ahUKEwi7zpitlqqXAxXiF1kFHRiqCgMQ1QJ6BAhJEAE",
+   "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=Blue+Dart+customer+care"
+  },
+  {
+   "block_position": 1,
+   "query": "Blue Dart Express",
+   "link": "https://www.google.co.in/search?sca_esv=e2130cf16db8d2a2&gl=in&hl=en&sxsrf=APpeQnsyHRF4grpVoWEc43AEtAJx_0EqIg:1791454039393&q=Blue+Dart+Express&sa=X&ved=2ahUKEwi7zpitlqqXAxXiF1kFHRiqCgMQ1QJ6BAhIEAE",
+   "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=Blue+Dart+Express"
+  },
+  {
+   "block_position": 1,
+   "query": "Blue Dart Indirapuram",
+   "link": "https://www.google.co.in/search?sca_esv=e2130cf16db8d2a2&gl=in&hl=en&sxsrf=APpeQnsyHRF4grpVoWEc43AEtAJx_0EqIg:1791454039393&q=Blue+Dart+Indirapuram&sa=X&ved=2ahUKEwi7zpitlqqXAxXiF1kFHRiqCgMQ1QJ6BAhHEAE",
+   "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=Blue+Dart+Indirapuram"
+  },
+  {
+   "block_position": 1,
+   "query": "DTDC",
+   "link": "https://www.google.co.in/search?sca_esv=e2130cf16db8d2a2&gl=in&hl=en&sxsrf=APpeQnsyHRF4grpVoWEc43AEtAJx_0EqIg:1791454039393&q=DTDC&sa=X&ved=2ahUKEwi7zpitlqqXAxXiF1kFHRiqCgMQ1QJ6BAhGEAE",
+   "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=DTDC"
+  },
+  {
+   "block_position": 1,
+   "query": "DTDC Courier",
+   "link": "https://www.google.co.in/search?sca_esv=e2130cf16db8d2a2&gl=in&hl=en&sxsrf=APpeQnsyHRF4grpVoWEc43AEtAJx_0EqIg:1791454039393&q=DTDC+Courier&sa=X&ved=2ahUKEwi7zpitlqqXAxXiF1kFHRiqCgMQ1QJ6BAhFEAE",
+   "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=DTDC+Courier"
+  },
+  {
+   "block_position": 1,
+   "query": "Delhivery",
+   "link": "https://www.google.co.in/search?sca_esv=e2130cf16db8d2a2&gl=in&hl=en&sxsrf=APpeQnsyHRF4grpVoWEc43AEtAJx_0EqIg:1791454039393&q=Delhivery&sa=X&ved=2ahUKEwi7zpitlqqXAxXiF1kFHRiqCgMQ1QJ6BAhEEAE",
+   "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=Delhivery"
+  }
+ ],
+ "pagination": {
+  "current": 1,
+  "next": "https://www.google.co.in/search?q=Blue+Dart&sca_esv=e2130cf16db8d2a2&gl=in&hl=en&sxsrf=APpeQnsyHRF4grpVoWEc43AEtAJx_0EqIg:1791454039393&ei=V2vHavvGF-Kv5NoPmNSqGA&start=10&sa=N&sstk=AS6-VmLbNONLsZkW9KDiyq1LrZceW1DpXu1yivapMMLJN1-bkQeit2do-2Uqr6207sHVF3gjjQWRbdcqL5bmqj9lxEvLOKf7RLV7Ew&ved=2ahUKEwi7zpitlqqXAxXiF1kFHRiqCgMQ8NMDegQIOxAG",
+  "other_pages": {
+   "2": "https://www.google.co.in/search?q=Blue+Dart&sca_esv=e2130cf16db8d2a2&gl=in&hl=en&sxsrf=APpeQnsyHRF4grpVoWEc43AEtAJx_0EqIg:1791454039393&ei=V2vHavvGF-Kv5NoPmNSqGA&start=10&sa=N&sstk=AS6-VmLbNONLsZkW9KDiyq1LrZceW1DpXu1yivapMMLJN1-bkQeit2do-2Uqr6207sHVF3gjjQWRbdcqL5bmqj9lxEvLOKf7RLV7Ew&ved=2ahUKEwi7zpitlqqXAxXiF1kFHRiqCgMQ8tMDegQIOxAE"
+  }
+ },
+ "serpapi_pagination": {
+  "current": 1,
+  "next_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=Blue+Dart&start=10",
+  "next": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=Blue+Dart&start=10",
+  "other_pages": {
+   "2": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=Blue+Dart&start=10"
+  }
+ }
+}
