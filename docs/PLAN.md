@@ -28,11 +28,12 @@ web/ (vanilla JS + SVG, no build)  ── EventSource SSE ──►  FastAPI (ap
    ├─ phones.py   Indian number parsing (+91/0/STD grouping/toll-free/short codes), strict extraction
    ├─ domains.py  registrable domains (.co.in, .bank.in…), directory sites, brand tokens
    ├─ serp.py     SerpApi client: disk cache · replay fixtures · per-check budget · hourly cap · scrub
-   ├─ pages.py    free HTTPS reads of the official domain's pages (same-domain only, 1.5 MB, 12 s, cached/replayable)
+   ├─ pages.py    free HTTPS reads of the official domain's pages (same-domain only, 2 MB, 20 s deadline, linear HTML tokenizer, cached/replayable); redirect-alias resolution
    ├─ official.py official-domain decision (Maps majority × KG/organic/local pack × LLM sanity × site: confirmation)
    ├─ evidence.py number→sources, complaint snippets (keyword rules), pin audit, verdict (all in code)
-   └─ llm.py      Gemini 2.5 Flash (OpenAI-compatible): (1) official-domain guess (domain only),
-                  (2) labels for snippets naming the number + 2-sentence summary from facts (digits validated)
+   └─ llm.py      Gemini 2.5 Flash (OpenAI-compatible): (1) official-domain guess (domain only, one vote of three),
+                  (2) 2-sentence summary that only shortens code-written fact sentences (rejected if it names any
+                  number not suggested, or uses vouching words). Snippet/complaint labelling is deterministic rules.
 ```
 
 ## 5. SerpApi calls per check (≤ 4 credits; brand-level calls cached 72 h per brand+city)
@@ -42,7 +43,7 @@ web/ (vanilla JS + SVG, no build)  ── EventSource SSE ──►  FastAPI (ap
 | 2 | `google` | `<brand> customer care number` (gl=in, google.co.in) | what a victim's search shows; KG/local pack/organic domains; complaint snippets |
 | 3 | `google` | `site:<official> customer care OR contact OR helpline` | finds the brand's own contact/help/fraud pages (+ snippets with numbers) |
 | 4 | `google` | `"<number variants>"` (only if a number was given) | where this exact number appears; complaint text naming it |
-Calls 1, 2, 4 and the LLM domain guess run in parallel; 3 waits for the domain decision; then up to 4 page reads.
+Calls 1, 2, 4 and the LLM domain guess run in parallel; 3 waits for the domain decision; then up to 5 page reads.
 
 ## 6. Core logic & thresholds
 - **Official domain:** candidates = Maps majority domain (≥3 pins with that site and ≥60% of pins that have a website), KG website, local-pack websites, non-directory organic domains whose label carries a brand token, LLM guess. Accept the domain backed by **≥2 independent sources** (Maps / Google results / LLM), not a directory. Redirect aliases (hdfcbank.com → hdfc.bank.in) are kept as the same brand. Then call 3 must return ≥1 page on it, else abstain. User-typed domain overrides (still needs call 3 to return pages).
@@ -58,7 +59,7 @@ Calls 1, 2, 4 and the LLM domain guess run in parallel; 3 waits for the domain d
 - **Summary:** LLM writes from pre-formatted facts; rejected (template used) if it contains any digit run not in the facts or banned words.
 
 ## 7. API
-- `GET /api/check?brand=&number=&city=&domain=` → SSE stream of events.
+- `GET /api/check/stream?brand=&number=&city=&domain=` → SSE stream (events: start · step · serp_call · page_read · official · notice · result · done · error).
 - `GET /api/examples` → recorded example queries (replay works with no keys).
 - `GET /api/status` → mode (live/replay), LLM model, credits left (free account API).
 - Cross-site guard (`Sec-Fetch-Site: cross-site` → 403), per-check budget 4, hourly live cap 30.
@@ -80,3 +81,6 @@ Number parsing traps (AWB ids, prices, pincodes, dates, +1 numbers, STD grouping
 
 ## 11. Submission checklist
 See HACKATHON_PLAYBOOK.md §9 — public repo LoheshM/rightnumber, replay with no keys, secret scan, README (problem, screenshots, engines table, verified table, limitations, AI disclosure, MIT), demo < 3 min from git-ignored DEMO_SCRIPT.md, form: Knowledge & Public Interest, AI tools = Claude Code + Gemini 2.5 Flash.
+
+## 12. Changes after verification and review
+See docs/VERIFICATION.md: care-labelled numbers only; fax / other-org / escalation / seller / branch / user-generated sources never suggested; Maps never breaks a domain tie; user-entered domain labelled as such; shared links prefill but never auto-run; anti-framing headers.

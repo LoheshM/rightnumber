@@ -86,7 +86,22 @@ At most **4 credits per check** (3 with no number). Brand-level searches are cac
 
 ## Verified against the web
 
-<!-- VERIFIED_TABLE -->
+Ten real cases were run on live data and then fact-checked against the web by an independent agent, which opened every cited page. The full log and the list of bugs this found are in [docs/VERIFICATION.md](docs/VERIFICATION.md).
+
+| Case (input) | RightNumber says | Web check | |
+|---|---|---|---|
+| Blue Dart · 6291610240 (from a Justdial review) | 🔴 Verify before calling: complaint text names it. Call 1860 233 1234 / 022 4061 1234 / 080 4661 1234 | The review calls it "a fraud no."; all 3 numbers are on bluedart.com | ✅ |
+| Blue Dart · 1860 233 1234 | ✅ Printed on bluedart.com | "contact on its official number 18602331234" (/fraudawareness) | ✅ |
+| Blue Dart · 07016493282 (scam caller on TechEnclave) | 🟡 Not on the official pages | Correct, but the forum report wasn't surfaced | ⚠️ |
+| IRCTC · 09002327947 (Facebook "refund number") | 🔴 Advertised as the helpline of Koovs, IndiGo, Google Pay, Flipkart, Paytm. Call 14646 | Posted as a "customer care" number for several brands; 14646 is on IRCTC Contact Us | ✅ |
+| IRCTC · 14646 | ✅ Printed on irctc.co.in | Contact Us: "Customer support within India" | ✅ |
+| DTDC · +91 9606 911 811 | ✅ Printed on dtdc.com | dtdc.com/customer-care | ✅ |
+| HDFC Bank (no number) | Call 1800 1600 / 1800 258 6161 | On hdfc.bank.in (home; /upi/report-frauds) | ✅ |
+| SBI · 1800 1234 | ⚪ Abstains (bank.sbi vs sbi.bank.in). One click "Use sbi.bank.in" → ✅ | "Toll free number: 1800 1234" on sbi.bank.in | ✅ / ⚠️ |
+| Airtel · 6290133964 (scam caller, complaint site) | 🟡 Not on airtel.in pages; no number suggested | Fair; Airtel's care line is the short code 121, which wasn't on the pages read | ⚠️ |
+| Amazon · +91 80 6605 5000 (reported fake) | 🟡 Not on amazon.in pages; no number suggested | Amazon India publishes no phone number; seller-listing numbers are excluded | ✅ |
+
+**7 ✅ · 3 ⚠️ · 0 ❌. No verdict on a user's number overclaimed.** Verification found 10 real bugs before submission, for example fax lines, partner (Google Pay) numbers, seller-listing numbers on amazon.in, appellate officers and franchise stores suggested as "call instead". Each is fixed and has a regression test.
 
 ## Quick start
 
@@ -110,7 +125,7 @@ GEMINI_API_KEY=...    # https://aistudio.google.com/apikey (free tier; optional 
 
 Command line: `uv run python -m scripts.check "Blue Dart" "6291610240" Delhi`
 
-Tests: `uv run pytest -q` (690 offline tests: respx blocks the network and keys are removed). Run `uv run ruff check` for lint and `uv run python -m scripts.secret_scan` to check for secrets.
+Tests: `uv run pytest -q` (705 offline tests: respx blocks the network and keys are removed). Run `uv run ruff check` for lint and `uv run python -m scripts.secret_scan` to check for secrets.
 
 ## Limitations (honest)
 
