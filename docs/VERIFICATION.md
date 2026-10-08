@@ -3,7 +3,7 @@
 How RightNumber was checked against reality (8 Oct 2026):
 
 1. A ground-truth agent collected official numbers from each brand's own website, and publicly reported fake numbers, using WebSearch/WebFetch only ([ground_truth.json](ground_truth.json)).
-2. Ten real cases were run through the app on live SerpApi data. Raw event dumps are in `results/` (git-ignored). Run `bash scripts/verify_batch.sh` to rerun them for free from cache.
+2. Ten real cases were run through the app on live SerpApi data. Raw event dumps are in `results/`. Run `bash scripts/verify_batch.sh` to rerun them for free from cache.
 3. An independent agent fact-checked every output against the web, opening the cited source pages ([VERIFICATION_web_check.md](VERIFICATION_web_check.md)).
 4. Every problem found was fixed, given a regression test (`tests/test_regressions.py`), and rerun from cache.
 
