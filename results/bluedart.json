@@ -983,18 +983,18 @@
      "brands": []
     }
    ],
-   "summary": "The number +91 62916 10240 is not printed on bluedart.com and is named in a complaint on justdial.com. You can call Blue Dart using 1860 233 1234 or 022 4061 1234, which are printed on bluedart.com.",
-   "summary_source": "llm:cache",
+   "summary": "This number is not printed on the bluedart.com pages that were read. Text on justdial.com names this exact number in a complaint. Numbers printed on Blue Dart's official website bluedart.com: 1860 233 1234 or 022 4061 1234.",
+   "summary_source": "template",
    "credits_spent": 0,
    "searches": 4,
-   "ms": 15
+   "ms": 5093
   }
  },
  {
   "event": "done",
   "data": {
    "credits_spent": 0,
-   "ms": 15
+   "ms": 5093
   }
  }
 ]

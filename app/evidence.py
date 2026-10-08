@@ -21,6 +21,22 @@ OFFICIAL_NEAR = re.compile(r"(?<![a-z])(official|our (?:customer|toll|helpline|n
 PROXIMITY = 120
 
 
+# Warnings that no nearby "customer care" can cancel: actors ("fraudsters posing as … customer care"),
+# qualified fakes ("fake customer care numbers such as …") and lists ("numbers reported as fraudulent: …").
+STRONG_WARNING = re.compile(r"(?<![a-z])(fraudsters?|scammers?|impost[oe]rs?|cheaters?|criminals?|"
+                            r"reported (?:as )?(?:fraud\w*|fake|scam\w*|spam)|posing as|pretend\w* to be|"
+                            r"(?:fake|bogus|fraudulent|spurious|unofficial|so-called)\W+(?:\w+\W+){0,3}?"
+                            r"(?:customer\s?care|helpline|help line|numbers?|executives?|agents?|calls?))(?![a-z])",
+                            re.IGNORECASE)
+# The brand's own instruction "To report fraud / unauthorised transactions, please call X" — it must lead
+# straight into the number ("… call", "… on", "… :").
+REPORT_INSTRUCTION = re.compile(r"(?<![a-z])(?:report(?:ing)?|block|hotlist)\s+(?:[\w,&/]+\s+){0,8}?"
+                                r"(?:fraud\w*|unauthori[sz]ed|suspicious|card|account|transactions?)\b[^.]{0,90}?"
+                                r"\b(?:call|dial|contact|helpline|on|at)\b[^.\d]{0,25}$", re.IGNORECASE)
+# Reference ids printed next to a label ("Waybill no. 5012345678", "Invoice 2024000123") are not phone numbers.
+REFERENCE_BEFORE = re.compile(r"(?<![a-z])(waybill|awb|invoice|order|ref(?:erence)?|tracking|consignment|docket|"
+                              r"a/?c|account|cin|gstin|pnr|policy|ticket|case|id)\W{0,3}(?:no\.?|number|#|id)?\W{0,3}$",
+                              re.IGNORECASE)
 # "Report a fraud / block your card: call X" is the brand's own instruction, not a warning against X.
 REPORT_FRAUD = re.compile(r"(?<![a-z])(report\w*\s+(?:[\w,]+\s+){0,4}(?:fraud\w*|unauthori[sz]ed|suspicious|cyber)|"
                           r"fraud (?:report\w*|helpline|desk)|block (?:your |the )?(?:card|account)|hotlist\w*)(?![a-z])", re.IGNORECASE)
@@ -34,6 +50,7 @@ SHORT_CODE = re.compile(r"(?i)(?:customer care|helpline|help line|toll[- ]?free|
                         r"(?: on| at)?\s*[:\-]?\s*(1\d{2,4})(?!\d)(?!\s?[\-.]?\s?\d)(?![/]\d)(?!,\d{3}(?!\d))")
 FAX_BEFORE = re.compile(r"(?<![a-z])fax(?: no\.?| number)?\s*[:.\-]?\s*$", re.IGNORECASE)
 CARE_NEAR = re.compile(r"(?<![a-z])(customer (?:care|service|support)|toll[- ]?free|helpline|help ?line|call us|"
+                       r"contact us|reach us|phone banking|"
                        r"official (?:number|helpline)|support|assistance|enquir\w*|grievance)(?![a-z])", re.IGNORECASE)
 
 
@@ -108,13 +125,15 @@ def _clip(text: str, start: int, end: int, before: int, after: int, blocks: bool
 def _label(text: str, start: int, end: int, brand_toks: tuple[str, ...] = ()) -> str:
     if FAX_BEFORE.search(text[max(0, start - 14):start]):
         return "fax"
+    if REFERENCE_BEFORE.search(text[max(0, start - 25):start]):
+        return "reference"
     before = _clip(text, start, start, 45, 0)
     org = [m.group(0) for m in OTHER_ORG.finditer(before)]
     if org and not any(t in o.lower().replace(" ", "") for o in org for t in brand_toks):
         return "other_org"
     if _is_warning(text, start, end):
         return "warning"
-    if CARE_NEAR.search(_clip(text, start, end, 80, 20)) or REPORT_FRAUD.search(_clip(text, start, end, 160, 30)):
+    if CARE_NEAR.search(_clip(text, start, end, 80, 20)) or REPORT_INSTRUCTION.search(_clip(text, start, start, 200, 0)):
         return "care"
     return "plain"
 
@@ -152,8 +171,10 @@ class OfficialNumber:
 def _is_warning(text: str, start: int, end: int) -> bool:
     near = _clip(text, start, end, 90, 60, blocks=True)
     close = _clip(text, start, end, 45, 25, blocks=True)
-    if REPORT_FRAUD.search(_clip(text, start, end, 160, 30)):
+    if REPORT_INSTRUCTION.search(_clip(text, start, start, 200, 0)):
         return False
+    if STRONG_WARNING.search(near):
+        return True
     return bool(WARNING_NEAR.search(near)) and not OFFICIAL_NEAR.search(close)
 
 
@@ -199,8 +220,10 @@ def callable_numbers(found: dict[str, OfficialNumber]) -> list[OfficialNumber]:
     """Official numbers worth calling, best first: labelled as customer care, toll-free, most sources.
 
     Fax lines and numbers the site only mentions inside fraud warnings are never suggested."""
+    # Only numbers the site itself labels as customer care / helpline / toll-free / "report fraud: call" are
+    # suggested; an unlabelled number on a fraud-awareness page could be one it warns about.
     good = [o for o in found.values()
-            if not o.warned and not o.fax_only and not o.other_org
+            if o.care and not o.warned and not o.fax_only and not o.other_org
             and any(s.scope not in ("b2b", "escalation") for s in o.sources)]  # seller desks, appellate officers
     rank = {"tollfree": 0, "short": 1, "landline": 1, "mobile": 2}
 
@@ -285,7 +308,7 @@ def mentions(results: list[dict[str, Any]], number: Phone, official: set[str], e
     """Search results whose own title/snippet literally contains the number (after normalisation)."""
     out = []
     for r in (x for x in results if isinstance(x, dict)):
-        title, snip = r.get("title") or "", r.get("snippet") or ""
+        title, snip = str(r.get("title") or ""), str(r.get("snippet") or "")
         text = f"{title} . {snip}"
         hits = [(a, b) for ph, a, b in find_phones(text) if ph.key == number.key]
         if not hits:
@@ -357,7 +380,7 @@ def google_view(brand_search: dict[str, Any], official: set[str]) -> dict[str, A
     off_rank = next((i + 1 for i, d in enumerate(doms) if d in official), None)
     return {"results": len(org), "directory": directory, "directory_domains": top_dirs[:4],
             "official_rank": off_rank,
-            "top": [{"title": r.get("title", "")[:90], "domain": doms[i], "link": r.get("link"),
+            "top": [{"title": str(r.get("title") or "")[:90], "domain": doms[i], "link": r.get("link"),
                      "directory": is_directory(doms[i]), "official": doms[i] in official} for i, r in enumerate(org[:5])]}
 
 

@@ -180,26 +180,7 @@
     "other_brands": [],
     "other_brand_examples": []
    },
-   "call_instead": [
-    {
-     "key": "9154052102",
-     "display": "+91 91540 52102",
-     "kind": "mobile",
-     "warned": false,
-     "fax_only": false,
-     "care": false,
-     "other_org": false,
-     "sources": [
-      {
-       "url": "https://www.airtel.in/digital-tv/consumercorner",
-       "context": "From your registered mobile number, dial 9154052 … call 9154052102). Toll Free Customer Care Number and other contact details",
-       "kind": "snippet",
-       "label": "plain",
-       "scope": "main"
-      }
-     ]
-    }
-   ],
+   "call_instead": [],
    "warned_numbers": [],
    "official_numbers": [
     {
@@ -638,18 +619,18 @@
     ]
    },
    "mentions": [],
-   "summary": "The checked number +91 62901 33964 is not printed on the airtel.in pages that were read. You can find +91 91540 52102 printed on Airtel's official website airtel.in.",
-   "summary_source": "llm:live",
+   "summary": "This number is not printed on the airtel.in pages that were read. No phone number could be copied from airtel.in; use the number on your bill, card, ticket or app.",
+   "summary_source": "template",
    "credits_spent": 0,
    "searches": 4,
-   "ms": 3691
+   "ms": 2864
   }
  },
  {
   "event": "done",
   "data": {
    "credits_spent": 0,
-   "ms": 3691
+   "ms": 2864
   }
  }
 ]

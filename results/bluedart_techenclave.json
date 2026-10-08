@@ -860,18 +860,18 @@
     ]
    },
    "mentions": [],
-   "summary": "The number +91 70164 93282 is not printed on Blue Dart's bluedart.com pages. Official numbers printed on bluedart.com are 1860 233 1234 or 022 4061 1234.",
-   "summary_source": "llm:cache",
+   "summary": "This number is not printed on the bluedart.com pages that were read. Numbers printed on Blue Dart's official website bluedart.com: 1860 233 1234 or 022 4061 1234.",
+   "summary_source": "template",
    "credits_spent": 0,
    "searches": 4,
-   "ms": 14
+   "ms": 4396
   }
  },
  {
   "event": "done",
   "data": {
    "credits_spent": 0,
-   "ms": 14
+   "ms": 4396
   }
  }
 ]

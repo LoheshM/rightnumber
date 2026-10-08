@@ -326,7 +326,7 @@ async def test_user_domain_override_without_model(tmp_path):
     env = Env(tmp_path)
     result, _ = await env.populate(domain="bluedart.com")
     assert result["domain"] == "bluedart.com"
-    assert result["decision"]["reason"] == "domain you entered"
+    assert result["decision"]["reason"] .startswith("the website you entered")
     assert result["call_instead"][0]["key"] == "18602331234"
 
 

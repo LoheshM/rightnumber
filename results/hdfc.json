@@ -208,6 +208,38 @@
    "verdict": null,
    "call_instead": [
     {
+     "key": "18001600",
+     "display": "1800 1600",
+     "kind": "tollfree",
+     "warned": false,
+     "fax_only": false,
+     "care": true,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://www.hdfc.bank.in/",
+       "context": "Here’s how to reach us . 18001600 Call . Chat . Locate · About Us . Overview . Investor",
+       "kind": "page",
+       "label": "care",
+       "scope": "main"
+      },
+      {
+       "url": "https://www.hdfc.bank.in/upi/report-frauds",
+       "context": "away · Here’s how to reach us . 18001600 Call . Chat . Locate · About Us . Overview . Investor",
+       "kind": "page",
+       "label": "care",
+       "scope": "main"
+      },
+      {
+       "url": "https://www.hdfc.bank.in/need-help/grievance-redressal",
+       "context": "Merchants · Here’s how to reach us . 18001600 Call . Chat . Locate · About Us . Overview . Investor",
+       "kind": "page",
+       "label": "care",
+       "scope": "escalation"
+      }
+     ]
+    },
+    {
      "key": "18002586161",
      "display": "1800 258 6161",
      "kind": "tollfree",
@@ -224,74 +256,6 @@
        "scope": "main"
       }
      ]
-    },
-    {
-     "key": "18001600",
-     "display": "1800 1600",
-     "kind": "tollfree",
-     "warned": false,
-     "fax_only": false,
-     "care": false,
-     "other_org": false,
-     "sources": [
-      {
-       "url": "https://www.hdfc.bank.in/",
-       "context": "Here’s how to reach us . 18001600 Call . Chat . Locate · About Us . Overview . Investor",
-       "kind": "page",
-       "label": "plain",
-       "scope": "main"
-      },
-      {
-       "url": "https://www.hdfc.bank.in/upi/report-frauds",
-       "context": "away · Here’s how to reach us . 18001600 Call . Chat . Locate · About Us . Overview . Investor",
-       "kind": "page",
-       "label": "plain",
-       "scope": "main"
-      },
-      {
-       "url": "https://www.hdfc.bank.in/need-help/grievance-redressal",
-       "context": "Merchants · Here’s how to reach us . 18001600 Call . Chat . Locate · About Us . Overview . Investor",
-       "kind": "page",
-       "label": "plain",
-       "scope": "escalation"
-      }
-     ]
-    },
-    {
-     "key": "18002600",
-     "display": "1800 2600",
-     "kind": "tollfree",
-     "warned": false,
-     "fax_only": false,
-     "care": false,
-     "other_org": false,
-     "sources": [
-      {
-       "url": "https://www.hdfc.bank.in/ways-to-bank/smsbanking",
-       "context": "SMS your query to 7308080808.~Please call on 1800-1600 / 1800-2600 for further assistance · Can you share",
-       "kind": "page",
-       "label": "plain",
-       "scope": "main"
-      }
-     ]
-    },
-    {
-     "key": "7308080808",
-     "display": "+91 73080 80808",
-     "kind": "mobile",
-     "warned": false,
-     "fax_only": false,
-     "care": false,
-     "other_org": false,
-     "sources": [
-      {
-       "url": "https://www.hdfc.bank.in/ways-to-bank/smsbanking",
-       "context": "of customer ID” “Last 4 digits of account number” to 7308080808 · Range of requests . With HDFC Bank SMS",
-       "kind": "page",
-       "label": "plain",
-       "scope": "main"
-      }
-     ]
     }
    ],
    "warned_numbers": [],
@@ -302,28 +266,28 @@
      "kind": "tollfree",
      "warned": false,
      "fax_only": false,
-     "care": false,
+     "care": true,
      "other_org": false,
      "sources": [
       {
        "url": "https://www.hdfc.bank.in/",
        "context": "Here’s how to reach us . 18001600 Call . Chat . Locate · About Us . Overview . Investor",
        "kind": "page",
-       "label": "plain",
+       "label": "care",
        "scope": "main"
       },
       {
        "url": "https://www.hdfc.bank.in/upi/report-frauds",
        "context": "away · Here’s how to reach us . 18001600 Call . Chat . Locate · About Us . Overview . Investor",
        "kind": "page",
-       "label": "plain",
+       "label": "care",
        "scope": "main"
       },
       {
        "url": "https://www.hdfc.bank.in/need-help/grievance-redressal",
        "context": "Merchants · Here’s how to reach us . 18001600 Call . Chat . Locate · About Us . Overview . Investor",
        "kind": "page",
-       "label": "plain",
+       "label": "care",
        "scope": "escalation"
       }
      ]
@@ -877,18 +841,18 @@
     ]
    },
    "mentions": [],
-   "summary": "The numbers 1800 258 6161 or 1800 1600 are printed on HDFC Bank's official website hdfc.bank.in.",
+   "summary": "The numbers 1800 1600 and 1800 258 6161 are printed on HDFC Bank's official website.",
    "summary_source": "llm:live",
    "credits_spent": 0,
    "searches": 3,
-   "ms": 5934
+   "ms": 3354
   }
  },
  {
   "event": "done",
   "data": {
    "credits_spent": 0,
-   "ms": 5934
+   "ms": 3354
   }
  }
 ]

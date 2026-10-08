@@ -59,7 +59,8 @@ def google_domains(g: dict[str, Any], brand: str) -> dict[str, str]:
     if d and not is_directory(d):
         out[d] = "knowledge-graph website"
     for p in (x for x in _local_pack(g) if isinstance(x, dict)):
-        d = registrable(p.get("website") or (p.get("links") or {}).get("website"))
+        links = p.get("links") if isinstance(p.get("links"), dict) else {}
+        d = registrable(str(p.get("website") or links.get("website") or ""))
         if d and not is_directory(d) and mentions_brand(d, brand):
             out.setdefault(d, "Google local-pack website")
     for r in [x for x in (g.get("organic_results") or []) if isinstance(x, dict)][:10]:
@@ -107,13 +108,15 @@ def decide(brand: str, pins: list[dict[str, Any]], brand_search: dict[str, Any],
 
     shown = {d: [f"{fam}: {why}" for fam, why in fams.items()] for d, fams in votes.items()}
     if ud:
-        return OfficialDecision(ud, shown, "domain you entered")
+        return OfficialDecision(ud, shown, "the website you entered (not checked against search)")
     if not votes:
         return OfficialDecision(None, shown, "no candidate website found in Maps pins, Google results or model knowledge")
     ranked = sorted(votes.items(), key=lambda kv: (len(kv[1]), "maps" in kv[1], "google" in kv[1]), reverse=True)
     best, fams = ranked[0]
     if len(fams) < 2:
         return OfficialDecision(None, shown, "sources don't agree on one official website")
-    if len(ranked) > 1 and len(ranked[1][1]) == len(fams) and ranked[1][1].keys() == fams.keys():
+    if len(ranked) > 1 and len(ranked[1][1]) >= 2 and len(ranked[1][1]) == len(fams):
+        # Two websites each backed by two kinds of source: Maps pins are owner-editable, so they never break
+        # the tie (scam-only pins + an SEO'd organic result must not outvote the knowledge graph + the model).
         return OfficialDecision(None, shown, f"two websites are equally supported ({best}, {ranked[1][0]})")
     return OfficialDecision(best, shown, " + ".join(sorted(fams)) + " agree")

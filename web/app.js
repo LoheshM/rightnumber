@@ -46,10 +46,10 @@ async function boot() {
     }));
   } catch {}
   const p = new URLSearchParams(location.search);
-  if (p.get("brand")) {
+  if (p.get("brand")) {  // a shared link fills the form; the visitor still clicks Check (no credit spent unasked)
     $("#brand").value = p.get("brand"); $("#number").value = p.get("number") || "";
     if (p.get("city")) $("#city").value = p.get("city");
-    start();
+    $("#go").focus();
   }
 }
 
@@ -77,7 +77,14 @@ function start() {
   on("result", render);
   on("error", (d) => { $("#notices").insertAdjacentHTML("beforeend", `<div class="notice">${esc(d.text || "Something went wrong.")}</div>`); finish(); });
   on("done", (d) => { meta(d.ms); finish(); });
-  es.onerror = () => { if (es && es.readyState !== EventSource.CLOSED) { es.close(); finish(); } };
+  let gotResult = false;
+  es.addEventListener("result", () => { gotResult = true; });
+  es.onerror = () => {
+    // 400/403/422 responses and dropped connections both land here: always recover the button and say so.
+    if (es && !gotResult) $("#notices").insertAdjacentHTML("beforeend", `<div class="notice">The check couldn't run or was interrupted. Check the brand name (and website, if you entered one) and try again.</div>`);
+    if (es) es.close();
+    finish();
+  };
 }
 
 function finish() {

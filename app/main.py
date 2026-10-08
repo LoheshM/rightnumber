@@ -50,7 +50,12 @@ def create_app(settings: Settings | None = None, deps: pipeline.Deps | None = No
         # Credit-spending endpoints must not be triggerable by other websites (<img src=…>, fetch).
         if request.url.path.startswith("/api/") and request.headers.get("sec-fetch-site") == "cross-site":
             return JSONResponse({"error": "cross-site requests are not allowed"}, status_code=403)
-        return await call_next(request)
+        resp = await call_next(request)
+        # No framing: a hidden <iframe> must not be able to run checks (and spend credits) from another site.
+        resp.headers["X-Frame-Options"] = "DENY"
+        resp.headers["Content-Security-Policy"] = "frame-ancestors 'none'"
+        resp.headers["Referrer-Policy"] = "no-referrer"
+        return resp
 
     def stream(runner) -> EventSourceResponse:
         queue: asyncio.Queue[tuple[str, Any] | None] = asyncio.Queue()

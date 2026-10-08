@@ -546,18 +546,18 @@
      "brands": []
     }
    ],
-   "summary": "The number 1800 1234 could not be verified. No official State Bank of India page or website could be read for comparison.",
-   "summary_source": "llm:cache",
+   "summary": "No official State Bank of India page could be read to compare this number with. State Bank of India's official website could not be established from the search results.",
+   "summary_source": "template",
    "credits_spent": 0,
    "searches": 3,
-   "ms": 8
+   "ms": 3583
   }
  },
  {
   "event": "done",
   "data": {
    "credits_spent": 0,
-   "ms": 8
+   "ms": 3583
   }
  }
 ]

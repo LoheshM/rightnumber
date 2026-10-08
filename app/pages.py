@@ -26,10 +26,11 @@ from urllib.parse import urljoin, urlsplit
 
 import httpx
 
-from .domains import mentions_brand, registrable
+from .domains import registrable
 
 MAX_BYTES = 2_000_000
 MAX_TEXT = 300_000
+PAGE_DEADLINE_S = 20.0
 UA = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
                   "Chrome/128.0 Safari/537.36",
@@ -61,21 +62,75 @@ class Page:
                 "error": self.error, "title": self.title[:120], "chars": len(self.text)}
 
 
+_BLOCK_TAGS = {"p", "div", "li", "tr", "td", "th", "h1", "h2", "h3", "h4", "h5", "h6", "br", "section", "article",
+               "header", "footer", "ul", "ol", "table", "dt", "dd"}
+_SKIP_TAGS = {"script", "style", "noscript", "svg", "template"}
+_ESCAPED_MARKUP = re.compile(r"<(?:a|td|tr|p|div|li|span|table|br)\b", re.IGNORECASE)
+
+
+# One tag: "<name attrs>" or "</name>". Attribute text can't cross "<" or ">", so every match attempt stops at
+# the next angle bracket and the scan stays linear even on hostile markup (thousands of unclosed "<a ").
+_TAG = re.compile(r"<(/?)([a-zA-Z][a-zA-Z0-9-]{0,30})((?:[^<>\"']|\"[^\"<>]{0,800}\"|'[^'<>]{0,800}'){0,3000})>")
+_HREF = re.compile(r"""href\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s"'>]+))""", re.IGNORECASE)
+
+
+def _extract(raw: str) -> tuple[str, list[tuple[str, str]], str]:
+    low = raw.lower()
+    out: list[str] = []
+    links: list[tuple[str, str]] = []
+    title = ""
+    open_a: tuple[str, int] | None = None
+    pos, n = 0, len(raw)
+    while pos < n:
+        i = raw.find("<", pos)
+        if i < 0:
+            out.append(raw[pos:])
+            break
+        out.append(raw[pos:i])
+        if raw.startswith("<!--", i):
+            j = raw.find("-->", i + 4)
+            pos = n if j < 0 else j + 3
+            continue
+        m = _TAG.match(raw, i)
+        if m is None:
+            out.append("<")
+            pos = i + 1
+            continue
+        closing, name, attrs = m.group(1) == "/", m.group(2).lower(), m.group(3)
+        pos = m.end()
+        if not closing and name in _SKIP_TAGS | {"title"}:
+            j = low.find(f"</{name}", pos)
+            if name == "title" and not title:
+                title = re.sub(r"\s+", " ", html.unescape(raw[pos:j if j >= 0 else pos + 300])).strip()[:200]
+            pos = n if j < 0 else j
+            continue
+        if name == "a":
+            if closing and open_a is not None:
+                href, k = open_a
+                anchor = re.sub(r"\s+", " ", html.unescape("".join(out[k:]))).strip(" .")[:80]
+                if len(links) < 3000:
+                    links.append((href, anchor))
+                open_a = None
+            elif not closing:
+                h = _HREF.search(attrs)
+                href = html.unescape(next((g for g in h.groups() if g is not None), "")).strip() if h else ""
+                if href.lower().startswith("tel:"):
+                    out.append(f" {href[4:]} ")  # inline, so the words around it still label the number
+                elif href:
+                    open_a = (href, len(out))
+        if name in _BLOCK_TAGS:
+            out.append(" . ")
+    text = re.sub(r"\s+", " ", html.unescape("".join(out)))
+    text = re.sub(r"(?: \.)+ ", " . ", f" {text} ").strip(" .")  # one separator between blocks
+    return text, links, title
+
+
 def html_to_text(raw: str) -> tuple[str, list[tuple[str, str]], str]:
-    """Visible text (plus tel: link targets), links with anchor text, and <title>."""
-    title_m = re.search(r"(?is)<title[^>]*>(.*?)</title>", raw)
-    title = html.unescape(re.sub(r"\s+", " ", title_m.group(1))).strip() if title_m else ""
-    links = []
-    for m in re.finditer(r'(?is)<a\b[^>]*?href\s*=\s*["\']([^"\']+)["\'][^>]*>(.*?)</a>', raw):
-        anchor = html.unescape(re.sub(r"<[^>]+>", " ", m.group(2)))
-        links.append((html.unescape(m.group(1)).strip(), re.sub(r"\s+", " ", anchor).strip()[:80]))
-    body = re.sub(r"(?is)<(script|style|noscript|svg)\b[^>]*>.*?</\1>", " ", raw)
-    for _ in range(2):  # second pass: markup that was HTML-escaped inside the page (&lt;td&gt;…)
-        # tel: targets go inline where the link is, so the words around them still label the number
-        body = re.sub(r"""(?i)<a\b[^>]*?href\s*=\s*["']tel:([^"']+)["'][^>]*>""", lambda m: f" {m.group(1)} ", body)
-        body = re.sub(r"(?is)<br\s*/?>|</(p|div|li|tr|td|th|h\d)>", " . ", body)
-        body = html.unescape(re.sub(r"<[^>]+>", " ", body))
-    text = re.sub(r"\s+", " ", body).strip()
+    """Visible text (tel: link targets inline), links with anchor text, and <title>."""
+    text, links, title = _extract(raw[:MAX_BYTES])
+    if _ESCAPED_MARKUP.search(text):  # markup that was HTML-escaped inside the page (&lt;td&gt;…)
+        text, more, _ = _extract(text)
+        links += more
     return text[:MAX_TEXT], links, title
 
 
@@ -123,7 +178,7 @@ def _public_host(host: str) -> bool:
         return False
     for info in infos:
         ip = ipaddress.ip_address(info[4][0])
-        if ip.is_private or ip.is_loopback or ip.is_link_local or ip.is_reserved or ip.is_multicast:
+        if not ip.is_global or ip.is_multicast:  # also rejects 100.64/10 (CGNAT) and other special ranges
             return False
     return True
 
@@ -177,12 +232,13 @@ class PageReader:
         if self.replay:
             return Page(url, url, "", [], "fixture", _ms(t0), False, "not recorded (replay mode)")
         try:
-            final, raw = await self._fetch(url, allowed, brand)
-            text, links, title = html_to_text(raw)
+            # one deadline for the whole page: a server trickling a byte every few seconds can't hold a check
+            final, raw = await asyncio.wait_for(self._fetch(url, allowed, brand), PAGE_DEADLINE_S)
+            text, links, title = await asyncio.to_thread(html_to_text, raw)
             # Footers hold the contact links and come last on big portals: keep those before the first 300 others.
             keep = [x for x in links if link_score(x[0], x[1])][:120] + [x for x in links if not link_score(x[0], x[1])][:300]
             rec = {"final_url": final, "text": text, "links": keep, "title": title, "ok": True}
-        except (PageBlocked, httpx.HTTPError, UnicodeDecodeError, ValueError) as e:
+        except (PageBlocked, httpx.HTTPError, UnicodeDecodeError, ValueError, TimeoutError) as e:
             msg = str(e) if isinstance(e, PageBlocked) else e.__class__.__name__
             rec = {"final_url": url, "text": "", "links": [], "title": "", "ok": False, "error": msg[:120]}
         self._store(key, rec)
@@ -224,8 +280,10 @@ class PageReader:
                 raise PageBlocked("not an http(s) URL")
             dom = registrable(cur)
             # Redirects may move to a renamed brand domain (hdfcbank.com -> hdfc.bank.in) but nowhere else.
-            if dom not in allowed and not mentions_brand(dom, brand):
+            if dom not in allowed:
                 raise PageBlocked(f"outside the official domain ({dom})")
+            if parts.port not in (None, 80, 443):
+                raise PageBlocked("non-standard port")
             if self.check_dns and not await asyncio.to_thread(_public_host, parts.hostname):
                 raise PageBlocked("host does not resolve to a public address")
             async with self._http.stream("GET", cur) as r:

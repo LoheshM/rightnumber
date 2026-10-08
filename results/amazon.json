@@ -434,18 +434,18 @@
     ]
    },
    "mentions": [],
-   "summary": "The number 080 6605 5000 is not printed on the amazon.in pages that were read; use the number on your bill, card, ticket or app for a contact number.",
-   "summary_source": "llm:cache",
+   "summary": "This number is not printed on the amazon.in pages that were read. No phone number could be copied from amazon.in; use the number on your bill, card, ticket or app.",
+   "summary_source": "template",
    "credits_spent": 0,
    "searches": 4,
-   "ms": 13
+   "ms": 3008
   }
  },
  {
   "event": "done",
   "data": {
    "credits_spent": 0,
-   "ms": 13
+   "ms": 3008
   }
  }
 ]

@@ -137,10 +137,11 @@ def test_tie_abstains():
     assert "equally supported" in d.reason
 
 
-def test_maps_breaks_a_two_vs_two_tie_with_different_families():
+def test_maps_never_breaks_a_two_vs_two_tie():
+    # code review H2: owner-editable pins must not decide between two domains each backed twice
     search = organic("https://bluedarttracking.in/")
     d = decide(BRAND, pins(*[OFF] * 5), search, ["bluedart.com", "bluedarttracking.in"])
-    assert d.domain == "bluedart.com"
+    assert d.domain is None and "equally supported" in d.reason
 
 
 def test_more_families_win():
@@ -197,7 +198,7 @@ def test_real_probe_payloads_with_model():
 def test_user_domain_overrides(typed, expected):
     d = decide(BRAND, [], {}, [], user_domain=typed)
     assert d.domain == expected
-    assert d.reason == "domain you entered"
+    assert d.reason .startswith("the website you entered")
     assert d.votes[expected] == ["user: typed by you"]
 
 

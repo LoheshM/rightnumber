@@ -67,7 +67,7 @@ def test_html_to_text_links_with_anchor_text():
     _, links, _ = html_to_text(HTML)
     assert ("/web/guest/call-us", "Call Us") in links
     assert ("/customer-care", "Customer & care") in links
-    assert ("tel:18602331234", "1860 233 1234") in links
+    assert all(not h.lower().startswith("tel:") for h, _ in links)  # tel: targets are inlined into the text
 
 
 def test_html_to_text_no_title_and_empty():
@@ -223,14 +223,15 @@ async def test_reader_cross_domain_redirect_blocked(dirs):
     assert calls == ["www.bluedart.com"]  # never contacted the other host
 
 
-async def test_reader_brand_named_redirect_allowed(dirs):
+async def test_reader_cross_domain_redirect_blocked_even_if_brand_named(dirs):
     def handler(req):
         if req.url.host == "www.hdfcbank.com":
             return httpx.Response(301, headers={"location": "https://www.hdfc.bank.in/"})
         return html_response("<p>PhoneBanking 1800 202 6161</p>")
 
+    # code review M3: only the decided domain is read; aliases are resolved before voting instead
     pg = await make_reader(dirs, handler).read("https://www.hdfcbank.com/", {"hdfcbank.com"}, "HDFC Bank")
-    assert pg.ok and pg.final_url == "https://www.hdfc.bank.in/"
+    assert not pg.ok and "outside the official domain" in pg.error
 
 
 @pytest.mark.parametrize("url", ["ftp://www.bluedart.com/x", "file:///etc/passwd", "javascript:alert(1)",

@@ -187,8 +187,9 @@ def test_bug_cyber_crime_short_code_suggested_first():
 
 
 def test_callable_keeps_number_with_mixed_labels():
+    # only numbers the site itself labels as care are suggested (code review H1)
     found = {"8025229856": _on("8025229856", "landline", ("fax", "page"), ("plain", "snippet"))}
-    assert [o.phone.key for o in callable_numbers(found)] == ["8025229856"]
+    assert [o.phone.key for o in callable_numbers(found)] == []
     found = {"9876543210": _on("9876543210", "mobile", ("warning", "page"), ("care", "snippet"))}
     assert [o.phone.key for o in callable_numbers(found)] == ["9876543210"]
 
@@ -201,8 +202,7 @@ def test_callable_ranking_care_then_tollfree():
         _on("4466344600", "landline", ("care", "page")),
         _on("18602331234", "tollfree", ("care", "snippet")),
     ]}
-    assert [o.phone.key for o in callable_numbers(found)] == [
-        "18602331234", "4466344600", "18002091234", "2240611234", "9811111111"]
+    assert [o.phone.key for o in callable_numbers(found)] == ["18602331234", "4466344600"]  # care-labelled only
 
 
 def test_callable_ties_prefer_more_sources_then_pages():

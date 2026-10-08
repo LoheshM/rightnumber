@@ -23,11 +23,11 @@ from typing import Any
 from urllib.parse import urlsplit
 
 from . import evidence as ev
-from .domains import is_directory, registrable
+from .domains import is_directory, mentions_brand, registrable
 from .llm import LLM
 from .official import OfficialDecision, candidates, decide
 from .pages import Page, PageReader, contact_links, is_contactish, link_score, page_id
-from .phones import Phone, parse_user_number
+from .phones import Phone, extract_phones, parse_user_number
 from .serp import (
     BudgetExceeded,
     CreditBudget,
@@ -48,6 +48,9 @@ CITIES = {
     "Lucknow": (26.8467, 80.9462),
 }
 MAX_PAGES = 5
+VOUCH = re.compile(r"(?<![a-z])(genuine|legit\w*|verified|authentic|trust(?:ed|worthy)|real (?:number|helpline))(?![a-z])",
+                   re.IGNORECASE)
+BRAND_OK = re.compile(r"[\w&.'’ -]{2,60}")
 BANNED = re.compile(r"(?<![a-z])(fake|scam\w*|fraud\w*|counterfeit|cheat\w*|safe|guarantee\w*)(?![a-z])", re.IGNORECASE)
 
 
@@ -137,8 +140,10 @@ async def run(brand: str, number_text: str | None, city: str | None, deps: Deps,
             await notice(f"“{purpose}” failed: {str(e)[:120]}")
         return None
 
-    if len(brand) < 2:
-        await emit("error", {"text": "Type the brand or organisation whose helpline you want to check."})
+    if len(brand) < 2 or not BRAND_OK.fullmatch(brand) or sum(c.isdigit() for c in brand) > 4:
+        # The brand flows into searches, prompts and on-screen sentences: letters, digits (1mg, 99acres) and
+        # simple punctuation only, and never a phone number smuggled in through a shared link.
+        await emit("error", {"text": "Type the brand or organisation name only (letters, digits, & . - ')."})
         return {}
     user: Phone | None = None
     if number_text and number_text.strip():
@@ -178,7 +183,10 @@ async def run(brand: str, number_text: str | None, city: str | None, deps: Deps,
     alias: dict[str, str] = {}
     if len(cands) > 1:  # the same site under two names (dtdc.in -> dtdc.com) must not split the vote
         finals = await asyncio.gather(*(deps.pages.resolve_alias(d) for d in cands[:5]))
-        alias = {d: f for d, f in zip(cands, finals, strict=False) if f and f != d}
+        # An alias only counts when the redirect lands on the brand's own name or another candidate:
+        # a parked-domain, SSO or ad redirect must not carry the votes away.
+        alias = {d: f for d, f in zip(cands, finals, strict=False)
+                 if f and f != d and (f in cands or mentions_brand(f, brand))}
     decision = decide(brand, pins_raw, brand_search, model_domains, user_domain, alias)
     if model_source in ("unavailable", "error") and not user_domain:
         decision.votes.setdefault("(model)", ["model: not available — only search sources were used"])
@@ -205,7 +213,7 @@ async def run(brand: str, number_text: str | None, city: str | None, deps: Deps,
 
     # 3. Facts (code only) ----------------------------------------------------------------------
     official: set[str] = {decision.domain} if decision.domain else set()
-    official |= {d for d in (registrable(p.final_url) for p in pages if p.ok and p.text) if d}
+    # Pages are fetched same-domain only, so the official set is exactly the decided domain.
     # Snippets of the brand's own pages from both searches (free: already fetched) plus the pages read directly.
     # PDFs are skipped: they are often years-old documents (an investor-call dial-in list from 2015).
     own_snippets = [r for r in site_results + (brand_search.get("organic_results") or [])
@@ -255,7 +263,7 @@ async def run(brand: str, number_text: str | None, city: str | None, deps: Deps,
 
 async def _model_domains(llm: LLM, brand: str) -> tuple[list[str], str]:
     data, source = await llm.json(DOMAIN_SYSTEM, f"Organisation: {brand}", DOMAIN_SCHEMA, "official_domain")
-    if not data or data.get("confidence") == "low":
+    if not isinstance(data, dict) or data.get("confidence") == "low":
         return [], source
     doms = [registrable(d) for d in data.get("domains") or [] if isinstance(d, str)]
     return [d for d in doms if d and not is_directory(d)][:2], source
@@ -332,7 +340,10 @@ def _facts(brand: str, city: str, user: Phone | None, decision: OfficialDecision
         s.append(f"No phone number could be copied from {dom}; use the number on your bill, card, ticket or app.")
     else:
         s.append(f"{brand}'s official website could not be established from the search results.")
-    return {"sentences": s, "brand": brand}
+    keys = {o.phone.key for o in call_instead[:2]}
+    if user and label == "on_official_site":
+        keys.add(user.key)
+    return {"sentences": s, "brand": brand, "phone_keys": sorted(keys)}
 
 
 def _template(f: dict) -> str:
@@ -343,10 +354,17 @@ def _template(f: dict) -> str:
 
 
 def summary_ok(text: str, facts: dict) -> bool:
-    if not text or len(text) > 420 or BANNED.search(text):
+    """The LLM's summary may only restate the facts: no new digits, no banned or vouching words, and the
+    only phone numbers it may name are the ones suggested to call (plus the user's own number only when the
+    official site prints it)."""
+    if not text or len(text) > 420 or BANNED.search(text) or VOUCH.search(text):
         return False
-    allowed = set(re.findall(r"\d+", str(facts)))
-    return all(d in allowed for d in re.findall(r"\d+", text))
+    allowed = set(re.findall(r"\d+", " ".join(facts.get("sentences", [])) or str(facts)))
+    if not all(d in allowed for d in re.findall(r"\d+", text)):
+        return False
+    if "phone_keys" in facts:
+        return all(ph.key in facts["phone_keys"] for ph in extract_phones(text))
+    return True
 
 
 async def _summary(llm: LLM, facts: dict) -> tuple[str, str]:
@@ -354,7 +372,7 @@ async def _summary(llm: LLM, facts: dict) -> tuple[str, str]:
 
     data, source = await llm.json(SUMMARY_SYSTEM, "FACTS:\n" + json.dumps(facts, ensure_ascii=False, indent=1),
                                   SUMMARY_SCHEMA, "summary")
-    text = (data or {}).get("summary", "").strip().replace("“", "").replace("”", "")
+    text = str((data if isinstance(data, dict) else {}).get("summary") or "").strip().replace("“", "").replace("”", "")
     if summary_ok(text, facts):
         return text, f"llm:{source}"
     return _template(facts), "template"

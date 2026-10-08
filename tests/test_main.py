@@ -106,7 +106,7 @@ def test_check_stream_official_number(client):
 def test_check_stream_with_user_domain(client):
     events = stream(client, brand="Blue Dart", number="6291610240", domain="bluedart.com")
     official = next(d for n, d in events if n == "official")
-    assert official["domain"] == "bluedart.com" and official["reason"] == "domain you entered"
+    assert official["domain"] == "bluedart.com" and official["reason"] .startswith("the website you entered")
 
 
 def test_check_stream_without_number(client):

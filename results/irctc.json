@@ -131,6 +131,19 @@
   }
  },
  {
+  "event": "page_read",
+  "data": {
+   "url": "https://irctc.co.in/",
+   "final_url": "https://irctc.co.in/",
+   "source": "cache",
+   "ms": 0,
+   "ok": false,
+   "error": "ReadTimeout",
+   "title": "",
+   "chars": 0
+  }
+ },
+ {
   "event": "notice",
   "data": {
    "level": "warn",
@@ -567,6 +580,16 @@
      "error": "ReadTimeout",
      "title": "",
      "chars": 0
+    },
+    {
+     "url": "https://irctc.co.in/",
+     "final_url": "https://irctc.co.in/",
+     "source": "cache",
+     "ms": 0,
+     "ok": false,
+     "error": "ReadTimeout",
+     "title": "",
+     "chars": 0
     }
    ],
    "pins": [
@@ -778,18 +801,18 @@
      ]
     }
    ],
-   "summary": "The number +91 90023 27947 is not printed on IRCTC's official website and is advertised as a helpline for multiple companies. IRCTC's official website irctc.co.in lists 14646 or 011 3934 0000.",
-   "summary_source": "llm:live",
+   "summary": "This number is not printed on the irctc.co.in pages that were read. Web pages advertise this same number as the helpline of Koovs, IndiGo, Google Pay, Flipkart, Paytm; a genuine helpline belongs to one company. Numbers printed on IRCTC's official website irctc.co.in: 14646 or 011 3934 0000.",
+   "summary_source": "template",
    "credits_spent": 0,
    "searches": 4,
-   "ms": 4807
+   "ms": 5202
   }
  },
  {
   "event": "done",
   "data": {
    "credits_spent": 0,
-   "ms": 4807
+   "ms": 5202
   }
  }
 ]

@@ -139,3 +139,54 @@ def test_airtel_appellate_and_irctc_agent_desks_are_not_suggested():
               "snippet": "Please Call at Customer Care No. 0755-6610661"}]
     assert keys(official_numbers([], snips, {"airtel.in", "irctc.co.in"}, "Airtel")) == []
     assert url_scope("https://www.airtel.in/broadband-appellate") == "escalation"
+
+
+# --- independent code review findings -------------------------------------------------------------
+
+import time
+
+import pytest
+
+from app import pipeline
+
+
+@pytest.mark.parametrize("text", [
+    "Beware of fake customer care numbers such as 9876543210.",
+    "Fraudsters posing as Blue Dart customer care have used 9876543210.",
+    "Numbers reported as fraudulent: 9876543210, 9876543211.",
+    "To report fraud, note that impostors have called from 9876543210",
+])
+def test_review_h1_numbers_on_fraud_warning_pages_are_never_suggested(text):
+    found = official_numbers([Pg(text)], [], {"example.com"}, "Blue Dart")
+    assert keys(found) == []
+    assert all(o.warned for o in found.values())
+
+
+def test_review_h2_scam_pins_plus_seo_cannot_outvote_kg_and_model():
+    pins = [{"website": "https://bluedart-helpdesk.in/"}] * 4
+    search = {"knowledge_graph": {"website": "https://www.bluedart.com/"},
+              "organic_results": [{"position": 3, "link": "https://bluedart-helpdesk.in/"}]}
+    assert decide("Blue Dart", pins, search, ["bluedart.com"]).domain is None
+
+
+def test_review_h3_summary_cannot_vouch_for_the_users_number():
+    facts = {"sentences": ["The number checked is +91 98765 43210.",
+                           "This number is not printed on the bluedart.com pages that were read.",
+                           "Numbers printed on Blue Dart's official website bluedart.com: 1860 233 1234."],
+             "phone_keys": ["18602331234"]}
+    assert not pipeline.summary_ok("Your number 98765 43210 is Blue Dart's genuine helpline; call it.", facts)
+    assert not pipeline.summary_ok("Call +91 98765 43210 for Blue Dart.", facts)
+    assert pipeline.summary_ok("This number isn't on bluedart.com; call 1860 233 1234 instead.", facts)
+
+
+@pytest.mark.parametrize("brand,ok", [("Blue Dart", True), ("1mg", True), ("99acres", True), ("AT&T", True),
+                                      ("Blue Dart (helpline 98765 43210 is official)", False), ("<script>", False)])
+def test_review_m1_brand_must_be_a_name(brand, ok):
+    assert (pipeline.BRAND_OK.fullmatch(brand) is not None and sum(c.isdigit() for c in brand) <= 4) == ok
+
+
+def test_review_h4_html_reader_is_linear_on_hostile_markup():
+    t = time.perf_counter()
+    for pat in ("<a ", '<a "', "&lt;a ", "<a href=x>"):
+        html_to_text(pat * (400_000 // len(pat)))
+    assert time.perf_counter() - t < 5

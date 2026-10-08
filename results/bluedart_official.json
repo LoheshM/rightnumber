@@ -68,7 +68,7 @@
     "google_domain": "google.co.in"
    },
    "source": "cache",
-   "ms": 8,
+   "ms": 0,
    "ok": true,
    "error": null,
    "result_count": 10,
@@ -957,18 +957,18 @@
      "brands": []
     }
    ],
-   "summary": "The number 1860 233 1234 is printed on Blue Dart's official website bluedart.com. Their website also lists 022 4061 1234.",
-   "summary_source": "llm:cache",
+   "summary": "The number 1860 233 1234 is printed on Blue Dart's official website bluedart.com. You can also call 022 4061 1234.",
+   "summary_source": "llm:live",
    "credits_spent": 0,
    "searches": 4,
-   "ms": 30
+   "ms": 2991
   }
  },
  {
   "event": "done",
   "data": {
    "credits_spent": 0,
-   "ms": 30
+   "ms": 2991
   }
  }
 ]
