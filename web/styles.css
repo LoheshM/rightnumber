@@ -238,3 +238,5 @@ details.more > summary { cursor: pointer; font-weight: 600; font-family: var(--d
 .live.collapsed .trail, .live.collapsed #notices .notice.info { display: none; }
 .trail-toggle { font: inherit; font-size: 13px; border: 1px solid var(--line); background: var(--surface-2); color: var(--ink-2); border-radius: 8px; padding: 4px 10px; cursor: pointer; }
 .dup { color: var(--muted); font-size: 12px; }
+mark { background: var(--warn-soft); color: var(--ink); border-radius: 3px; padding: 0 2px; }
+.quote mark { background: transparent; color: var(--bad); }

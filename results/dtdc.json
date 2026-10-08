@@ -256,60 +256,6 @@
        "scope": "main"
       }
      ]
-    },
-    {
-     "key": "8037681594",
-     "display": "+91 80376 81594",
-     "kind": "mobile",
-     "warned": false,
-     "fax_only": false,
-     "care": false,
-     "other_org": false,
-     "sources": [
-      {
-       "url": "https://stores.dtdc.com/dtdc-retail-balrampur-azamgarh-courier-service-balrampur-azamgarh-563533/Timeline-Videos",
-       "context": "Balrampur Azamgarh - 276001. Infront Of ITI College. +918037681594. Opens at 10:00 AM. Sat 10:00 AM - 09:00 PM",
-       "kind": "snippet",
-       "label": "plain",
-       "scope": "local"
-      }
-     ]
-    },
-    {
-     "key": "8037681850",
-     "display": "+91 80376 81850",
-     "kind": "mobile",
-     "warned": false,
-     "fax_only": false,
-     "care": false,
-     "other_org": false,
-     "sources": [
-      {
-       "url": "https://stores.dtdc.com/dtdc-retail-swami-vihar-haldwani-branch-courier-service-swami-vihar-nainital-563620/Home",
-       "context": "Road Swami Vihar Nainital - 263139. Near Suzuki Showroom. +918037681850. Opens at 09:00 AM. Sat 09:00 AM - 05:00 PM",
-       "kind": "snippet",
-       "label": "plain",
-       "scope": "local"
-      }
-     ]
-    },
-    {
-     "key": "8037681887",
-     "display": "+91 80376 81887",
-     "kind": "mobile",
-     "warned": false,
-     "fax_only": false,
-     "care": false,
-     "other_org": false,
-     "sources": [
-      {
-       "url": "https://stores.dtdc.com/dtdc-retail-vazhu-thareddy-villupuram-courier-service-vazhu-thareddy-villupuram-563650/Timeline?page=5",
-       "context": "Thareddy Villupuram - 605602. Near Honda Service Center. +918037681887. Open until 09:00 PM Open Now",
-       "kind": "snippet",
-       "label": "plain",
-       "scope": "local"
-      }
-     ]
     }
    ],
    "warned_numbers": [],
@@ -951,18 +897,18 @@
      "brands": []
     }
    ],
-   "summary": "The number +91 96069 11811 is printed on DTDC's official website dtdc.com. DTDC's official website also prints +91 80376 81594.",
+   "summary": "The number +91 96069 11811 is printed on DTDC's official website dtdc.com.",
    "summary_source": "llm:cache",
    "credits_spent": 0,
    "searches": 4,
-   "ms": 17
+   "ms": 18
   }
  },
  {
   "event": "done",
   "data": {
    "credits_spent": 0,
-   "ms": 17
+   "ms": 18
   }
  }
 ]

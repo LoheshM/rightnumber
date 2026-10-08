@@ -286,6 +286,8 @@ async def _read_official_pages(reader: PageReader, dom: str, brand: str, pins: l
             await emit("page_read", pg.to_event())
 
     await read_all(first)
+    if pages and not pages[0].ok and home.startswith("https://www."):
+        await read_all([home.replace("https://www.", "https://", 1)])  # sbi.bank.in has no www. host
     ids |= {page_id(pg.final_url) for pg in pages}
     more: list[tuple[int, str]] = []
     for pg in pages:

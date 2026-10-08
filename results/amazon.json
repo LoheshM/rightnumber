@@ -435,17 +435,17 @@
    },
    "mentions": [],
    "summary": "The number 080 6605 5000 is not printed on the amazon.in pages that were read; use the number on your bill, card, ticket or app for a contact number.",
-   "summary_source": "llm:live",
+   "summary_source": "llm:cache",
    "credits_spent": 0,
    "searches": 4,
-   "ms": 4907
+   "ms": 13
   }
  },
  {
   "event": "done",
   "data": {
    "credits_spent": 0,
-   "ms": 4907
+   "ms": 13
   }
  }
 ]

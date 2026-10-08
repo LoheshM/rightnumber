@@ -1,0 +1,642 @@
+[
+ {
+  "event": "start",
+  "data": {
+   "brand": "IRCTC",
+   "city": "Delhi",
+   "number": "14646",
+   "number_kind": "short",
+   "mode": "auto"
+  }
+ },
+ {
+  "event": "step",
+  "data": {
+   "id": "gather",
+   "label": "Searching Google Maps, Google and your number the web",
+   "status": "running"
+  }
+ },
+ {
+  "event": "serp_call",
+  "data": {
+   "engine": "google_maps",
+   "purpose": "Maps pins for “IRCTC customer care” near Delhi",
+   "params": {
+    "type": "search",
+    "q": "IRCTC customer care",
+    "ll": "@28.6139,77.209,12z",
+    "hl": "en",
+    "gl": "in"
+   },
+   "source": "cache",
+   "ms": 0,
+   "ok": true,
+   "error": null,
+   "result_count": 0,
+   "credit": false
+  }
+ },
+ {
+  "event": "serp_call",
+  "data": {
+   "engine": "google",
+   "purpose": "What Google shows for “IRCTC customer care number”",
+   "params": {
+    "q": "IRCTC customer care number",
+    "gl": "in",
+    "hl": "en",
+    "google_domain": "google.co.in"
+   },
+   "source": "cache",
+   "ms": 0,
+   "ok": true,
+   "error": null,
+   "result_count": 10,
+   "credit": false
+  }
+ },
+ {
+  "event": "step",
+  "data": {
+   "id": "gather",
+   "label": "Found 4 Maps pins and 10 Google results",
+   "status": "done"
+  }
+ },
+ {
+  "event": "step",
+  "data": {
+   "id": "domain",
+   "label": "Working out the brand's official website",
+   "status": "running"
+  }
+ },
+ {
+  "event": "serp_call",
+  "data": {
+   "engine": "google",
+   "purpose": "The brand's own contact pages on irctc.co.in",
+   "params": {
+    "q": "site:irctc.co.in customer care contact number",
+    "gl": "in",
+    "hl": "en",
+    "google_domain": "google.co.in"
+   },
+   "source": "cache",
+   "ms": 0,
+   "ok": true,
+   "error": null,
+   "result_count": 10,
+   "credit": false
+  }
+ },
+ {
+  "event": "notice",
+  "data": {
+   "level": "info",
+   "text": "Google returned no irctc.co.in pages for the site: search, so only its home page and the contact links on it are read."
+  }
+ },
+ {
+  "event": "page_read",
+  "data": {
+   "url": "https://www.irctc.co.in/",
+   "final_url": "https://www.irctc.co.in/",
+   "source": "cache",
+   "ms": 0,
+   "ok": false,
+   "error": "ReadTimeout",
+   "title": "",
+   "chars": 0
+  }
+ },
+ {
+  "event": "notice",
+  "data": {
+   "level": "warn",
+   "text": "irctc.co.in couldn't be read automatically (it may block bots or need JavaScript), so no official number could be copied from it."
+  }
+ },
+ {
+  "event": "official",
+  "data": {
+   "domain": "irctc.co.in",
+   "established": true,
+   "reason": "google + model agree",
+   "votes": [
+    {
+     "domain": "irctc.co.in",
+     "sources": [
+      "google: organic result #1",
+      "model: model's own knowledge"
+     ]
+    },
+    {
+     "domain": "irctc.com",
+     "sources": [
+      "google: organic result #7"
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "event": "step",
+  "data": {
+   "id": "domain",
+   "label": "Official website: irctc.co.in",
+   "status": "done"
+  }
+ },
+ {
+  "event": "result",
+  "data": {
+   "brand": "IRCTC",
+   "city": "Delhi",
+   "domain": "irctc.co.in",
+   "decision": {
+    "domain": "irctc.co.in",
+    "established": true,
+    "reason": "google + model agree",
+    "votes": [
+     {
+      "domain": "irctc.co.in",
+      "sources": [
+       "google: organic result #1",
+       "model: model's own knowledge"
+      ]
+     },
+     {
+      "domain": "irctc.com",
+      "sources": [
+       "google: organic result #7"
+      ]
+     }
+    ]
+   },
+   "number": "14646",
+   "number_kind": "short",
+   "verdict": {
+    "label": "on_official_site",
+    "title": "Printed on the official site",
+    "sources": [
+     {
+      "url": "https://equery.irctc.co.in/",
+      "context": "of your query you may call our 24-hours Customer Care : 14646. Customers from outside India may call +91-8044647999 /",
+      "kind": "snippet",
+      "label": "care",
+      "scope": "main"
+     },
+     {
+      "url": "https://agent.irctc.co.in/",
+      "context": "For Further Details, Please Call at Customer Care No. 14646,0755-6610661 & 0755-4090600 or Mail at",
+      "kind": "snippet",
+      "label": "care",
+      "scope": "b2b"
+     }
+    ],
+    "complaints": [],
+    "other_brands": [],
+    "other_brand_examples": []
+   },
+   "call_instead": [
+    {
+     "key": "14646",
+     "display": "14646",
+     "kind": "short",
+     "warned": false,
+     "fax_only": false,
+     "care": true,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://equery.irctc.co.in/",
+       "context": "of your query you may call our 24-hours Customer Care : 14646. Customers from outside India may call +91-8044647999 /",
+       "kind": "snippet",
+       "label": "care",
+       "scope": "main"
+      },
+      {
+       "url": "https://agent.irctc.co.in/",
+       "context": "For Further Details, Please Call at Customer Care No. 14646,0755-6610661 & 0755-4090600 or Mail at",
+       "kind": "snippet",
+       "label": "care",
+       "scope": "b2b"
+      }
+     ]
+    },
+    {
+     "key": "1139340000",
+     "display": "011 3934 0000",
+     "kind": "landline",
+     "warned": false,
+     "fax_only": false,
+     "care": true,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://contents.irctc.co.in/en/userregistration.html",
+       "context": "User Registration . Customer Support at 011-39340000, MON - SAT(10 AM - 6 PM) 011-23344787 ,Chennai Customer",
+       "kind": "snippet",
+       "label": "care",
+       "scope": "main"
+      }
+     ]
+    },
+    {
+     "key": "1123344787",
+     "display": "011 2334 4787",
+     "kind": "landline",
+     "warned": false,
+     "fax_only": false,
+     "care": true,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://contents.irctc.co.in/en/userregistration.html",
+       "context": "Customer Support at 011-39340000, MON - SAT(10 AM - 6 PM) 011-23344787 ,Chennai Customer Care 044 - 25300000 · For any",
+       "kind": "snippet",
+       "label": "care",
+       "scope": "main"
+      }
+     ]
+    },
+    {
+     "key": "4425300000",
+     "display": "044 2530 0000",
+     "kind": "landline",
+     "warned": false,
+     "fax_only": false,
+     "care": true,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://contents.irctc.co.in/en/userregistration.html",
+       "context": "- SAT(10 AM - 6 PM) 011-23344787 ,Chennai Customer Care 044 - 25300000 · For any enquiries or information regarding your",
+       "kind": "snippet",
+       "label": "care",
+       "scope": "main"
+      }
+     ]
+    }
+   ],
+   "warned_numbers": [],
+   "official_numbers": [
+    {
+     "key": "1800225100",
+     "display": "1800 22 5100",
+     "kind": "tollfree",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://contents.irctc.co.in/en/ContactUsEn.html",
+       "context": "IRCTC Loyalty credit card, kindly contact as below. · 1800225100 / 18001031006 · 18002026161 / 18602676161 · 02262327777 /",
+       "kind": "snippet",
+       "label": "plain",
+       "scope": "main"
+      }
+     ]
+    },
+    {
+     "key": "18001031006",
+     "display": "1800 103 1006",
+     "kind": "tollfree",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://contents.irctc.co.in/en/ContactUsEn.html",
+       "context": "credit card, kindly contact as below. · 1800225100 / 18001031006 · 18002026161 / 18602676161 · 02262327777 / 02271190900",
+       "kind": "snippet",
+       "label": "plain",
+       "scope": "main"
+      }
+     ]
+    },
+    {
+     "key": "18002026161",
+     "display": "1800 202 6161",
+     "kind": "tollfree",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://contents.irctc.co.in/en/ContactUsEn.html",
+       "context": "kindly contact as below. · 1800225100 / 18001031006 · 18002026161 / 18602676161 · 02262327777 / 02271190900",
+       "kind": "snippet",
+       "label": "plain",
+       "scope": "main"
+      }
+     ]
+    },
+    {
+     "key": "18602676161",
+     "display": "1860 267 6161",
+     "kind": "tollfree",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://contents.irctc.co.in/en/ContactUsEn.html",
+       "context": "as below. · 1800225100 / 18001031006 · 18002026161 / 18602676161 · 02262327777 / 02271190900",
+       "kind": "snippet",
+       "label": "plain",
+       "scope": "main"
+      }
+     ]
+    },
+    {
+     "key": "2262327777",
+     "display": "022 6232 7777",
+     "kind": "landline",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://contents.irctc.co.in/en/ContactUsEn.html",
+       "context": "1800225100 / 18001031006 · 18002026161 / 18602676161 · 02262327777 / 02271190900",
+       "kind": "snippet",
+       "label": "plain",
+       "scope": "main"
+      }
+     ]
+    },
+    {
+     "key": "2271190900",
+     "display": "022 7119 0900",
+     "kind": "landline",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://contents.irctc.co.in/en/ContactUsEn.html",
+       "context": "/ 18001031006 · 18002026161 / 18602676161 · 02262327777 / 02271190900",
+       "kind": "snippet",
+       "label": "plain",
+       "scope": "main"
+      }
+     ]
+    },
+    {
+     "key": "8044647999",
+     "display": "+91 80446 47999",
+     "kind": "mobile",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://equery.irctc.co.in/",
+       "context": "Care : 14646. Customers from outside India may call +91-8044647999 / +91-8035734999",
+       "kind": "snippet",
+       "label": "plain",
+       "scope": "main"
+      }
+     ]
+    },
+    {
+     "key": "8035734999",
+     "display": "+91 80357 34999",
+     "kind": "mobile",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://equery.irctc.co.in/",
+       "context": "Customers from outside India may call +91-8044647999 / +91-8035734999",
+       "kind": "snippet",
+       "label": "plain",
+       "scope": "main"
+      }
+     ]
+    },
+    {
+     "key": "14646",
+     "display": "14646",
+     "kind": "short",
+     "warned": false,
+     "fax_only": false,
+     "care": true,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://equery.irctc.co.in/",
+       "context": "of your query you may call our 24-hours Customer Care : 14646. Customers from outside India may call +91-8044647999 /",
+       "kind": "snippet",
+       "label": "care",
+       "scope": "main"
+      },
+      {
+       "url": "https://agent.irctc.co.in/",
+       "context": "For Further Details, Please Call at Customer Care No. 14646,0755-6610661 & 0755-4090600 or Mail at",
+       "kind": "snippet",
+       "label": "care",
+       "scope": "b2b"
+      }
+     ]
+    },
+    {
+     "key": "7556610661",
+     "display": "0755 6610661",
+     "kind": "landline",
+     "warned": false,
+     "fax_only": false,
+     "care": true,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://agent.irctc.co.in/",
+       "context": "Further Details, Please Call at Customer Care No. 14646,0755-6610661 & 0755-4090600 or Mail at etickets@irctc.co.in. Copyright",
+       "kind": "snippet",
+       "label": "care",
+       "scope": "b2b"
+      }
+     ]
+    },
+    {
+     "key": "7554090600",
+     "display": "0755 4090600",
+     "kind": "landline",
+     "warned": false,
+     "fax_only": false,
+     "care": true,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://agent.irctc.co.in/",
+       "context": "Please Call at Customer Care No. 14646,0755-6610661 & 0755-4090600 or Mail at etickets@irctc.co.in. Copyright @ 2026 -",
+       "kind": "snippet",
+       "label": "care",
+       "scope": "b2b"
+      }
+     ]
+    },
+    {
+     "key": "1139340000",
+     "display": "011 3934 0000",
+     "kind": "landline",
+     "warned": false,
+     "fax_only": false,
+     "care": true,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://contents.irctc.co.in/en/userregistration.html",
+       "context": "User Registration . Customer Support at 011-39340000, MON - SAT(10 AM - 6 PM) 011-23344787 ,Chennai Customer",
+       "kind": "snippet",
+       "label": "care",
+       "scope": "main"
+      }
+     ]
+    }
+   ],
+   "pages": [
+    {
+     "url": "https://www.irctc.co.in/",
+     "final_url": "https://www.irctc.co.in/",
+     "source": "cache",
+     "ms": 0,
+     "ok": false,
+     "error": "ReadTimeout",
+     "title": "",
+     "chars": 0
+    }
+   ],
+   "pins": [
+    {
+     "title": "IRCTC OFFICIAL",
+     "phone_shown": "011 2618 1550",
+     "website": null,
+     "website_status": "none",
+     "number_status": "not_on_official",
+     "rating": 3.7,
+     "reviews": 119,
+     "address": "Statesman House, B 148, 11th, 402, Barakhamba Rd, New Delhi, Delhi 110001",
+     "is_user_number": false,
+     "phone_kind": "landline"
+    },
+    {
+     "title": "Indian Railway Catering and Tourism Corporation Ltd.",
+     "phone_shown": "",
+     "website": null,
+     "website_status": "none",
+     "number_status": "none",
+     "rating": 3.1,
+     "reviews": 35,
+     "address": "H59W+G39, Block F, Nauroji Nagar, Safdarjung Enclave, New Delhi, Delhi 110029",
+     "is_user_number": false,
+     "phone_kind": null
+    },
+    {
+     "title": "IRCTC",
+     "phone_shown": "011 2374 5962",
+     "website": "irctc.co.in",
+     "website_status": "official",
+     "number_status": "not_on_official",
+     "rating": 3.8,
+     "reviews": 72,
+     "address": "J6Q9+WMP, State Entry Rd, Railway Colony, Connaught Place, New Delhi, Delhi, 110055",
+     "is_user_number": false,
+     "phone_kind": "landline"
+    },
+    {
+     "title": "IRCTC AIR",
+     "phone_shown": "011 2341 5815",
+     "website": "irctc.co.in",
+     "website_status": "official",
+     "number_status": "not_on_official",
+     "rating": 1.9,
+     "reviews": 30,
+     "address": "IRCTC LTD, M 13, Block K, Connaught Place, New Delhi, Delhi 110001",
+     "is_user_number": false,
+     "phone_kind": "landline"
+    }
+   ],
+   "pin_stats": {
+    "total": 4,
+    "judged": true,
+    "official_number": 0,
+    "number_not_on_official": 3,
+    "website_not_official": 0,
+    "no_website": 2,
+    "user_number_pins": 0
+   },
+   "google_view": {
+    "results": 10,
+    "directory": 2,
+    "directory_domains": [
+     "pissedconsumer.com",
+     "indiacustomercare.com"
+    ],
+    "official_rank": 1,
+    "top": [
+     {
+      "title": "Contact Us - IRCTC Next Generation eTicketing System",
+      "domain": "irctc.co.in",
+      "link": "https://contents.irctc.co.in/en/ContactUsEn.html",
+      "directory": false,
+      "official": true
+     },
+     {
+      "title": "IRCTC eQuery Portal",
+      "domain": "irctc.co.in",
+      "link": "https://equery.irctc.co.in/",
+      "directory": false,
+      "official": true
+     },
+     {
+      "title": "IRCTC Customer Service Phone Number +91 755 393 4141 ...",
+      "domain": "pissedconsumer.com",
+      "link": "https://irctc.pissedconsumer.com/customer-service.html",
+      "directory": true,
+      "official": false
+     },
+     {
+      "title": "SSL CERTIFICATE REQUIREMENT - IRCTC",
+      "domain": "irctc.co.in",
+      "link": "https://agent.irctc.co.in/",
+      "directory": false,
+      "official": true
+     },
+     {
+      "title": "Indian Railways Customer Care No. 139",
+      "domain": "indiacustomercare.com",
+      "link": "https://www.indiacustomercare.com/indian-railways-customer-care-contact-helpline-numbers",
+      "directory": true,
+      "official": false
+     }
+    ]
+   },
+   "mentions": [],
+   "summary": "The number 14646 is printed on IRCTC's official website irctc.co.in. IRCTC's official website also prints 011 3934 0000.",
+   "summary_source": "llm:live",
+   "credits_spent": 0,
+   "searches": 3,
+   "ms": 3775
+  }
+ },
+ {
+  "event": "done",
+  "data": {
+   "credits_spent": 0,
+   "ms": 3775
+  }
+ }
+]

@@ -161,19 +161,14 @@
   "data": {
    "domain": "hdfc.bank.in",
    "established": true,
-   "reason": "google + maps agree",
+   "reason": "google + maps + model agree",
    "votes": [
     {
      "domain": "hdfc.bank.in",
      "sources": [
       "maps: website of 17 of 20 Maps pins",
-      "google: organic result #1"
-     ]
-    },
-    {
-     "domain": "hdfcbank.com",
-     "sources": [
-      "model: model's own knowledge"
+      "google: organic result #1",
+      "model: model's own knowledge (hdfcbank.com redirects here)"
      ]
     }
    ]
@@ -196,19 +191,14 @@
    "decision": {
     "domain": "hdfc.bank.in",
     "established": true,
-    "reason": "google + maps agree",
+    "reason": "google + maps + model agree",
     "votes": [
      {
       "domain": "hdfc.bank.in",
       "sources": [
        "maps: website of 17 of 20 Maps pins",
-       "google: organic result #1"
-      ]
-     },
-     {
-      "domain": "hdfcbank.com",
-      "sources": [
-       "model: model's own knowledge"
+       "google: organic result #1",
+       "model: model's own knowledge (hdfcbank.com redirects here)"
       ]
      }
     ]
@@ -230,30 +220,14 @@
        "url": "https://www.hdfc.bank.in/upi/report-frauds",
        "context": "Debit Card, NetBanking, or UPI transactions, please call 1800 258 6161. Have the following details ready before calling",
        "kind": "page",
-       "label": "care"
+       "label": "care",
+       "scope": "main"
       }
      ]
     },
     {
-     "key": "4469129917",
-     "display": "044 6912 9917",
-     "kind": "landline",
-     "warned": false,
-     "fax_only": false,
-     "care": true,
-     "other_org": false,
-     "sources": [
-      {
-       "url": "https://www.hdfc.bank.in/need-help/grievance-redressal",
-       "context": "us at rrb.chennai@hdfc.bank.in or call us at 04469129917 044 69129917 · Raise A Dispute . In addition to",
-       "kind": "page",
-       "label": "care"
-      }
-     ]
-    },
-    {
-     "key": "18002583838",
-     "display": "1800 258 3838",
+     "key": "18001600",
+     "display": "1800 1600",
      "kind": "tollfree",
      "warned": false,
      "fax_only": false,
@@ -261,104 +235,31 @@
      "other_org": false,
      "sources": [
       {
-       "url": "https://www.hdfc.bank.in/need-help/grievance-redressal",
-       "context": "write to cardsales.complaint@hdfc.bank.in or call at 18002583838 044 - 61084900 · Investor Grievance Redressal",
+       "url": "https://www.hdfc.bank.in/",
+       "context": "Here’s how to reach us . 18001600 Call . Chat . Locate · About Us . Overview . Investor",
        "kind": "page",
-       "label": "plain"
-      }
-     ]
-    },
-    {
-     "key": "18002664060",
-     "display": "1800 266 4060",
-     "kind": "tollfree",
-     "warned": false,
-     "fax_only": false,
-     "care": false,
-     "other_org": false,
-     "sources": [
-      {
-       "url": "https://www.hdfc.bank.in/need-help/grievance-redressal",
-       "context": "and Depository Services · Mr. Mehernosh Dhamodiwala . 18002664060 1800 266 4060 Monday - Saturday 9:30am to 5:30pm",
-       "kind": "page",
-       "label": "plain"
-      }
-     ]
-    }
-   ],
-   "warned_numbers": [],
-   "official_numbers": [
-    {
-     "key": "18002586161",
-     "display": "1800 258 6161",
-     "kind": "tollfree",
-     "warned": false,
-     "fax_only": false,
-     "care": true,
-     "other_org": false,
-     "sources": [
+       "label": "plain",
+       "scope": "main"
+      },
       {
        "url": "https://www.hdfc.bank.in/upi/report-frauds",
-       "context": "Debit Card, NetBanking, or UPI transactions, please call 1800 258 6161. Have the following details ready before calling",
+       "context": "away · Here’s how to reach us . 18001600 Call . Chat . Locate · About Us . Overview . Investor",
        "kind": "page",
-       "label": "care"
-      }
-     ]
-    },
-    {
-     "key": "18004190157",
-     "display": "1800 419 0157",
-     "kind": "tollfree",
-     "warned": false,
-     "fax_only": false,
-     "care": false,
-     "other_org": true,
-     "sources": [
+       "label": "plain",
+       "scope": "main"
+      },
       {
-       "url": "https://www.hdfc.bank.in/upi/report-frauds",
-       "context": "Partner . Customer Care Contact · Google Pay . 1-800-419-0157 1-800-419-0157 · WhatsApp . %091-800-212-8552",
+       "url": "https://www.hdfc.bank.in/need-help/grievance-redressal",
+       "context": "Merchants · Here’s how to reach us . 18001600 Call . Chat . Locate · About Us . Overview . Investor",
        "kind": "page",
-       "label": "other_org"
+       "label": "plain",
+       "scope": "escalation"
       }
      ]
     },
     {
-     "key": "8002128552",
-     "display": "0800 2128552",
-     "kind": "landline",
-     "warned": false,
-     "fax_only": false,
-     "care": false,
-     "other_org": true,
-     "sources": [
-      {
-       "url": "https://www.hdfc.bank.in/upi/report-frauds",
-       "context": "Pay . 1-800-419-0157 1-800-419-0157 · WhatsApp . %091-800-212-8552 1-800-212-8552 · Mobikwik . 011-61266390 011-61266390",
-       "kind": "page",
-       "label": "other_org"
-      }
-     ]
-    },
-    {
-     "key": "18002128552",
-     "display": "1800 212 8552",
-     "kind": "tollfree",
-     "warned": false,
-     "fax_only": false,
-     "care": false,
-     "other_org": true,
-     "sources": [
-      {
-       "url": "https://www.hdfc.bank.in/upi/report-frauds",
-       "context": "1-800-419-0157 · WhatsApp . %091-800-212-8552 1-800-212-8552 · Mobikwik . 011-61266390 011-61266390 · \"> Partner",
-       "kind": "page",
-       "label": "other_org"
-      }
-     ]
-    },
-    {
-     "key": "18002583838",
-     "display": "1800 258 3838",
+     "key": "18002600",
+     "display": "1800 2600",
      "kind": "tollfree",
      "warned": false,
      "fax_only": false,
@@ -366,78 +267,11 @@
      "other_org": false,
      "sources": [
       {
-       "url": "https://www.hdfc.bank.in/need-help/grievance-redressal",
-       "context": "write to cardsales.complaint@hdfc.bank.in or call at 18002583838 044 - 61084900 · Investor Grievance Redressal",
+       "url": "https://www.hdfc.bank.in/ways-to-bank/smsbanking",
+       "context": "SMS your query to 7308080808.~Please call on 1800-1600 / 1800-2600 for further assistance · Can you share",
        "kind": "page",
-       "label": "plain"
-      }
-     ]
-    },
-    {
-     "key": "4461084900",
-     "display": "044 6108 4900",
-     "kind": "landline",
-     "warned": false,
-     "fax_only": false,
-     "care": false,
-     "other_org": false,
-     "sources": [
-      {
-       "url": "https://www.hdfc.bank.in/need-help/grievance-redressal",
-       "context": "to cardsales.complaint@hdfc.bank.in or call at 18002583838 044 - 61084900 · Investor Grievance Redressal Mechanism for",
-       "kind": "page",
-       "label": "plain"
-      }
-     ]
-    },
-    {
-     "key": "4469129917",
-     "display": "044 6912 9917",
-     "kind": "landline",
-     "warned": false,
-     "fax_only": false,
-     "care": true,
-     "other_org": false,
-     "sources": [
-      {
-       "url": "https://www.hdfc.bank.in/need-help/grievance-redressal",
-       "context": "us at rrb.chennai@hdfc.bank.in or call us at 04469129917 044 69129917 · Raise A Dispute . In addition to",
-       "kind": "page",
-       "label": "care"
-      }
-     ]
-    },
-    {
-     "key": "18002664060",
-     "display": "1800 266 4060",
-     "kind": "tollfree",
-     "warned": false,
-     "fax_only": false,
-     "care": false,
-     "other_org": false,
-     "sources": [
-      {
-       "url": "https://www.hdfc.bank.in/need-help/grievance-redressal",
-       "context": "and Depository Services · Mr. Mehernosh Dhamodiwala . 18002664060 1800 266 4060 Monday - Saturday 9:30am to 5:30pm",
-       "kind": "page",
-       "label": "plain"
-      }
-     ]
-    },
-    {
-     "key": "2262841505",
-     "display": "022 6284 1505",
-     "kind": "landline",
-     "warned": false,
-     "fax_only": false,
-     "care": false,
-     "other_org": false,
-     "sources": [
-      {
-       "url": "https://www.hdfc.bank.in/need-help/grievance-redressal",
-       "context": "Peninsula Business Park, Lower Parel West, Mumbai 400013 . 02262841505 022 - 62841505 · Email Now · Level 4",
-       "kind": "page",
-       "label": "plain"
+       "label": "plain",
+       "scope": "main"
       }
      ]
     },
@@ -454,7 +288,241 @@
        "url": "https://www.hdfc.bank.in/ways-to-bank/smsbanking",
        "context": "of customer ID” “Last 4 digits of account number” to 7308080808 · Range of requests . With HDFC Bank SMS",
        "kind": "page",
-       "label": "plain"
+       "label": "plain",
+       "scope": "main"
+      }
+     ]
+    }
+   ],
+   "warned_numbers": [],
+   "official_numbers": [
+    {
+     "key": "18001600",
+     "display": "1800 1600",
+     "kind": "tollfree",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://www.hdfc.bank.in/",
+       "context": "Here’s how to reach us . 18001600 Call . Chat . Locate · About Us . Overview . Investor",
+       "kind": "page",
+       "label": "plain",
+       "scope": "main"
+      },
+      {
+       "url": "https://www.hdfc.bank.in/upi/report-frauds",
+       "context": "away · Here’s how to reach us . 18001600 Call . Chat . Locate · About Us . Overview . Investor",
+       "kind": "page",
+       "label": "plain",
+       "scope": "main"
+      },
+      {
+       "url": "https://www.hdfc.bank.in/need-help/grievance-redressal",
+       "context": "Merchants · Here’s how to reach us . 18001600 Call . Chat . Locate · About Us . Overview . Investor",
+       "kind": "page",
+       "label": "plain",
+       "scope": "escalation"
+      }
+     ]
+    },
+    {
+     "key": "18002586161",
+     "display": "1800 258 6161",
+     "kind": "tollfree",
+     "warned": false,
+     "fax_only": false,
+     "care": true,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://www.hdfc.bank.in/upi/report-frauds",
+       "context": "Debit Card, NetBanking, or UPI transactions, please call 1800 258 6161. Have the following details ready before calling",
+       "kind": "page",
+       "label": "care",
+       "scope": "main"
+      }
+     ]
+    },
+    {
+     "key": "18004190157",
+     "display": "1800 419 0157",
+     "kind": "tollfree",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": true,
+     "sources": [
+      {
+       "url": "https://www.hdfc.bank.in/upi/report-frauds",
+       "context": "Partner . Customer Care Contact · Google Pay . 1-800-419-0157 1-800-419-0157 · WhatsApp . %091-800-212-8552",
+       "kind": "page",
+       "label": "other_org",
+       "scope": "main"
+      }
+     ]
+    },
+    {
+     "key": "18002128552",
+     "display": "1800 212 8552",
+     "kind": "tollfree",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": true,
+     "sources": [
+      {
+       "url": "https://www.hdfc.bank.in/upi/report-frauds",
+       "context": "1-800-419-0157 · WhatsApp . %091-800-212-8552 1-800-212-8552 · Mobikwik . 011-61266390 011-61266390 · \"> Partner",
+       "kind": "page",
+       "label": "other_org",
+       "scope": "main"
+      }
+     ]
+    },
+    {
+     "key": "1161266390",
+     "display": "011 6126 6390",
+     "kind": "landline",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": true,
+     "sources": [
+      {
+       "url": "https://www.hdfc.bank.in/upi/report-frauds",
+       "context": "WhatsApp . %091-800-212-8552 1-800-212-8552 · Mobikwik . 011-61266390 011-61266390 · \"> Partner . Customer Care Contact",
+       "kind": "page",
+       "label": "other_org",
+       "scope": "main"
+      }
+     ]
+    },
+    {
+     "key": "18002583838",
+     "display": "1800 258 3838",
+     "kind": "tollfree",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://www.hdfc.bank.in/need-help/grievance-redressal",
+       "context": "write to cardsales.complaint@hdfc.bank.in or call at 18002583838 044 - 61084900 · Investor Grievance Redressal",
+       "kind": "page",
+       "label": "plain",
+       "scope": "escalation"
+      }
+     ]
+    },
+    {
+     "key": "4461084900",
+     "display": "044 6108 4900",
+     "kind": "landline",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://www.hdfc.bank.in/need-help/grievance-redressal",
+       "context": "to cardsales.complaint@hdfc.bank.in or call at 18002583838 044 - 61084900 · Investor Grievance Redressal Mechanism for",
+       "kind": "page",
+       "label": "plain",
+       "scope": "escalation"
+      }
+     ]
+    },
+    {
+     "key": "4469129917",
+     "display": "044 6912 9917",
+     "kind": "landline",
+     "warned": false,
+     "fax_only": false,
+     "care": true,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://www.hdfc.bank.in/need-help/grievance-redressal",
+       "context": "us at rrb.chennai@hdfc.bank.in or call us at 04469129917 044 69129917 · Raise A Dispute . In addition to",
+       "kind": "page",
+       "label": "care",
+       "scope": "escalation"
+      }
+     ]
+    },
+    {
+     "key": "18002664060",
+     "display": "1800 266 4060",
+     "kind": "tollfree",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://www.hdfc.bank.in/need-help/grievance-redressal",
+       "context": "and Depository Services · Mr. Mehernosh Dhamodiwala . 18002664060 1800 266 4060 Monday - Saturday 9:30am to 5:30pm",
+       "kind": "page",
+       "label": "plain",
+       "scope": "escalation"
+      }
+     ]
+    },
+    {
+     "key": "2262841505",
+     "display": "022 6284 1505",
+     "kind": "landline",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://www.hdfc.bank.in/need-help/grievance-redressal",
+       "context": "Peninsula Business Park, Lower Parel West, Mumbai 400013 . 02262841505 022 - 62841505 · Email Now · Level 4",
+       "kind": "page",
+       "label": "plain",
+       "scope": "escalation"
+      }
+     ]
+    },
+    {
+     "key": "7308080808",
+     "display": "+91 73080 80808",
+     "kind": "mobile",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://www.hdfc.bank.in/ways-to-bank/smsbanking",
+       "context": "of customer ID” “Last 4 digits of account number” to 7308080808 · Range of requests . With HDFC Bank SMS",
+       "kind": "page",
+       "label": "plain",
+       "scope": "main"
+      }
+     ]
+    },
+    {
+     "key": "18002600",
+     "display": "1800 2600",
+     "kind": "tollfree",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://www.hdfc.bank.in/ways-to-bank/smsbanking",
+       "context": "SMS your query to 7308080808.~Please call on 1800-1600 / 1800-2600 for further assistance · Can you share",
+       "kind": "page",
+       "label": "plain",
+       "scope": "main"
       }
      ]
     }
@@ -514,123 +582,123 @@
    "pins": [
     {
      "title": "HDFC Bank",
-     "phone_shown": "",
+     "phone_shown": "1800 1601",
      "website": "hdfc.bank.in",
      "website_status": "official",
-     "number_status": "none",
+     "number_status": "not_on_official",
      "rating": 2.9,
      "reviews": 36,
      "address": "Elphinstone House, CST Building, No 17, Murzban Rd, near Sterling Cinema, Azad Maidan, For",
      "is_user_number": false,
-     "phone_kind": null
+     "phone_kind": "tollfree"
     },
     {
      "title": "HDFC Bank",
-     "phone_shown": "",
+     "phone_shown": "1800 1601",
      "website": "hdfc.bank.in",
      "website_status": "official",
-     "number_status": "none",
+     "number_status": "not_on_official",
      "rating": 3.4,
      "reviews": 113,
      "address": "Jehangir Building, Mahatma Gandhi Road, Kala Ghoda, Fort, Mumbai, Maharashtra 400001",
      "is_user_number": false,
-     "phone_kind": null
+     "phone_kind": "tollfree"
     },
     {
      "title": "HDFC Bank",
-     "phone_shown": "",
+     "phone_shown": "1800 1601",
      "website": "hdfcbank.com",
      "website_status": "other",
-     "number_status": "none",
+     "number_status": "not_on_official",
      "rating": 2.7,
      "reviews": 114,
      "address": "Metro Station Chakala (J B Nagar), J B Nagar, First Floor & Ground Floor R Square, Andheri",
      "is_user_number": false,
-     "phone_kind": null
+     "phone_kind": "tollfree"
     },
     {
      "title": "HDFC Bank",
-     "phone_shown": "",
+     "phone_shown": "1800 1601",
      "website": "hdfc.bank.in",
      "website_status": "official",
-     "number_status": "none",
+     "number_status": "not_on_official",
      "rating": 2.7,
      "reviews": 135,
      "address": "Rupam Centre, Cineplanet, Sion Cir, Sion Koliwada, Sion East, Sion, Mumbai, Maharashtra 40",
      "is_user_number": false,
-     "phone_kind": null
+     "phone_kind": "tollfree"
     },
     {
      "title": "HDFC Bank",
-     "phone_shown": "",
+     "phone_shown": "1800 1601",
      "website": "hdfc.bank.in",
      "website_status": "official",
-     "number_status": "none",
+     "number_status": "not_on_official",
      "rating": 3.6,
      "reviews": 352,
      "address": "1st Floor, New Vijay Cinema Building, Sion - Trombay Rd, शिवसाई को हा सोसायटी, Chembur Eas",
      "is_user_number": false,
-     "phone_kind": null
+     "phone_kind": "tollfree"
     },
     {
      "title": "HDFC Bank",
-     "phone_shown": "",
+     "phone_shown": "1800 1601",
      "website": "hdfc.bank.in",
      "website_status": "official",
-     "number_status": "none",
+     "number_status": "not_on_official",
      "rating": 3.4,
      "reviews": 178,
      "address": "Hiranandani Business Park, Ground Floor, Prudential Building, Powai, Mumbai, Maharashtra 4",
      "is_user_number": false,
-     "phone_kind": null
+     "phone_kind": "tollfree"
     },
     {
      "title": "HDFC Bank",
-     "phone_shown": "",
+     "phone_shown": "1800 1601",
      "website": "hdfc.bank.in",
      "website_status": "official",
-     "number_status": "none",
+     "number_status": "not_on_official",
      "rating": 2.6,
      "reviews": 115,
      "address": "Ground Floor, Kamla Mills Compound, Senapati Bapat Marg, Lower Parel, Mumbai, Maharashtra ",
      "is_user_number": false,
-     "phone_kind": null
+     "phone_kind": "tollfree"
     },
     {
      "title": "HDFC Bank",
-     "phone_shown": "",
+     "phone_shown": "1800 1601",
      "website": "hdfc.bank.in",
      "website_status": "official",
-     "number_status": "none",
+     "number_status": "not_on_official",
      "rating": 2.5,
      "reviews": 65,
      "address": "No 175/3, Unicorn Building, CG Rd, opposite Natraj Lawns, Gulab Park Colony, Vasant Vihar ",
      "is_user_number": false,
-     "phone_kind": null
+     "phone_kind": "tollfree"
     },
     {
      "title": "HDFC Bank",
-     "phone_shown": "",
+     "phone_shown": "1800 1601",
      "website": "hdfc.bank.in",
      "website_status": "official",
-     "number_status": "none",
+     "number_status": "not_on_official",
      "rating": 2.7,
      "reviews": 58,
      "address": "No 82, Khatija Mansion, Cyprus Avenue, Dr Anandrao Nair Marg, opposite Topiwala National M",
      "is_user_number": false,
-     "phone_kind": null
+     "phone_kind": "tollfree"
     },
     {
      "title": "HDFC Bank",
-     "phone_shown": "",
+     "phone_shown": "1800 1601",
      "website": "hdfc.bank.in",
      "website_status": "official",
-     "number_status": "none",
+     "number_status": "not_on_official",
      "rating": 3.1,
      "reviews": 34,
      "address": "Creative Industrial Estate, NM Joshi Marg, Shastri Nagar, Adarsh Nagar, Worli, Mumbai, Mah",
      "is_user_number": false,
-     "phone_kind": null
+     "phone_kind": "tollfree"
     },
     {
      "title": "HDFC Bank",
@@ -646,27 +714,27 @@
     },
     {
      "title": "HDFC Bank",
-     "phone_shown": "",
+     "phone_shown": "1800 1601",
      "website": "hdfc.bank.in",
      "website_status": "official",
-     "number_status": "none",
+     "number_status": "not_on_official",
      "rating": 3.1,
      "reviews": 37,
      "address": "Shop No 4/35, Gr Flr, Sagar Palaz Mall Andheri Kurla Road, Andheri - Ghatkopar Link Rd, Sa",
      "is_user_number": false,
-     "phone_kind": null
+     "phone_kind": "tollfree"
     },
     {
      "title": "HDFC Bank",
-     "phone_shown": "",
+     "phone_shown": "1800 1601",
      "website": "hdfcbank.com",
      "website_status": "other",
-     "number_status": "none",
+     "number_status": "not_on_official",
      "rating": 2.8,
      "reviews": 32,
      "address": "Gr Flr, Mini Sudarshan CHS Ltd, G1 to G3, LD Ruparel Marg, Malabar Hill, Mumbai, Maharasht",
      "is_user_number": false,
-     "phone_kind": null
+     "phone_kind": "tollfree"
     },
     {
      "title": "HDFC Bank",
@@ -682,27 +750,27 @@
     },
     {
      "title": "HDFC Bank",
-     "phone_shown": "",
+     "phone_shown": "1800 1601",
      "website": "hdfc.bank.in",
      "website_status": "official",
-     "number_status": "none",
+     "number_status": "not_on_official",
      "rating": 2.4,
      "reviews": 38,
      "address": "Shop No 1, 101, Parmeshwari Plaza, Netaji Subhash Chandra Rd, near Canara Bank, Mulund Wes",
      "is_user_number": false,
-     "phone_kind": null
+     "phone_kind": "tollfree"
     },
     {
      "title": "HDFC Bank",
-     "phone_shown": "",
+     "phone_shown": "1800 1601",
      "website": "hdfc.bank.in",
      "website_status": "official",
-     "number_status": "none",
+     "number_status": "not_on_official",
      "rating": 2.2,
      "reviews": 30,
      "address": "Kachwala Building, No 511/513, Maulana Azad Rd, near Gol Deval, Marine Lines East, Gulal W",
      "is_user_number": false,
-     "phone_kind": null
+     "phone_kind": "tollfree"
     },
     {
      "title": "HDFC Bank",
@@ -718,55 +786,56 @@
     },
     {
      "title": "HDFC Bank",
-     "phone_shown": "",
+     "phone_shown": "1800 1601",
      "website": "hdfc.bank.in",
      "website_status": "official",
-     "number_status": "none",
+     "number_status": "not_on_official",
      "rating": 3.6,
      "reviews": 27,
      "address": "Konkan Nagar CHS LTD, PN Kotnis Rd, opposite Fire Brigade, Kokan Nagar, Mahim West, Mahim,",
      "is_user_number": false,
-     "phone_kind": null
+     "phone_kind": "tollfree"
     },
     {
      "title": "HDFC Bank",
-     "phone_shown": "",
+     "phone_shown": "1800 1601",
      "website": "hdfc.bank.in",
      "website_status": "official",
-     "number_status": "none",
+     "number_status": "not_on_official",
      "rating": 3.2,
      "reviews": 33,
      "address": "Ground Floor, Cuffe Parade, near GD Somani School, Mumbai, Maharashtra 400070",
      "is_user_number": false,
-     "phone_kind": null
+     "phone_kind": "tollfree"
     },
     {
      "title": "HDFC Bank",
-     "phone_shown": "",
+     "phone_shown": "1800 1601",
      "website": "hdfc.bank.in",
      "website_status": "official",
-     "number_status": "none",
+     "number_status": "not_on_official",
      "rating": 2.8,
      "reviews": 131,
      "address": "106, GF, Nityanand Nagar, Siddhi Aura, Shop No 3 to 6, Office No 104 to, Andheri East, Mum",
      "is_user_number": false,
-     "phone_kind": null
+     "phone_kind": "tollfree"
     }
    ],
    "pin_stats": {
     "total": 20,
     "judged": true,
     "official_number": 0,
-    "number_not_on_official": 3,
+    "number_not_on_official": 20,
     "website_not_official": 3,
     "no_website": 0,
     "user_number_pins": 0
    },
    "google_view": {
     "results": 9,
-    "directory": 1,
+    "directory": 2,
     "directory_domains": [
-     "youtube.com"
+     "youtube.com",
+     "truecaller.com"
     ],
     "official_rank": 1,
     "top": [
@@ -808,18 +877,18 @@
     ]
    },
    "mentions": [],
-   "summary": "For HDFC Bank, you can contact 1800 258 6161 or 044 6912 9917, as both are listed on their official website, hdfc.bank.in.",
+   "summary": "The numbers 1800 258 6161 or 1800 1600 are printed on HDFC Bank's official website hdfc.bank.in.",
    "summary_source": "llm:live",
    "credits_spent": 0,
    "searches": 3,
-   "ms": 5358
+   "ms": 5934
   }
  },
  {
   "event": "done",
   "data": {
    "credits_spent": 0,
-   "ms": 5358
+   "ms": 5934
   }
  }
 ]

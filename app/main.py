@@ -22,10 +22,14 @@ log = logging.getLogger("rightnumber")
 WEB = ROOT / "web"
 
 EXAMPLES = [
-    {"label": "Blue Dart + a number from a review", "brand": "Blue Dart", "number": "6291610240", "city": "Delhi",
-     "hint": "Number named in complaints · official numbers instead"},
-    {"label": "Blue Dart's own toll-free", "brand": "Blue Dart", "number": "1860 233 1234", "city": "Delhi",
-     "hint": "Printed on bluedart.com"},
+    {"label": "Blue Dart · a number from a review", "brand": "Blue Dart", "number": "6291610240", "city": "Delhi",
+     "hint": "Named in complaints · official numbers instead"},
+    {"label": "IRCTC · a number from a Facebook post", "brand": "IRCTC", "number": "09002327947", "city": "Delhi",
+     "hint": "Advertised as the helpline of 6 other brands"},
+    {"label": "DTDC · +91 9606 911 811", "brand": "DTDC", "number": "+91 9606 911 811", "city": "Delhi",
+     "hint": "Printed on dtdc.com"},
+    {"label": "HDFC Bank · no number yet", "brand": "HDFC Bank", "number": "", "city": "Mumbai",
+     "hint": "What the bank's own site prints"},
 ]
 
 

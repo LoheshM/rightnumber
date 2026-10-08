@@ -9,3 +9,8 @@ run "State Bank of India" "1800 1234" "Mumbai" sbi
 run "Airtel" "6290133964" "Kolkata" airtel
 run "Amazon" "+91 80 6605 5000" "Bengaluru" amazon
 run "Blue Dart" "07016493282" "Delhi" bluedart_techenclave
+run "Blue Dart" "6291610240" "Delhi" bluedart
+run "Blue Dart" "1860 233 1234" "Delhi" bluedart_official
+run "HDFC Bank" "" "Mumbai" hdfc
+run "IRCTC" "09002327947" "Delhi" irctc
+run "IRCTC" "14646" "Delhi" irctc_14646

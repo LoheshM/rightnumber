@@ -38,7 +38,11 @@ CARE_NEAR = re.compile(r"(?<![a-z])(customer (?:care|service|support)|toll[- ]?f
 
 
 _B2B_URL = re.compile(r"(?:^|[./-])(sell|seller\w*|vendor\w*|supplier\w*|partner\w*|advertis\w*|affiliate\w*|"
-                      r"developer\w*|investor\w*|careers?|jobs|business|corporate|b2b|ir)(?:[./-]|$)", re.IGNORECASE)
+                      r"developer\w*|investor\w*|careers?|jobs|business|corporate|b2b|ir|agents?)(?:[./-]|$)",
+                      re.IGNORECASE)
+# Escalation desks (appellate authority, nodal / grievance officers, bond or scheme-specific complaint lines):
+# official, but not where a customer should start — never suggested under "call instead".
+_ESCALATION_URL = re.compile(r"appellate|nodal|grievance|redress|ombudsman|escalat|complaint", re.IGNORECASE)
 _LOCAL_URL = re.compile(r"(?:^|[./-])(stores?|branch\w*|locator|locate|outlets?|dealers?|franchise\w*|atm|"
                         r"retail-point|centres?|centers?)(?:[./-]|$)", re.IGNORECASE)
 
@@ -56,6 +60,8 @@ def url_scope(url: str) -> str:
     u = re.sub(r"^https?://", "", (url or "").lower()).split("?")[0]
     if _UGC_URL.search(u) or _UGC_URL.search("/" + u.split("/", 1)[-1]):
         return "ugc"
+    if _ESCALATION_URL.search(u):
+        return "escalation"
     if _B2B_URL.search(u):
         return "b2b"
     if _LOCAL_URL.search(u):
@@ -195,13 +201,15 @@ def callable_numbers(found: dict[str, OfficialNumber]) -> list[OfficialNumber]:
     Fax lines and numbers the site only mentions inside fraud warnings are never suggested."""
     good = [o for o in found.values()
             if not o.warned and not o.fax_only and not o.other_org
-            and any(s.scope != "b2b" for s in o.sources)]  # seller/partner/investor desks aren't for customers
+            and any(s.scope not in ("b2b", "escalation") for s in o.sources)]  # seller desks, appellate officers
     rank = {"tollfree": 0, "short": 1, "landline": 1, "mobile": 2}
 
     def main(o: OfficialNumber) -> bool:
         return any(s.scope == "main" for s in o.sources)
 
-    # A branch/store page's number is suggested only after numbers the brand publishes for everyone.
+    # A branch/store page's number is suggested only when the brand publishes nothing for everyone.
+    if any(main(o) for o in good):
+        good = [o for o in good if main(o)]
     return sorted(good, key=lambda o: (not main(o), not o.care, rank.get(o.phone.kind, 3), -len(o.sources),
                                        0 if any(s.kind == "page" for s in o.sources) else 1))
 
@@ -232,8 +240,16 @@ _HELPLINE_WORDS = re.compile(r"customer|care|helpline|help ?line|toll ?free|supp
                              re.IGNORECASE)
 
 
+_HELPLINE_AFTER = re.compile(r"^\W{0,3}(?:\.com\W{0,2}|\.in\W{0,2}|india\W{1,2}|pay\W{1,2})?(?:customer\s?(?:care|service|support)|"
+                             r"help\s?line|(?:customer\s?)?toll\s?free|care\s?number|contact\s?number|support\s?number|"
+                             r"refund|payment|booking|helpline)", re.IGNORECASE)
+
+
 def other_brands(text: str, brand: str) -> list[str]:
-    """Known brands (other than the one being checked) that this text presents as having a helpline."""
+    """Known brands (other than the one being checked) that this text presents as having a helpline.
+
+    The helpline words must directly follow the brand ("Koovs.com Customer Care Number", "Indigo customer care"):
+    a site's category label ("Aircel Complaint Daudnagar") is not a claim that the number is Aircel's."""
     if not _HELPLINE_WORDS.search(text or ""):
         return []
     mine = {t for t in brand_tokens(brand)} | {brand.lower().replace(" ", "")}
@@ -242,7 +258,7 @@ def other_brands(text: str, brand: str) -> list[str]:
         key = name.lower().replace(" ", "")
         if any(key in t or t in key for t in mine if len(t) >= 3):
             continue
-        if rx.search(text) and name not in out:
+        if name not in out and any(_HELPLINE_AFTER.search(text[m.end():m.end() + 40]) for m in rx.finditer(text)):
             out.append(name)
     return [b for b in out if not (b == "GPay" and "Google Pay" in out)]
 

@@ -126,3 +126,16 @@ def test_lookup_hits_without_the_number_in_their_text_do_not_count():
     num = parse_user_number("040 2331 1919")
     hits = [{"link": "https://www.bluedart.com/track?x=1", "title": "Track", "snippet": "real-time tracking updates"}]
     assert mentions(hits, num, {"bluedart.com"}, "lookup", "Blue Dart") == []
+
+
+def test_irctc_category_label_is_not_a_helpline_claim():
+    assert other_brands("Aircel Complaint Daudnagar, Koovs.com Customer Care Number 9002327947", "IRCTC") == ["Koovs"]
+
+
+def test_airtel_appellate_and_irctc_agent_desks_are_not_suggested():
+    snips = [{"link": "https://www.airtel.in/broadband-appellate", "title": "Appellate",
+              "snippet": "Appellate Authority . Phone No. 040-40000222."},
+             {"link": "https://agent.irctc.co.in/", "title": "Agents",
+              "snippet": "Please Call at Customer Care No. 0755-6610661"}]
+    assert keys(official_numbers([], snips, {"airtel.in", "irctc.co.in"}, "Airtel")) == []
+    assert url_scope("https://www.airtel.in/broadband-appellate") == "escalation"

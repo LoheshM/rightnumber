@@ -203,7 +203,9 @@ function render(r) {
       <p class="muted" style="margin:6px 0 0">${dom ? (g.official_rank ? `${esc(dom)} is result #${g.official_rank}.` : `${esc(dom)} isn't in the top ${g.results}.`) : ""} Directory listings can be edited by anyone.</p>
       <ol class="serp">${top}</ol>` : `<p class="muted">No search results available.</p>`}
   </article>`;
-  const pages = (r.pages || []).filter((p) => p.ok && p.chars).map((p) => `<li>✓ <a href="${safeHref(p.final_url)}" target="_blank" rel="noopener">${esc(shortUrl(p.final_url))}</a></li>`).join("");
+  const seenPage = new Set();
+  const pages = (r.pages || []).filter((p) => p.ok && p.chars)
+    .filter((p) => { const k = shortUrl(p.final_url).split("/").pop(); if (seenPage.has(k)) return false; seenPage.add(k); return true; }).map((p) => `<li>✓ <a href="${safeHref(p.final_url)}" target="_blank" rel="noopener">${esc(shortUrl(p.final_url))}</a></li>`).join("");
   const warned = (r.warned_numbers || []).map((w) => `<li><span class="mono">${esc(w.display)}</span> — <span class="tag bad">named in a warning</span> “…${esc(w.sources[0]?.context)}…”</li>`).join("");
   const right = `<article class="card side"><h2>What ${brand} itself says</h2>
     <p class="sub">${dom ? `Official website: <b>${esc(dom)}</b>` : "Official website: not established"}</p>
@@ -211,7 +213,9 @@ function render(r) {
       <ul class="pages">${pages || "<li class='muted'>No page could be read.</li>"}</ul>
       ${r.call_instead?.length ? "" : `<p class="muted">We couldn't copy a phone number from ${esc(dom)}'s pages (some sites load them with JavaScript or block automated reading). Use the number on your bill, card, ticket or in the official app.</p>`}
       ${warned ? `<h3 style="margin-top:14px">Numbers the site warns about</h3><ul class="pages">${warned}</ul>` : ""}`
-      : `<p class="muted">${esc(r.decision?.reason || "")}. You can enter the official website under “I know the official website”.</p>`}
+      : `<p class="muted">${esc(r.decision?.reason || "")}. If you know which of these is ${brand}'s website, pick it and we'll read it:</p>
+         <div class="chips">${(r.decision?.votes || []).filter((x) => /^[a-z0-9.-]+\.[a-z]{2,}$/i.test(x.domain)).slice(0, 4)
+           .map((x) => `<button type="button" class="chip use-domain" data-domain="${esc(x.domain)}">Use ${esc(x.domain)}<small>${esc(x.sources[0] || "")}</small></button>`).join("")}</div>`}
   </article>`;
   out.push(`<div class="split">${left}${right}</div>`);
 
@@ -260,6 +264,9 @@ function render(r) {
     <p class="muted">${r.searches} searches · ${r.credits_spent} credit${r.credits_spent === 1 ? "" : "s"} spent · ${(r.ms / 1000).toFixed(1)} s. RightNumber never says a number is safe — only whether the brand's own website prints it.</p></div></details>`);
 
   $("#result").innerHTML = out.join("");
+  $("#result").querySelectorAll(".use-domain").forEach((b) => b.addEventListener("click", () => {
+    $("#domain").value = b.dataset.domain; $(".adv").open = true; start();
+  }));
   $("#result").classList.remove("hidden");
   // The trail did its job on camera; fold it so the verdict is the first thing in view.
   $("#live").classList.add("collapsed");

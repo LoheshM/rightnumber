@@ -182,71 +182,17 @@
    },
    "call_instead": [
     {
-     "key": "4040000222",
-     "display": "040 4000 0222",
-     "kind": "landline",
+     "key": "9154052102",
+     "display": "+91 91540 52102",
+     "kind": "mobile",
      "warned": false,
      "fax_only": false,
      "care": false,
      "other_org": false,
      "sources": [
       {
-       "url": "https://www.airtel.in/broadband-appellate",
-       "context": "Broadband and Fixed Line Appellate Authority . Phone No. 040-40000222. Phone No. 011-41614690. Phone No. 079-40020143. Phone No",
-       "kind": "snippet",
-       "label": "plain",
-       "scope": "main"
-      }
-     ]
-    },
-    {
-     "key": "1141614690",
-     "display": "011 4161 4690",
-     "kind": "landline",
-     "warned": false,
-     "fax_only": false,
-     "care": false,
-     "other_org": false,
-     "sources": [
-      {
-       "url": "https://www.airtel.in/broadband-appellate",
-       "context": "Appellate Authority . Phone No. 040-40000222. Phone No. 011-41614690. Phone No. 079-40020143. Phone No. 0180-4600150. Phone No",
-       "kind": "snippet",
-       "label": "plain",
-       "scope": "main"
-      }
-     ]
-    },
-    {
-     "key": "7940020143",
-     "display": "079 4002 0143",
-     "kind": "landline",
-     "warned": false,
-     "fax_only": false,
-     "care": false,
-     "other_org": false,
-     "sources": [
-      {
-       "url": "https://www.airtel.in/broadband-appellate",
-       "context": "Phone No. 040-40000222. Phone No. 011-41614690. Phone No. 079-40020143. Phone No. 0180-4600150. Phone No. 080-41115201. Phone No",
-       "kind": "snippet",
-       "label": "plain",
-       "scope": "main"
-      }
-     ]
-    },
-    {
-     "key": "1804600150",
-     "display": "0180 4600150",
-     "kind": "landline",
-     "warned": false,
-     "fax_only": false,
-     "care": false,
-     "other_org": false,
-     "sources": [
-      {
-       "url": "https://www.airtel.in/broadband-appellate",
-       "context": "Phone No. 011-41614690. Phone No. 079-40020143. Phone No. 0180-4600150. Phone No. 080-41115201. Phone No. 0484-4015201",
+       "url": "https://www.airtel.in/digital-tv/consumercorner",
+       "context": "From your registered mobile number, dial 9154052 … call 9154052102). Toll Free Customer Care Number and other contact details",
        "kind": "snippet",
        "label": "plain",
        "scope": "main"
@@ -270,7 +216,7 @@
        "context": "Broadband and Fixed Line Appellate Authority . Phone No. 040-40000222. Phone No. 011-41614690. Phone No. 079-40020143. Phone No",
        "kind": "snippet",
        "label": "plain",
-       "scope": "main"
+       "scope": "escalation"
       }
      ]
     },
@@ -288,7 +234,7 @@
        "context": "Appellate Authority . Phone No. 040-40000222. Phone No. 011-41614690. Phone No. 079-40020143. Phone No. 0180-4600150. Phone No",
        "kind": "snippet",
        "label": "plain",
-       "scope": "main"
+       "scope": "escalation"
       }
      ]
     },
@@ -306,7 +252,7 @@
        "context": "Phone No. 040-40000222. Phone No. 011-41614690. Phone No. 079-40020143. Phone No. 0180-4600150. Phone No. 080-41115201. Phone No",
        "kind": "snippet",
        "label": "plain",
-       "scope": "main"
+       "scope": "escalation"
       }
      ]
     },
@@ -324,7 +270,7 @@
        "context": "Phone No. 011-41614690. Phone No. 079-40020143. Phone No. 0180-4600150. Phone No. 080-41115201. Phone No. 0484-4015201",
        "kind": "snippet",
        "label": "plain",
-       "scope": "main"
+       "scope": "escalation"
       }
      ]
     },
@@ -342,7 +288,7 @@
        "context": "Phone No. 079-40020143. Phone No. 0180-4600150. Phone No. 080-41115201. Phone No. 0484-4015201",
        "kind": "snippet",
        "label": "plain",
-       "scope": "main"
+       "scope": "escalation"
       }
      ]
     },
@@ -360,7 +306,7 @@
        "context": "Phone No. 0180-4600150. Phone No. 080-41115201. Phone No. 0484-4015201",
        "kind": "snippet",
        "label": "plain",
-       "scope": "main"
+       "scope": "escalation"
       }
      ]
     },
@@ -692,18 +638,18 @@
     ]
    },
    "mentions": [],
-   "summary": "The number +91 62901 33964 is not printed on the airtel.in pages that were read. Numbers printed on Airtel's official website airtel.in are 040 4000 0222 or 011 4161 4690.",
-   "summary_source": "llm:cache",
+   "summary": "The checked number +91 62901 33964 is not printed on the airtel.in pages that were read. You can find +91 91540 52102 printed on Airtel's official website airtel.in.",
+   "summary_source": "llm:live",
    "credits_spent": 0,
    "searches": 4,
-   "ms": 6
+   "ms": 3691
   }
  },
  {
   "event": "done",
   "data": {
    "credits_spent": 0,
-   "ms": 6
+   "ms": 3691
   }
  }
 ]
