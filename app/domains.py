@@ -21,6 +21,10 @@ DIRECTORY_DOMAINS = {
     "callupcontact.com", "customercarecontacts.com", "contactnumbers.in", "allcustomercarenumbers.net",
     "infoisinfo.co.in", "nearbuy.com", "mapsofindia.com", "cybo.com", "zaubacorp.com", "tofler.in",
     "whatsapp.com", "t.me", "telegram.me", "sites.google.com", "business.site", "linktr.ee",
+    "pissedconsumer.com", "indiacustomercare.com", "customercaredb.in", "econsumercourt.com",
+    "consumercomplaintscourt.com", "complaintboard.in", "complaintsboard.com", "trustpilot.com", "sitejabber.com",
+    "akosha.com", "grievance.in", "customercarenumber.in", "tollfreenumber.org", "contactcustomerservice.in",
+    "indiacustomercareinfo.com", "customer-care-number.in", "truecaller.com", "sync.me", "spamcalls.net",
 }
 
 # Words too generic to identify a brand inside a domain name.

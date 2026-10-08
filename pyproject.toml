@@ -21,3 +21,8 @@ dev = [
     "respx>=0.23.1",
     "ruff>=0.16.10",
 ]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+pythonpath = ["."]

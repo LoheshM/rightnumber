@@ -1,0 +1,136 @@
+[
+  {
+    "brand": "Blue Dart",
+    "official_domains": ["bluedart.com"],
+    "official_numbers": [
+      {"number": "1860 233 1234", "label": "\"contact on its official number 18602331234\" (fraud-awareness page)", "url": "https://www.bluedart.com/fraudawareness", "kind": "shared-cost 1860 (not toll-free)"},
+      {"number": "022 4061 1234", "label": "Pickup And Support: \"Schedule a free pickup or get customer service assistance\" (also in site header)", "url": "https://www.bluedart.com/contact-us", "kind": "landline (Mumbai)"},
+      {"number": "080 4661 1234", "label": "Pickup And Support: \"Schedule a free pickup or get customer service assistance\"", "url": "https://www.bluedart.com/contact-us", "kind": "landline (Bengaluru)"}
+    ],
+    "reported_fake_numbers": [
+      {"number": "07016493282", "url": "https://techenclave.com/t/new-kind-of-scam-in-the-name-of-bludart/275105", "date": "2025-05-05", "quote": "This guy name is Ashok Verma and his number is 07016493282.", "source_type": "consumer forum post; scam caller posing as Blue Dart delivery/support"},
+      {"number": "6354422054", "url": "https://techenclave.com/t/new-kind-of-scam-in-the-name-of-bludart/275105", "date": "2025-05-05", "quote": "was about to call the number he had texted _21_6354422054 and then realized", "source_type": "consumer forum post; call-forwarding code (*21*<number>#) sent by fake Blue Dart caller"}
+    ],
+    "has_pins": "yes",
+    "notes": "Blue Dart fraud page names 1860 233 1234 as the official number; contact page shows the 022/080 landlines. Complaintsboard (2019-10-24) reports a fraud Blue Dart number shown on Google, but only as a screenshot, so no digits were recorded. Blue Dart has service centres that appear on Maps."
+  },
+  {
+    "brand": "DTDC",
+    "official_domains": ["dtdc.com", "dtdc.in (301 redirect to dtdc.com)"],
+    "official_numbers": [
+      {"number": "+91 9606 911 811", "label": "Contact Us (customer-care page)", "url": "https://www.dtdc.com/customer-care/", "kind": "mobile number"}
+    ],
+    "reported_fake_numbers": [],
+    "has_pins": "yes",
+    "notes": "Site says 'www.dtdc.com is DTDC's only official website' and that DTDC never asks for OTP. Third-party sites also list +91-7305770577 and +91 80 2536 5032 as DTDC customer care. These are unverified and do not appear on dtdc.com. There are many DTDC franchise counters on Maps."
+  },
+  {
+    "brand": "Delhivery",
+    "official_domains": ["delhivery.com"],
+    "official_numbers": [],
+    "reported_fake_numbers": [],
+    "has_pins": "yes",
+    "notes": "delhivery.com is a client-rendered SPA ('Loading...'), so WebFetch got no content. A search snippet of https://www.delhivery.com/fraud-disclaimer reads: 'Any other customer care communication channel or contact numbers available on the Internet may be fraudulent.' Support is through the website and app only. Third-party directories list 1800 103 6354 and 080-6985 6101 (+91-8069856101), but neither was confirmed on an official page, so treat both as unverified. A TechEnclave thread (2024-12-16) reports a scam call asking for a Rs 10 fee, with the number given only in a screenshot. Delhivery has hubs/centres on Maps."
+  },
+  {
+    "brand": "HDFC Bank",
+    "official_domains": ["hdfc.bank.in", "hdfcbank.com (301 redirect to hdfc.bank.in)"],
+    "official_numbers": [
+      {"number": "1800 1600", "label": "HDFC Bank Helpline Numbers: 18001600 / 18002600 (Accessible across India)", "url": "https://www.hdfc.bank.in/contact-us/customer-care", "kind": "toll-free"},
+      {"number": "1800 2600", "label": "HDFC Bank Helpline Numbers: 18001600 / 18002600 (Accessible across India)", "url": "https://www.hdfc.bank.in/contact-us/customer-care", "kind": "toll-free"},
+      {"number": "+91 22 6160 6160", "label": "Customers travelling abroad / From outside India customers can call on", "url": "https://www.hdfc.bank.in/contact-us/customer-care", "kind": "landline (Mumbai)"},
+      {"number": "1800 258 3838", "label": "Complaints: Contact Number", "url": "https://www.hdfc.bank.in/contact-us/customer-care", "kind": "toll-free"},
+      {"number": "044 6108 4900", "label": "Credit Card Miselling: call at", "url": "https://www.hdfc.bank.in/contact-us", "kind": "landline (Chennai)"},
+      {"number": "+91 70700 22222", "label": "Chat with us (WhatsApp link)", "url": "https://www.hdfc.bank.in/contact-us", "kind": "WhatsApp-only mobile"}
+    ],
+    "reported_fake_numbers": [],
+    "has_pins": "yes",
+    "notes": "The page says: 'Phone numbers mentioned here are the only Customer Care numbers of HDFC Bank, which you should use.' According to the HDFC blog dated 12 May 2026 (https://www.hdfc.bank.in/blogs/banking-services/how-to-verify-hdfc-bank-official-number-series), outbound calls come only from 1600-series (service) and 140-series (marketing) numbers, and any other caller should be treated as suspicious. HDFC Bank Cares on X flagged fake handles such as @HDFCbank34407 and @HDFC_BANK3535, but no phone numbers. 1930 is the national cyber helpline and is not HDFC's."
+  },
+  {
+    "brand": "State Bank of India (SBI)",
+    "official_domains": ["sbi.bank.in", "sbi.co.in (301 redirect to sbi.bank.in)", "bank.sbi", "onlinesbi.sbi"],
+    "official_numbers": [
+      {"number": "1800 1234", "label": "Call us: Toll free number", "url": "https://sbi.bank.in/web/customer-care/contact-us", "kind": "toll-free"},
+      {"number": "1800 2100", "label": "Call us: Toll free number", "url": "https://sbi.bank.in/web/customer-care/contact-us", "kind": "toll-free"},
+      {"number": "1800 11 2211", "label": "Call us: Toll free number", "url": "https://sbi.bank.in/web/customer-care/contact-us", "kind": "toll-free"},
+      {"number": "1800 425 3800", "label": "Call us: Toll free number", "url": "https://sbi.bank.in/web/customer-care/contact-us", "kind": "toll-free"},
+      {"number": "080-26599990", "label": "Call us: Toll number (also 'For reporting Unauthorised Electronic transactions')", "url": "https://sbi.bank.in/web/customer-care/contact-us", "kind": "landline (Bengaluru, chargeable)"},
+      {"number": "1800 11 1109", "label": "For reporting Unauthorised Electronic transactions (Toll Free)", "url": "https://sbi.bank.in/web/customer-care/contact-us", "kind": "toll-free"},
+      {"number": "94491 12211", "label": "For reporting Unauthorised Electronic transactions (Mobile number, Toll Free)", "url": "https://sbi.bank.in/web/customer-care/contact-us", "kind": "mobile (toll-free)"},
+      {"number": "8008 20 20 20", "label": "Text us: Unhappy with services: SMS UNHAPPY to", "url": "https://sbi.bank.in/web/customer-care/contact-us", "kind": "SMS-only mobile"},
+      {"number": "022 22741216", "label": "Principal Nodal Officer: Contact No", "url": "https://sbi.bank.in/web/customer-care/contact-us", "kind": "landline (Mumbai)"}
+    ],
+    "reported_fake_numbers": [],
+    "has_pins": "yes",
+    "notes": "The same page lists 18 regional Nodal Officer landlines for Persons with Disabilities, which are not copied here. SBI tweeted 'Beware of fraudulent customer care numbers' (Outlook India, 2021-11-22) without naming any numbers. SBI's YONO phishing guide treats 'a 10-digit mobile number in place of official toll-free numbers' as a red flag (search snippet; the page returned 404 on fetch). Branches and ATMs appear everywhere on Maps."
+  },
+  {
+    "brand": "IRCTC",
+    "official_domains": ["irctc.co.in", "irctc.com"],
+    "official_numbers": [
+      {"number": "14646", "label": "IRCTC Business Helplines: Next Generation E Ticketing (12 languages); also 'Railway tickets booked & Refund queries, IRCTC Delhi Customer Care No.'", "url": "https://www.irctc.com/contact-us.php", "kind": "short code"},
+      {"number": "+91-8044647999", "label": "Next Generation E Ticketing, Customer Support (Outside India) / Customer Care No.", "url": "https://www.irctc.com/contact-us.php", "kind": "landline (Bengaluru)"},
+      {"number": "+91-8035734999", "label": "Next Generation E Ticketing, Customer Support (Outside India) / Customer Care No.", "url": "https://www.irctc.com/contact-us.php", "kind": "landline (Bengaluru)"},
+      {"number": "1323", "label": "E-catering (Care number)", "url": "https://www.irctc.com/contact-us.php", "kind": "short code"},
+      {"number": "1800 110 139", "label": "Air Ticketing / Tourism", "url": "https://www.irctc.com/contact-us.php", "kind": "toll-free"},
+      {"number": "080-44647998", "label": "Air Ticketing / Tourism", "url": "https://www.irctc.com/contact-us.php", "kind": "landline (Bengaluru)"},
+      {"number": "139", "label": "Need Help / Integrated Railways Helpline & Enquiry System (IRHES) - Indian Railways, not IRCTC-specific", "url": "https://www.irctc.com/contact-us.php", "kind": "short code"},
+      {"number": "0755-6610661", "label": "X post @IRCTCofficial: 'contact IRCTC Customer Care on official nos. 07556610661, 07554090600' (search-result snippet; legacy, not on current contact page)", "url": "https://x.com/IRCTCofficial/status/1536729022818045953", "kind": "landline (Bhopal), legacy; source type: official social post"},
+      {"number": "0755-4090600", "label": "Same X post as above (legacy)", "url": "https://x.com/IRCTCofficial/status/1536729022818045953", "kind": "landline (Bhopal), legacy; source type: official social post"}
+    ],
+    "reported_fake_numbers": [],
+    "has_pins": "unclear",
+    "notes": "The irctc.co.in booking site is an Angular SPA and the fetch returned no content, so these numbers come from the corporate site irctc.com. The contact page also lists about 80 zonal, regional, tourism and catering-control numbers (011-26181550/51, 97176xxxxx and others), which are not copied here. A homepage caution notice says 'हमारा कस्टमर केयर नंबर है: १४६४६'. There is a non-official Facebook page titled 'IRCTC refund complaint number 09002327947' (https://www.facebook.com/irctcrefundcomplaintnumber/). That number is not on any IRCTC page and is a likely-fake candidate, but no source has reported it as fake. Maps shows IRCTC offices and tourism centres, while reservation counters belong to Indian Railways."
+  },
+  {
+    "brand": "Amazon India",
+    "official_domains": ["amazon.in", "aboutamazon.in (corporate news)"],
+    "official_numbers": [],
+    "reported_fake_numbers": [
+      {"number": "+91 80 6605 5000", "url": "https://www.mimikama.org/en/vorsicht-vor-der-rufnummer-00918066055000-falscher-amazon-mitarbeiter/", "date": "unknown (page returned 403; number seen in URL/title and search snippet)", "quote": "Vorsicht vor der Rufnummer 00918066055000 – falscher Amazon-Mitarbeiter", "source_type": "fact-check site (Mimikama, Austria); outbound caller posing as Amazon staff, German audience"}
+    ],
+    "has_pins": "no",
+    "notes": "amazon.in help pages returned HTTP 503 on every fetch (bot blocking), so no official number was captured. aboutamazon.in says: 'Do not call numbers sent over text or email, or found in online search results.' Third-party directories list 1800 3000 9009, 1800 1200 9009 and seller line 1800 419 7355, but these are unverified and should not be treated as ground truth without an official source. There are no customer-care counters, though Amazon offices and delivery stations may appear on Maps."
+  },
+  {
+    "brand": "Swiggy",
+    "official_domains": ["swiggy.com"],
+    "official_numbers": [
+      {"number": "79482 31850", "label": "Food-safety helpline: 'Customers can call 7948231850 to register complaints with customer care agents.' (Swiggy release reported by UNI, 15 Sep 2026)", "url": "https://www.uniindia.com/business-economy/business-swiggy/180654", "kind": "landline (Ahmedabad 079 series); source type: news report of company press release"}
+    ],
+    "reported_fake_numbers": [],
+    "has_pins": "no",
+    "notes": "The swiggy.com pages are JS-rendered and fetched empty. A search snippet of https://www.swiggy.com/swiggy_customer_care reads: 'Swiggy does not have any official customer care phone line. Beware of fake numbers! For any issues, please use our in-app support only.' The food-safety line launched in Sep 2026 is therefore the only official number found. Treat any other 'Swiggy customer care' number as fake. Several victim cases exist (Swiggy Go Rs 95k, Bengaluru; elderly man Rs 3 lakh, 2024), but none printed the fake number. indiacustomercare.com lists 080 67466791, which is unverified."
+  },
+  {
+    "brand": "Indane Gas",
+    "official_domains": ["iocl.com", "indianoil.in (cx.indianoil.in customer portal)"],
+    "official_numbers": [
+      {"number": "1800-2333-555", "label": "'a unique toll-free number 1800-2333-555 has been made available to customers for registering their feedback, suggestions and complaints'", "url": "https://iocl.com/pages/indane-cooking-gas-overview", "kind": "toll-free; source type: search snippet of official page (direct fetch got HTTP 307)"},
+      {"number": "1906", "label": "'1906' - round-the-clock LPG Emergency Helpline (IOCL news item)", "url": "https://iocl.com/NewsDetails/38028", "kind": "short code (LPG leak emergency); source type: search snippet of official page"}
+    ],
+    "reported_fake_numbers": [],
+    "has_pins": "yes",
+    "notes": "Every iocl.com URL returned HTTP 307 (bot wall), and indane.co.in does not resolve. Booking numbers 7718955555 (IVRS/SMS), 7588888824 (WhatsApp) and 8454955555 (missed call) appear consistently on third-party sites and on Vikaspedia (government portal, but its fetch returned only the title). They are probably genuine but not verified here. Fake-site alerts name indanegasservice.site. Fake LPG customer-care cases exist (Durg, ETV Bharat, 2026-05-29), but none printed the number. Indane distributors and agencies appear widely on Maps and are themselves a fake-number target."
+  },
+  {
+    "brand": "Airtel",
+    "official_domains": ["airtel.in"],
+    "official_numbers": [
+      {"number": "121", "label": "For Enquiries and Requests Call 121 from your Airtel number (Prepaid/Postpaid; also Broadband and DTH)", "url": "https://www.airtel.in/contact-us", "kind": "short code"},
+      {"number": "198", "label": "For Complaints Call 198 (Toll Fee [sic])", "url": "https://www.airtel.in/contact-us", "kind": "short code (toll-free)"},
+      {"number": "1800-23400", "label": "In case of any query, Airtel subscribers can call 1800-23400 (Airtel Payments Bank)", "url": "https://www.airtel.in/contact-us", "kind": "toll-free"},
+      {"number": "98100 12345", "label": "DTH: '121 for airtel users and 9810012345 from non-Airtel number'", "url": "https://www.airtel.in/contact-us", "kind": "mobile"},
+      {"number": "+91 91001 91001", "label": "Chat on WhatsApp (wa.me link)", "url": "https://www.airtel.in/contact-us", "kind": "WhatsApp-only mobile"}
+    ],
+    "reported_fake_numbers": [
+      {"number": "6290133964", "url": "https://consumercomplaintscourt.com/fraud-call-about-airtel-customer-care/", "date": "2020-05-30", "quote": "The mobile numbers are 6290133964 6204867934 9088518140 6290115567.", "source_type": "consumer complaint site; callers claiming to be Airtel customer care asking for debit card number"},
+      {"number": "6204867934", "url": "https://consumercomplaintscourt.com/fraud-call-about-airtel-customer-care/", "date": "2020-05-30", "quote": "The mobile numbers are 6290133964 6204867934 9088518140 6290115567.", "source_type": "consumer complaint site"},
+      {"number": "9088518140", "url": "https://consumercomplaintscourt.com/fraud-call-about-airtel-customer-care/", "date": "2020-05-30", "quote": "The mobile numbers are 6290133964 6204867934 9088518140 6290115567.", "source_type": "consumer complaint site"},
+      {"number": "6290115567", "url": "https://consumercomplaintscourt.com/fraud-call-about-airtel-customer-care/", "date": "2020-05-30", "quote": "The mobile numbers are 6290133964 6204867934 9088518140 6290115567.", "source_type": "consumer complaint site"}
+    ],
+    "has_pins": "yes",
+    "notes": "Airtel stores and Airtel Payments Bank points appear on Maps. The fake numbers are from 2020 and may since have been reassigned."
+  }
+]

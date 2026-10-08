@@ -122,16 +122,21 @@ function pageRead(p) {
 /* ---------- result ---------- */
 const VCLASS = {
   on_official_site: ["good", "✓"], warned_on_official_site: ["bad", "!"], verify_before_calling: ["bad", "!"],
+  other_org_on_official_site: ["warn", "?"],
   not_on_official_pages: ["warn", "?"], no_official_source: ["grey", "–"],
 };
 
-function highlight(text, digits) {
+function highlight(text, digits, brands) {
   // Mark the user's number inside a quoted snippet (digits may be spaced or prefixed differently).
   let html = esc(text);
   if (!digits) return html;
   const tail = digits.slice(-10);
   const pattern = tail.split("").map((d) => d).join("[\\s\\-.]?");
   try { html = html.replace(new RegExp("(" + pattern + ")", "g"), "<mark>$1</mark>"); } catch {}
+  for (const b of brands || []) {
+    const rx = esc(b).replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace(/ /g, "\\s?");
+    try { html = html.replace(new RegExp("(?<![A-Za-z])(" + rx + ")(?![A-Za-z])", "gi"), "<mark>$1</mark>"); } catch {}
+  }
   return html.replace(/(fraud\w*|scam\w*|cheat\w*|fake|unauthori[sz]ed|duped)/gi, "<mark>$1</mark>");
 }
 
@@ -158,11 +163,15 @@ function render(r) {
     let why = "";
     if (v.label === "on_official_site") why = `This exact number is printed on ${esc(dom)}.`;
     else if (v.label === "warned_on_official_site") why = `${esc(dom)} mentions this number only inside a fraud warning.`;
-    else if (v.label === "verify_before_calling") why = dom ? `It is not on the ${esc(dom)} pages we read, and text on the web names this exact number in a complaint.` : `We couldn't establish an official website, and text on the web names this exact number in a complaint.`;
+    else if (v.label === "other_org_on_official_site") why = `${esc(dom)} lists this number as another organisation's helpline (see the words around it below), not as ${esc(r.brand)}'s own.`;
+    else if (v.label === "verify_before_calling" && v.other_brands?.length) why = `The same number is advertised on the web as the helpline of <b>${v.other_brands.map(esc).join(", ")}</b>. A genuine helpline belongs to one company.${dom && (r.pages || []).some((p) => p.ok && p.chars) ? ` It is not on the ${esc(dom)} pages we read.` : ""}`;
+    else if (v.label === "verify_before_calling") why = dom && (r.pages || []).some((p) => p.ok && p.chars) ? `It is not on the ${esc(dom)} pages we read, and text on the web names this exact number in a complaint.` : `We couldn't establish an official website, and text on the web names this exact number in a complaint.`;
     else if (v.label === "not_on_official_pages") why = `It is not printed on the ${esc(dom)} pages we read. It may be a local branch — but never pay, share an OTP or install an app because a caller on this number asks.`;
-    else why = `We couldn't establish the brand's official website from search, so we can't compare. Use the number on your bill, card, ticket or the official app.`;
-    const quotes = groupMentions(v.complaints || []).slice(0, 2).map(({ m }) =>
-      `<blockquote class="quote">“${highlight(m.complaint || m.snippet, digits)}”<cite>— text on ${esc(m.domain)} (a third-party site; not checked by us) · <a href="${safeHref(m.url)}" target="_blank" rel="noopener nofollow">open</a></cite></blockquote>`).join("");
+    else why = dom ? `${esc(dom)} is the official website, but we couldn't read any phone number from it, so we can't compare. Use the number on your bill, card, ticket or the official app.`
+      : `We couldn't establish the brand's official website from search, so we can't compare. Use the number on your bill, card, ticket or the official app.`;
+    const quoteSrc = (v.complaints || []).length ? v.complaints : (v.other_brand_examples || []);
+    const quotes = groupMentions(quoteSrc).slice(0, 2).map(({ m }) =>
+      `<blockquote class="quote">“${highlight(m.complaint || m.snippet, digits, v.other_brands)}”<cite>— text on ${esc(m.domain)} (a third-party site; not checked by us) · <a href="${safeHref(m.url)}" target="_blank" rel="noopener nofollow">open</a></cite></blockquote>`).join("");
     out.push(`<article class="card verdict ${cls}">
       <div class="v-top"><span class="v-num">${esc(r.number)}</span><span class="label ${cls}">${icon} ${esc(v.title)}</span></div>
       <p class="v-why">${why}</p>${quotes}
@@ -200,6 +209,7 @@ function render(r) {
     <p class="sub">${dom ? `Official website: <b>${esc(dom)}</b>` : "Official website: not established"}</p>
     ${dom ? `<div class="big-stat">${r.call_instead?.length || 0}<small> callable number${(r.call_instead?.length || 0) === 1 ? "" : "s"} printed on its own pages</small></div>
       <ul class="pages">${pages || "<li class='muted'>No page could be read.</li>"}</ul>
+      ${r.call_instead?.length ? "" : `<p class="muted">We couldn't copy a phone number from ${esc(dom)}'s pages (some sites load them with JavaScript or block automated reading). Use the number on your bill, card, ticket or in the official app.</p>`}
       ${warned ? `<h3 style="margin-top:14px">Numbers the site warns about</h3><ul class="pages">${warned}</ul>` : ""}`
       : `<p class="muted">${esc(r.decision?.reason || "")}. You can enter the official website under “I know the official website”.</p>`}
   </article>`;

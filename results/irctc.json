@@ -1,0 +1,492 @@
+[
+ {
+  "event": "start",
+  "data": {
+   "brand": "IRCTC",
+   "city": "Delhi",
+   "number": "+91 90023 27947",
+   "number_kind": "mobile",
+   "mode": "auto"
+  }
+ },
+ {
+  "event": "step",
+  "data": {
+   "id": "gather",
+   "label": "Searching Google Maps, Google and your number the web",
+   "status": "running"
+  }
+ },
+ {
+  "event": "serp_call",
+  "data": {
+   "engine": "google_maps",
+   "purpose": "Maps pins for “IRCTC customer care” near Delhi",
+   "params": {
+    "type": "search",
+    "q": "IRCTC customer care",
+    "ll": "@28.6139,77.209,12z",
+    "hl": "en",
+    "gl": "in"
+   },
+   "source": "cache",
+   "ms": 0,
+   "ok": true,
+   "error": null,
+   "result_count": 0,
+   "credit": false
+  }
+ },
+ {
+  "event": "serp_call",
+  "data": {
+   "engine": "google",
+   "purpose": "What Google shows for “IRCTC customer care number”",
+   "params": {
+    "q": "IRCTC customer care number",
+    "gl": "in",
+    "hl": "en",
+    "google_domain": "google.co.in"
+   },
+   "source": "cache",
+   "ms": 0,
+   "ok": true,
+   "error": null,
+   "result_count": 10,
+   "credit": false
+  }
+ },
+ {
+  "event": "serp_call",
+  "data": {
+   "engine": "google",
+   "purpose": "Where +91 90023 27947 appears on the web",
+   "params": {
+    "q": "\"9002327947\" OR \"90023 27947\" OR \"+91 90023 27947\" OR \"+919002327947\"",
+    "gl": "in",
+    "hl": "en",
+    "google_domain": "google.co.in"
+   },
+   "source": "cache",
+   "ms": 10,
+   "ok": true,
+   "error": null,
+   "result_count": 10,
+   "credit": false
+  }
+ },
+ {
+  "event": "step",
+  "data": {
+   "id": "gather",
+   "label": "Found 4 Maps pins and 10 Google results",
+   "status": "done"
+  }
+ },
+ {
+  "event": "step",
+  "data": {
+   "id": "domain",
+   "label": "Working out the brand's official website",
+   "status": "running"
+  }
+ },
+ {
+  "event": "serp_call",
+  "data": {
+   "engine": "google",
+   "purpose": "The brand's own contact pages on irctc.co.in",
+   "params": {
+    "q": "site:irctc.co.in customer care contact number",
+    "gl": "in",
+    "hl": "en",
+    "google_domain": "google.co.in"
+   },
+   "source": "cache",
+   "ms": 0,
+   "ok": true,
+   "error": null,
+   "result_count": 10,
+   "credit": false
+  }
+ },
+ {
+  "event": "notice",
+  "data": {
+   "level": "info",
+   "text": "Google returned no irctc.co.in pages for the site: search, so only its home page and the contact links on it are read."
+  }
+ },
+ {
+  "event": "page_read",
+  "data": {
+   "url": "https://www.irctc.co.in/",
+   "final_url": "https://www.irctc.co.in/",
+   "source": "cache",
+   "ms": 0,
+   "ok": false,
+   "error": "ReadTimeout",
+   "title": "",
+   "chars": 0
+  }
+ },
+ {
+  "event": "notice",
+  "data": {
+   "level": "warn",
+   "text": "irctc.co.in couldn't be read automatically (it may block bots or need JavaScript), so no official number could be copied from it."
+  }
+ },
+ {
+  "event": "official",
+  "data": {
+   "domain": "irctc.co.in",
+   "established": true,
+   "reason": "google + model agree",
+   "votes": [
+    {
+     "domain": "irctc.co.in",
+     "sources": [
+      "google: organic result #1",
+      "model: model's own knowledge"
+     ]
+    },
+    {
+     "domain": "irctc.com",
+     "sources": [
+      "google: organic result #7"
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "event": "step",
+  "data": {
+   "id": "domain",
+   "label": "Official website: irctc.co.in",
+   "status": "done"
+  }
+ },
+ {
+  "event": "result",
+  "data": {
+   "brand": "IRCTC",
+   "city": "Delhi",
+   "domain": "irctc.co.in",
+   "decision": {
+    "domain": "irctc.co.in",
+    "established": true,
+    "reason": "google + model agree",
+    "votes": [
+     {
+      "domain": "irctc.co.in",
+      "sources": [
+       "google: organic result #1",
+       "model: model's own knowledge"
+      ]
+     },
+     {
+      "domain": "irctc.com",
+      "sources": [
+       "google: organic result #7"
+      ]
+     }
+    ]
+   },
+   "number": "+91 90023 27947",
+   "number_kind": "mobile",
+   "verdict": {
+    "label": "verify_before_calling",
+    "title": "Verify before calling",
+    "sources": [],
+    "complaints": [],
+    "other_brands": [
+     "Aircel",
+     "Koovs",
+     "IndiGo",
+     "Google Pay",
+     "Flipkart",
+     "Paytm"
+    ],
+    "other_brand_examples": [
+     {
+      "url": "https://www.econsumercourt.com/aircel-complaint/koovs-com-customer-care-number-9002327947-updated-on-monday-27-january-2020-146pm-company-log_i49481",
+      "domain": "econsumercourt.com",
+      "title": "Koovs.com Customer Care Number 9002327947 Updated on ...",
+      "snippet": "Aircel Complaint Daudnagar, Koovs.com Customer Care Number 9002327947 Updated on Monday, 27 January 2020 - 1:46pm. Company Logo. Organization: koovs.",
+      "official": false,
+      "directory": false,
+      "complaint": null,
+      "engine": "lookup",
+      "brands": [
+       "Aircel",
+       "Koovs"
+      ]
+     },
+     {
+      "url": "https://www.facebook.com/goindigo.in/posts/6etraveladvisory-for-flight-status-click-and-visit-plan-b-for-cancelled-or-impac/4532919470148331/",
+      "domain": "facebook.com",
+      "title": "#6ETravelAdvisory: For flight status, click http://bit.ly/ ...",
+      "snippet": "Indigo customer care number...9002327947 booking complain available 24 horsepower now Indigo customer care number...9002327947 booking complain ...",
+      "official": false,
+      "directory": true,
+      "complaint": null,
+      "engine": "lookup",
+      "brands": [
+       "IndiGo"
+      ]
+     },
+     {
+      "url": "https://theprint.in/tech/google-gets-antitrust-notice-over-unfairly-promoting-google-pay-over-other-apps-in-india/430981/",
+      "domain": "theprint.in",
+      "title": "Google gets antitrust notice over 'unfairly' promoting ...",
+      "snippet": "... 9002327947 company. You c. Add users to Google pay payment enquiry customer care…7679159909…9002327947 company. You c. Reply. LEAVE A REPLY ...",
+      "official": false,
+      "directory": false,
+      "complaint": null,
+      "engine": "lookup",
+      "brands": [
+       "Google Pay"
+      ]
+     }
+    ]
+   },
+   "call_instead": [],
+   "warned_numbers": [],
+   "official_numbers": [],
+   "pages": [
+    {
+     "url": "https://www.irctc.co.in/",
+     "final_url": "https://www.irctc.co.in/",
+     "source": "cache",
+     "ms": 0,
+     "ok": false,
+     "error": "ReadTimeout",
+     "title": "",
+     "chars": 0
+    }
+   ],
+   "pins": [
+    {
+     "title": "IRCTC OFFICIAL",
+     "phone_shown": "",
+     "website": null,
+     "website_status": "none",
+     "number_status": "none",
+     "rating": 3.7,
+     "reviews": 119,
+     "address": "Statesman House, B 148, 11th, 402, Barakhamba Rd, New Delhi, Delhi 110001",
+     "is_user_number": false,
+     "phone_kind": null
+    },
+    {
+     "title": "Indian Railway Catering and Tourism Corporation Ltd.",
+     "phone_shown": "",
+     "website": null,
+     "website_status": "none",
+     "number_status": "none",
+     "rating": 3.1,
+     "reviews": 35,
+     "address": "H59W+G39, Block F, Nauroji Nagar, Safdarjung Enclave, New Delhi, Delhi 110029",
+     "is_user_number": false,
+     "phone_kind": null
+    },
+    {
+     "title": "IRCTC",
+     "phone_shown": "",
+     "website": "irctc.co.in",
+     "website_status": "official",
+     "number_status": "none",
+     "rating": 3.8,
+     "reviews": 72,
+     "address": "J6Q9+WMP, State Entry Rd, Railway Colony, Connaught Place, New Delhi, Delhi, 110055",
+     "is_user_number": false,
+     "phone_kind": null
+    },
+    {
+     "title": "IRCTC AIR",
+     "phone_shown": "",
+     "website": "irctc.co.in",
+     "website_status": "official",
+     "number_status": "none",
+     "rating": 1.9,
+     "reviews": 30,
+     "address": "IRCTC LTD, M 13, Block K, Connaught Place, New Delhi, Delhi 110001",
+     "is_user_number": false,
+     "phone_kind": null
+    }
+   ],
+   "pin_stats": {
+    "total": 4,
+    "judged": true,
+    "official_number": 0,
+    "number_not_on_official": 0,
+    "website_not_official": 0,
+    "no_website": 2,
+    "user_number_pins": 0
+   },
+   "google_view": {
+    "results": 10,
+    "directory": 0,
+    "directory_domains": [],
+    "official_rank": 1,
+    "top": [
+     {
+      "title": "Contact Us - IRCTC Next Generation eTicketing System",
+      "domain": "irctc.co.in",
+      "link": "https://contents.irctc.co.in/en/ContactUsEn.html",
+      "directory": false,
+      "official": true
+     },
+     {
+      "title": "IRCTC eQuery Portal",
+      "domain": "irctc.co.in",
+      "link": "https://equery.irctc.co.in/",
+      "directory": false,
+      "official": true
+     },
+     {
+      "title": "IRCTC Customer Service Phone Number +91 755 393 4141 ...",
+      "domain": "pissedconsumer.com",
+      "link": "https://irctc.pissedconsumer.com/customer-service.html",
+      "directory": false,
+      "official": false
+     },
+     {
+      "title": "SSL CERTIFICATE REQUIREMENT - IRCTC",
+      "domain": "irctc.co.in",
+      "link": "https://agent.irctc.co.in/",
+      "directory": false,
+      "official": true
+     },
+     {
+      "title": "Indian Railways Customer Care No. 139",
+      "domain": "indiacustomercare.com",
+      "link": "https://www.indiacustomercare.com/indian-railways-customer-care-contact-helpline-numbers",
+      "directory": false,
+      "official": false
+     }
+    ]
+   },
+   "mentions": [
+    {
+     "url": "https://www.econsumercourt.com/aircel-complaint/koovs-com-customer-care-number-9002327947-updated-on-monday-27-january-2020-146pm-company-log_i49481",
+     "domain": "econsumercourt.com",
+     "title": "Koovs.com Customer Care Number 9002327947 Updated on ...",
+     "snippet": "Aircel Complaint Daudnagar, Koovs.com Customer Care Number 9002327947 Updated on Monday, 27 January 2020 - 1:46pm. Company Logo. Organization: koovs.",
+     "official": false,
+     "directory": false,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": [
+      "Aircel",
+      "Koovs"
+     ]
+    },
+    {
+     "url": "https://www.facebook.com/goindigo.in/posts/6etraveladvisory-for-flight-status-click-and-visit-plan-b-for-cancelled-or-impac/4532919470148331/",
+     "domain": "facebook.com",
+     "title": "#6ETravelAdvisory: For flight status, click http://bit.ly/ ...",
+     "snippet": "Indigo customer care number...9002327947 booking complain available 24 horsepower now Indigo customer care number...9002327947 booking complain ...",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": [
+      "IndiGo"
+     ]
+    },
+    {
+     "url": "https://theprint.in/tech/google-gets-antitrust-notice-over-unfairly-promoting-google-pay-over-other-apps-in-india/430981/",
+     "domain": "theprint.in",
+     "title": "Google gets antitrust notice over 'unfairly' promoting ...",
+     "snippet": "... 9002327947 company. You c. Add users to Google pay payment enquiry customer care…7679159909…9002327947 company. You c. Reply. LEAVE A REPLY ...",
+     "official": false,
+     "directory": false,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": [
+      "Google Pay"
+     ]
+    },
+    {
+     "url": "https://issuetracker.google.com/issues/145310152",
+     "domain": "google.com",
+     "title": "Google play does not find apps by exact app name [145310152]",
+     "snippet": "Google pay customer care helpline number....9002327947....9576313963. Refund pending googleplay.com. Google pay customer care helpline number....9002327947....",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": [
+      "Google Pay"
+     ]
+    },
+    {
+     "url": "https://www.facebook.com/flipkart/videos/camera-filters-are-here/660579848466208/",
+     "domain": "facebook.com",
+     "title": "Camera Filters Are Here! - Flipkart",
+     "snippet": "Flipkart customer care helpline number 24 hours call now 9002327947. 5y. Max Acam. Flipkart customer care helpline number 24 hours call now ...",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": [
+      "Flipkart"
+     ]
+    },
+    {
+     "url": "https://mobile-search-9002.blogspot.com/p/whatsapp-location-details.html?9002327900&m=1",
+     "domain": "blogspot.com",
+     "title": "Whatsapp, Location Details of 9002327900",
+     "snippet": "Whatsapp, Location Details of 9002327947 / Whatsapp Directly 9002327947 · Whatsapp, Location Details of 9002327948 / Whatsapp Directly 9002327948 · Whatsapp ...",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": []
+    },
+    {
+     "url": "https://www.facebook.com/Paytm/posts/sending-cute-playlists-to-best-friends-%EF%B8%8F/5343059495759578/",
+     "domain": "facebook.com",
+     "title": "sending cute playlists to best friends ❤️",
+     "snippet": "9002327947 payment pending 24X7 available Paytm customer toll free number. 9002327947 payment pending 24X7 available Paytm customer toll free number.",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": [
+      "Paytm"
+     ]
+    },
+    {
+     "url": "https://www.econsumercourt.com/aircel-complaint:bihar-r781494",
+     "domain": "econsumercourt.com",
+     "title": "Aircel Complaint Bihar - Consumer Court",
+     "snippet": "Koovs.com Customer Care Number 9002327947 Updated on Monday, 27 January 2020 - 1:46pm. ... 9002327947 Updated on Monday, 27 January 2020 - 1: ...",
+     "official": false,
+     "directory": false,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": [
+      "Aircel",
+      "Koovs"
+     ]
+    }
+   ],
+   "summary": "The number +91 90023 27947 is advertised as a helpline for IRCTC. The same number is also advertised as a helpline for Aircel, Koovs, IndiGo, Google Pay, Flipkart, and Paytm.",
+   "summary_source": "llm:live",
+   "credits_spent": 0,
+   "searches": 4,
+   "ms": 3128
+  }
+ },
+ {
+  "event": "done",
+  "data": {
+   "credits_spent": 0,
+   "ms": 3128
+  }
+ }
+]

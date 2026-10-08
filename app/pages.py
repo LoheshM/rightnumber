@@ -69,13 +69,13 @@ def html_to_text(raw: str) -> tuple[str, list[tuple[str, str]], str]:
     for m in re.finditer(r'(?is)<a\b[^>]*?href\s*=\s*["\']([^"\'#]+)["\'][^>]*>(.*?)</a>', raw):
         anchor = html.unescape(re.sub(r"<[^>]+>", " ", m.group(2)))
         links.append((html.unescape(m.group(1)).strip(), re.sub(r"\s+", " ", anchor).strip()[:80]))
-    tels = [html.unescape(h) for h in re.findall(r'(?i)href\s*=\s*["\']tel:([^"\']+)["\']', raw)]
     body = re.sub(r"(?is)<(script|style|noscript|svg)\b[^>]*>.*?</\1>", " ", raw)
-    body = re.sub(r"(?is)<br\s*/?>|</(p|div|li|tr|td|h\d)>", " . ", body)
-    text = html.unescape(re.sub(r"<[^>]+>", " ", body))
-    text = re.sub(r"\s+", " ", text).strip()
-    if tels:
-        text += " . Phone links: " + " ; ".join(tels)
+    for _ in range(2):  # second pass: markup that was HTML-escaped inside the page (&lt;td&gt;…)
+        # tel: targets go inline where the link is, so the words around them still label the number
+        body = re.sub(r"""(?i)<a\b[^>]*?href\s*=\s*["']tel:([^"']+)["'][^>]*>""", lambda m: f" {m.group(1)} ", body)
+        body = re.sub(r"(?is)<br\s*/?>|</(p|div|li|tr|td|th|h\d)>", " . ", body)
+        body = html.unescape(re.sub(r"<[^>]+>", " ", body))
+    text = re.sub(r"\s+", " ", body).strip()
     return text[:MAX_TEXT], links, title
 
 
@@ -179,7 +179,9 @@ class PageReader:
         try:
             final, raw = await self._fetch(url, allowed, brand)
             text, links, title = html_to_text(raw)
-            rec = {"final_url": final, "text": text, "links": links[:400], "title": title, "ok": True}
+            # Footers hold the contact links and come last on big portals: keep those before the first 300 others.
+            keep = [x for x in links if link_score(x[0], x[1])][:120] + [x for x in links if not link_score(x[0], x[1])][:300]
+            rec = {"final_url": final, "text": text, "links": keep, "title": title, "ok": True}
         except (PageBlocked, httpx.HTTPError, UnicodeDecodeError, ValueError) as e:
             msg = str(e) if isinstance(e, PageBlocked) else e.__class__.__name__
             rec = {"final_url": url, "text": "", "links": [], "title": "", "ok": False, "error": msg[:120]}
