@@ -648,18 +648,18 @@
     ]
    },
    "mentions": [],
-   "summary": "The number 14646 is printed on IRCTC's official website irctc.co.in. IRCTC's official website irctc.co.in also prints 011 3934 0000.",
+   "summary": "The number 14646 is printed on IRCTC's official website irctc.co.in. You can also call 011 3934 0000 for IRCTC.",
    "summary_source": "llm:live",
    "credits_spent": 0,
    "searches": 3,
-   "ms": 10534
+   "ms": 4610
   }
  },
  {
   "event": "done",
   "data": {
    "credits_spent": 0,
-   "ms": 10534
+   "ms": 4610
   }
  }
 ]

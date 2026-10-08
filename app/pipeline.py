@@ -48,6 +48,7 @@ CITIES = {
     "Lucknow": (26.8467, 80.9462),
 }
 MAX_PAGES = 5
+CALL_VERB = re.compile(r"(?<![a-z])(call|dial|ring|contact|reach|use|try)(?![a-z])", re.IGNORECASE)
 VOUCH = re.compile(r"(?<![a-z])(genuine|legit\w*|verified|authentic|trust(?:ed|worthy)|real (?:number|helpline))(?![a-z])",
                    re.IGNORECASE)
 BRAND_OK = re.compile(r"[\w&.'’ -]{2,60}")
@@ -343,7 +344,7 @@ def _facts(brand: str, city: str, user: Phone | None, decision: OfficialDecision
     keys = {o.phone.key for o in call_instead[:2]}
     if user and label == "on_official_site":
         keys.add(user.key)
-    return {"sentences": s, "brand": brand, "phone_keys": sorted(keys)}
+    return {"sentences": s, "brand": brand, "phone_keys": sorted(keys), "user_key": user.key if user else None}
 
 
 def _template(f: dict) -> str:
@@ -363,7 +364,16 @@ def summary_ok(text: str, facts: dict) -> bool:
     if not all(d in allowed for d in re.findall(r"\d+", text)):
         return False
     if "phone_keys" in facts:
-        return all(ph.key in facts["phone_keys"] for ph in extract_phones(text))
+        user = facts.get("user_key")
+        for sentence in re.split(r"(?<=[.!?])\s+", text):
+            for ph in extract_phones(sentence):
+                if ph.key in facts["phone_keys"]:
+                    continue
+                # The user's own number may be *named* ("… is not printed on bluedart.com") but never next to
+                # an instruction to call it.
+                if ph.key == user and not CALL_VERB.search(sentence):
+                    continue
+                return False
     return True
 
 

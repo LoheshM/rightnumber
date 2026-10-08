@@ -841,18 +841,18 @@
     ]
    },
    "mentions": [],
-   "summary": "The numbers 1800 1600 and 1800 258 6161 are printed on HDFC Bank's official website.",
-   "summary_source": "llm:live",
+   "summary": "The numbers for HDFC Bank are 1800 1600 or 1800 258 6161, which are printed on its official website hdfc.bank.in.",
+   "summary_source": "llm:cache",
    "credits_spent": 0,
    "searches": 3,
-   "ms": 3354
+   "ms": 37
   }
  },
  {
   "event": "done",
   "data": {
    "credits_spent": 0,
-   "ms": 3354
+   "ms": 37
   }
  }
 ]

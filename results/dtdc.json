@@ -898,17 +898,17 @@
     }
    ],
    "summary": "The number +91 96069 11811 is printed on DTDC's official website dtdc.com.",
-   "summary_source": "llm:live",
+   "summary_source": "llm:cache",
    "credits_spent": 0,
    "searches": 4,
-   "ms": 3836
+   "ms": 18
   }
  },
  {
   "event": "done",
   "data": {
    "credits_spent": 0,
-   "ms": 3836
+   "ms": 18
   }
  }
 ]

@@ -957,18 +957,18 @@
      "brands": []
     }
    ],
-   "summary": "The number 1860 233 1234 is printed on Blue Dart's official website bluedart.com. You can also call 022 4061 1234.",
+   "summary": "The number 1860 233 1234 is printed on Blue Dart's official website bluedart.com. You can call 1860 233 1234 or 022 4061 1234, as listed there.",
    "summary_source": "llm:live",
    "credits_spent": 0,
    "searches": 4,
-   "ms": 2991
+   "ms": 4049
   }
  },
  {
   "event": "done",
   "data": {
    "credits_spent": 0,
-   "ms": 2991
+   "ms": 4049
   }
  }
 ]

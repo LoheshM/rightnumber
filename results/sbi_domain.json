@@ -103,7 +103,7 @@
     "google_domain": "google.co.in"
    },
    "source": "cache",
-   "ms": 9,
+   "ms": 0,
    "ok": true,
    "error": null,
    "result_count": 10,
@@ -123,7 +123,7 @@
    "url": "https://www.sbi.bank.in/",
    "final_url": "https://www.sbi.bank.in/",
    "source": "cache",
-   "ms": 5,
+   "ms": 0,
    "ok": false,
    "error": "host does not resolve to a public address",
    "title": "",
@@ -135,8 +135,8 @@
   "data": {
    "url": "https://sbi.bank.in/",
    "final_url": "https://sbi.bank.in/",
-   "source": "live",
-   "ms": 301,
+   "source": "cache",
+   "ms": 8,
    "ok": true,
    "error": null,
    "title": "SBI - Loans, Accounts, Cards, Investment, Deposits, Net Banking - Personal Banking",
@@ -148,8 +148,8 @@
   "data": {
    "url": "https://sbi.bank.in/web/customer-care/",
    "final_url": "https://sbi.bank.in/web/customer-care/",
-   "source": "live",
-   "ms": 386,
+   "source": "cache",
+   "ms": 7,
    "ok": true,
    "error": null,
    "title": "Customer Care - Customer Care",
@@ -161,8 +161,8 @@
   "data": {
    "url": "https://sbi.bank.in/web/customer-care/contact-us/",
    "final_url": "https://sbi.bank.in/web/customer-care/contact-us/",
-   "source": "live",
-   "ms": 222,
+   "source": "cache",
+   "ms": 6,
    "ok": true,
    "error": null,
    "title": "Contact Us - Customer Care",
@@ -174,8 +174,8 @@
   "data": {
    "url": "https://sbi.bank.in/web/customercare/yono-sbi",
    "final_url": "https://sbi.bank.in/web/customercare/yono-sbi",
-   "source": "live",
-   "ms": 239,
+   "source": "cache",
+   "ms": 5,
    "ok": false,
    "error": "HTTP 404",
    "title": "",
@@ -187,7 +187,7 @@
   "data": {
    "domain": "sbi.bank.in",
    "established": true,
-   "reason": "domain you entered",
+   "reason": "the website you entered (not checked against search)",
    "votes": [
     {
      "domain": "sbi.bank.in",
@@ -222,7 +222,7 @@
    "decision": {
     "domain": "sbi.bank.in",
     "established": true,
-    "reason": "domain you entered",
+    "reason": "the website you entered (not checked against search)",
     "votes": [
      {
       "domain": "sbi.bank.in",
@@ -555,7 +555,7 @@
      "url": "https://www.sbi.bank.in/",
      "final_url": "https://www.sbi.bank.in/",
      "source": "cache",
-     "ms": 5,
+     "ms": 0,
      "ok": false,
      "error": "host does not resolve to a public address",
      "title": "",
@@ -564,8 +564,8 @@
     {
      "url": "https://sbi.bank.in/",
      "final_url": "https://sbi.bank.in/",
-     "source": "live",
-     "ms": 301,
+     "source": "cache",
+     "ms": 8,
      "ok": true,
      "error": null,
      "title": "SBI - Loans, Accounts, Cards, Investment, Deposits, Net Banking - Personal Banking",
@@ -574,8 +574,8 @@
     {
      "url": "https://sbi.bank.in/web/customer-care/",
      "final_url": "https://sbi.bank.in/web/customer-care/",
-     "source": "live",
-     "ms": 386,
+     "source": "cache",
+     "ms": 7,
      "ok": true,
      "error": null,
      "title": "Customer Care - Customer Care",
@@ -584,8 +584,8 @@
     {
      "url": "https://sbi.bank.in/web/customer-care/contact-us/",
      "final_url": "https://sbi.bank.in/web/customer-care/contact-us/",
-     "source": "live",
-     "ms": 222,
+     "source": "cache",
+     "ms": 6,
      "ok": true,
      "error": null,
      "title": "Contact Us - Customer Care",
@@ -594,8 +594,8 @@
     {
      "url": "https://sbi.bank.in/web/customercare/yono-sbi",
      "final_url": "https://sbi.bank.in/web/customercare/yono-sbi",
-     "source": "live",
-     "ms": 239,
+     "source": "cache",
+     "ms": 5,
      "ok": false,
      "error": "HTTP 404",
      "title": "",
@@ -988,18 +988,18 @@
      "brands": []
     }
    ],
-   "summary": "The number 1800 1234 is printed on State Bank of India's official website sbi.bank.in. Other numbers printed on their official website include 1800 2100.",
+   "summary": "The number 1800 1234 is printed on State Bank of India's official website sbi.bank.in. You can also use 1800 2100 from the official website.",
    "summary_source": "llm:live",
    "credits_spent": 0,
    "searches": 4,
-   "ms": 4198
+   "ms": 5181
   }
  },
  {
   "event": "done",
   "data": {
    "credits_spent": 0,
-   "ms": 4198
+   "ms": 5181
   }
  }
 ]

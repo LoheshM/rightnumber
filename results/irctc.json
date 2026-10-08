@@ -801,18 +801,18 @@
      ]
     }
    ],
-   "summary": "This number is not printed on the irctc.co.in pages that were read. Web pages advertise this same number as the helpline of Koovs, IndiGo, Google Pay, Flipkart, Paytm; a genuine helpline belongs to one company. Numbers printed on IRCTC's official website irctc.co.in: 14646 or 011 3934 0000.",
-   "summary_source": "template",
+   "summary": "The number +91 90023 27947 is not printed on the official IRCTC website and is advertised as a helpline for multiple companies. IRCTC's official website lists 14646 or 011 3934 0000.",
+   "summary_source": "llm:cache",
    "credits_spent": 0,
    "searches": 4,
-   "ms": 5202
+   "ms": 11
   }
  },
  {
   "event": "done",
   "data": {
    "credits_spent": 0,
-   "ms": 5202
+   "ms": 11
   }
  }
 ]

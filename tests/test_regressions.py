@@ -190,3 +190,13 @@ def test_review_h4_html_reader_is_linear_on_hostile_markup():
     for pat in ("<a ", '<a "', "&lt;a ", "<a href=x>"):
         html_to_text(pat * (400_000 // len(pat)))
     assert time.perf_counter() - t < 5
+
+
+def test_summary_may_name_the_users_number_but_not_tell_them_to_call_it():
+    facts = {"sentences": ["The number checked is +91 62916 10240.",
+                           "This number is not printed on the bluedart.com pages that were read.",
+                           "Numbers printed on Blue Dart's official website bluedart.com: 1860 233 1234."],
+             "phone_keys": ["18602331234"], "user_key": "6291610240"}
+    assert pipeline.summary_ok("The number +91 62916 10240 is not printed on bluedart.com. "
+                               "You can call 1860 233 1234, which is printed on bluedart.com.", facts)
+    assert not pipeline.summary_ok("Call +91 62916 10240 for Blue Dart.", facts)
