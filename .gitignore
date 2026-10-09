@@ -13,3 +13,6 @@ probe/raw_unscrubbed/
 probe/*.json
 results/raw/
 HACKATHON_PLAYBOOK.md
+
+# recorded demo video (local only)
+demo_video/
