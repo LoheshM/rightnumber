@@ -4,7 +4,7 @@
   "data": {
    "brand": "Airtel",
    "city": "Kolkata",
-   "number": "+91 62901 33964",
+   "number": "+91 87978 96100",
    "number_kind": "mobile",
    "mode": "auto"
   }
@@ -30,7 +30,7 @@
     "gl": "in"
    },
    "source": "cache",
-   "ms": 9,
+   "ms": 0,
    "ok": true,
    "error": null,
    "result_count": 0,
@@ -49,7 +49,7 @@
     "google_domain": "google.co.in"
    },
    "source": "cache",
-   "ms": 9,
+   "ms": 0,
    "ok": true,
    "error": null,
    "result_count": 10,
@@ -60,19 +60,19 @@
   "event": "serp_call",
   "data": {
    "engine": "google",
-   "purpose": "Where +91 62901 33964 appears on the web",
+   "purpose": "Where +91 87978 96100 appears on the web",
    "params": {
-    "q": "\"6290133964\" OR \"62901 33964\" OR \"+91 62901 33964\" OR \"+916290133964\"",
+    "q": "\"8797896100\" OR \"87978 96100\" OR \"+91 87978 96100\" OR \"+918797896100\"",
     "gl": "in",
     "hl": "en",
     "google_domain": "google.co.in"
    },
-   "source": "cache",
-   "ms": 8,
+   "source": "live",
+   "ms": 1185,
    "ok": true,
    "error": null,
-   "result_count": 8,
-   "credit": false
+   "result_count": 10,
+   "credit": true
   }
  },
  {
@@ -103,7 +103,7 @@
     "google_domain": "google.co.in"
    },
    "source": "cache",
-   "ms": 9,
+   "ms": 0,
    "ok": true,
    "error": null,
    "result_count": 10,
@@ -116,7 +116,7 @@
    "url": "https://www.airtel.in/",
    "final_url": "https://www.airtel.in/",
    "source": "cache",
-   "ms": 5,
+   "ms": 0,
    "ok": true,
    "error": null,
    "title": "Airtel: Wi-Fi, Postpaid, Prepaid, DTH, Bank & Business",
@@ -170,15 +170,59 @@
      }
     ]
    },
-   "number": "+91 62901 33964",
+   "number": "+91 87978 96100",
    "number_kind": "mobile",
    "verdict": {
-    "label": "not_on_official_pages",
-    "title": "Not found on the official pages we checked",
+    "label": "verify_before_calling",
+    "title": "Verify before calling",
     "sources": [],
     "complaints": [],
-    "other_brands": [],
-    "other_brand_examples": []
+    "other_brands": [
+     "Blinkit",
+     "PhonePe",
+     "Meesho"
+    ],
+    "other_brand_examples": [
+     {
+      "url": "https://www.justdial.com/Delhi/Online-Websites-For-Grocery-Delivery-in-Mayur-Vihar-Phase-3/nct-16180171",
+      "domain": "justdial.com",
+      "title": "Online Websites For Grocery Delivery - Delhi",
+      "snippet": "Blinkit customer care number 8797896100. Toll free number 91-879-789-6100. Contact help us: (8797896100) All types complaint 24x7 customer support Blinkit ..",
+      "official": false,
+      "directory": true,
+      "complaint": null,
+      "engine": "lookup",
+      "brands": [
+       "Blinkit"
+      ]
+     },
+     {
+      "url": "https://www.justdial.com/hi/Panipat/PhonePe-Kyc-Centres/nct-12362982",
+      "domain": "justdial.com",
+      "title": "फोनपे काइक केंद्र - पानीपत",
+      "snippet": "Phonepe. Customer Care Number 91)-879-789-6100. Phonepe. Pay customer Care Helpline Number 8797896100. contact us. PhonePe- Toll free number 080-1800 7771.?",
+      "official": false,
+      "directory": true,
+      "complaint": null,
+      "engine": "lookup",
+      "brands": [
+       "PhonePe"
+      ]
+     },
+     {
+      "url": "https://www.justdial.com/Panipat/Internet-Websites-For-Taxi-Services-in-Sanoli-Road/nct-11150238",
+      "domain": "justdial.com",
+      "title": "Top Internet Websites For Taxi Services in Sanoli Road",
+      "snippet": "Blinkit customer care number 8797896100. Toll free number 91-879-789-6100. Contact help us: (8797896100) All types complaint 24x.7 customer support Blinkit ..",
+      "official": false,
+      "directory": true,
+      "complaint": null,
+      "engine": "lookup",
+      "brands": [
+       "Blinkit"
+      ]
+     }
+    ]
    },
    "call_instead": [],
    "warned_numbers": [],
@@ -315,7 +359,7 @@
      "url": "https://www.airtel.in/",
      "final_url": "https://www.airtel.in/",
      "source": "cache",
-     "ms": 5,
+     "ms": 0,
      "ok": true,
      "error": null,
      "title": "Airtel: Wi-Fi, Postpaid, Prepaid, DTH, Bank & Business",
@@ -618,19 +662,122 @@
      }
     ]
    },
-   "mentions": [],
-   "summary": "The number +91 62901 33964 is not printed on the airtel.in pages that were read. For Airtel, use the number on your bill, card, ticket or app.",
-   "summary_source": "llm:cache",
-   "credits_spent": 0,
+   "mentions": [
+    {
+     "url": "https://www.justdial.com/Delhi/Online-Websites-For-Grocery-Delivery-in-Mayur-Vihar-Phase-3/nct-16180171",
+     "domain": "justdial.com",
+     "title": "Online Websites For Grocery Delivery - Delhi",
+     "snippet": "Blinkit customer care number 8797896100. Toll free number 91-879-789-6100. Contact help us: (8797896100) All types complaint 24x7 customer support Blinkit ..",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": [
+      "Blinkit"
+     ]
+    },
+    {
+     "url": "https://www.justdial.com/hi/Panipat/PhonePe-Kyc-Centres/nct-12362982",
+     "domain": "justdial.com",
+     "title": "फोनपे काइक केंद्र - पानीपत",
+     "snippet": "Phonepe. Customer Care Number 91)-879-789-6100. Phonepe. Pay customer Care Helpline Number 8797896100. contact us. PhonePe- Toll free number 080-1800 7771.?",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": [
+      "PhonePe"
+     ]
+    },
+    {
+     "url": "https://www.justdial.com/Aligarh/24-Hours-Mobile-Phone-Customer-Services-in-Quarsi/nct-11218639",
+     "domain": "justdial.com",
+     "title": "24 Hours Mobile Phone Customer Services - Aligarh",
+     "snippet": "If you need Kuku FM customer care,08797- 896- 100 Kuku FM Toll free number 91-8797-8961-00 Kuku FM customer care number 8797896100. User18 hours. Use Per New ...",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": []
+    },
+    {
+     "url": "https://www.justdial.com/Panipat/Internet-Websites-For-Taxi-Services-in-Sanoli-Road/nct-11150238",
+     "domain": "justdial.com",
+     "title": "Top Internet Websites For Taxi Services in Sanoli Road",
+     "snippet": "Blinkit customer care number 8797896100. Toll free number 91-879-789-6100. Contact help us: (8797896100) All types complaint 24x.7 customer support Blinkit ..",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": [
+      "Blinkit"
+     ]
+    },
+    {
+     "url": "https://www.justdial.com/Lucknow/Product-Listing-Services-For-Meesho-in-Vrindavan-Colony-Sector-18/nct-12298868",
+     "domain": "justdial.com",
+     "title": "Product Listing Services For Meesho - Lucknow",
+     "snippet": "Toll Free No Via Meesho.Customer Care Number 8797896100 Via. Meesho Customer Support Team Contact No.087.9789.6100., Chand Mohan Village Dhaka Taluk .. sanya11 ...",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": [
+      "Meesho"
+     ]
+    },
+    {
+     "url": "https://www.justdial.com/Delhi/Internet-Websites-For-Loan-in-Kalyan-Puri-Block-18/nct-11156370",
+     "domain": "justdial.com",
+     "title": "Internet Websites For Loan in Kalyan Puri Block 18, Delhi",
+     "snippet": "Blinkit customer care number 8797896100. Toll free number 91-879-789-6100. Contact help us: (8797896100) All types complaint 24x7 customer support Blinkit ..",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": [
+      "Blinkit"
+     ]
+    },
+    {
+     "url": "https://www.justdial.com/Sirsa-Haryana/Internet-Websites-For-Taxi-Services-in-Rania/nct-11150238",
+     "domain": "justdial.com",
+     "title": "Internet Websites For Taxi Services in Rania, Sirsa Haryana",
+     "snippet": "Blinkit customer care number 8797896100. Toll free number 91-879-789-6100. Contact help us: (8797896100) All types complaint 24x.7 customer support Blinkit ..",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": [
+      "Blinkit"
+     ]
+    },
+    {
+     "url": "https://www.justdial.com/Raipur-Chhattisgarh/Internet-Websites-For-Motorcycle-Taxi-Services-in-Sunder-Nagar/nct-11780817",
+     "domain": "justdial.com",
+     "title": "Internet Websites For Motorcycle Taxi Services - Raipur",
+     "snippet": "Blinkit customer care number 8797896100. Blinkit customer care number 08797-89-6100. Blinkit customer care number 91-87978-96100 connect bay 24 hours 24x.7 ...",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": [
+      "Blinkit"
+     ]
+    }
+   ],
+   "summary": "The number +91 87978 96100 is not printed on airtel.in pages and is advertised as a helpline for multiple companies. For Airtel, use a phone number printed on your bill, card, ticket, or app.",
+   "summary_source": "llm:live",
+   "credits_spent": 1,
    "searches": 4,
-   "ms": 58
+   "ms": 5358
   }
  },
  {
   "event": "done",
   "data": {
-   "credits_spent": 0,
-   "ms": 58
+   "credits_spent": 1,
+   "ms": 5358
   }
  }
 ]

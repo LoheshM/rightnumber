@@ -30,7 +30,7 @@
     "gl": "in"
    },
    "source": "cache",
-   "ms": 0,
+   "ms": 9,
    "ok": true,
    "error": null,
    "result_count": 0,
@@ -49,7 +49,7 @@
     "google_domain": "google.co.in"
    },
    "source": "cache",
-   "ms": 0,
+   "ms": 9,
    "ok": true,
    "error": null,
    "result_count": 10,
@@ -68,7 +68,7 @@
     "google_domain": "google.co.in"
    },
    "source": "cache",
-   "ms": 0,
+   "ms": 8,
    "ok": true,
    "error": null,
    "result_count": 10,
@@ -103,7 +103,7 @@
     "google_domain": "google.co.in"
    },
    "source": "cache",
-   "ms": 0,
+   "ms": 10,
    "ok": true,
    "error": null,
    "result_count": 10,
@@ -116,7 +116,7 @@
    "url": "https://www.dtdc.com/",
    "final_url": "https://www.dtdc.com/in/",
    "source": "cache",
-   "ms": 0,
+   "ms": 15,
    "ok": true,
    "error": null,
    "title": "",
@@ -129,7 +129,7 @@
    "url": "https://www.dtdc.com/customer-care/",
    "final_url": "https://www.dtdc.com/customer-care/",
    "source": "cache",
-   "ms": 0,
+   "ms": 14,
    "ok": true,
    "error": null,
    "title": "",
@@ -142,7 +142,7 @@
    "url": "https://www.dtdc.com/support-business-inquiry/",
    "final_url": "https://edot.mydtdc.in/?utm_source=websitepages&utm_medium=Direct&utm_campaign=NA&utm_id=1&channel_code=",
    "source": "cache",
-   "ms": 0,
+   "ms": 5,
    "ok": true,
    "error": null,
    "title": "DTDC",
@@ -155,7 +155,7 @@
    "url": "https://www.dtdc.com/support-locate-us/",
    "final_url": "https://www.dtdc.com/support-locate-us/",
    "source": "cache",
-   "ms": 0,
+   "ms": 20,
    "ok": true,
    "error": null,
    "title": "",
@@ -168,7 +168,7 @@
    "url": "https://www.dtdc.com/support-service-guide/",
    "final_url": "https://www.dtdc.com/support-service-guide/",
    "source": "cache",
-   "ms": 0,
+   "ms": 15,
    "ok": true,
    "error": null,
    "title": "",
@@ -464,7 +464,7 @@
      "url": "https://www.dtdc.com/",
      "final_url": "https://www.dtdc.com/in/",
      "source": "cache",
-     "ms": 0,
+     "ms": 15,
      "ok": true,
      "error": null,
      "title": "",
@@ -474,7 +474,7 @@
      "url": "https://www.dtdc.com/customer-care/",
      "final_url": "https://www.dtdc.com/customer-care/",
      "source": "cache",
-     "ms": 0,
+     "ms": 14,
      "ok": true,
      "error": null,
      "title": "",
@@ -484,7 +484,7 @@
      "url": "https://www.dtdc.com/support-business-inquiry/",
      "final_url": "https://edot.mydtdc.in/?utm_source=websitepages&utm_medium=Direct&utm_campaign=NA&utm_id=1&channel_code=",
      "source": "cache",
-     "ms": 0,
+     "ms": 5,
      "ok": true,
      "error": null,
      "title": "DTDC",
@@ -494,7 +494,7 @@
      "url": "https://www.dtdc.com/support-locate-us/",
      "final_url": "https://www.dtdc.com/support-locate-us/",
      "source": "cache",
-     "ms": 0,
+     "ms": 20,
      "ok": true,
      "error": null,
      "title": "",
@@ -504,7 +504,7 @@
      "url": "https://www.dtdc.com/support-service-guide/",
      "final_url": "https://www.dtdc.com/support-service-guide/",
      "source": "cache",
-     "ms": 0,
+     "ms": 15,
      "ok": true,
      "error": null,
      "title": "",
@@ -901,14 +901,14 @@
    "summary_source": "llm:cache",
    "credits_spent": 0,
    "searches": 4,
-   "ms": 18
+   "ms": 149
   }
  },
  {
   "event": "done",
   "data": {
    "credits_spent": 0,
-   "ms": 18
+   "ms": 149
   }
  }
 ]

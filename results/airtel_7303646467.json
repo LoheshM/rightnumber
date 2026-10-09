@@ -4,7 +4,7 @@
   "data": {
    "brand": "Airtel",
    "city": "Kolkata",
-   "number": "+91 62901 33964",
+   "number": "+91 73036 46467",
    "number_kind": "mobile",
    "mode": "auto"
   }
@@ -30,7 +30,7 @@
     "gl": "in"
    },
    "source": "cache",
-   "ms": 9,
+   "ms": 0,
    "ok": true,
    "error": null,
    "result_count": 0,
@@ -49,7 +49,7 @@
     "google_domain": "google.co.in"
    },
    "source": "cache",
-   "ms": 9,
+   "ms": 0,
    "ok": true,
    "error": null,
    "result_count": 10,
@@ -60,19 +60,19 @@
   "event": "serp_call",
   "data": {
    "engine": "google",
-   "purpose": "Where +91 62901 33964 appears on the web",
+   "purpose": "Where +91 73036 46467 appears on the web",
    "params": {
-    "q": "\"6290133964\" OR \"62901 33964\" OR \"+91 62901 33964\" OR \"+916290133964\"",
+    "q": "\"7303646467\" OR \"73036 46467\" OR \"+91 73036 46467\" OR \"+917303646467\"",
     "gl": "in",
     "hl": "en",
     "google_domain": "google.co.in"
    },
-   "source": "cache",
-   "ms": 8,
+   "source": "live",
+   "ms": 955,
    "ok": true,
    "error": null,
-   "result_count": 8,
-   "credit": false
+   "result_count": 10,
+   "credit": true
   }
  },
  {
@@ -103,7 +103,7 @@
     "google_domain": "google.co.in"
    },
    "source": "cache",
-   "ms": 9,
+   "ms": 0,
    "ok": true,
    "error": null,
    "result_count": 10,
@@ -116,7 +116,7 @@
    "url": "https://www.airtel.in/",
    "final_url": "https://www.airtel.in/",
    "source": "cache",
-   "ms": 5,
+   "ms": 0,
    "ok": true,
    "error": null,
    "title": "Airtel: Wi-Fi, Postpaid, Prepaid, DTH, Bank & Business",
@@ -170,7 +170,7 @@
      }
     ]
    },
-   "number": "+91 62901 33964",
+   "number": "+91 73036 46467",
    "number_kind": "mobile",
    "verdict": {
     "label": "not_on_official_pages",
@@ -315,7 +315,7 @@
      "url": "https://www.airtel.in/",
      "final_url": "https://www.airtel.in/",
      "source": "cache",
-     "ms": 5,
+     "ms": 0,
      "ok": true,
      "error": null,
      "title": "Airtel: Wi-Fi, Postpaid, Prepaid, DTH, Bank & Business",
@@ -618,19 +618,31 @@
      }
     ]
    },
-   "mentions": [],
-   "summary": "The number +91 62901 33964 is not printed on the airtel.in pages that were read. For Airtel, use the number on your bill, card, ticket or app.",
-   "summary_source": "llm:cache",
-   "credits_spent": 0,
+   "mentions": [
+    {
+     "url": "https://www.justdial.com/Jodhpur/24-Hours-Mobile-Phone-Customer-Services-Airtel/nct-11218641",
+     "domain": "justdial.com",
+     "title": "Airtel Customer Care Number in Jodhpur",
+     "snippet": "Airtel Customer Care – 7303646467..Airtel Support – 730 364 6467..Airtel Help Center – 730.364.6467 Airtel Customer Service ... ..",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "brand",
+     "brands": []
+    }
+   ],
+   "summary": "The number checked, +91 73036 46467, is not printed on the airtel.in pages that were read. No phone number could be copied from airtel.in, so use the number on your bill, card, ticket or app.",
+   "summary_source": "llm:live",
+   "credits_spent": 1,
    "searches": 4,
-   "ms": 58
+   "ms": 5516
   }
  },
  {
   "event": "done",
   "data": {
-   "credits_spent": 0,
-   "ms": 58
+   "credits_spent": 1,
+   "ms": 5516
   }
  }
 ]

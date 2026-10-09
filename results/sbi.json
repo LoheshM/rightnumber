@@ -30,7 +30,7 @@
     "gl": "in"
    },
    "source": "cache",
-   "ms": 0,
+   "ms": 10,
    "ok": true,
    "error": null,
    "result_count": 0,
@@ -49,7 +49,7 @@
     "google_domain": "google.co.in"
    },
    "source": "cache",
-   "ms": 0,
+   "ms": 8,
    "ok": true,
    "error": null,
    "result_count": 10,
@@ -68,7 +68,7 @@
     "google_domain": "google.co.in"
    },
    "source": "cache",
-   "ms": 0,
+   "ms": 9,
    "ok": true,
    "error": null,
    "result_count": 10,
@@ -547,17 +547,17 @@
     }
    ],
    "summary": "The number 1800 1234 could not be compared with any official State Bank of India page, as State Bank of India's official website could not be established.",
-   "summary_source": "llm:live",
+   "summary_source": "llm:cache",
    "credits_spent": 0,
    "searches": 3,
-   "ms": 3747
+   "ms": 55
   }
  },
  {
   "event": "done",
   "data": {
    "credits_spent": 0,
-   "ms": 3747
+   "ms": 55
   }
  }
 ]

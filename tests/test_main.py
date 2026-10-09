@@ -126,7 +126,7 @@ def test_check_stream_pipeline_crash_becomes_error_event(client, monkeypatch):
 
     monkeypatch.setattr(pipeline, "run", boom)
     events = stream(client, brand="Blue Dart")
-    assert events == [("error", {"text": "Something went wrong while checking this helpline."})]
+    assert events == [("failure", {"text": "Something went wrong while checking this helpline."})]
 
 
 def test_check_stream_no_api_key_in_body(client):

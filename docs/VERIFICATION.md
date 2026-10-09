@@ -11,6 +11,7 @@ How RightNumber was checked against reality (8 Oct 2026):
 
 | # | Case (input) | RightNumber says | Checked against the web | Result |
 |---|---|---|---|---|
+| 0 | **PhonePe** · 8797896100 (Justdial lists it as "customer care" for several brands) | 🔴 *Verify before calling*: also advertised as the helpline of Blinkit and Meesho. Call instead 080 6872 7374 · 022 6872 7374 | [phonepe.com/contact-us](https://www.phonepe.com/contact-us/): "Customer Support: 080-68727374 / 022-68727374". The Justdial posts (Blinkit / Meesho / PhonePe / Kuku FM customer care) are in Google's own snippets; Justdial blocks direct fetching (HTTP 403) | ✅ |
 | 1 | **Blue Dart** · 6291610240 (number from a Justdial review) | 🔴 *Verify before calling*: complaint text names this exact number. Call instead 1860 233 1234 · 022 4061 1234 · 080 4661 1234 | A Justdial review (2019) calls it "a fraud no.". All three numbers are on [bluedart.com/fraudawareness](https://www.bluedart.com/fraudawareness) and [/call-us](https://www.bluedart.com/call-us) | ✅ |
 | 2 | **Blue Dart** · 1860 233 1234 | ✅ *Printed on the official site* | The fraud-awareness page says "contact on its official number 18602331234" | ✅ |
 | 3 | **Blue Dart** · 07016493282 (scam caller reported on TechEnclave) | 🟡 *Not found on the official pages we read* | Correctly not official. The TechEnclave report wasn't surfaced, so the result is 🟡 rather than 🔴 | ⚠️ |
@@ -22,7 +23,7 @@ How RightNumber was checked against reality (8 Oct 2026):
 | 9 | **Airtel** · 6290133964 (named as a scam caller on a complaint site, 2020) | 🟡 *Not on the airtel.in pages we read*. No call-instead number, because only escalation desks were found | The verdict is fair. Airtel's care line is the short code 121, which wasn't on the pages read | ⚠️ |
 | 10 | **Amazon** · +91 80 6605 5000 (reported as a fake Amazon number) | 🟡 *Not on the amazon.in pages we read*. No call-instead number | Correct: Amazon India publishes no customer-care phone number. Numbers on seller product listings are excluded | ✅ |
 
-**7 ✅ · 3 ⚠️ · 0 ❌.** None of the verdicts on a user's number overclaimed. The ⚠️ rows are honest misses: an un-surfaced complaint, an automatic abstain, and a short code that wasn't found.
+**8 ✅ · 3 ⚠️ · 0 ❌.** None of the verdicts on a user's number overclaimed. The ⚠️ rows are honest misses: an un-surfaced complaint, an automatic abstain, and a short code that wasn't found.
 
 ## Bugs found by verification, all fixed with regression tests
 

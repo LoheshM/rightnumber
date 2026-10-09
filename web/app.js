@@ -5,9 +5,11 @@ const ESC = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;
 const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => ESC[c]);
 const safeHref = (u) => (/^https?:\/\//i.test(String(u || "")) ? esc(u) : "#");
 const telHref = (key) => "tel:" + String(key || "").replace(/[^0-9+]/g, "");
+const dialKey = (c) => (c.kind === "mobile" ? "+91" + c.key : (c.kind === "landline" ? "0" + c.key : c.key));
 const shortUrl = (u) => {
   try { const x = new URL(u); return (x.hostname.replace(/^www\./, "") + x.pathname).replace(/\/$/, ""); } catch { return String(u || ""); }
 };
+const PHONE_SVG = '<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M6.6 3c.9 0 1.9 2 2.4 3.3.3.8 0 1.4-.5 1.9l-1 1c.8 1.9 2.4 3.5 4.3 4.3l1-1c.5-.5 1.1-.8 1.9-.5 1.3.5 3.3 1.5 3.3 2.4v1.9c0 1-.9 1.9-1.9 1.9C9.6 19.2 3.8 13.4 3.8 6.6c0-1 .9-1.9 1.9-1.9z"/></svg>';
 
 let es = null;
 let state = {};
@@ -29,16 +31,20 @@ async function boot() {
   try {
     const st = await (await fetch("/api/status")).json();
     const m = $("#mode");
-    m.textContent = st.mode === "replay" ? "Replay · recorded examples" : `Live · ${st.account?.searches_left ?? "?"} searches left`;
+    m.textContent = st.mode === "replay" ? "Replay · recorded calls" : `Live · ${st.account?.searches_left ?? "?"} searches left`;
     m.className = "pill " + (st.mode === "replay" ? "replay" : "live");
     m.title = st.mode === "replay" ? "No SerpApi key: recorded examples only, no credits spent" : "Live SerpApi searches (cached results are free)";
     $("#city").innerHTML = (st.cities || ["Delhi"]).map((c) => `<option>${esc(c)}</option>`).join("");
   } catch { $("#city").innerHTML = "<option>Delhi</option>"; }
   try {
     const ex = await (await fetch("/api/examples")).json();
-    $("#examples").innerHTML = ex.map((e, i) =>
-      `<button type="button" class="chip" data-i="${i}">${esc(e.label)}<small>${esc(e.hint)}</small></button>`).join("");
-    $("#examples").querySelectorAll(".chip").forEach((b) => b.addEventListener("click", () => {
+    const icon = { bad: "!", good: "✓", grey: "–" };
+    $("#examples").innerHTML = ex.map((e, i) => {
+      const tone = ["bad", "good", "grey"].includes(e.tone) ? e.tone : "grey";
+      return `<button type="button" class="logrow" data-i="${i}"><span class="ic ${tone}" aria-hidden="true">${icon[tone]}</span>
+        <span class="who"><b>${esc(e.label)}</b><small>${esc(e.hint)}</small></span><span class="go" aria-hidden="true">›</span></button>`;
+    }).join("");
+    $("#examples").querySelectorAll(".logrow").forEach((b) => b.addEventListener("click", () => {
       const e = ex[+b.dataset.i];
       $("#brand").value = e.brand; $("#number").value = e.number || ""; $("#city").value = e.city || "Delhi";
       $("#domain").value = "";
@@ -46,7 +52,7 @@ async function boot() {
     }));
   } catch {}
   const p = new URLSearchParams(location.search);
-  if (p.get("brand")) {  // a shared link fills the form; the visitor still clicks Check (no credit spent unasked)
+  if (p.get("brand")) {  // a shared link fills the form; the visitor still taps the button (no credit spent unasked)
     $("#brand").value = p.get("brand"); $("#number").value = p.get("number") || "";
     if (p.get("city")) $("#city").value = p.get("city");
     $("#go").focus();
@@ -63,57 +69,59 @@ function start() {
   state = { brand, calls: 0, credits: 0, pages: 0, steps: {} };
   const q = new URLSearchParams({ brand, number: $("#number").value.trim(), city: $("#city").value, domain: $("#domain").value.trim() });
   history.replaceState(null, "", "?" + new URLSearchParams({ brand, number: $("#number").value.trim(), city: $("#city").value }));
-  $("#live").classList.remove("hidden");
-  $("#trail").innerHTML = ""; $("#notices").innerHTML = ""; $("#trail-meta").textContent = "";
-  $("#live").classList.remove("collapsed"); $("#trail-toggle")?.remove();
+  $("#live").classList.remove("hidden", "collapsed"); $("#trail-toggle")?.remove();
+  $("#trail").innerHTML = ""; $("#notices").innerHTML = ""; $("#trail-meta").textContent = "connecting…";
   $("#result").classList.add("hidden"); $("#result").innerHTML = "";
-  $("#go").disabled = true; $("#go").textContent = "Checking…";
+  $("#go").disabled = true; $("#go-label").textContent = "Checking the line…";
+  $("#live").scrollIntoView({ behavior: "smooth", block: "start" });
   es = new EventSource("/api/check/stream?" + q);
+  let gotResult = false;
   const on = (name, fn) => es.addEventListener(name, (ev) => { try { fn(JSON.parse(ev.data)); } catch (err) { console.warn(err); } });
   on("step", step);
   on("serp_call", serpCall);
   on("page_read", pageRead);
   on("notice", (n) => $("#notices").insertAdjacentHTML("beforeend", `<div class="notice ${n.level === "info" ? "info" : ""}">${esc(n.text)}</div>`));
-  on("result", render);
-  on("error", (d) => { $("#notices").insertAdjacentHTML("beforeend", `<div class="notice">${esc(d.text || "Something went wrong.")}</div>`); finish(); });
+  on("result", (r) => {
+    gotResult = true;
+    try { render(r); } catch (err) {
+      console.warn(err);
+      $("#notices").insertAdjacentHTML("beforeend", `<div class="notice">The result arrived but couldn't be displayed. Please try again.</div>`);
+    }
+  });
+  on("failure", (d) => { gotResult = true; $("#notices").insertAdjacentHTML("beforeend", `<div class="notice">${esc(d.text || "Something went wrong.")}</div>`); finish(); });
   on("done", (d) => { meta(d.ms); finish(); });
-  let gotResult = false;
-  es.addEventListener("result", () => { gotResult = true; });
   es.onerror = () => {
     // 400/403/422 responses and dropped connections both land here: always recover the button and say so.
-    if (es && !gotResult) $("#notices").insertAdjacentHTML("beforeend", `<div class="notice">The check couldn't run or was interrupted. Check the brand name (and website, if you entered one) and try again.</div>`);
-    if (es) es.close();
+    if (!gotResult) $("#notices").insertAdjacentHTML("beforeend", `<div class="notice">The check couldn't run or was interrupted. Check the brand name (and website, if you entered one) and try again.</div>`);
     finish();
   };
 }
 
 function finish() {
   if (es) es.close();
-  $("#go").disabled = false; $("#go").textContent = "Check";
+  $("#go").disabled = false; $("#go-label").textContent = "Check before you dial";
 }
 
 function meta(ms) {
-  const parts = [`${state.calls} SerpApi searches`, `${state.credits} credit${state.credits === 1 ? "" : "s"} spent`, `${state.pages} official pages read`];
+  const parts = [`${state.calls} searches`, `${state.credits} credit${state.credits === 1 ? "" : "s"}`, `${state.pages} official pages`];
   if (ms) parts.push(ms < 1000 ? `${ms} ms` : `${(ms / 1000).toFixed(1)} s`);
   $("#trail-meta").textContent = parts.join(" · ");
 }
 
 function step(s) {
   let li = state.steps[s.id];
-  if (!li) {
-    li = document.createElement("li"); li.className = "step"; state.steps[s.id] = li;
-    $("#trail").appendChild(li);
-  }
+  if (!li) { li = document.createElement("li"); li.className = "step"; state.steps[s.id] = li; $("#trail").appendChild(li); }
   li.innerHTML = `${s.status === "done" ? '<span class="tick">✓</span>' : '<span class="spin"></span>'}<span>${esc(s.label)}</span>`;
 }
 
 function serpCall(c) {
   state.calls += 1; if (c.credit) state.credits += 1;
+  const lamp = !c.ok ? "bad" : c.source === "live" ? "live" : "";
   const cost = !c.ok ? `<span class="cost bad">failed · free</span>`
     : c.source === "live" ? `<span class="cost live">live · 1 credit · ${c.ms} ms</span>`
     : `<span class="cost">${c.source === "fixture" ? "recorded" : "cached"} · free</span>`;
   $("#trail").insertAdjacentHTML("beforeend",
-    `<li><span class="eng ${esc(c.engine)}">${esc(c.engine)}</span><span class="purpose" title="${esc(c.purpose)}">${esc(c.purpose)}</span>${cost}</li>`);
+    `<li><span class="lamp ${lamp}" aria-hidden="true"></span><span class="jack">${esc(c.engine)}</span><span class="purpose" title="${esc(c.purpose)}">${esc(c.purpose)}</span>${cost}</li>`);
   meta();
 }
 
@@ -122,15 +130,14 @@ function pageRead(p) {
   const cost = p.ok ? `<span class="cost">${p.source === "live" ? `read · free · ${p.ms} ms` : "cached · free"}</span>`
     : `<span class="cost bad">couldn't read</span>`;
   $("#trail").insertAdjacentHTML("beforeend",
-    `<li><span class="eng page">official page</span><span class="purpose" title="${esc(p.final_url)}">${esc(shortUrl(p.final_url))}${p.ok ? "" : " — " + esc(p.error || "")}</span>${cost}</li>`);
+    `<li><span class="lamp ${p.ok ? "page" : "bad"}" aria-hidden="true"></span><span class="jack">official page</span><span class="purpose" title="${esc(p.final_url)}">${esc(shortUrl(p.final_url))}${p.ok ? "" : " — " + esc(p.error || "")}</span>${cost}</li>`);
   meta();
 }
 
 /* ---------- result ---------- */
 const VCLASS = {
-  on_official_site: ["good", "✓"], warned_on_official_site: ["bad", "!"], verify_before_calling: ["bad", "!"],
-  other_org_on_official_site: ["warn", "?"],
-  not_on_official_pages: ["warn", "?"], no_official_source: ["grey", "–"],
+  on_official_site: "good", warned_on_official_site: "bad", verify_before_calling: "bad",
+  other_org_on_official_site: "warn", not_on_official_pages: "warn", no_official_source: "grey",
 };
 
 function highlight(text, digits, brands) {
@@ -138,7 +145,7 @@ function highlight(text, digits, brands) {
   let html = esc(text);
   if (!digits) return html;
   const tail = digits.slice(-10);
-  const pattern = tail.split("").map((d) => d).join("[\\s\\-.]?");
+  const pattern = tail.split("").join("[\\s\\-.]?");
   try { html = html.replace(new RegExp("(" + pattern + ")", "g"), "<mark>$1</mark>"); } catch {}
   for (const b of brands || []) {
     const rx = esc(b).replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace(/ /g, "\\s?");
@@ -157,44 +164,72 @@ function groupMentions(list) {
   return [...groups.values()];
 }
 
+function callerId(v, dom) {
+  if (!v) return "";
+  const d = esc(dom || "the official site");
+  switch (v.label) {
+    case "on_official_site": return `Printed on ${d}`;
+    case "warned_on_official_site": return `${d} warns about this number`;
+    case "other_org_on_official_site": return `Listed on ${d} for another organisation`;
+    case "verify_before_calling": return v.other_brands?.length ? "Unverified caller · posted for other brands too" : "Unverified caller · named in complaints";
+    case "not_on_official_pages": return `Unknown caller · not on ${d}'s pages`;
+    default: return "Caller ID unavailable · no official source";
+  }
+}
+
 function render(r) {
   const out = [];
   const dom = r.domain;
   const brand = esc(r.brand);
   const v = r.verdict;
   const digits = (r.number || "").replace(/\D/g, "");
+  const top = (r.call_instead || [])[0];
 
-  /* verdict */
+  /* incoming-call screen */
   if (v) {
-    const [cls, icon] = VCLASS[v.label] || ["grey", "–"];
+    const cls = VCLASS[v.label] || "grey";
     let why = "";
     if (v.label === "on_official_site") why = `This exact number is printed on ${esc(dom)}.`;
     else if (v.label === "warned_on_official_site") why = `${esc(dom)} mentions this number only inside a fraud warning.`;
-    else if (v.label === "other_org_on_official_site") why = `${esc(dom)} lists this number as another organisation's helpline (see the words around it below), not as ${esc(r.brand)}'s own.`;
+    else if (v.label === "other_org_on_official_site") why = `${esc(dom)} lists this number as another organisation's helpline (see the words around it below), not as ${brand}'s own.`;
     else if (v.label === "verify_before_calling" && v.other_brands?.length) why = `The same number is advertised on the web as the helpline of <b>${v.other_brands.map(esc).join(", ")}</b>. A genuine helpline belongs to one company.${dom && (r.pages || []).some((p) => p.ok && p.chars) ? ` It is not on the ${esc(dom)} pages we read.` : ""}`;
     else if (v.label === "verify_before_calling") why = dom && (r.pages || []).some((p) => p.ok && p.chars) ? `It is not on the ${esc(dom)} pages we read, and text on the web names this exact number in a complaint.` : `We couldn't establish an official website, and text on the web names this exact number in a complaint.`;
     else if (v.label === "not_on_official_pages") why = `It is not printed on the ${esc(dom)} pages we read. It may be a local branch — but never pay, share an OTP or install an app because a caller on this number asks.`;
     else why = dom ? `${esc(dom)} is the official website, but we couldn't read any phone number from it, so we can't compare. Use the number on your bill, card, ticket or the official app.`
       : `We couldn't establish the brand's official website from search, so we can't compare. Use the number on your bill, card, ticket or the official app.`;
     const quoteSrc = (v.complaints || []).length ? v.complaints : (v.other_brand_examples || []);
-    const quotes = groupMentions(quoteSrc).slice(0, 2).map(({ m }) =>
-      `<blockquote class="quote">“${highlight(m.complaint || m.snippet, digits, v.other_brands)}”<cite>— text on ${esc(m.domain)} (a third-party site; not checked by us) · <a href="${safeHref(m.url)}" target="_blank" rel="noopener nofollow">open</a></cite></blockquote>`).join("");
-    out.push(`<article class="card verdict ${cls}">
-      <div class="v-top"><span class="v-num">${esc(r.number)}</span><span class="label ${cls}">${icon} ${esc(v.title)}</span></div>
-      <p class="v-why">${why}</p>${quotes}
-      ${r.summary ? `<p class="v-sum">${esc(r.summary)} <small>${r.summary_source === "template" ? "" : "· summary by Gemini from the facts below"}</small></p>` : ""}
+    const quotes = groupMentions(quoteSrc).slice(0, 2).map(({ m, n }) =>
+      `<blockquote class="vm">“${highlight(m.complaint || m.snippet, digits, v.other_brands)}”<cite>Text on ${esc(m.domain)}${n > 1 ? ` (same text on ${n} pages)` : ""} — a third-party site, not checked by us · <a href="${safeHref(m.url)}" target="_blank" rel="noopener nofollow">open</a></cite></blockquote>`).join("");
+    const actions = [];
+    if (cls === "bad" || cls === "warn") {
+      actions.push(`<span class="act decline"><span class="btn-round">${PHONE_SVG}</span>Don't call this one yet</span>`);
+    }
+    if (top && v.label !== "on_official_site") {
+      actions.push(`<a class="act answer" href="${telHref(dialKey(top))}"><span class="btn-round">${PHONE_SVG}</span><b>${esc(top.display)}</b>printed on ${esc(dom)}</a>`);
+    } else if (v.label === "on_official_site" && top) {
+      actions.push(`<a class="act answer" href="${telHref(digits.length > 4 ? r.number : digits)}"><span class="btn-round">${PHONE_SVG}</span><b>${esc(r.number)}</b>as printed on ${esc(dom)}</a>`);
+    }
+    out.push(`<article class="incoming ${cls}">
+      <span class="in-label">Incoming check · ${brand}</span>
+      <div class="avatar" aria-hidden="true">${cls === "good" ? "✓" : cls === "grey" ? "?" : "!"}</div>
+      <div class="in-num">${esc(r.number)}</div>
+      <span class="callerid ${cls}">${callerId(v, dom)}</span>
+      <p class="in-why">${why}</p>
+      ${quotes ? `<div class="voicemails">${quotes}</div>` : ""}
+      ${r.summary ? `<p class="in-sum">${esc(r.summary)} <small>${r.summary_source === "template" ? "" : "· summary by Gemini from the facts below"}</small></p>` : ""}
+      ${actions.length ? `<div class="in-actions">${actions.join("")}</div>` : ""}
     </article>`);
   } else if (r.summary) {
-    out.push(`<article class="card verdict ${dom ? "good" : ""}"><p class="v-sum">${esc(r.summary)}</p></article>`);
+    out.push(`<article class="incoming ${dom ? "good" : ""}"><span class="in-label">Directory check · ${brand}</span><p class="in-sum">${esc(r.summary)}</p></article>`);
   }
 
-  /* call instead */
+  /* dial pad: numbers the brand itself prints */
   if (r.call_instead?.length) {
-    out.push(`<article class="card"><h2>${v && v.label === "on_official_site" ? "Numbers" : "Call instead"} — printed on ${esc(dom)}</h2>
-      <p class="muted" style="margin:4px 0 12px">Copied from the brand's own pages, with the words around each number so you can see how the site labels it.</p>
-      <div class="callbox">${r.call_instead.map((c) => {
+    out.push(`<article class="card"><div class="dialpad-head"><h2>${v && v.label === "on_official_site" ? "Numbers" : "Call instead"} — printed on ${esc(dom)}</h2>
+      <span class="muted" style="font-size:13px">Copied from the brand's own pages, with the words around each number.</span></div>
+      <div class="dialpad">${r.call_instead.map((c) => {
         const s = c.sources[0] || {};
-        return `<div class="call"><a class="tel" href="${telHref(c.kind === "mobile" ? "+91" + c.key : (c.kind === "landline" ? "0" + c.key : c.key))}">${esc(c.display)}</a>
+        return `<div class="key"><a class="tel" href="${telHref(dialKey(c))}">${esc(c.display)}<span class="dot">${PHONE_SVG}</span></a>
           <span class="ctx">“…${esc(s.context)}…”</span>
           <span class="src">${s.kind === "page" ? "Read from" : "Google snippet of"} <a href="${safeHref(s.url)}" target="_blank" rel="noopener">${esc(shortUrl(s.url))}</a>${c.sources.length > 1 ? ` and ${c.sources.length - 1} more page${c.sources.length > 2 ? "s" : ""}` : ""}</span></div>`;
       }).join("")}</div></article>`);
@@ -202,17 +237,18 @@ function render(r) {
 
   /* two columns: what google shows vs what the brand says */
   const g = r.google_view || {};
-  const top = (g.top || []).map((t, i) => `<li><span class="pos">${i + 1}</span><a class="t" href="${safeHref(t.link)}" target="_blank" rel="noopener nofollow" title="${esc(t.title)}">${esc(t.title)}</a>
+  const topRes = (g.top || []).map((t, i) => `<li><span class="pos">${i + 1}</span><a class="t" href="${safeHref(t.link)}" target="_blank" rel="noopener nofollow" title="${esc(t.title)}">${esc(t.title)}</a>
       ${t.official ? '<span class="tag off">official</span>' : t.directory ? `<span class="tag dir">${esc(t.domain)}</span>` : `<span class="tag other">${esc(t.domain)}</span>`}</li>`).join("");
   const left = `<article class="card side"><h2>What Google shows you</h2>
     <p class="sub">Top results for “${brand} customer care number”</p>
     ${g.results ? `<div class="big-stat">${g.directory}<small> of ${g.results} top results are directory sites</small></div>
       <p class="muted" style="margin:6px 0 0">${dom ? (g.official_rank ? `${esc(dom)} is result #${g.official_rank}.` : `${esc(dom)} isn't in the top ${g.results}.`) : ""} Directory listings can be edited by anyone.</p>
-      <ol class="serp">${top}</ol>` : `<p class="muted">No search results available.</p>`}
+      <ol class="serp">${topRes}</ol>` : `<p class="muted">No search results available.</p>`}
   </article>`;
   const seenPage = new Set();
   const pages = (r.pages || []).filter((p) => p.ok && p.chars)
-    .filter((p) => { const k = shortUrl(p.final_url).split("/").pop(); if (seenPage.has(k)) return false; seenPage.add(k); return true; }).map((p) => `<li>✓ <a href="${safeHref(p.final_url)}" target="_blank" rel="noopener">${esc(shortUrl(p.final_url))}</a></li>`).join("");
+    .filter((p) => { const k = shortUrl(p.final_url).split("/").pop(); if (seenPage.has(k)) return false; seenPage.add(k); return true; })
+    .map((p) => `<li>✓ <a href="${safeHref(p.final_url)}" target="_blank" rel="noopener">${esc(shortUrl(p.final_url))}</a></li>`).join("");
   const warned = (r.warned_numbers || []).map((w) => `<li><span class="mono">${esc(w.display)}</span> — <span class="tag bad">named in a warning</span> “…${esc(w.sources[0]?.context)}…”</li>`).join("");
   const right = `<article class="card side"><h2>What ${brand} itself says</h2>
     <p class="sub">${dom ? `Official website: <b>${esc(dom)}</b>` : "Official website: not established"}</p>
@@ -236,7 +272,7 @@ function render(r) {
     out.push(`<article class="card"><h2>Where ${esc(r.number)} appears on the web</h2><p class="muted">No search result's text contains this exact number.</p></article>`);
   }
 
-  /* pin audit */
+  /* Maps pin audit as a call log */
   const ps = r.pin_stats || {};
   if (ps.total) {
     const pct = (n) => (100 * n / ps.total).toFixed(2);
@@ -244,20 +280,22 @@ function render(r) {
     const bar = ps.judged ? `<div class="pinbar" role="img" aria-label="${ps.official_number} pins show an official number, ${ps.number_not_on_official} show a number not on the official pages">
         <span style="width:${pct(ps.official_number)}%;background:var(--good)"></span><span style="width:${pct(ps.number_not_on_official)}%;background:var(--warn)"></span><span style="width:${pct(none)}%;background:var(--grey-soft)"></span></div>
       <div class="legend"><span><i style="background:var(--good)"></i>${ps.official_number} show a number printed on ${esc(dom)}</span><span><i style="background:var(--warn)"></i>${ps.number_not_on_official} show a number not on its pages</span>${ps.website_not_official ? `<span>${ps.website_not_official} link to a website other than ${esc(dom)}</span>` : ""}</div>` : `<p class="muted">No official website established, so pins can't be compared.</p>`;
-    const pins = (r.pins || []).map((p) => {
+    const rows = (r.pins || []).map((p) => {
+      const ic = p.number_status === "official" ? ["good", "✓"] : p.number_status === "not_on_official" ? ["warn", "?"]
+        : p.number_status === "warned" ? ["bad", "!"] : ["grey", "–"];
       const nt = p.number_status === "official" ? '<span class="tag off">number on official site</span>'
         : p.number_status === "not_on_official" ? '<span class="tag dir">number not on official pages</span>'
         : p.number_status === "warned" ? '<span class="tag bad">number the site warns about</span>' : "";
       const wt = p.website_status === "official" ? "" : p.website_status === "other" ? `<span class="tag other">website: ${esc(p.website)}</span>`
         : p.website_status === "none" ? '<span class="tag other">no website</span>' : "";
-      return `<div class="pin ${p.is_user_number ? "you" : ""}"><span class="pt" title="${esc(p.title)}">${esc(p.title)}</span>
-        <span class="pp">${esc(p.phone_shown || "no phone")}${p.is_user_number ? " ← your number" : ""}</span>
-        <span class="pa" title="${esc(p.address)}">${esc(p.address)}${p.rating ? ` · ★ ${esc(p.rating)} (${esc(p.reviews ?? 0)})` : ""}</span>
-        <span class="tags">${nt}${wt}</span></div>`;
+      return `<li class="${p.is_user_number ? "you" : ""}"><span class="ic ${ic[0]}" aria-hidden="true">${ic[1]}</span>
+        <span class="who"><b title="${esc(p.title)}">${esc(p.title)}</b><span title="${esc(p.address)}">${esc(p.address)}${p.rating ? ` · ★ ${esc(p.rating)} (${esc(p.reviews ?? 0)})` : ""}</span></span>
+        <span class="num">${esc(p.phone_shown || "no phone")}${p.is_user_number ? " ← yours" : ""}</span>
+        ${nt || wt ? `<span class="tags">${nt}${wt}</span>` : ""}</li>`;
     }).join("");
-    out.push(`<details class="card more" ${ps.user_number_pins ? "open" : ""}><summary>Google Maps audit — ${ps.total} “${brand} customer care” pins near ${esc(r.city)}</summary>
+    out.push(`<details class="card more" ${ps.user_number_pins ? "open" : ""}><summary>Maps call log — ${ps.total} “${brand} customer care” pins near ${esc(r.city)}</summary>
       ${bar}<p class="muted" style="font-size:13px">Pins are listed by their owners and anyone can suggest edits. A number not printed on the official pages may still be a genuine local branch; mobile numbers are partly hidden for privacy.</p>
-      <div class="pins">${pins}</div></details>`);
+      <ul class="log">${rows}</ul></details>`);
   }
 
   /* transparency */
@@ -275,16 +313,16 @@ function render(r) {
     $("#domain").value = b.dataset.domain; $(".adv").open = true; start();
   }));
   $("#result").classList.remove("hidden");
-  // The trail did its job on camera; fold it so the verdict is the first thing in view.
+  // The switchboard did its job on camera; fold it so the incoming-call screen is the first thing in view.
   $("#live").classList.add("collapsed");
   if (!$("#trail-toggle")) {
-    $(".trail-head").insertAdjacentHTML("beforeend", '<button id="trail-toggle" type="button" class="trail-toggle">Show trail</button>');
+    $(".trail-head").insertAdjacentHTML("beforeend", '<button id="trail-toggle" type="button" class="trail-toggle">Show switchboard</button>');
     $("#trail-toggle").addEventListener("click", () => {
       const c = $("#live").classList.toggle("collapsed");
-      $("#trail-toggle").textContent = c ? "Show trail" : "Hide trail";
+      $("#trail-toggle").textContent = c ? "Show switchboard" : "Hide switchboard";
     });
   }
-  $("#trail-toggle").textContent = "Show trail";
+  $("#trail-toggle").textContent = "Show switchboard";
   $("#live").scrollIntoView({ behavior: "smooth", block: "start" });
 }
 

@@ -144,7 +144,7 @@ async def run(brand: str, number_text: str | None, city: str | None, deps: Deps,
     if len(brand) < 2 or not BRAND_OK.fullmatch(brand) or sum(c.isdigit() for c in brand) > 4:
         # The brand flows into searches, prompts and on-screen sentences: letters, digits (1mg, 99acres) and
         # simple punctuation only, and never a phone number smuggled in through a shared link.
-        await emit("error", {"text": "Type the brand or organisation name only (letters, digits, & . - ')."})
+        await emit("failure", {"text": "Type the brand or organisation name only (letters, digits, & . - ')."})
         return {}
     user: Phone | None = None
     if number_text and number_text.strip():

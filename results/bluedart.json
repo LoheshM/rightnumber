@@ -68,7 +68,7 @@
     "google_domain": "google.co.in"
    },
    "source": "cache",
-   "ms": 0,
+   "ms": 9,
    "ok": true,
    "error": null,
    "result_count": 10,
@@ -987,14 +987,14 @@
    "summary_source": "llm:cache",
    "credits_spent": 0,
    "searches": 4,
-   "ms": 16
+   "ms": 31
   }
  },
  {
   "event": "done",
   "data": {
    "credits_spent": 0,
-   "ms": 16
+   "ms": 31
   }
  }
 ]

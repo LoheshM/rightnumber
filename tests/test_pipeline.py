@@ -361,7 +361,7 @@ async def test_brand_too_short(tmp_path, brand):
     env = Env(tmp_path)
     result, events = await env.run(brand=brand)
     assert result == {}
-    assert names(events) == ["error"]
+    assert names(events) == ["failure"]
     assert "brand" in events[0][1]["text"]
 
 

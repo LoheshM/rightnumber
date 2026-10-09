@@ -22,14 +22,16 @@ log = logging.getLogger("rightnumber")
 WEB = ROOT / "web"
 
 EXAMPLES = [
-    {"label": "Blue Dart · a number from a review", "brand": "Blue Dart", "number": "6291610240", "city": "Delhi",
-     "hint": "Named in complaints · official numbers instead"},
-    {"label": "IRCTC · a number from a Facebook post", "brand": "IRCTC", "number": "09002327947", "city": "Delhi",
-     "hint": "Advertised as the helpline of 6 other brands"},
-    {"label": "DTDC · +91 9606 911 811", "brand": "DTDC", "number": "+91 9606 911 811", "city": "Delhi",
-     "hint": "Printed on dtdc.com"},
-    {"label": "HDFC Bank · no number yet", "brand": "HDFC Bank", "number": "", "city": "Mumbai",
-     "hint": "What the bank's own site prints"},
+    {"label": "PhonePe · 87978 96100", "brand": "PhonePe", "number": "8797896100", "tone": "bad", "city": "Bengaluru",
+     "hint": "Also posted as Blinkit & Meesho care"},
+    {"label": "Blue Dart · 62916 10240", "brand": "Blue Dart", "number": "6291610240", "tone": "bad", "city": "Delhi",
+     "hint": "Named in a fraud review"},
+    {"label": "IRCTC · 90023 27947", "brand": "IRCTC", "number": "09002327947", "tone": "bad", "city": "Delhi",
+     "hint": "Posted as 5 other brands' care"},
+    {"label": "Blue Dart · 1860 233 1234", "brand": "Blue Dart", "number": "1860 233 1234", "tone": "good", "city": "Delhi",
+     "hint": "Printed on bluedart.com"},
+    {"label": "HDFC Bank · no number", "brand": "HDFC Bank", "number": "", "tone": "grey", "city": "Mumbai",
+     "hint": "What hdfc.bank.in prints"},
 ]
 
 
@@ -68,7 +70,8 @@ def create_app(settings: Settings | None = None, deps: pipeline.Deps | None = No
                 await runner(emit)
             except Exception:
                 log.exception("pipeline failed")
-                await queue.put(("error", {"text": "Something went wrong while checking this helpline."}))
+                # "failure", not "error": the browser's own EventSource `error` event would swallow it
+                await queue.put(("failure", {"text": "Something went wrong while checking this helpline."}))
             finally:
                 await queue.put(None)
 

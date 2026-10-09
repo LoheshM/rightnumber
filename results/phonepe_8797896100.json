@@ -1,0 +1,944 @@
+[
+ {
+  "event": "start",
+  "data": {
+   "brand": "PhonePe",
+   "city": "Bengaluru",
+   "number": "+91 87978 96100",
+   "number_kind": "mobile",
+   "mode": "auto"
+  }
+ },
+ {
+  "event": "step",
+  "data": {
+   "id": "gather",
+   "label": "Searching Google Maps, Google and your number the web",
+   "status": "running"
+  }
+ },
+ {
+  "event": "serp_call",
+  "data": {
+   "engine": "google",
+   "purpose": "Where +91 87978 96100 appears on the web",
+   "params": {
+    "q": "\"8797896100\" OR \"87978 96100\" OR \"+91 87978 96100\" OR \"+918797896100\"",
+    "gl": "in",
+    "hl": "en",
+    "google_domain": "google.co.in"
+   },
+   "source": "cache",
+   "ms": 11,
+   "ok": true,
+   "error": null,
+   "result_count": 10,
+   "credit": false
+  }
+ },
+ {
+  "event": "serp_call",
+  "data": {
+   "engine": "google",
+   "purpose": "What Google shows for “PhonePe customer care number”",
+   "params": {
+    "q": "PhonePe customer care number",
+    "gl": "in",
+    "hl": "en",
+    "google_domain": "google.co.in"
+   },
+   "source": "live",
+   "ms": 1278,
+   "ok": true,
+   "error": null,
+   "result_count": 7,
+   "credit": true
+  }
+ },
+ {
+  "event": "serp_call",
+  "data": {
+   "engine": "google_maps",
+   "purpose": "Maps pins for “PhonePe customer care” near Bengaluru",
+   "params": {
+    "type": "search",
+    "q": "PhonePe customer care",
+    "ll": "@12.9716,77.5946,12z",
+    "hl": "en",
+    "gl": "in"
+   },
+   "source": "live",
+   "ms": 1821,
+   "ok": true,
+   "error": null,
+   "result_count": 0,
+   "credit": true
+  }
+ },
+ {
+  "event": "step",
+  "data": {
+   "id": "gather",
+   "label": "Found 20 Maps pins and 7 Google results",
+   "status": "done"
+  }
+ },
+ {
+  "event": "step",
+  "data": {
+   "id": "domain",
+   "label": "Working out the brand's official website",
+   "status": "running"
+  }
+ },
+ {
+  "event": "serp_call",
+  "data": {
+   "engine": "google",
+   "purpose": "The brand's own contact pages on phonepe.com",
+   "params": {
+    "q": "site:phonepe.com customer care contact number",
+    "gl": "in",
+    "hl": "en",
+    "google_domain": "google.co.in"
+   },
+   "source": "live",
+   "ms": 654,
+   "ok": true,
+   "error": null,
+   "result_count": 10,
+   "credit": true
+  }
+ },
+ {
+  "event": "notice",
+  "data": {
+   "level": "info",
+   "text": "Google returned no phonepe.com pages for the site: search, so only its home page and the contact links on it are read."
+  }
+ },
+ {
+  "event": "page_read",
+  "data": {
+   "url": "https://www.phonepe.com/",
+   "final_url": "https://www.phonepe.com/",
+   "source": "live",
+   "ms": 117,
+   "ok": true,
+   "error": null,
+   "title": "PhonePe: UPI Payments, Investment, Insurance, Recharges, DTH & More",
+   "chars": 300000
+  }
+ },
+ {
+  "event": "page_read",
+  "data": {
+   "url": "https://www.phonepe.com/trust-and-safety/",
+   "final_url": "https://www.phonepe.com/trust-and-safety/",
+   "source": "live",
+   "ms": 88,
+   "ok": true,
+   "error": null,
+   "title": "PhonePe Security - Every Payment is Protected on PhonePe",
+   "chars": 272486
+  }
+ },
+ {
+  "event": "page_read",
+  "data": {
+   "url": "https://www.phonepe.com/grievance-policy/",
+   "final_url": "https://www.phonepe.com/grievance-policy/",
+   "source": "live",
+   "ms": 124,
+   "ok": true,
+   "error": null,
+   "title": "PhonePe - Grievance Policy",
+   "chars": 129438
+  }
+ },
+ {
+  "event": "page_read",
+  "data": {
+   "url": "https://www.phonepe.com/contact-us/",
+   "final_url": "https://www.phonepe.com/contact-us/",
+   "source": "live",
+   "ms": 119,
+   "ok": true,
+   "error": null,
+   "title": "PhonePe - Contact Us",
+   "chars": 112459
+  }
+ },
+ {
+  "event": "official",
+  "data": {
+   "domain": "phonepe.com",
+   "established": true,
+   "reason": "google + model agree",
+   "votes": [
+    {
+     "domain": "phonepe.com",
+     "sources": [
+      "google: organic result #1",
+      "model: model's own knowledge"
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "event": "step",
+  "data": {
+   "id": "domain",
+   "label": "Official website: phonepe.com",
+   "status": "done"
+  }
+ },
+ {
+  "event": "result",
+  "data": {
+   "brand": "PhonePe",
+   "city": "Bengaluru",
+   "domain": "phonepe.com",
+   "decision": {
+    "domain": "phonepe.com",
+    "established": true,
+    "reason": "google + model agree",
+    "votes": [
+     {
+      "domain": "phonepe.com",
+      "sources": [
+       "google: organic result #1",
+       "model: model's own knowledge"
+      ]
+     }
+    ]
+   },
+   "number": "+91 87978 96100",
+   "number_kind": "mobile",
+   "verdict": {
+    "label": "verify_before_calling",
+    "title": "Verify before calling",
+    "sources": [],
+    "complaints": [],
+    "other_brands": [
+     "Blinkit",
+     "Meesho"
+    ],
+    "other_brand_examples": [
+     {
+      "url": "https://www.justdial.com/Delhi/Online-Websites-For-Grocery-Delivery-in-Mayur-Vihar-Phase-3/nct-16180171",
+      "domain": "justdial.com",
+      "title": "Online Websites For Grocery Delivery - Delhi",
+      "snippet": "Blinkit customer care number 8797896100. Toll free number 91-879-789-6100. Contact help us: (8797896100) All types complaint 24x7 customer support Blinkit ..",
+      "official": false,
+      "directory": true,
+      "complaint": null,
+      "engine": "lookup",
+      "brands": [
+       "Blinkit"
+      ]
+     },
+     {
+      "url": "https://www.justdial.com/Panipat/Internet-Websites-For-Taxi-Services-in-Sanoli-Road/nct-11150238",
+      "domain": "justdial.com",
+      "title": "Top Internet Websites For Taxi Services in Sanoli Road",
+      "snippet": "Blinkit customer care number 8797896100. Toll free number 91-879-789-6100. Contact help us: (8797896100) All types complaint 24x.7 customer support Blinkit ..",
+      "official": false,
+      "directory": true,
+      "complaint": null,
+      "engine": "lookup",
+      "brands": [
+       "Blinkit"
+      ]
+     },
+     {
+      "url": "https://www.justdial.com/Lucknow/Product-Listing-Services-For-Meesho-in-Vrindavan-Colony-Sector-18/nct-12298868",
+      "domain": "justdial.com",
+      "title": "Product Listing Services For Meesho - Lucknow",
+      "snippet": "Toll Free No Via Meesho.Customer Care Number 8797896100 Via. Meesho Customer Support Team Contact No.087.9789.6100., Chand Mohan Village Dhaka Taluk .. sanya11 ...",
+      "official": false,
+      "directory": true,
+      "complaint": null,
+      "engine": "lookup",
+      "brands": [
+       "Meesho"
+      ]
+     }
+    ]
+   },
+   "call_instead": [
+    {
+     "key": "8068727374",
+     "display": "080 6872 7374",
+     "kind": "landline",
+     "warned": false,
+     "fax_only": false,
+     "care": true,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://www.phonepe.com/grievance-policy/",
+       "context": "a complaint by calling our customer support center on 080-68727374 / 022-68727374 · Additionally, customers can report any",
+       "kind": "page",
+       "label": "care",
+       "scope": "escalation"
+      },
+      {
+       "url": "https://www.phonepe.com/contact-us/",
+       "context": "reach us by phone · To reach us by phone, tap below . 080-68727374 / 022-68727374 . For login-related issues: . Raise a",
+       "kind": "page",
+       "label": "care",
+       "scope": "main"
+      }
+     ]
+    },
+    {
+     "key": "2268727374",
+     "display": "022 6872 7374",
+     "kind": "landline",
+     "warned": false,
+     "fax_only": false,
+     "care": true,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://www.phonepe.com/grievance-policy/",
+       "context": "by calling our customer support center on 080-68727374 / 022-68727374 · Additionally, customers can report any login-related",
+       "kind": "page",
+       "label": "care",
+       "scope": "escalation"
+      },
+      {
+       "url": "https://www.phonepe.com/contact-us/",
+       "context": "phone · To reach us by phone, tap below . 080-68727374 / 022-68727374 . For login-related issues: . Raise a Ticket . Not",
+       "kind": "page",
+       "label": "care",
+       "scope": "main"
+      }
+     ]
+    }
+   ],
+   "warned_numbers": [],
+   "official_numbers": [
+    {
+     "key": "8068727374",
+     "display": "080 6872 7374",
+     "kind": "landline",
+     "warned": false,
+     "fax_only": false,
+     "care": true,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://www.phonepe.com/grievance-policy/",
+       "context": "a complaint by calling our customer support center on 080-68727374 / 022-68727374 · Additionally, customers can report any",
+       "kind": "page",
+       "label": "care",
+       "scope": "escalation"
+      },
+      {
+       "url": "https://www.phonepe.com/contact-us/",
+       "context": "reach us by phone · To reach us by phone, tap below . 080-68727374 / 022-68727374 . For login-related issues: . Raise a",
+       "kind": "page",
+       "label": "care",
+       "scope": "main"
+      }
+     ]
+    },
+    {
+     "key": "2268727374",
+     "display": "022 6872 7374",
+     "kind": "landline",
+     "warned": false,
+     "fax_only": false,
+     "care": true,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://www.phonepe.com/grievance-policy/",
+       "context": "by calling our customer support center on 080-68727374 / 022-68727374 · Additionally, customers can report any login-related",
+       "kind": "page",
+       "label": "care",
+       "scope": "escalation"
+      },
+      {
+       "url": "https://www.phonepe.com/contact-us/",
+       "context": "phone · To reach us by phone, tap below . 080-68727374 / 022-68727374 . For login-related issues: . Raise a Ticket . Not",
+       "kind": "page",
+       "label": "care",
+       "scope": "main"
+      }
+     ]
+    },
+    {
+     "key": "8068727105",
+     "display": "080 6872 7105",
+     "kind": "landline",
+     "warned": false,
+     "fax_only": false,
+     "care": false,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://www.phonepe.com/grievance-policy/",
+       "context": "Principal Nodal Officer: Mr. Aniket Baheti . Contact No.: 080-68727105 . Email id: [email protected] . Webform:",
+       "kind": "page",
+       "label": "plain",
+       "scope": "escalation"
+      },
+      {
+       "url": "https://www.phonepe.com/contact-us/",
+       "context": "alt=\"phone\" class=\"contact-us-card-details-icon\"/>Contact 080-68727105 080-68727105 . Email[email protected] . L 4 . Approach the",
+       "kind": "page",
+       "label": "plain",
+       "scope": "main"
+      }
+     ]
+    },
+    {
+     "key": "8061123123",
+     "display": "080 6112 3123",
+     "kind": "landline",
+     "warned": false,
+     "fax_only": false,
+     "care": true,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://www.phonepe.com/grievance-policy/",
+       "context": "phones, customers can call the dedicated helpline number 080-61123123 or 022-61123123 · For any Bharat Connect concerns,",
+       "kind": "page",
+       "label": "care",
+       "scope": "escalation"
+      }
+     ]
+    },
+    {
+     "key": "2261123123",
+     "display": "022 6112 3123",
+     "kind": "landline",
+     "warned": false,
+     "fax_only": false,
+     "care": true,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://www.phonepe.com/grievance-policy/",
+       "context": "can call the dedicated helpline number 080-61123123 or 022-61123123 · For any Bharat Connect concerns, PhonePe aims to",
+       "kind": "page",
+       "label": "care",
+       "scope": "escalation"
+      }
+     ]
+    },
+    {
+     "key": "8068727777",
+     "display": "080 6872 7777",
+     "kind": "landline",
+     "warned": false,
+     "fax_only": false,
+     "care": true,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://www.phonepe.com/grievance-policy/",
+       "context": "merchant can call us between 7am to 11pm on all 7 days on 080-6872-7777/ 022-6872-7777. Onboarding related issues might take up to",
+       "kind": "page",
+       "label": "care",
+       "scope": "escalation"
+      }
+     ]
+    },
+    {
+     "key": "2268727777",
+     "display": "022 6872 7777",
+     "kind": "landline",
+     "warned": false,
+     "fax_only": false,
+     "care": true,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://www.phonepe.com/grievance-policy/",
+       "context": "us between 7am to 11pm on all 7 days on 080-6872-7777/ 022-6872-7777. Onboarding related issues might take up to 30 days for",
+       "kind": "page",
+       "label": "care",
+       "scope": "escalation"
+      }
+     ]
+    },
+    {
+     "key": "8068727778",
+     "display": "080 6872 7778",
+     "kind": "landline",
+     "warned": false,
+     "fax_only": false,
+     "care": true,
+     "other_org": false,
+     "sources": [
+      {
+       "url": "https://www.phonepe.com/grievance-policy/",
+       "context": "by calling our online merchant support center on 080-6872-7778 · If merchants are unable to login to their Phonepe",
+       "kind": "page",
+       "label": "care",
+       "scope": "escalation"
+      }
+     ]
+    }
+   ],
+   "pages": [
+    {
+     "url": "https://www.phonepe.com/",
+     "final_url": "https://www.phonepe.com/",
+     "source": "live",
+     "ms": 117,
+     "ok": true,
+     "error": null,
+     "title": "PhonePe: UPI Payments, Investment, Insurance, Recharges, DTH & More",
+     "chars": 300000
+    },
+    {
+     "url": "https://www.phonepe.com/trust-and-safety/",
+     "final_url": "https://www.phonepe.com/trust-and-safety/",
+     "source": "live",
+     "ms": 88,
+     "ok": true,
+     "error": null,
+     "title": "PhonePe Security - Every Payment is Protected on PhonePe",
+     "chars": 272486
+    },
+    {
+     "url": "https://www.phonepe.com/grievance-policy/",
+     "final_url": "https://www.phonepe.com/grievance-policy/",
+     "source": "live",
+     "ms": 124,
+     "ok": true,
+     "error": null,
+     "title": "PhonePe - Grievance Policy",
+     "chars": 129438
+    },
+    {
+     "url": "https://www.phonepe.com/contact-us/",
+     "final_url": "https://www.phonepe.com/contact-us/",
+     "source": "live",
+     "ms": 119,
+     "ok": true,
+     "error": null,
+     "title": "PhonePe - Contact Us",
+     "chars": 112459
+    }
+   ],
+   "pins": [
+    {
+     "title": "CNearMe",
+     "phone_shown": "+91 951xx xxx48",
+     "website": null,
+     "website_status": "none",
+     "number_status": "not_on_official",
+     "rating": 4.9,
+     "reviews": 63,
+     "address": "309, Rustam Bagh Layout, Bengaluru, Karnataka 560017",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "Phonup-3R Services",
+     "phone_shown": "+91 809xx xxx88",
+     "website": "3rservices.in",
+     "website_status": "other",
+     "number_status": "not_on_official",
+     "rating": 5,
+     "reviews": 79,
+     "address": "1330, 24th Cross Rd, Kottapalya, Jayanagara 9th Block, Jayanagar, Bengaluru, Karnataka 560",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "customer care",
+     "phone_shown": "+91 950xx xxx00",
+     "website": null,
+     "website_status": "none",
+     "number_status": "not_on_official",
+     "rating": 3.5,
+     "reviews": 4,
+     "address": "1st Floor, Papa Reddy Plaza, 3-6-355, Papareddipalya, Nagarbhavi, Bengaluru, Karnataka 560",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "Mobile Point",
+     "phone_shown": "+91 903xx xxx86",
+     "website": null,
+     "website_status": "none",
+     "number_status": "not_on_official",
+     "rating": 3.8,
+     "reviews": 110,
+     "address": "Sarjapuara Main Road, opposite more mall, Bellandur Gate Rd, Bellandur, Bengaluru, Karnata",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "Parameshwara Enterprises PE",
+     "phone_shown": "+91 872xx xxx24",
+     "website": null,
+     "website_status": "none",
+     "number_status": "not_on_official",
+     "rating": 3.3,
+     "reviews": 8,
+     "address": "SGR Dental College Rd, Sri Balaji Layout, m munnekolla village, Chandra Layout, Marathahal",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "Itel, Infinix & Tecno Mobile Carlcare Service Centre (Hoskote, Karnataka)",
+     "phone_shown": "1800 419 0525",
+     "website": "shalltry.com",
+     "website_status": "other",
+     "number_status": "not_on_official",
+     "rating": 4.4,
+     "reviews": 10,
+     "address": "1st Floor, Chinnu Nilaya, Gangammagudi Main Road Sri MV Extension Hoskote Bangal, Punjab, ",
+     "is_user_number": false,
+     "phone_kind": "tollfree"
+    },
+    {
+     "title": "prakash telecom",
+     "phone_shown": "+91 887xx xxx77",
+     "website": null,
+     "website_status": "none",
+     "number_status": "not_on_official",
+     "rating": 4.5,
+     "reviews": 15,
+     "address": "near samart bazzar, KSRTC Layout, Jayanagara 9th Block, J. P. Nagar, Bengaluru, Karnataka ",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "Customer Care Support Center",
+     "phone_shown": "1800 258 5603",
+     "website": "customercaresupportcenter.co.in",
+     "website_status": "other",
+     "number_status": "not_on_official",
+     "rating": 1,
+     "reviews": 4,
+     "address": "720, 7th Cross Rd, Weaver's Colony, BTM Layout 2nd Stage, BTM Layout, Bengaluru, Karnataka",
+     "is_user_number": false,
+     "phone_kind": "tollfree"
+    },
+    {
+     "title": "Arun telecom",
+     "phone_shown": "",
+     "website": null,
+     "website_status": "none",
+     "number_status": "none",
+     "rating": 3.7,
+     "reviews": 3,
+     "address": "56, 2, Sadar Patrappa Rd, Thigalarpet, Kumbarpet, Dodpete, Nagarathpete, Bengaluru, Karnat",
+     "is_user_number": false,
+     "phone_kind": null
+    },
+    {
+     "title": "Enzyme Octane - Managed Office space in HSR Layout",
+     "phone_shown": "+91 888xx xxx22",
+     "website": "enzymefo.com",
+     "website_status": "other",
+     "number_status": "not_on_official",
+     "rating": 4,
+     "reviews": 153,
+     "address": "Enzyme Coworking office in Bengaluru , 3rd Floor, 27th Main, 480/B, 18th Cross Rd, HSR Lay",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "Mwyn Tech Private Limited",
+     "phone_shown": "",
+     "website": null,
+     "website_status": "none",
+     "number_status": "none",
+     "rating": 3.8,
+     "reviews": 108,
+     "address": "7, Whitefield Main Rd, Varthur Kodi, Palm Meadows, Whitefield, Bengaluru, Karnataka 560066",
+     "is_user_number": false,
+     "phone_kind": null
+    },
+    {
+     "title": "Hira Enterprises mobile sales and services laptops services",
+     "phone_shown": "+91 953xx xxx57",
+     "website": null,
+     "website_status": "none",
+     "number_status": "not_on_official",
+     "rating": 4.9,
+     "reviews": 45,
+     "address": "Immadihalli Main Rd, Immadihalli, Whitefield, Bengaluru, Karnataka 560066",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "Customer Care",
+     "phone_shown": "",
+     "website": null,
+     "website_status": "none",
+     "number_status": "none",
+     "rating": 3,
+     "reviews": 6,
+     "address": "1, 2, Primrose Rd, Indiranagar, Bengaluru, Karnataka 560025",
+     "is_user_number": false,
+     "phone_kind": null
+    },
+    {
+     "title": "MedPlus JP Nagar 80Ft Road",
+     "phone_shown": "+91 630xx xxx74",
+     "website": "medplusmart.com",
+     "website_status": "other",
+     "number_status": "not_on_official",
+     "rating": 2.6,
+     "reviews": 39,
+     "address": "1316/A, 9th Cross Rd, Marenahalli, 2nd Phase, J. P. Nagar, Bengaluru, Karnataka 560078",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "MedPlus Jp Nagar Hansa Plaza",
+     "phone_shown": "+91 630xx xxx79",
+     "website": "medplusmart.com",
+     "website_status": "other",
+     "number_status": "not_on_official",
+     "rating": 3,
+     "reviews": 45,
+     "address": "Shop No 718, Hansha Plaza, 24th Main Rd, 26 Phase, J. P. Nagar, Bengaluru, Karnataka 56007",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "MedPlus Hennur Main Rd",
+     "phone_shown": "+91 630xx xxx61",
+     "website": null,
+     "website_status": "none",
+     "number_status": "not_on_official",
+     "rating": 2.9,
+     "reviews": 29,
+     "address": "Shop No 1, No 20/134 Main Road, Hennur Cross, opposite Indian Academic College, KG Halli, ",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "Buy Now Pay Later India - ZEROPAY",
+     "phone_shown": "+91 892xx xxx88",
+     "website": "zeropay.fyi",
+     "website_status": "other",
+     "number_status": "not_on_official",
+     "rating": 3,
+     "reviews": 2,
+     "address": "3FQP+X6R, No. 97, Achit Nagar, Soladevanahalli, Bengaluru, Karnataka 560107",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "Croma - Koramangala",
+     "phone_shown": "+91 779xx xxx18",
+     "website": "croma.com",
+     "website_status": "other",
+     "number_status": "not_on_official",
+     "rating": 4,
+     "reviews": 6401,
+     "address": "Gr Flr, No 23, 100 Feet Rd, Venkappa Garden, 6th Block, Koramangala, Bengaluru, Karnataka ",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "highway delite",
+     "phone_shown": "+91 998xx xxx48",
+     "website": "highwaydelite.com",
+     "website_status": "other",
+     "number_status": "not_on_official",
+     "rating": 2.4,
+     "reviews": 81,
+     "address": "8th Floor, Tower D, DIAMOND DISTRICT, HAL Old Airport Rd, Kodihalli, Bengaluru, Karnataka ",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    },
+    {
+     "title": "Infant Jesus Mobile Center",
+     "phone_shown": "+91 968xx xxx52",
+     "website": null,
+     "website_status": "none",
+     "number_status": "not_on_official",
+     "rating": 5,
+     "reviews": 2,
+     "address": "324, 3rd cross 7th, main viveknagar near ABCD, Ground road, Bengaluru, Karnataka 560047",
+     "is_user_number": false,
+     "phone_kind": "mobile"
+    }
+   ],
+   "pin_stats": {
+    "total": 20,
+    "judged": true,
+    "official_number": 0,
+    "number_not_on_official": 17,
+    "website_not_official": 9,
+    "no_website": 11,
+    "user_number_pins": 0
+   },
+   "google_view": {
+    "results": 7,
+    "directory": 2,
+    "directory_domains": [
+     "indiacustomercare.com"
+    ],
+    "official_rank": 1,
+    "top": [
+     {
+      "title": "Privacy policy - PhonePe",
+      "domain": "phonepe.com",
+      "link": "https://www.phonepe.com/privacy-policy/",
+      "directory": false,
+      "official": true
+     },
+     {
+      "title": "Digital Payments",
+      "domain": "indiacustomercare.com",
+      "link": "https://www.indiacustomercare.com/category/companies-category/digital-payments",
+      "directory": true,
+      "official": false
+     },
+     {
+      "title": "PhonePe - Know How to Download, Register & Send Money",
+      "domain": "bankbazaar.com",
+      "link": "https://www.bankbazaar.com/ifsc/phonepe.html",
+      "directory": false,
+      "official": false
+     },
+     {
+      "title": "PhonePe India's Payments App - PhonePe.com",
+      "domain": "phonepe.com",
+      "link": "https://www.phonepe.com/offers/2017/08/15/OF1708141132439314798656/en.html",
+      "directory": false,
+      "official": true
+     },
+     {
+      "title": "P",
+      "domain": "indiacustomercare.com",
+      "link": "https://www.indiacustomercare.com/category/companies-z/p?page=363",
+      "directory": true,
+      "official": false
+     }
+    ]
+   },
+   "mentions": [
+    {
+     "url": "https://www.justdial.com/Delhi/Online-Websites-For-Grocery-Delivery-in-Mayur-Vihar-Phase-3/nct-16180171",
+     "domain": "justdial.com",
+     "title": "Online Websites For Grocery Delivery - Delhi",
+     "snippet": "Blinkit customer care number 8797896100. Toll free number 91-879-789-6100. Contact help us: (8797896100) All types complaint 24x7 customer support Blinkit ..",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": [
+      "Blinkit"
+     ]
+    },
+    {
+     "url": "https://www.justdial.com/hi/Panipat/PhonePe-Kyc-Centres/nct-12362982",
+     "domain": "justdial.com",
+     "title": "फोनपे काइक केंद्र - पानीपत",
+     "snippet": "Phonepe. Customer Care Number 91)-879-789-6100. Phonepe. Pay customer Care Helpline Number 8797896100. contact us. PhonePe- Toll free number 080-1800 7771.?",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": []
+    },
+    {
+     "url": "https://www.justdial.com/Aligarh/24-Hours-Mobile-Phone-Customer-Services-in-Quarsi/nct-11218639",
+     "domain": "justdial.com",
+     "title": "24 Hours Mobile Phone Customer Services - Aligarh",
+     "snippet": "If you need Kuku FM customer care,08797- 896- 100 Kuku FM Toll free number 91-8797-8961-00 Kuku FM customer care number 8797896100. User18 hours. Use Per New ...",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": []
+    },
+    {
+     "url": "https://www.justdial.com/Panipat/Internet-Websites-For-Taxi-Services-in-Sanoli-Road/nct-11150238",
+     "domain": "justdial.com",
+     "title": "Top Internet Websites For Taxi Services in Sanoli Road",
+     "snippet": "Blinkit customer care number 8797896100. Toll free number 91-879-789-6100. Contact help us: (8797896100) All types complaint 24x.7 customer support Blinkit ..",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": [
+      "Blinkit"
+     ]
+    },
+    {
+     "url": "https://www.justdial.com/Lucknow/Product-Listing-Services-For-Meesho-in-Vrindavan-Colony-Sector-18/nct-12298868",
+     "domain": "justdial.com",
+     "title": "Product Listing Services For Meesho - Lucknow",
+     "snippet": "Toll Free No Via Meesho.Customer Care Number 8797896100 Via. Meesho Customer Support Team Contact No.087.9789.6100., Chand Mohan Village Dhaka Taluk .. sanya11 ...",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": [
+      "Meesho"
+     ]
+    },
+    {
+     "url": "https://www.justdial.com/Delhi/Internet-Websites-For-Loan-in-Kalyan-Puri-Block-18/nct-11156370",
+     "domain": "justdial.com",
+     "title": "Internet Websites For Loan in Kalyan Puri Block 18, Delhi",
+     "snippet": "Blinkit customer care number 8797896100. Toll free number 91-879-789-6100. Contact help us: (8797896100) All types complaint 24x7 customer support Blinkit ..",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": [
+      "Blinkit"
+     ]
+    },
+    {
+     "url": "https://www.justdial.com/Sirsa-Haryana/Internet-Websites-For-Taxi-Services-in-Rania/nct-11150238",
+     "domain": "justdial.com",
+     "title": "Internet Websites For Taxi Services in Rania, Sirsa Haryana",
+     "snippet": "Blinkit customer care number 8797896100. Toll free number 91-879-789-6100. Contact help us: (8797896100) All types complaint 24x.7 customer support Blinkit ..",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": [
+      "Blinkit"
+     ]
+    },
+    {
+     "url": "https://www.justdial.com/Raipur-Chhattisgarh/Internet-Websites-For-Motorcycle-Taxi-Services-in-Sunder-Nagar/nct-11780817",
+     "domain": "justdial.com",
+     "title": "Internet Websites For Motorcycle Taxi Services - Raipur",
+     "snippet": "Blinkit customer care number 8797896100. Blinkit customer care number 08797-89-6100. Blinkit customer care number 91-87978-96100 connect bay 24 hours 24x.7 ...",
+     "official": false,
+     "directory": true,
+     "complaint": null,
+     "engine": "lookup",
+     "brands": [
+      "Blinkit"
+     ]
+    }
+   ],
+   "summary": "The number +91 87978 96100 is not printed on PhonePe's website and web pages advertise this number as the helpline of Blinkit and Meesho. For PhonePe, call numbers printed on its official website: 080 6872 7374 or 022 6872 7374.",
+   "summary_source": "llm:live",
+   "credits_spent": 3,
+   "searches": 4,
+   "ms": 7948
+  }
+ },
+ {
+  "event": "done",
+  "data": {
+   "credits_spent": 3,
+   "ms": 7948
+  }
+ }
+]

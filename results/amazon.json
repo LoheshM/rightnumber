@@ -30,7 +30,7 @@
     "gl": "in"
    },
    "source": "cache",
-   "ms": 0,
+   "ms": 10,
    "ok": true,
    "error": null,
    "result_count": 0,
@@ -49,7 +49,7 @@
     "google_domain": "google.co.in"
    },
    "source": "cache",
-   "ms": 0,
+   "ms": 9,
    "ok": true,
    "error": null,
    "result_count": 10,
@@ -68,7 +68,7 @@
     "google_domain": "google.co.in"
    },
    "source": "cache",
-   "ms": 0,
+   "ms": 8,
    "ok": true,
    "error": null,
    "result_count": 10,
@@ -103,7 +103,7 @@
     "google_domain": "google.co.in"
    },
    "source": "cache",
-   "ms": 0,
+   "ms": 9,
    "ok": true,
    "error": null,
    "result_count": 10,
@@ -116,7 +116,7 @@
    "url": "https://www.amazon.in/",
    "final_url": "https://www.amazon.in/",
    "source": "cache",
-   "ms": 0,
+   "ms": 6,
    "ok": true,
    "error": null,
    "title": "",
@@ -129,7 +129,7 @@
    "url": "https://www.amazon.in/live/video/12d08297c26349689e8fde6a4f74a3e2",
    "final_url": "https://www.amazon.in/live/video/12d08297c26349689e8fde6a4f74a3e2",
    "source": "cache",
-   "ms": 0,
+   "ms": 9,
    "ok": true,
    "error": null,
    "title": "Watch Repair customer care number please on Amazon Live",
@@ -142,7 +142,7 @@
    "url": "https://sellercentral.amazon.in/seller-forums/discussions/t/7a8bab01-078b-4643-b651-d539f3b6b112",
    "final_url": "https://sellercentral.amazon.in/seller-forums/discussions/t/7a8bab01-078b-4643-b651-d539f3b6b112",
    "source": "cache",
-   "ms": 0,
+   "ms": 7,
    "ok": true,
    "error": null,
    "title": "Escalation: EasyShip Pickup Failure &amp; Customer Care Misconduct – Urgent Action Required",
@@ -155,7 +155,7 @@
    "url": "https://www.amazon.in/your-product-safety-alerts?ref_=footer_bsx_ypsa",
    "final_url": "https://www.amazon.in/ap/signin?openid.pape.max_auth_age=3600&openid.return_to=https%3A%2F%2Famazon.in%2Fyour-product-safety-alerts%3Fref_%3Dfooter_bsx_ypsa&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=amzn_yourrecalls_in&openid.mode=checkid_setup&language=en_IN&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0",
    "source": "cache",
-   "ms": 0,
+   "ms": 8,
    "ok": true,
    "error": null,
    "title": "Sign in",
@@ -168,7 +168,7 @@
    "url": "https://www.amazon.in/gp/help/customer/display.html?nodeId=200507590&ref_=nav_cs_help",
    "final_url": "https://www.amazon.in/gp/help/customer/display.html?nodeId=G508510&ref_=nav_cs_help",
    "source": "cache",
-   "ms": 0,
+   "ms": 9,
    "ok": true,
    "error": null,
    "title": "Help - Amazon Customer Service",
@@ -281,7 +281,7 @@
      "url": "https://www.amazon.in/",
      "final_url": "https://www.amazon.in/",
      "source": "cache",
-     "ms": 0,
+     "ms": 6,
      "ok": true,
      "error": null,
      "title": "",
@@ -291,7 +291,7 @@
      "url": "https://www.amazon.in/live/video/12d08297c26349689e8fde6a4f74a3e2",
      "final_url": "https://www.amazon.in/live/video/12d08297c26349689e8fde6a4f74a3e2",
      "source": "cache",
-     "ms": 0,
+     "ms": 9,
      "ok": true,
      "error": null,
      "title": "Watch Repair customer care number please on Amazon Live",
@@ -301,7 +301,7 @@
      "url": "https://sellercentral.amazon.in/seller-forums/discussions/t/7a8bab01-078b-4643-b651-d539f3b6b112",
      "final_url": "https://sellercentral.amazon.in/seller-forums/discussions/t/7a8bab01-078b-4643-b651-d539f3b6b112",
      "source": "cache",
-     "ms": 0,
+     "ms": 7,
      "ok": true,
      "error": null,
      "title": "Escalation: EasyShip Pickup Failure &amp; Customer Care Misconduct – Urgent Action Required",
@@ -311,7 +311,7 @@
      "url": "https://www.amazon.in/your-product-safety-alerts?ref_=footer_bsx_ypsa",
      "final_url": "https://www.amazon.in/ap/signin?openid.pape.max_auth_age=3600&openid.return_to=https%3A%2F%2Famazon.in%2Fyour-product-safety-alerts%3Fref_%3Dfooter_bsx_ypsa&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=amzn_yourrecalls_in&openid.mode=checkid_setup&language=en_IN&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0",
      "source": "cache",
-     "ms": 0,
+     "ms": 8,
      "ok": true,
      "error": null,
      "title": "Sign in",
@@ -321,7 +321,7 @@
      "url": "https://www.amazon.in/gp/help/customer/display.html?nodeId=200507590&ref_=nav_cs_help",
      "final_url": "https://www.amazon.in/gp/help/customer/display.html?nodeId=G508510&ref_=nav_cs_help",
      "source": "cache",
-     "ms": 0,
+     "ms": 9,
      "ok": true,
      "error": null,
      "title": "Help - Amazon Customer Service",
@@ -435,17 +435,17 @@
    },
    "mentions": [],
    "summary": "The number 080 6605 5000 is not printed on the amazon.in pages that were read. No phone number could be copied from amazon.in; use the number on your bill, card, ticket or app.",
-   "summary_source": "llm:live",
+   "summary_source": "llm:cache",
    "credits_spent": 0,
    "searches": 4,
-   "ms": 4489
+   "ms": 126
   }
  },
  {
   "event": "done",
   "data": {
    "credits_spent": 0,
-   "ms": 4489
+   "ms": 126
   }
  }
 ]

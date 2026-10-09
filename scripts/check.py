@@ -34,7 +34,7 @@ async def main(argv: list[str]) -> None:
                   f" ({data['ms']} ms){'  ERROR ' + str(data['error']) if not data['ok'] else ''}")
         elif event == "page_read":
             print(f"  [page {data['source']}] {data['final_url'][:80]} ok={data['ok']} chars={data['chars']} {data['error'] or ''}")
-        elif event in ("notice", "error", "official", "step"):
+        elif event in ("notice", "error", "failure", "official", "step"):
             print(f"  {event}: {json.dumps(data, ensure_ascii=False)[:300]}")
 
     res = await run(brand, number, city, deps, emit, user_domain=domain)

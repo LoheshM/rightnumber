@@ -10,6 +10,7 @@ from playwright.sync_api import sync_playwright
 base, out = sys.argv[1], sys.argv[2]
 brand = sys.argv[3] if len(sys.argv) > 3 else "Blue Dart"
 number = sys.argv[4] if len(sys.argv) > 4 else "6291610240"
+city = sys.argv[5] if len(sys.argv) > 5 else "Delhi"  # must match the recorded example, or a new Maps search is billed
 errors: list[str] = []
 with sync_playwright() as p:
     b = p.chromium.launch(channel="msedge")
@@ -24,6 +25,7 @@ with sync_playwright() as p:
             pg.screenshot(path=f"{out}/landing.png")
         pg.fill("#brand", brand)
         pg.fill("#number", number)
+        pg.select_option("#city", city)
         pg.click("#go")
         pg.wait_for_selector("#result:not(.hidden)", timeout=180000)
         pg.wait_for_timeout(600)

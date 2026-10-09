@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>RightNumber — check a helpline before you dial</title>
   <meta name="description" content="Found a customer-care number on Google or Maps? RightNumber checks whether the brand's own website prints it, and shows the numbers it does print.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f766e'/%3E%3Cpath d='M11 8c1 0 2 2 2.6 3.4.3.8 0 1.4-.6 2l-1 1c.9 2 2.6 3.7 4.6 4.6l1-1c.6-.6 1.2-.9 2-.6C21 18 23 19 23 20v2c0 1-1 2-2 2C14 24 8 18 8 11c0-1 1-2 2-2z' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230b1226'/%3E%3Cpath d='M11 8c1 0 2 2 2.6 3.4.3.8 0 1.4-.6 2l-1 1c.9 2 2.6 3.7 4.6 4.6l1-1c.6-.6 1.2-.9 2-.6C21 18 23 19 23 20v2c0 1-1 2-2 2C14 24 8 18 8 11c0-1 1-2 2-2z' fill='%2334d399'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
@@ -19,41 +19,62 @@
       <span>Right<b>Number</b></span>
     </a>
     <div class="top-right">
-      <span id="mode" class="pill" title="Data mode">…</span>
+      <span id="mode" class="pill">…</span>
       <button id="theme" class="icon-btn" aria-label="Toggle dark mode" title="Toggle dark mode">◐</button>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <p class="eyebrow">Knowledge &amp; public interest · India</p>
-      <h1>Found a customer-care number on Google?<br><span>Check it before you dial.</span></h1>
-      <p class="lede">Scammers plant helpline numbers in Maps pins and search results. RightNumber reads what Google and Maps show you, finds the brand's <em>own</em> website, and tells you whether that website prints the number — and which numbers it does print.</p>
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="led" aria-hidden="true"></span>Caller ID for customer care · India</p>
+        <h1>Wrong number?<br><span>Not on our watch.</span></h1>
+        <p class="lede">Scammers plant “customer care” numbers in Google results and Maps pins. Before you dial, RightNumber reads what Google and Maps show you, finds the brand's <em>own</em> website, and tells you whether that site prints the number — and which numbers it does print.</p>
+        <ul class="facts">
+          <li><b>4 live searches</b> per check, every one shown</li>
+          <li><b>Brand's own pages</b> read, not directories</li>
+          <li><b>Never says “safe”</b> — only what the brand prints</li>
+        </ul>
+      </div>
 
-      <form id="form" class="ask" autocomplete="off">
-        <label class="field brand">
-          <span>Brand or service</span>
-          <input id="brand" name="brand" required minlength="2" maxlength="60" placeholder="e.g. Blue Dart, HDFC Bank, IRCTC">
-        </label>
-        <label class="field number">
-          <span>Number you found <i>(optional)</i></span>
-          <input id="number" name="number" maxlength="40" inputmode="tel" placeholder="e.g. 98765 43210">
-        </label>
-        <label class="field city">
-          <span>Near</span>
-          <select id="city" name="city"></select>
-        </label>
-        <button id="go" type="submit" class="btn">Check</button>
-        <details class="adv">
-          <summary>I know the official website</summary>
-          <label class="field"><span>Official website</span><input id="domain" maxlength="100" placeholder="example.com"></label>
-        </details>
-      </form>
-      <div id="examples" class="chips" aria-label="Examples"></div>
+      <div class="phone" aria-label="Number checker">
+        <div class="phone-notch" aria-hidden="true"></div>
+        <form id="form" class="dialer" autocomplete="off">
+          <p class="dial-title">Who are you calling?</p>
+          <label class="field brand">
+            <span>Brand or service</span>
+            <input id="brand" name="brand" required minlength="2" maxlength="60" placeholder="Blue Dart, PhonePe, IRCTC…">
+          </label>
+          <label class="field number">
+            <span>The number you found <i>(optional)</i></span>
+            <input id="number" name="number" maxlength="40" inputmode="tel" placeholder="98765 43210">
+          </label>
+          <label class="field city">
+            <span>Maps pins near</span>
+            <select id="city" name="city"></select>
+          </label>
+          <details class="adv">
+            <summary>I know the official website</summary>
+            <label class="field"><span>Official website</span><input id="domain" maxlength="100" placeholder="example.com"></label>
+          </details>
+          <button id="go" type="submit" class="call-btn" aria-label="Check this number">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M6.6 3c.9 0 1.9 2 2.4 3.3.3.8 0 1.4-.5 1.9l-1 1c.8 1.9 2.4 3.5 4.3 4.3l1-1c.5-.5 1.1-.8 1.9-.5 1.3.5 3.3 1.5 3.3 2.4v1.9c0 1-.9 1.9-1.9 1.9C9.6 19.2 3.8 13.4 3.8 6.6c0-1 .9-1.9 1.9-1.9z"/></svg>
+            <span id="go-label">Check before you dial</span>
+          </button>
+        </form>
+      </div>
     </section>
 
-    <section id="live" class="live hidden" aria-live="polite">
-      <div class="trail-head"><h2>Live search trail</h2><span id="trail-meta" class="muted"></span></div>
+    <section class="recent" aria-label="Examples">
+      <h2 class="section-title">Recent calls <span>· recorded examples, tap to replay</span></h2>
+      <div id="examples" class="calllog"></div>
+    </section>
+
+    <section id="live" class="switchboard hidden" aria-live="polite">
+      <div class="trail-head">
+        <h2><span class="led" aria-hidden="true"></span>Switchboard</h2>
+        <span id="trail-meta" class="meta"></span>
+      </div>
       <ol id="trail" class="trail"></ol>
       <div id="notices"></div>
     </section>
@@ -63,7 +84,7 @@
 
   <footer class="foot">
     <p><b>RightNumber</b> never certifies a number as safe. It reports what the brand's own website prints, with links, so you can check yourself. If you've lost money, call <a href="tel:1930">1930</a> or report at <a href="https://cybercrime.gov.in" rel="noopener" target="_blank">cybercrime.gov.in</a>.</p>
-    <p class="muted">Search data via SerpApi (Google, Google Maps) · summaries by Gemini 2.5 Flash from computed facts · MIT licence</p>
+    <p class="muted">Search data via SerpApi (Google, Google Maps) · official-site vote and summary by Gemini 2.5 Flash from computed facts · MIT licence</p>
   </footer>
   <script src="/static/app.js"></script>
 </body>

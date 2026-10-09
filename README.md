@@ -6,7 +6,9 @@ RightNumber takes a brand and the number you found. It works out the brand's *ow
 
 > SerpApi India Hackathon 2026 · Track: **Knowledge & Public Interest** · runs locally, no deployment needed · works with **no API keys** in replay mode
 
-![RightNumber checking a number from a Justdial review against bluedart.com](docs/screenshots/bluedart-killer.png)
+![RightNumber's incoming-call screen: one number posted as the customer-care line of PhonePe, Blinkit and Meesho](docs/screenshots/phonepe-killer.png)
+
+*The UI is a phone: you “dial” the number into a dialer, a switchboard lights a lamp for every live search, and the verdict arrives as an incoming-call screen with a caller-ID banner — plus the numbers the brand itself prints, one tap away.*
 
 ---
 
@@ -40,9 +42,9 @@ What our own probe of live search data showed for Blue Dart:
 | **Google Maps audit** | Each pin's number and website compared with the official site. Mobile numbers are partly masked. |
 | **Live search trail** | Every SerpApi call with its engine, purpose and time, marked *live · 1 credit* or *cached · free*, plus every official page read. |
 
-The second killer case: a number someone posted as the "IRCTC refund complaint number" is advertised elsewhere on the web as the helpline of **Aircel, Koovs, IndiGo, Google Pay, Flipkart and Paytm**. A genuine helpline belongs to one company.
+The killer cases: **87978 96100** is posted on Justdial as the customer-care number of **PhonePe, Blinkit, Meesho** (and Kuku FM); RightNumber shows it's not on phonepe.com and offers the numbers phonepe.com itself prints (080 6872 7374 / 022 6872 7374, verified on phonepe.com/contact-us). And a number someone posted as the "IRCTC refund complaint number" is advertised elsewhere on the web as the helpline of **Koovs, IndiGo, Google Pay, Flipkart and Paytm**. A genuine helpline belongs to one company.
 
-![A number advertised as the helpline of six unrelated brands](docs/screenshots/irctc-killer.png)
+![A number advertised as the helpline of five other brands](docs/screenshots/irctc-killer.png)
 
 ## How it works
 
@@ -90,6 +92,7 @@ Ten real cases were run on live data and then fact-checked against the web by an
 
 | Case (input) | RightNumber says | Web check | |
 |---|---|---|---|
+| PhonePe · 87978 96100 (posted as several brands' care number) | 🔴 Advertised as the helpline of Blinkit, Meesho. Call 080 6872 7374 / 022 6872 7374 | PhonePe's contact page: "Customer Support: 080-68727374 / 022-68727374"; Justdial pages (via Google's snippets) post the number for Blinkit, Meesho, PhonePe, Kuku FM | ✅ |
 | Blue Dart · 6291610240 (from a Justdial review) | 🔴 Verify before calling: complaint text names it. Call 1860 233 1234 / 022 4061 1234 / 080 4661 1234 | The review calls it "a fraud no."; all 3 numbers are on bluedart.com | ✅ |
 | Blue Dart · 1860 233 1234 | ✅ Printed on bluedart.com | "contact on its official number 18602331234" (/fraudawareness) | ✅ |
 | Blue Dart · 07016493282 (scam caller on TechEnclave) | 🟡 Not on the official pages | Correct, but the forum report wasn't surfaced | ⚠️ |
@@ -101,7 +104,7 @@ Ten real cases were run on live data and then fact-checked against the web by an
 | Airtel · 6290133964 (scam caller, complaint site) | 🟡 Not on airtel.in pages; no number suggested | Fair; Airtel's care line is the short code 121, which wasn't on the pages read | ⚠️ |
 | Amazon · +91 80 6605 5000 (reported fake) | 🟡 Not on amazon.in pages; no number suggested | Amazon India publishes no phone number; seller-listing numbers are excluded | ✅ |
 
-**7 ✅ · 3 ⚠️ · 0 ❌. No verdict on a user's number overclaimed.** Verification found 10 real bugs before submission, for example fax lines, partner (Google Pay) numbers, seller-listing numbers on amazon.in, appellate officers and franchise stores suggested as "call instead". Each is fixed and has a regression test.
+**8 ✅ · 3 ⚠️ · 0 ❌. No verdict on a user's number overclaimed.** Verification found 10 real bugs before submission, for example fax lines, partner (Google Pay) numbers, seller-listing numbers on amazon.in, appellate officers and franchise stores suggested as "call instead". Each is fixed and has a regression test.
 
 ## Quick start
 
